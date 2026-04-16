@@ -1,3 +1,5 @@
 # ONE-WEEK
-Proyecto 2do Semestre POO
+Proyecto de 2do semestre en C++
+
+
 One week consiste en un simulador de citas, al estilo comedia romántica donde tenemos 4 perfiles como protagonistas (como gymrat, otaku, tóxico, NPC (chico bueno) ). Donde nuestro jugador elegirá uno de ellos, teniendo estadísticas predeterminadas como por ejemplo nivel de atractivo, confianza y carisma, cuales tendrán valores de entre 1 y 2. Posteriormente tenemos a la novia quien tendrá sus atributos de amor, felicidad y confianza, etc. Los cuales comenzarán con ciertos valores predeterminados dependiendo del personaje escogido. Este juego se basa en una semana de decisiones con tu novia, desde escenarios muy cotidianos como responder los mensajes, salir con ella, dar regalos, o si decides mentir, disminuir la comunicación o incluso llegar a ser infiel, etc. Dependiendo de la elección realizada puede afectar el nivel de confianza, amor y felicidad. Si el amor de la novia se acaba tu relación termina.  El objetivo de este juego es averiguar si durante una semana podrás salvar tu relación o si todo se termina y el amor se acaba. El juego tendrá diferentes finales. 
