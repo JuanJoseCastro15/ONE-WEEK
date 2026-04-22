@@ -14,18 +14,30 @@ public:
     Novia() : Confianza(105), Amor(70), Felicidad(105) {}
 
     void modificarConfianza(int valor) {
+<<<<<<< HEAD
         Confianza = Confianza + valor;
+=======
+        Confianza += valor;
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
        
     }
 
     void modificarFelicidad(int valor) {
+<<<<<<< HEAD
         Felicidad = Confianza + valor;
+=======
+        Felicidad += valor;
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
        
     }
 
     void actualizarAmor() {
 
+<<<<<<< HEAD
         Amor = Amor + ((Confianza + Felicidad) / 30);
+=======
+        Amor += (Confianza + Felicidad) / 20;
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
        
         
     }
@@ -45,6 +57,7 @@ protected:
 public:
     Jugador(int A, int C, int L) : Atractivo(A), Carisma(C), Lealtad(L) {}
 
+<<<<<<< HEAD
 
     virtual int  calcularFelicidad(int impact) {
         return(impact * Atractivo) / 3; // su habilidad especial
@@ -56,13 +69,24 @@ public:
 
     virtual int calcularConfianza(int impact) {
         return (impact * Lealtad) / 2;
+=======
+    virtual int calcularFelicidad(int impact) {
+        return (impact + Carisma) / 2;
+    }
+
+    virtual int calcularConfianza(int impact) {
+        return (impact + Lealtad) / 2;
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
     }
 
     void aplicarImpacto(Novia& novia, int impact) {
         int cambioConf = calcularConfianza(impact);
         int cambioFeli = calcularFelicidad(impact);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
         novia.modificarConfianza(cambioConf);
         novia.modificarFelicidad(cambioFeli);
         novia.actualizarAmor();
@@ -72,6 +96,7 @@ public:
 
 class Otaku : public Jugador {
 public:
+<<<<<<< HEAD
     Otaku() : Jugador(3, 7, 5) {}
 
     int calcularFelicidad(int impact) override {
@@ -84,12 +109,19 @@ public:
 
     int calcularConfianza(int impact) override {
         return (impact * Lealtad) / 2;
+=======
+    Otaku() : Jugador(30, 70, 5) {}
+
+    int calcularFelicidad(int impact) override {
+        return(impact * Atractivo) / 5; // su habilidad especial
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
     }
 };
 
 
 class Toxico : public Jugador {
 public:
+<<<<<<< HEAD
     Toxico() : Jugador(8, 3, 5) {}
 
     int calcularFelicidad(int impact) override {
@@ -102,10 +134,17 @@ public:
 
     int calcularConfianza(int impact) override {
         return (impact * Lealtad) / 2;
+=======
+    Toxico() : Jugador(80, 30, 5) {}
+
+    int calcularFelicidad(int impact) override {
+        return (impact + Atractivo) / 2; // usa atractivo en vez de carisma
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
     }
 };
 class Gymrat : public Jugador {
 public:
+<<<<<<< HEAD
     Gymrat() : Jugador(9, 5, 5) {}
     int calcularFelicidad(int impact) override {
         return(impact * Atractivo) / 5; // su habilidad especial
@@ -117,10 +156,16 @@ public:
 
     int calcularConfianza(int impact) override {
         return (impact * Lealtad) / 2;
+=======
+    Gymrat() : Jugador(90, 50, 5) {}
+    int calcularFelicidad(int impact) override {
+        return (impact + Atractivo) / 2;  // usa atractivo en vez de carisma
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
     }
 };
 class NPC : public Jugador {
 public:
+<<<<<<< HEAD
     NPC() : Jugador(5, 5, 5) {}
     int calcularFelicidad(int impact)  override {
         return(impact * Atractivo) / 5; // su habilidad especial
@@ -138,6 +183,17 @@ public:
 enum TipoImpacto {
     CARISMA, ATRACTIVO, LEALTAD
 };
+=======
+    NPC() : Jugador(50, 50, 5) {}
+    virtual int calcularFelicidad(int impact) {
+        return (impact + Atractivo) / 2;// Si es bueno, el atractivo ayuda un poquito
+    }
+
+    
+
+};
+
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
 
 
 // otaku carisma 70, atractivo 30, lealtad 5
@@ -159,7 +215,10 @@ struct Escenario {
     string pregunta;
     string op1, op2, op3, op4;
     int imp1, imp2, imp3, imp4;
+<<<<<<< HEAD
     TipoImpacto tipo; // esto es para identificar el caso para ayudar a identificar la funcion por medio del enum
+=======
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
 
 };
 
@@ -173,10 +232,13 @@ vector<Escenario> cargarHistoria(int clase) {
     e1.imp3 = 0;
     e1.imp4 = -5;
 
+<<<<<<< HEAD
     e1.tipo = CARISMA;
     
 
 
+=======
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
 
     if (clase == 0) { // TOXICO
         e1.op1 = "Buenos dias";
@@ -213,8 +275,11 @@ vector<Escenario> cargarHistoria(int clase) {
     e2.imp2 = -5;
     e2.imp3 = 0;
     e2.imp4 = -3;
+<<<<<<< HEAD
     e2.tipo = ATRACTIVO;
 
+=======
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
 
     if (clase == 0) { // TOXICO
         e2.op1 = "*solo la saluda con la mano*";
@@ -250,7 +315,10 @@ vector<Escenario> cargarHistoria(int clase) {
     e3.imp2 = 0;
     e3.imp3 = -3;
     e3.imp4 = -5;
+<<<<<<< HEAD
     e3.tipo = LEALTAD;
+=======
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
 
     if (clase == 0) { // TOXICO
         e3.op1 = "Estoy contando los dias para verte preciosa";

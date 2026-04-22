@@ -77,12 +77,20 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+<<<<<<< HEAD
       <AdditionalIncludeDirectories>"C:\Users\fatim\Documents\SFML 3.0.2 CARPETA\SFML-3.0.2\include"</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>C:\Users\fatim\Documents\vs c++\SFML-3.0.2\include</AdditionalIncludeDirectories>
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+<<<<<<< HEAD
       <AdditionalLibraryDirectories>"C:\Users\fatim\Documents\SFML 3.0.2 CARPETA\SFML-3.0.2\lib"</AdditionalLibraryDirectories>
+=======
+      <AdditionalLibraryDirectories>C:\Users\fatim\Documents\vs c++\SFML-3.0.2\lib</AdditionalLibraryDirectories>
+>>>>>>> 329997c40ffce856fcf0f8651967cf2240907ff5
       <AdditionalDependencies>sfml-graphics-d.lib;
 
 sfml-window-d.lib;
