@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ONE WEEK1.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Extras\Fondos\botones.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\botonjugar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\botonsimple.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\buenosdiaschatcuadro.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\buenosdiasopciones.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartoconhoja.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartoconhojayboton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartoconluz.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartoconluzcuadro.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartoconopciones.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\CUARTOOSCURO.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartoscurocuadro.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartosinluz.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartosinluzycuadro.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\cuartotexto.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fuentes\Cute Love.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\dia1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\elijetupersonaje.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\escenatulipanes.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\fechaimportante.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\fechaimportante1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\fotonovia.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\fotonoviacuadro.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\illeanapasillo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\illeanapasillocuadro.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\illeanapasillocuadro1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\inicio.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\medescribencomo.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\noviacontinuar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\noviacuadro.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\noviacuadrocontinuar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\pasillo.jpeg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\pasillocontinuar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Extras\Fondos\tulipanes.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\Extras\Fuentes\Cute Love.otf">
+      <Filter>Resource Files</Filter>
+    </Font>
+    <Font Include="..\Extras\Fuentes\Cute Love.ttf">
+      <Filter>Resource Files</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\Extras\Musica\musicalofi.mp3">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
+</Project>
