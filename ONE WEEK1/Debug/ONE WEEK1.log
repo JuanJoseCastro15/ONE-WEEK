@@ -1,0 +1,57 @@
+﻿  ONE WEEK1.cpp
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(307,29): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(314,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(321,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(327,27): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(334,31): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(342,22): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(349,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(358,27): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(365,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(372,32): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(379,32): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(386,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(393,29): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(524,49): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(583,49): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(626,49): warning C4018: '<': signed/unsigned mismatch
+C:\Users\fatim\Documents\sfml-test\ONE WEEK1\ONE WEEK1.cpp(683,29): warning C4129: 'E': unrecognized character escape sequence
+  ONE WEEK1.vcxproj -> C:\Users\fatim\Documents\sfml-test\Debug\ONE WEEK1.exe
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\botones.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\botonjugar.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\botonsimple.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\buenosdiaschatcuadro.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\buenosdiasopciones.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartoconhoja.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartoconhojayboton.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartoconluz.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartoconluzcuadro.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartoconopciones.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\CUARTOOSCURO.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartoscurocuadro.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartosinluz.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartosinluzycuadro.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\cuartotexto.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\dia1.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\elijetupersonaje.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\escenatulipanes.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\fechaimportante.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\fechaimportante1.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\fotonovia.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\fotonoviacuadro.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\illeanapasillo.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\illeanapasillocuadro.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\illeanapasillocuadro1.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\inicio.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\medescribencomo.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\noviacontinuar.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\noviacuadro.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\noviacuadrocontinuar.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\pasillo.jpeg
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\pasillocontinuar.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fondos\tulipanes.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fuentes\Cute Love.otf
+  C:\Users\fatim\Documents\sfml-test\Extras\Fuentes\Cute Love.png
+  C:\Users\fatim\Documents\sfml-test\Extras\Fuentes\Cute Love.ttf
+  C:\Users\fatim\Documents\sfml-test\Extras\Musica\musicalofi.mp3
+  37 File(s) copied
