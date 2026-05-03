@@ -241,6 +241,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 int main() {
     
+    
     //crear ventana
     sf::RenderWindow ventana(sf::VideoMode({ 1080, 614 }), "ONE WEEK");
 
@@ -395,17 +396,38 @@ int main() {
     sf::Sprite bg12(cuartoscuro);
     ajustar(bg12, cuartoscuro);
 
+    //fin del dia menu
+    sf::Texture finmenu;
+    finmenu.loadFromFile("../Extras/fondos/findiamenu.png");
+
+    sf::Sprite bgMenu(finmenu);
+    ajustar(bgMenu, finmenu);
+
+    //escena de las 4 opciones de regalos
+    sf::Texture regalos;
+    regalos.loadFromFile("../Extras/fondos/Regalos.png");
+
+    sf::Sprite bgRegalos(regalos);
+    ajustar(bgRegalos, regalos);
+
+    //escena del dia 2
+    sf::Texture dia2;
+    dia2.loadFromFile("../Extras/fondos/Dia2.png");
+
+    sf::Sprite bg13(dia2);
+    ajustar(bg13, dia2);
+
     
     // boton invisible inicio
 
     sf::FloatRect zonaJugar({ 477.f, 400.f }, { 150.f, 60.f });
 
-    //continuar arriba escena 1
+    //continuar arriba escena 1  arriba
     sf::FloatRect zonaContinuar0({ 795.f, 27.f }, { 250.f, 45.f });
     
  
 
-    //boton continuar escena 2
+    //boton continuar escena 2 abajo
                                 //posicion          ancho y alto
     sf::FloatRect zonaContinuar({ 795.f, 540.f }, { 250.f, 45.f });
 
@@ -422,6 +444,27 @@ int main() {
     sf::FloatRect zOp3({ 160.f, 555.f }, { 350.f, 60.f });
     sf::FloatRect zOp4({ 550.f, 555.f }, { 350.f, 60.f });
 
+
+    //botones del menu del final del dia
+
+    sf::FloatRect zonaContM({ 35.f, 463.f }, { 475.f, 80.f }); //zona de continuar
+    sf::FloatRect zonaRegalos({ 565.f, 455.f }, { 475.f, 80.f }); //zona de regalos
+
+
+    //botones de los regalos chocolate flores,carta, pastel collar
+     //flores                   //X Y                   //ancho y alto
+    sf::FloatRect zonaFlores({ 277.f, 125.f }, { 250.f, 150.f });
+
+    //carta                        x y                ancho y alto
+    sf::FloatRect zonaCarta({ 567.f, 125.f }, { 250.f, 150.f });
+
+
+
+    //pastel                    x y                 ancho y alto
+    sf::FloatRect zonaPastel({ 277.f,320.f }, { 250.f, 150.f });
+
+    //collar                   x y                 ancho y alto
+    sf::FloatRect zonaCollar({ 567.f,320.f }, { 250.f, 150.f });
 
 
     //bucle 
@@ -513,7 +556,7 @@ int main() {
 
                         //esto es para saber si pico un boton
                         if (impactoElegido != -67) {
-                            
+
                             //objeto mi jugador uso su funcion aplicarimpacto y le mando la novia y el impacto -5,0,3,5 que esta gaurdado arriba
                             miJugador->aplicarImpacto(mitilina, impactoElegido);
 
@@ -524,20 +567,20 @@ int main() {
                             if (escenarioActual < historia.size() - 1) {
                                 escenarioActual++;
                             }
-                            
+
                         }
 
 
                     }
                     else if (scene == 6) {
                         if (zonaContinuar0.contains(mousePos)) {
-                            scene= 7;
+                            scene = 7;
                         }
 
                     }
                     else if (scene == 7) {
                         if (zonaContinuar0.contains(mousePos)) {
-                            scene =8;
+                            scene = 8;
                         }
                     }
                     else if (scene == 8) {
@@ -587,9 +630,9 @@ int main() {
                         }
                     }
                     else if (scene == 10) {
-                       if (zonaContinuar0.contains(mousePos)) {
-                           scene = 11;
-                       }
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 11;
+                        }
                     }
                     else if (scene == 11) {
                         if (zonaContinuar0.contains(mousePos)) {
@@ -630,13 +673,34 @@ int main() {
                     }
                     else if (scene == 13) {
                         if (zonaContinuar0.contains(mousePos)) {
-                            scene = 14;
+                            scene = 14; //escena del menu
+                        }
+                    }
+                    else if (scene == 14) {
+                        if (zonaContM.contains(mousePos)) {
+                            scene = 15; //escena del dia 2
+                        }
+                        if (zonaRegalos.contains(mousePos)) {
+                            scene = -1; //escena de los regalos
+                            
+
+                        }
+                    }
+                    else if (scene == -1){
+                        if (zonaCollar.contains(mousePos) || zonaFlores.contains(mousePos) || zonaPastel.contains(mousePos) || zonaCarta.contains(mousePos)) {
+                            scene = 15;
+
+                        }
+                    }
+
+                    else if (scene == 15) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 16;
                         }
                     }
                 }
             }
         }
-    
 
     // mostrar los dibujos
     ventana.clear(sf::Color::Black);
@@ -738,8 +802,15 @@ int main() {
         ventana.draw(textolore);
     }
     else if (scene == 14) {
-        textolore.setString("Aqui deberia ir el menu de si el jugador quiere continuar\n o quiere hacer alguna actividad extra para\n corregir sus decisiones");
-        ventana.draw(textolore);
+        ventana.draw(bgMenu);
+        
+    }
+    else if (scene == 15) { //escena del dia 2
+        ventana.draw(bg13);
+    }
+    else if (scene == -1) { //escena del menu de los regalos
+        ventana.draw(bgRegalos);
+        
     }
 
     ventana.display();
