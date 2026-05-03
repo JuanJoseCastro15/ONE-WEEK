@@ -92,7 +92,7 @@ sfml-audio-d.lib
 ;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)Extras" "$(OutDir)Extras" /E /I /Y</Command>
+      <Command>xcopy "$(SolutionDir)assets" "$(OutDir)assets" /E /I /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -117,12 +117,12 @@ sfml-audio-d.lib
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)SFML/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs/SFML/include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)SFML/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)libs/SFML/lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;
 sfml-window.lib;
 sfml-system.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -147,47 +147,47 @@ sfml-system.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies
     <ClCompile Include="ONE WEEK1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\Extras\Fondos\botones.jpeg" />
-    <Image Include="..\Extras\Fondos\botonjugar.png" />
-    <Image Include="..\Extras\Fondos\botonsimple.png" />
-    <Image Include="..\Extras\Fondos\buenosdiaschatcuadro.jpeg" />
-    <Image Include="..\Extras\Fondos\buenosdiasopciones.jpeg" />
-    <Image Include="..\Extras\Fondos\cuartoconhoja.png" />
-    <Image Include="..\Extras\Fondos\cuartoconhojayboton.png" />
-    <Image Include="..\Extras\Fondos\cuartoconluz.jpeg" />
-    <Image Include="..\Extras\Fondos\cuartoconluzcuadro.jpeg" />
-    <Image Include="..\Extras\Fondos\cuartoconopciones.jpeg" />
-    <Image Include="..\Extras\Fondos\CUARTOOSCURO.png" />
-    <Image Include="..\Extras\Fondos\cuartoscurocuadro.jpeg" />
-    <Image Include="..\Extras\Fondos\cuartosinluz.png" />
-    <Image Include="..\Extras\Fondos\cuartosinluzycuadro.jpeg" />
-    <Image Include="..\Extras\Fondos\cuartotexto.png" />
-    <Image Include="..\Extras\Fondos\dia1.png" />
-    <Image Include="..\Extras\Fondos\elijetupersonaje.jpeg" />
-    <Image Include="..\Extras\Fondos\escenatulipanes.jpeg" />
-    <Image Include="..\Extras\Fondos\fechaimportante.png" />
-    <Image Include="..\Extras\Fondos\fechaimportante1.png" />
-    <Image Include="..\Extras\Fondos\fotonovia.jpeg" />
-    <Image Include="..\Extras\Fondos\fotonoviacuadro.jpeg" />
-    <Image Include="..\Extras\Fondos\illeanapasillo.png" />
-    <Image Include="..\Extras\Fondos\illeanapasillocuadro.png" />
-    <Image Include="..\Extras\Fondos\illeanapasillocuadro1.png" />
-    <Image Include="..\Extras\Fondos\inicio.jpeg" />
-    <Image Include="..\Extras\Fondos\medescribencomo.jpeg" />
-    <Image Include="..\Extras\Fondos\noviacontinuar.png" />
-    <Image Include="..\Extras\Fondos\noviacuadro.jpeg" />
-    <Image Include="..\Extras\Fondos\noviacuadrocontinuar.png" />
-    <Image Include="..\Extras\Fondos\pasillo.jpeg" />
-    <Image Include="..\Extras\Fondos\pasillocontinuar.png" />
-    <Image Include="..\Extras\Fondos\tulipanes.png" />
-    <Image Include="..\Extras\Fuentes\Cute Love.png" />
+    <Image Include="..\assets\Fondos\botones.jpeg" />
+    <Image Include="..\assets\Fondos\botonjugar.png" />
+    <Image Include="..\assets\Fondos\botonsimple.png" />
+    <Image Include="..\assets\Fondos\buenosdiaschatcuadro.jpeg" />
+    <Image Include="..\assets\Fondos\buenosdiasopciones.jpeg" />
+    <Image Include="..\assets\Fondos\cuartoconhoja.png" />
+    <Image Include="..\assets\Fondos\cuartoconhojayboton.png" />
+    <Image Include="..\assets\Fondos\cuartoconluz.jpeg" />
+    <Image Include="..\assets\Fondos\cuartoconluzcuadro.jpeg" />
+    <Image Include="..\assets\Fondos\cuartoconopciones.jpeg" />
+    <Image Include="..\assets\Fondos\CUARTOOSCURO.png" />
+    <Image Include="..\assets\Fondos\cuartoscurocuadro.jpeg" />
+    <Image Include="..\assets\Fondos\cuartosinluz.png" />
+    <Image Include="..\assets\Fondos\cuartosinluzycuadro.jpeg" />
+    <Image Include="..\assets\Fondos\cuartotexto.png" />
+    <Image Include="..\assets\Fondos\dia1.png" />
+    <Image Include="..\assets\Fondos\elijetupersonaje.jpeg" />
+    <Image Include="..\assets\Fondos\escenatulipanes.jpeg" />
+    <Image Include="..\assets\Fondos\fechaimportante.png" />
+    <Image Include="..\assets\Fondos\fechaimportante1.png" />
+    <Image Include="..\assets\Fondos\fotonovia.jpeg" />
+    <Image Include="..\assets\Fondos\fotonoviacuadro.jpeg" />
+    <Image Include="..\assets\Fondos\illeanapasillo.png" />
+    <Image Include="..\assets\Fondos\illeanapasillocuadro.png" />
+    <Image Include="..\assets\Fondos\illeanapasillocuadro1.png" />
+    <Image Include="..\assets\Fondos\inicio.jpeg" />
+    <Image Include="..\assets\Fondos\medescribencomo.jpeg" />
+    <Image Include="..\assets\Fondos\noviacontinuar.png" />
+    <Image Include="..\assets\Fondos\noviacuadro.jpeg" />
+    <Image Include="..\assets\Fondos\noviacuadrocontinuar.png" />
+    <Image Include="..\assets\Fondos\pasillo.jpeg" />
+    <Image Include="..\assets\Fondos\pasillocontinuar.png" />
+    <Image Include="..\assets\Fondos\tulipanes.png" />
+    <Image Include="..\assets\Fuentes\Cute Love.png" />
   </ItemGroup>
   <ItemGroup>
-    <Font Include="..\Extras\Fuentes\Cute Love.otf" />
-    <Font Include="..\Extras\Fuentes\Cute Love.ttf" />
+    <Font Include="..\assets\Fuentes\Cute Love.otf" />
+    <Font Include="..\assets\Fuentes\Cute Love.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="..\Extras\Musica\musicalofi.mp3" />
+    <Media Include="..\assets\Musica\musicalofi.mp3" />
   </ItemGroup>
   <ItemGroup>
     <None Include="sfml-audio-3.dll" />
