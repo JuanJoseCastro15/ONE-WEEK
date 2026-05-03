@@ -15,19 +15,15 @@ public:
 
     void modificarConfianza(int valor) {
         Confianza += valor;
-       
     }
 
     void modificarFelicidad(int valor) {
         Felicidad += valor;
-       
     }
 
     void actualizarAmor() {
 
         Amor += (Confianza + Felicidad) / 20;
-       
-        
     }
 
     void mostrar() {
@@ -36,7 +32,6 @@ public:
         cout << "Amor: " << Amor << endl;
     }
 };
-
 
 class Jugador {
 protected:
@@ -256,7 +251,7 @@ int main() {
 
     //musica
     sf::Music musica;
-    if (!musica.openFromFile("../Extras/Musica/musicalofi.mp3")) {
+    if (!musica.openFromFile("../assets/Musica/musicalofi.mp3")) {
         return -1; }
     musica.setLooping(true);// que se repita
     musica.setVolume(25); // volumen
@@ -264,7 +259,7 @@ int main() {
 
     //fuentes
     sf::Font fuente;//cargar fuente
-    if (!fuente.openFromFile("../Extras/Fuentes/Cute Love.ttf")) { //si la fuente no se abre entonces cierra todo
+    if (!fuente.openFromFile("../assets/Fuentes/Cute Love.ttf")) { //si la fuente no se abre entonces cierra todo
         return -1;
     }
 
@@ -305,34 +300,34 @@ int main() {
 
     //fondo jugar
     sf::Texture fondoinicio;
-    fondoinicio.loadFromFile("../Extras/fondos/inicio.jpeg");
+    fondoinicio.loadFromFile("../assets/fondos/inicio.jpeg");
 
     sf::Sprite bg0(fondoinicio);
     ajustar(bg0, fondoinicio); // funcion de ajustar
 
     //elige personaje
     sf::Texture personajes;
-    personajes.loadFromFile("../Extras/fondos/medescribencomo.jpeg");
+    personajes.loadFromFile("../assets/fondos/medescribencomo.jpeg");
     sf::Sprite bg1(personajes);
     ajustar(bg1, personajes);
 
 
     //dibujo de la novia 
     sf::Texture noviaboton;
-    noviaboton.loadFromFile("../Extras/fondos/noviacuadrocontinuar.png");
+    noviaboton.loadFromFile("../assets/fondos/noviacuadrocontinuar.png");
 
     sf::Sprite bg2(noviaboton);
     ajustar(bg2, noviaboton);
 
     sf::Texture fotonovia;
-    fotonovia.loadFromFile("../Extras/fondos/noviacontinuar.png");
+    fotonovia.loadFromFile("../assets/fondos/noviacontinuar.png");
 
     sf::Sprite bg3(fotonovia);
     ajustar(bg3, fotonovia);
 
     //textura mensaje de buenos dias con botones
     sf::Texture msjbuenosdias;
-    msjbuenosdias.loadFromFile("../Extras/fondos/buenosdiasopciones.jpeg");
+    msjbuenosdias.loadFromFile("../assets/fondos/buenosdiasopciones.jpeg");
 
     sf::Sprite bg4(msjbuenosdias);
     ajustar(bg4, msjbuenosdias);
@@ -340,14 +335,14 @@ int main() {
     //textura dia 1
 
     sf::Texture dia1;
-    dia1.loadFromFile("../Extras/fondos/dia1.png");
+    dia1.loadFromFile("../assets/fondos/dia1.png");
 
     sf::Sprite bg5(dia1);
     ajustar(bg5, dia1);
 
     //pasillo
     sf::Texture pasillo;
-    pasillo.loadFromFile("../Extras/fondos/pasillocontinuar.png");
+    pasillo.loadFromFile("../assets/fondos/pasillocontinuar.png");
 
     sf::Sprite bg6(pasillo);
     ajustar(bg6, pasillo);
@@ -356,63 +351,63 @@ int main() {
     //escema tulipanes
     
     sf::Texture tulipanes;
-    tulipanes.loadFromFile("../Extras/fondos/tulipanes.png");
+    tulipanes.loadFromFile("../assets/fondos/tulipanes.png");
 
     sf::Sprite bg7(tulipanes);
     ajustar(bg7, tulipanes);
     
     //escena illeana
     sf::Texture illeana;
-    illeana.loadFromFile("../Extras/fondos/illeanapasillo.png");
+    illeana.loadFromFile("../assets/fondos/illeanapasillo.png");
 
     sf::Sprite bg8(illeana);
     ajustar(bg8, illeana);
 
     //escena illeana con opciones
     sf::Texture illeanapasillo;
-    illeanapasillo.loadFromFile("../Extras/fondos/illeanapasillocuadro1.png");
+    illeanapasillo.loadFromFile("../assets/fondos/illeanapasillocuadro1.png");
 
     sf::Sprite bg9(illeanapasillo);
     ajustar(bg9, illeanapasillo);
 
     //escena del cuarto con un boton
     sf::Texture cuartocontexto;
-    cuartocontexto.loadFromFile("../Extras/fondos/cuartotexto.png");
+    cuartocontexto.loadFromFile("../assets/fondos/cuartotexto.png");
 
     sf::Sprite bg10(cuartocontexto);
     ajustar(bg10, cuartocontexto);
 
     //escena de desicion sobre el domingo
     sf::Texture domingo;
-    domingo.loadFromFile("../Extras/fondos/fechaimportante1.png");
+    domingo.loadFromFile("../assets/fondos/fechaimportante1.png");
 
     sf::Sprite bg11(domingo);
     ajustar(bg11, domingo);
 
     //escena de cuarto con boton de continuar de noche
     sf::Texture cuartoscuro;
-    cuartoscuro.loadFromFile("../Extras/fondos/cuartosinluz.png");
+    cuartoscuro.loadFromFile("../assets/fondos/cuartosinluz.png");
 
     sf::Sprite bg12(cuartoscuro);
     ajustar(bg12, cuartoscuro);
 
     //fin del dia menu
     sf::Texture finmenu;
-    finmenu.loadFromFile("../Extras/fondos/findiamenu.png");
+    finmenu.loadFromFile("../assets/fondos/findiamenu.png");
 
     sf::Sprite bgMenu(finmenu);
     ajustar(bgMenu, finmenu);
 
     //escena de las 4 opciones de regalos
     sf::Texture regalos;
-    regalos.loadFromFile("../Extras/fondos/Regalos.png");
+    regalos.loadFromFile("../assets/fondos/Regalos.png");
 
     sf::Sprite bgRegalos(regalos);
     ajustar(bgRegalos, regalos);
 
     //escena del dia 2
     sf::Texture dia2;
-    dia2.loadFromFile("../Extras/fondos/Dia2.png");
+    dia2.loadFromFile("../assets/fondos/Dia2.png");
 
     sf::Sprite bg13(dia2);
     ajustar(bg13, dia2);
