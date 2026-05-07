@@ -395,7 +395,162 @@ int main() {
     sf::Sprite bg12(cuartoscuro);
     ajustar(bg12, cuartoscuro);
 
+<<<<<<< Updated upstream:ONE WEEK1/ONE WEEK1.cpp
+=======
+    //fin del dia menu
+    sf::Texture finmenu;
+    finmenu.loadFromFile("../assets/fondos/findiamenu.png");
+
+    sf::Sprite bgMenu(finmenu);
+    ajustar(bgMenu, finmenu);
+
+    //escena de las 4 opciones de regalos
+    sf::Texture regalos;
+    regalos.loadFromFile("../assets/fondos/Regalos.png");
+
+    sf::Sprite bgRegalos(regalos);
+    ajustar(bgRegalos, regalos);
+
+    //escena del dia 2
+    sf::Texture dia2;
+    dia2.loadFromFile("../assets/fondos/Dia2.png");
+
+    sf::Sprite bg13(dia2);
+    ajustar(bg13, dia2);
+
+    //alarma del martes
+    sf::Texture martes;
+    martes.loadFromFile("../assets/fondos/AlarmaMartes.jpeg");
+
+    sf::Sprite bg14(martes);
+    ajustar(bg14, martes);
+
+    //cuarto lluvioso con opciones
+    sf::Texture cuartolluvia;
+    cuartolluvia.loadFromFile("../assets/fondos/cuartolluvioso.jpeg");
+
+    sf::Sprite bg15(cuartolluvia);
+    ajustar(bg15, cuartolluvia);
+
+    //dia de lluvia al inicio
+    sf::Texture lluvia1;
+    lluvia1.loadFromFile("../assets/fondos/lluviacampus.png");
+
+    sf::Sprite bg16(lluvia1);
+    ajustar(bg16, lluvia1);
+
+    //escena lluvia 2
+    sf::Texture lluvia2;
+    lluvia2.loadFromFile("../assets/fondos/lluvia2.png");
+
+    sf::Sprite bg17(lluvia2);
+    ajustar(bg17, lluvia2);
+
+    //lluvia con opciones
+    sf::Texture lluviaop;
+    lluviaop.loadFromFile("../assets/fondos/Lluviaopciones.jpeg");
+
+    sf::Sprite bg18(lluviaop);
+    ajustar(bg18, lluviaop);
+
+    //escena de lluvia 3
+    sf::Texture lluvia3;
+    lluvia3.loadFromFile("../assets/fondos/lluvia3.png");
+
+    sf::Sprite bg19(lluvia3);
+    ajustar(bg19, lluvia3);
+
+    //lluvia con girasoles
+    sf::Texture lluviagira;
+    lluviagira.loadFromFile("../assets/fondos/lluviagirasoles.png");
+
+    sf::Sprite bg20(lluviagira);
+    ajustar(bg20, lluviagira);
+
+    //celular en la lluvia con un mensaje
+    sf::Texture telelluvia;
+    telelluvia.loadFromFile("../assets/fondos/telgirasoles.png");
+
+    sf::Sprite bg21(telelluvia);
+    ajustar(bg21, telelluvia);
+
+    //escena del mensaje abierto con illeana 
+    sf::Texture mensajegirasol;
+    mensajegirasol.loadFromFile("../assets/fondos/mensajegira.png");
+
+    sf::Sprite bg22(mensajegirasol);
+    ajustar(bg22, mensajegirasol);
+
+    //escena de los girasoles con las opciones donde illeana le pregunta si es tu novia
+
+    sf::Texture giraop;
+    giraop.loadFromFile("../assets/fondos/girasolesopciones.jpeg");
+
+    sf::Sprite bg23(giraop);
+    ajustar(bg23, giraop);
+
+    //escena del pasillo con illeana avisandote del domingo
+
+    sf::Texture pasIlleana;
+    pasIlleana.loadFromFile("../assets/fondos/pasilloilleana.png");
+
+    sf::Sprite bg24(pasIlleana);
+    ajustar(bg24, pasIlleana);// --- ESCENAS DIA 3 (MIERCOLES) ---
+
+    sf::Texture cuartoMiercoles;
+    cuartoMiercoles.loadFromFile("../assets/fondos/cuartoconluz.jpeg");
+
+    sf::Sprite bg28(cuartoMiercoles);
+    ajustar(bg28, cuartoMiercoles);
+
+
+    sf::Texture mensajeMiercoles;
+    mensajeMiercoles.loadFromFile("../assets/fondos/mensajemiercoles.png");
+
+    sf::Sprite bg29(mensajeMiercoles);
+    ajustar(bg29, mensajeMiercoles);
+
+
+    sf::Texture pasilloMiercoles;
+    pasilloMiercoles.loadFromFile("../assets/fondos/pasillo.jpeg");
+
+    sf::Sprite bg30(pasilloMiercoles);
+    ajustar(bg30, pasilloMiercoles);
+
+
+    sf::Texture illeanaHey;
+    illeanaHey.loadFromFile("../assets/fondos/illeanapensando.png");
+
+    sf::Sprite bg31(illeanaHey);
+    ajustar(bg31, illeanaHey);
+
+
+    sf::Texture textura32;
+    textura32.loadFromFile("../assets/fondos/noviaencafeopciones.png");
+
+    sf::Sprite bg32(textura32);
+    ajustar(bg32, textura32);
+
+
+    sf::Texture textura33;
+    textura33.loadFromFile("../assets/fondos/noviaencafe1.png");
+
+    sf::Sprite bg33(textura33);
+    ajustar(bg33, textura33);
+>>>>>>> Stashed changes:src/ONE WEEK1.cpp
     
+    // ================= BOTON CONTINUAR =================
+
+    sf::Texture continuarTex;
+    continuarTex.loadFromFile("../assets/fondos/botoncontinuar.png");
+
+    sf::Sprite botonContinuar(continuarTex);
+    botonContinuar.setPosition({ 795.f, 27.f });
+
+    sf::Sprite botonUI(noviaboton);
+    botonUI.setTextureRect(sf::IntRect({ 795, 27 }, { 250, 45 }));
+    botonUI.setPosition({ 795.f, 27.f });
+
     // boton invisible inicio
 
     sf::FloatRect zonaJugar({ 477.f, 400.f }, { 150.f, 60.f });
@@ -633,6 +788,213 @@ int main() {
                             scene = 14;
                         }
                     }
+<<<<<<< Updated upstream:ONE WEEK1/ONE WEEK1.cpp
+=======
+                    else if (scene == 14) {
+                        if (zonaContM.contains(mousePos)) {
+                            scene = 15; //escena del dia 2
+                        }
+                        if (zonaRegalos.contains(mousePos)) {
+                            scene = -1; //escena de los regalos
+                            
+
+                        }
+                    }
+                    else if (scene == -1){
+                        if (zonaCollar.contains(mousePos) || zonaFlores.contains(mousePos) || zonaPastel.contains(mousePos) || zonaCarta.contains(mousePos)) {
+                            scene = 15;
+
+                        }
+                    }
+
+                    else if (scene == 15) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 16;
+                        }
+                    }
+
+                    else if (scene == 16) {
+                        if (zonaAlarma1.contains(mousePos) || zonaAlarma2.contains(mousePos)) {
+                            scene = 17;
+                        }
+                    }
+                    else if (scene == 17) { //EN ESTA ESCENA FALTA LA FUNCION DEL ATRACTIVO PARA QUE NO MODIFIQUE A LA NOVIA
+                        int impactoCentinela = -67;
+
+                        if (zOp1.contains(mousePos)) {
+                            mitilina.mostrar(); //ver stats inciales
+                            impactoCentinela = historia[escenarioActual].imp1;
+                            scene = 18;
+                        }
+                        else if (zOp2.contains(mousePos)) {
+                            mitilina.mostrar(); //ver stats inciales
+                            impactoCentinela = historia[escenarioActual].imp2;
+                            scene = 18;
+                        }
+                        else if (zOp3.contains(mousePos)) {
+                            mitilina.mostrar(); //ver stats inciales
+                            impactoCentinela = historia[escenarioActual].imp3;
+                            scene = 18;
+                        }
+                        else if (zOp4.contains(mousePos)) {
+                            mitilina.mostrar(); //ver stats inciales
+                            impactoCentinela = historia[escenarioActual].imp4;
+                            scene = 18;
+                        }
+                        if (impactoCentinela != -67) {
+                            miJugador->aplicarImpacto(mitilina, impactoCentinela);
+                            mitilina.mostrar();
+
+                            if (escenarioActual < historia.size() - 1) {
+                                escenarioActual++;
+                            }
+                        }
+                        }
+                    else if (scene == 18) {
+                            if (zonaContinuar0.contains(mousePos)) {
+                                scene = 19;
+                            }
+                            }
+                    else if (scene == 19) {
+                                if (zonaContinuar0.contains(mousePos)) {
+                                    scene = 20;
+                                }
+                                }
+                    else if (scene == 20) {
+                         int impactoCentinela = -67;
+
+                        if (zOp1.contains(mousePos)) {
+                          mitilina.mostrar(); //ver stats inciales
+                          impactoCentinela = historia[escenarioActual].imp1;
+                          scene = 21;
+                         }
+                         else if (zOp2.contains(mousePos)) {
+                          mitilina.mostrar(); //ver stats inciales
+                          impactoCentinela = historia[escenarioActual].imp2;
+                          scene = 21;
+                         }
+                          else if (zOp3.contains(mousePos)) {
+                           mitilina.mostrar(); //ver stats inciales
+                           impactoCentinela = historia[escenarioActual].imp3;
+                           scene = 21;
+                         }
+                          else if (zOp4.contains(mousePos)) {
+                            mitilina.mostrar(); //ver stats inciales
+                            impactoCentinela = historia[escenarioActual].imp4;
+                            scene = 21;
+                         }
+                         if (impactoCentinela != -67) {
+                          miJugador->aplicarImpacto(mitilina, impactoCentinela);
+                          mitilina.mostrar();
+
+                            if (escenarioActual < historia.size() - 1) {
+                              escenarioActual++;
+                            }
+                         }
+                    }
+                    else if (scene == 21) {
+                      if (zonaContinuar0.contains(mousePos)) {
+                          scene = 22;
+                       }
+                    }
+                    else if (scene == 22) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                          scene = 23;
+                        }
+                     }
+                    else if (scene == 23) {
+                      if (zonaContinuar0.contains(mousePos)) {
+                          scene = 24;
+                       }
+                     }
+                    else if (scene == 24) {
+                         if (zonaContinuar0.contains(mousePos)) {
+                             scene = 25;
+                           }
+                    }
+                    else if (scene == 25) {
+                      int impactoCentinela = -67;
+
+                       if (zOp1.contains(mousePos)) {
+                           mitilina.mostrar(); //ver stats inciales
+                           impactoCentinela = historia[escenarioActual].imp1;
+                           scene = 26;
+                        }
+                        else if (zOp2.contains(mousePos)) {
+                         mitilina.mostrar(); //ver stats inciales
+                         impactoCentinela = historia[escenarioActual].imp2;
+                         scene = 26;
+                         }
+                         else if (zOp3.contains(mousePos)) {
+                            mitilina.mostrar(); //ver stats inciales
+                            impactoCentinela = historia[escenarioActual].imp3;
+                            scene = 26;
+                         }
+                          else if (zOp4.contains(mousePos)) {
+                                mitilina.mostrar(); //ver stats inciales
+                                impactoCentinela = historia[escenarioActual].imp4;
+                                scene = 26;
+                          }
+                          if (impactoCentinela != -67) {
+                              miJugador->aplicarImpacto(mitilina, impactoCentinela);
+                              mitilina.mostrar();
+
+                               if (escenarioActual < historia.size() - 1) {
+                                  escenarioActual++;
+                               }
+                           }
+                     }
+                    else if (scene == 26) {
+                          if (zonaContinuar0.contains(mousePos)) {
+                           scene = 27;
+                           }
+
+                      }
+                    else if (scene == 27) {
+                        if (zonaContM.contains(mousePos)) {
+                            scene = 28; //escena del dia 3
+                        }
+                         if (zonaRegalos.contains(mousePos)) {
+                            scene = -2; //escena de los regalos
+                         }
+                      }
+                    else if (scene == -2) {
+                        if (zonaCollar.contains(mousePos) || zonaFlores.contains(mousePos) || zonaPastel.contains(mousePos) || zonaCarta.contains(mousePos)) { //faltaria anadir que afecte a los atributos
+                            scene = 28;
+
+                        }
+                    }
+
+                    else if (scene == 28) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 29;
+                        }
+}
+
+                    else if (scene == 29) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 30;
+                        }
+}
+
+                    else if (scene == 30) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 31;
+                        }
+}
+
+                    else if (scene == 31) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 32;
+                        }
+}
+
+                    else if (scene == 32) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 33;
+                        }
+                        }
+>>>>>>> Stashed changes:src/ONE WEEK1.cpp
                 }
             }
         }
@@ -741,10 +1103,87 @@ int main() {
         textolore.setString("Aqui deberia ir el menu de si el jugador quiere continuar\n o quiere hacer alguna actividad extra para\n corregir sus decisiones");
         ventana.draw(textolore);
     }
+<<<<<<< Updated upstream:ONE WEEK1/ONE WEEK1.cpp
+=======
+    else if (scene == 25) {
+       ventana.draw(bg23);
 
+      textoPregunta.setString(historia[escenarioActual].pregunta);
+      top1.setString(historia[escenarioActual].op1);
+      top2.setString(historia[escenarioActual].op2);
+      top3.setString(historia[escenarioActual].op3);
+      top4.setString(historia[escenarioActual].op4);
+
+      ventana.draw(textoPregunta);
+      ventana.draw(top1);
+      ventana.draw(top2);
+      ventana.draw(top3);
+      ventana.draw(top4);
+    }
+    else if (scene == 26) {
+      ventana.draw(bg24);
+      textolore.setString("Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Illeana volteo hacia mi.\nOye...El domingo... va a haber algo interesante cerca de aqui, deberias venir :)\nUff, por fin termino el día.Fue pesado...");
+      ventana.draw(textolore);
+    }
+    else if (scene == 27) {
+     ventana.draw(bgMenu);
+    }
+    else if (scene == -2) {
+     ventana.draw(bgRegalos);
+    }
+    else if (scene == 28) {
+        ventana.draw(bg28);
+>>>>>>> Stashed changes:src/ONE WEEK1.cpp
+
+        textolore.setString("Miercoles...\n\nDespierto lentamente mientras la luz entra por la ventana.\nHoy se siente diferente.");
+        ventana.draw(textolore);
+        ventana.draw(botonUI);
+
+        }
+
+    else if (scene == 29) {
+            ventana.draw(bg29);
+
+            textolore.setString("*ring*\nMensaje nuevo de tu novia.");
+            ventana.draw(textolore);
+            ventana.draw(botonUI);
+
+            }
+
+    else if (scene == 30) {
+                ventana.draw(bg30);
+
+                textolore.setString("Camino por el pasillo de la universidad.\nTodo parece tranquilo.");
+                ventana.draw(textolore);
+                ventana.draw(botonUI);
+
+                }
+
+    else if (scene == 31) {
+                    ventana.draw(bg31);
+
+                    textolore.setString("Illeana parece distraida...\nComo si quisiera decir algo.");
+                    ventana.draw(textolore);
+                    ventana.draw(botonUI);
+                    }
+
+    else if (scene == 32) {
+                        ventana.draw(bg32);
+
+                        textolore.setString("Mas tarde...\nveo una cafeteria llena de estudiantes.");
+                        ventana.draw(textolore);
+                        ventana.draw(botonUI);
+
+                        }
+
+    else if (scene == 33) {
+                            ventana.draw(bg33);
+
+                            textolore.setString("Ella levanta la mirada y sonrie ligeramente.");
+                            ventana.draw(textolore);
+                            ventana.draw(botonUI);
+                            }
     ventana.display();
 }
         return 0;
     }
-
-  
