@@ -1,21 +1,22 @@
 # Visual Studio
 .vs/
-*.suo
 *.user
-*.userosscache
-*.sln.docstates
-
-# Build output
-bin/
-obj/
-Debug/
-Release/
-
-# Compilados C++
-*.exe
-*.pdb
-*.ilk
-*.obj
-*.log
+*.suo
+*.VC.db
 *.ipch
 
+# Builds
+bin/
+Debug/
+Release/
+x64/
+obj/
+
+# basura compilada
+*.log
+*.tlog
+*.pdb
+*.idb
+
+# dll runtime
+*.dll
