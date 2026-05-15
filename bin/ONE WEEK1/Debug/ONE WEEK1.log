@@ -1,0 +1,31 @@
+﻿  ONE WEEK1.cpp
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(422,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(431,29): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(438,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(445,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(451,27): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(458,31): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(466,22): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(473,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(482,27): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(489,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(496,32): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(503,32): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(510,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(517,29): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(524,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(531,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(538,22): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(545,24): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(552,30): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(559,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(566,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(573,26): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(580,25): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(587,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(594,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(601,32): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(609,24): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(617,28): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\fatim\ONE-WEEK\src\ONE WEEK1.cpp(1147,29): warning C4129: 'E': unrecognized character escape sequence
+  ONE WEEK1.vcxproj -> C:\Users\fatim\ONE-WEEK\bin\Debug\ONE WEEK1.exe

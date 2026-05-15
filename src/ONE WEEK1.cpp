@@ -31,6 +31,12 @@ public:
         cout << "Felicidad: " << Felicidad << endl;
         cout << "Amor: " << Amor << endl;
     }
+
+    //agregue esta funcion para ver si te terminan depues de tomar una decision
+
+    bool relacionTerminada() const {
+        return Amor < 60;
+    }
 };
 
 class Jugador {
@@ -411,6 +417,15 @@ int main() {
 
     //  Textura y Sprites (fondos)
 
+    //escena donde tu novia te termina por mensaje
+    sf::Texture terminamos;
+    terminamos.loadFromFile("../assets/fondos/ruptura.png");
+
+    sf::Sprite bgTerminamos(terminamos);
+    ajustar(bgTerminamos, terminamos);
+
+
+
     //fondo jugar
     sf::Texture fondoinicio;
     fondoinicio.loadFromFile("../assets/fondos/inicio.jpeg");
@@ -758,6 +773,9 @@ int main() {
                             //objeto mi jugador uso su funcion aplicarimpacto y le mando la novia y el impacto -5,0,3,5 que esta gaurdado arriba
                             miJugador->aplicarImpacto(mitilina, impactoElegido);
 
+                            if (mitilina.relacionTerminada()) {
+                                scene = -100; //escena de la ruptura
+                            }
                             //para ver si funciona
                             mitilina.mostrar();
 
@@ -817,6 +835,11 @@ int main() {
                             //objeto mi jugador uso su funcion aplicarimpacto y le mando la novia y el impacto -5,0,3,5 que esta gaurdado arriba
                             miJugador->aplicarImpacto(mitilina, impactoElegido);
 
+
+                            if (mitilina.relacionTerminada()) {
+                                scene = -100; //escena de la ruptura
+                            }
+
                             //para ver si funciona
                             mitilina.mostrar();
 
@@ -862,6 +885,11 @@ int main() {
                         }
                         if (impactoCentinela != -67) {
                             miJugador->aplicarImpacto(mitilina, impactoCentinela);
+
+                            if (mitilina.relacionTerminada()) {
+                                scene = -100; //escena de la ruptura
+                            }
+
                             mitilina.mostrar();
 
                             if (escenarioActual < historia.size() - 1) {
@@ -927,6 +955,11 @@ int main() {
                         }
                         if (impactoCentinela != -67) {
                             miJugador->aplicarImpacto(mitilina, impactoCentinela);
+
+                            if (mitilina.relacionTerminada()) {
+                                scene = -100; //escena de la ruptura
+                            }
+
                             mitilina.mostrar();
 
                             if (escenarioActual < historia.size() - 1) {
@@ -943,7 +976,7 @@ int main() {
                                 if (zonaContinuar0.contains(mousePos)) {
                                     scene = 20;
                                 }
-                                }
+                    }
                     else if (scene == 20) {
                          int impactoCentinela = -67;
 
@@ -969,6 +1002,11 @@ int main() {
                          }
                          if (impactoCentinela != -67) {
                           miJugador->aplicarImpacto(mitilina, impactoCentinela);
+
+                          if (mitilina.relacionTerminada()) {
+                              scene = -100; //escena de la ruptura
+                          }
+
                           mitilina.mostrar();
 
                             if (escenarioActual < historia.size() - 1) {
@@ -1021,6 +1059,11 @@ int main() {
                           }
                           if (impactoCentinela != -67) {
                               miJugador->aplicarImpacto(mitilina, impactoCentinela);
+
+                              if (mitilina.relacionTerminada()) {
+                                  scene = -100; //escena de la ruptura
+                              }
+
                               mitilina.mostrar();
 
                                if (escenarioActual < historia.size() - 1) {
@@ -1046,6 +1089,11 @@ int main() {
                         if (zonaCollar.contains(mousePos) || zonaFlores.contains(mousePos) || zonaPastel.contains(mousePos) || zonaCarta.contains(mousePos)) { //faltaria anadir que afecte a los atributos
                             scene = 28;
 
+                        }
+                    }
+                    else if (scene == -100) {
+                        if (zonaContinuar0.contains(mousePos)) {
+                            scene = 0;
                         }
                     }
 
@@ -1258,7 +1306,12 @@ int main() {
     else if (scene == 28) {
      textolore.setString("aqui comienza la escena del dia 3");
       ventana.draw(textolore);
-      }
+    }
+    else if (scene == -100) {
+        textolore.setString("El mensaje sigue ahi, iluminando el cuarto.\n\n No hay mas explicaciones.\nSolo un final escrito en una pantalla...");
+        ventana.draw(bgTerminamos);
+        ventana.draw(textolore);
+    }
 
     ventana.display();
 }
