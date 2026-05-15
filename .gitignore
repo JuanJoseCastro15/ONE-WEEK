@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+
+# Compilados C++
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.log
+*.ipch
+
