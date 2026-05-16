@@ -238,6 +238,80 @@ vector<Escenario> cargarHistoria(int clase) {
         s.setScale({1080.f / t.getSize().x,614.f / t.getSize().y});
         }
 
+   void cambiarEscena(int& scene) { // nueva funcion implementada para hacer los cambios de escena
+       scene++;
+   }
+
+   void dibujarOpciones(
+       sf::RenderWindow& ventana,
+       sf::Text& pregunta,
+       sf::Text& op1,
+       sf::Text& op2,
+       sf::Text& op3,
+       sf::Text& op4,
+       vector<Escenario>& historia,
+       int escenarioActual
+   ) {
+       pregunta.setString(historia[escenarioActual].pregunta);
+
+       op1.setString(historia[escenarioActual].op1);
+       op2.setString(historia[escenarioActual].op2);
+       op3.setString(historia[escenarioActual].op3);
+       op4.setString(historia[escenarioActual].op4);
+
+       ventana.draw(pregunta);
+       ventana.draw(op1);
+       ventana.draw(op2);
+       ventana.draw(op3);
+       ventana.draw(op4);
+   }
+
+   void procesarDecision(
+       int& scene,
+       int siguienteScene,
+       int& escenarioActual,
+       vector<Escenario>& historia,
+       Jugador* miJugador,
+       Novia& mitilina,
+       sf::Vector2f mousePos,
+       sf::FloatRect zOp1,
+       sf::FloatRect zOp2,
+       sf::FloatRect zOp3,
+       sf::FloatRect zOp4
+   ) {
+       int impacto = -67;
+
+       if (zOp1.contains(mousePos)) {
+           impacto = historia[escenarioActual].imp1;
+           scene = siguienteScene;
+       }
+       else if (zOp2.contains(mousePos)) {
+           impacto = historia[escenarioActual].imp2;
+           scene = siguienteScene;
+       }
+       else if (zOp3.contains(mousePos)) {
+           impacto = historia[escenarioActual].imp3;
+           scene = siguienteScene;
+       }
+       else if (zOp4.contains(mousePos)) {
+           impacto = historia[escenarioActual].imp4;
+           scene = siguienteScene;
+       }
+
+       if (impacto != -67) {
+
+           mitilina.mostrar();
+
+           miJugador->aplicarImpacto(mitilina, impacto);
+
+           mitilina.mostrar();
+
+           if (escenarioActual < historia.size() - 1) {
+               escenarioActual++;
+           }
+       }
+   }
+
 
 int main() {
     
@@ -642,6 +716,7 @@ int main() {
 
                     }
                     else if (scene == 5) {
+<<<<<<< Updated upstream:ONE WEEK1/ONE WEEK1.cpp
                         int impactoElegido = -67; // variable centinela
 
                         // dependiendo el boton que eligio con su opcion se guarda el impacto -5,0,3,5
@@ -682,7 +757,22 @@ int main() {
                             
                         }
 
+=======
+>>>>>>> Stashed changes:src/ONE WEEK1.cpp
 
+                        procesarDecision(
+                            scene,
+                            6,
+                            escenarioActual,
+                            historia,
+                            miJugador,
+                            mitilina,
+                            mousePos,
+                            zOp1,
+                            zOp2,
+                            zOp3,
+                            zOp4
+                        );
                     }
                     else if (scene == 6) {
                         if (zonaContinuar0.contains(mousePos)) {
@@ -701,45 +791,20 @@ int main() {
                         }
                     }
                     else if (scene == 9) {
-                        int impactoElegido = -67; // variable centinela
 
-                        // dependiendo el boton que eligio con su opcion se guarda el impacto -5,0,3,5
-                        if (zOp1.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp1;
-                            scene = 10;
-                        }
-                        else if (zOp2.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp2;
-                            scene = 10;
-                        }
-                        else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp3;
-                            scene = 10;
-                        }
-                        else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp4;
-                            scene = 10;
-                        }
-
-                        //esto es para saber si pico un boton
-                        if (impactoElegido != -67) {
-
-                            //objeto mi jugador uso su funcion aplicarimpacto y le mando la novia y el impacto -5,0,3,5 que esta gaurdado arriba
-                            miJugador->aplicarImpacto(mitilina, impactoElegido);
-
-                            //para ver si funciona
-                            mitilina.mostrar();
-
-                            //avanzo en mi vector para que no se quede en los mismos dialogos
-                            if (escenarioActual < historia.size() - 1) {
-                                escenarioActual++;
-                            }
-
-                        }
+                        procesarDecision(
+                            scene,
+                            10,
+                            escenarioActual,
+                            historia,
+                            miJugador,
+                            mitilina,
+                            mousePos,
+                            zOp1,
+                            zOp2,
+                            zOp3,
+                            zOp4
+                        );
                     }
                     else if (scene == 10) {
                        if (zonaContinuar0.contains(mousePos)) {
@@ -752,37 +817,21 @@ int main() {
                         }
                     }
                     else if (scene == 12) {
-                        int impactoCentinela = -67;
 
-                        if (zOp1.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp1;
-                            scene = 13;
+                        procesarDecision(
+                            scene,
+                            13,
+                            escenarioActual,
+                            historia,
+                            miJugador,
+                            mitilina,
+                            mousePos,
+                            zOp1,
+                            zOp2,
+                            zOp3,
+                            zOp4
+                        );
                         }
-                        else if (zOp2.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp2;
-                            scene = 13;
-                        }
-                        else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp3;
-                            scene = 13;
-                        }
-                        else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp4;
-                            scene = 13;
-                        }
-                        if (impactoCentinela != -67) {
-                            miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                            mitilina.mostrar();
-
-                            if (escenarioActual < historia.size() - 1) {
-                                escenarioActual++;
-                            }
-                        }
-                    }
                     else if (scene == 13) {
                         if (zonaContinuar0.contains(mousePos)) {
                             scene = 14;
@@ -818,37 +867,21 @@ int main() {
                             scene = 17;
                         }
                     }
-                    else if (scene == 17) { //EN ESTA ESCENA FALTA LA FUNCION DEL ATRACTIVO PARA QUE NO MODIFIQUE A LA NOVIA
-                        int impactoCentinela = -67;
+                    else if (scene == 17) {
 
-                        if (zOp1.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp1;
-                            scene = 18;
-                        }
-                        else if (zOp2.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp2;
-                            scene = 18;
-                        }
-                        else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp3;
-                            scene = 18;
-                        }
-                        else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp4;
-                            scene = 18;
-                        }
-                        if (impactoCentinela != -67) {
-                            miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                            mitilina.mostrar();
-
-                            if (escenarioActual < historia.size() - 1) {
-                                escenarioActual++;
-                            }
-                        }
+                        procesarDecision(
+                            scene,
+                            18,
+                            escenarioActual,
+                            historia,
+                            miJugador,
+                            mitilina,
+                            mousePos,
+                            zOp1,
+                            zOp2,
+                            zOp3,
+                            zOp4
+                        );
                         }
                     else if (scene == 18) {
                             if (zonaContinuar0.contains(mousePos)) {
@@ -861,37 +894,21 @@ int main() {
                                 }
                                 }
                     else if (scene == 20) {
-                         int impactoCentinela = -67;
 
-                        if (zOp1.contains(mousePos)) {
-                          mitilina.mostrar(); //ver stats inciales
-                          impactoCentinela = historia[escenarioActual].imp1;
-                          scene = 21;
-                         }
-                         else if (zOp2.contains(mousePos)) {
-                          mitilina.mostrar(); //ver stats inciales
-                          impactoCentinela = historia[escenarioActual].imp2;
-                          scene = 21;
-                         }
-                          else if (zOp3.contains(mousePos)) {
-                           mitilina.mostrar(); //ver stats inciales
-                           impactoCentinela = historia[escenarioActual].imp3;
-                           scene = 21;
-                         }
-                          else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp4;
-                            scene = 21;
-                         }
-                         if (impactoCentinela != -67) {
-                          miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                          mitilina.mostrar();
-
-                            if (escenarioActual < historia.size() - 1) {
-                              escenarioActual++;
-                            }
-                         }
-                    }
+                        procesarDecision(
+                            scene,
+                            21,
+                            escenarioActual,
+                            historia,
+                            miJugador,
+                            mitilina,
+                            mousePos,
+                            zOp1,
+                            zOp2,
+                            zOp3,
+                            zOp4
+                        );
+                        }
                     else if (scene == 21) {
                       if (zonaContinuar0.contains(mousePos)) {
                           scene = 22;
@@ -913,38 +930,23 @@ int main() {
                            }
                     }
                     else if (scene == 25) {
-                      int impactoCentinela = -67;
 
-                       if (zOp1.contains(mousePos)) {
-                           mitilina.mostrar(); //ver stats inciales
-                           impactoCentinela = historia[escenarioActual].imp1;
-                           scene = 26;
+                        procesarDecision(
+                            scene,
+                            26,
+                            escenarioActual,
+                            historia,
+                            miJugador,
+                            mitilina,
+                            mousePos,
+                            zOp1,
+                            zOp2,
+                            zOp3,
+                            zOp4
+                        );
                         }
-                        else if (zOp2.contains(mousePos)) {
-                         mitilina.mostrar(); //ver stats inciales
-                         impactoCentinela = historia[escenarioActual].imp2;
-                         scene = 26;
-                         }
-                         else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp3;
-                            scene = 26;
-                         }
-                          else if (zOp4.contains(mousePos)) {
-                                mitilina.mostrar(); //ver stats inciales
-                                impactoCentinela = historia[escenarioActual].imp4;
-                                scene = 26;
-                          }
-                          if (impactoCentinela != -67) {
-                              miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                              mitilina.mostrar();
-
-                               if (escenarioActual < historia.size() - 1) {
-                                  escenarioActual++;
-                               }
-                           }
-                     }
                     else if (scene == 26) {
+<<<<<<< Updated upstream:ONE WEEK1/ONE WEEK1.cpp
                           if (zonaContinuar0.contains(mousePos)) {
                            scene = 27;
                            }
@@ -994,6 +996,52 @@ int main() {
                             scene = 33;
                         }
                         }
+>>>>>>> Stashed changes:src/ONE WEEK1.cpp
+=======
+                        if (zonaContinuar0.contains(mousePos)) {
+                            cambiarEscena(scene); // pasa a 27
+                        }
+                    }
+
+                    else if (scene == 27) {
+
+                        if (zonaContM.contains(mousePos)) {
+                            cambiarEscena(scene); // pasa a 28
+                        }
+
+                        else if (zonaRegalos.contains(mousePos)) {
+                            scene = -2; // regalos
+                        }
+                        }
+
+                    else if (scene == -2) {
+
+                            if (zonaCollar.contains(mousePos) ||
+                                zonaFlores.contains(mousePos) ||
+                                zonaPastel.contains(mousePos) ||
+                                zonaCarta.contains(mousePos)) {
+
+                                scene = 28;
+                            }
+                            }
+
+                    else if (scene == 28) {
+
+                                if (zonaContinuar0.contains(mousePos)) {
+                                    cambiarEscena(scene); // pasa a 29
+                                }
+                                }
+
+                    else if (scene == 29) {
+
+                                    if (zonaContinuar0.contains(mousePos)) {
+                                        cambiarEscena(scene); // pasa a 30
+                                    }
+                                    }
+
+                    else if (scene == 30) {
+                        procesarDecision( scene, 31, escenarioActual,historia,miJugador,mitilina,mousePos,zOp1,zOp2,zOp3,zOp4);
+                    }
 >>>>>>> Stashed changes:src/ONE WEEK1.cpp
                 }
             }
@@ -1159,6 +1207,7 @@ int main() {
 
                 }
 
+<<<<<<< Updated upstream:ONE WEEK1/ONE WEEK1.cpp
     else if (scene == 31) {
                     ventana.draw(bg31);
 
@@ -1187,3 +1236,12 @@ int main() {
 }
         return 0;
     }
+=======
+                ventana.display();
+
+} // <- cierre del while
+
+return 0;
+
+}
+>>>>>>> Stashed changes:src/ONE WEEK1.cpp
