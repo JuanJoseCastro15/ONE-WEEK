@@ -1,6 +1,1 @@
-﻿.vs/
-*.ipch
-*.log
-Debug/
-Release/
-bin/
+.vs
