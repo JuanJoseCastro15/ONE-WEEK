@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <memory>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,15 +16,42 @@ public:
 
     void modificarConfianza(int valor) {
         Confianza += valor;
+
+        if (Confianza > 150)
+            Confianza = 150;
+
+        if (Confianza < 0)
+            Confianza = 0;
     }
 
     void modificarFelicidad(int valor) {
         Felicidad += valor;
-    }
 
+        if (Felicidad > 150)
+            Felicidad = 150;
+
+        if (Felicidad < 0)
+            Felicidad = 0;
+    }
+    void modificarAmor(int valor) {
+
+        Amor += valor;
+
+        if (Amor > 100)
+            Amor = 100;
+
+        if (Amor < 0)
+            Amor = 0;
+    }
     void actualizarAmor() {
 
-        Amor += (Confianza + Felicidad) / 20;
+        Amor += ((Confianza - 100) + (Felicidad - 100)) / 50;
+
+        if (Amor > 100)
+            Amor = 100;
+
+        if (Amor < 0)
+            Amor = 0;
     }
 
     void mostrar() {
@@ -31,7 +59,18 @@ public:
         cout << "Felicidad: " << Felicidad << endl;
         cout << "Amor: " << Amor << endl;
     }
+
+    //agregue esta funcion para ver si te terminan depues de tomar una decision
+
+    bool relacionTerminada() const {
+        return Amor < 60;
+    }
+
+    int getAmor() const { return Amor; }
+    int getConfianza() const { return Confianza; }
+    int getFelicidad() const { return Felicidad; }
 };
+
 
 class Jugador {
 protected:
@@ -41,11 +80,22 @@ public:
     Jugador(int A, int C, int L) : Atractivo(A), Carisma(C), Lealtad(L) {}
 
     virtual int calcularFelicidad(int impact) {
-        return (impact + Carisma) / 2;
+
+        // si la respuesta es mala, se respeta el castigo
+        if (impact < 0) {
+            return impact;
+        }
+
+        return impact + (Carisma / 10);
     }
 
     virtual int calcularConfianza(int impact) {
-        return (impact + Lealtad) / 2;
+
+        if (impact < 0) {
+            return impact;
+        }
+
+        return impact + (Lealtad / 10);
     }
 
     void aplicarImpacto(Novia& novia, int impact) {
@@ -64,7 +114,9 @@ public:
     Otaku() : Jugador(30, 70, 5) {}
 
     int calcularFelicidad(int impact) override {
-        return(impact * Atractivo) / 5; // su habilidad especial
+
+        // habilidad especial balanceada
+        return (impact + Carisma) / 3;
     }
 };
 
@@ -74,25 +126,37 @@ public:
     Toxico() : Jugador(80, 30, 5) {}
 
     int calcularFelicidad(int impact) override {
-        return (impact + Atractivo) / 2; // usa atractivo en vez de carisma
+
+        if (impact < 0) {
+            return impact;
+        }
+
+        return impact + (Atractivo / 10);
     }
 };
 class Gymrat : public Jugador {
 public:
     Gymrat() : Jugador(90, 50, 5) {}
     int calcularFelicidad(int impact) override {
-        return (impact + Atractivo) / 2;  // usa atractivo en vez de carisma
+
+        if (impact < 0) {
+            return impact;
+        }
+
+        return impact + (Atractivo / 10);
     }
 };
 class NPC : public Jugador {
 public:
     NPC() : Jugador(50, 50, 5) {}
-    virtual int calcularFelicidad(int impact) {
-        return (impact + Atractivo) / 2;// Si es bueno, el atractivo ayuda un poquito
+    int calcularFelicidad(int impact) override {
+
+        if (impact < 0) {
+            return impact;
+        }
+
+        return impact + (Atractivo / 10);
     }
-
-    
-
 };
 
 
@@ -145,7 +209,7 @@ vector<Escenario> cargarHistoria(int clase) {
     else if (clase == 2) { // GYMRAT
         e1.op1 = "Buenos dias";
         e1.op2 = "Buenos dias, pense en ti";
-        e1.op3 = "Buenos dias hermos, hoy entreno amarte mas";
+        e1.op3 = "Buenos dias hermosa, hoy entreno amarte mas";
         e1.op4 = "Que tienen de bueno? me duele todo";
     }
     else if (clase == 3) { // OTAKU
@@ -335,37 +399,488 @@ vector<Escenario> cargarHistoria(int clase) {
 
     h.push_back(e6);
 
+    Escenario e7;
+    e7.pregunta = "Hoy es un dia importante...\nQue le dices a tu novia?";
+
+    e7.imp1 = 5;
+    e7.imp2 = 2;
+    e7.imp3 = -2;
+    e7.imp4 = -5;
+
+    if (clase == 0) { // TOXICO
+        e7.op1 = "Obvio me acorde";
+        e7.op2 = "Feliz dia amor";
+        e7.op3 = "Ah era hoy?";
+        e7.op4 = "Ni idea";
+    }
+    else if (clase == 1) { // NPC
+        e7.op1 = "Claro que me acorde";
+        e7.op2 = "Feliz dia mi amor";
+        e7.op3 = "Perdon, olvide la fecha";
+        e7.op4 = "Que tenia hoy?";
+    }
+    else if (clase == 2) { // GYMRAT
+        e7.op1 = "Nunca olvidaria nuestro dia";
+        e7.op2 = "Feliz dia preciosa";
+        e7.op3 = "Andaba entrenando...";
+        e7.op4 = "No tuve tiempo";
+    }
+    else if (clase == 3) { // OTAKU
+        e7.op1 = "Nuestro evento canonico UwU";
+        e7.op2 = "Feliz dia waifu";
+        e7.op3 = "Mi memoria filler fallo";
+        e7.op4 = "No recuerdo ese arco";
+    }
+
+    h.push_back(e7);
+
+    Escenario e8;
+    e8.pregunta = "Ella te pregunta si de verdad la amas...";
+
+    e8.imp1 = 5;
+    e8.imp2 = 2;
+    e8.imp3 = -3;
+    e8.imp4 = -5;
+
+    if (clase == 0) {
+        e8.op1 = "Claro que si";
+        e8.op2 = "Eres mia";
+        e8.op3 = "No se";
+        e8.op4 = "Que flojera";
+    }
+    else if (clase == 1) {
+        e8.op1 = "Muchisimo";
+        e8.op2 = "Siempre estare contigo";
+        e8.op3 = "A veces lo dudo";
+        e8.op4 = "No me molestes";
+    }
+    else if (clase == 2) {
+        e8.op1 = "Mas que al gym";
+        e8.op2 = "Siempre";
+        e8.op3 = "Estoy confundido";
+        e8.op4 = "Estoy ocupado";
+    }
+    else if (clase == 3) {
+        e8.op1 = "Mas que al anime";
+        e8.op2 = "Tu eres mi protagonista";
+        e8.op3 = "No se...";
+        e8.op4 = "zzz";
+    }
+
+    h.push_back(e8);
 
 
+
+
+    // Dentro de cargarHistoria(), después de e8
+
+    Escenario e9;
+
+    e9.pregunta = "Buenos días <3\n"
+        "Ayer te sentí un poco raro...\n"
+        "¿Todo bien?";
+
+    e9.imp1 = 5;
+    e9.imp2 = 2;
+    e9.imp3 = -2;
+    e9.imp4 = -5;
+
+    if (clase == 0) { // TOXICO
+
+        e9.op1 = "Todo bien amor, solo queria verte.";
+        e9.op2 = "Si, solo tuve un mal dia.";
+        e9.op3 = "Estoy bien.";
+        e9.op4 = "No pasa nada.";
+
+    }
+    else if (clase == 1) { // NPC
+
+        e9.op1 = "Perdon amor, creo que solo estaba cansado.\nTe prometo que estoy bien.";
+
+        e9.op2 = "Todo bien, solo tuve un dia pesado.";
+
+        e9.op3 = "Si estoy bien.";
+
+        e9.op4 = "No pasa nada, no te preocupes.";
+
+    }
+    else if (clase == 2) { // GYMRAT
+
+        e9.op1 = "Todo bien preciosa,\nsolo ando destruido del gym.";
+
+        e9.op2 = "Solo tuve un dia pesado.";
+
+        e9.op3 = "Estoy bien.";
+
+        e9.op4 = "Nah, todo normal.";
+
+    }
+    else if (clase == 3) { // OTAKU
+
+        e9.op1 = "Todo bien mi waifu hermosa UwU";
+
+        e9.op2 = "Solo andaba sin energia ayer.";
+
+        e9.op3 = "Toy bien.";
+
+        e9.op4 = "Nada importante nya.";
+
+    }
+    h.push_back(e9);
+
+    // =========================
+    // DIA 3 - ESCENA 2
+    // =========================
+
+    Escenario e10;
+
+    e10.pregunta = "Illeana me mira directamente.\n"
+        "¿Me pasas tu numero?";
+
+    e10.imp1 = -4;
+    e10.imp2 = 2;
+    e10.imp3 = 3;
+    e10.imp4 = 0;
+
+    if (clase == 0) { // TOXICO
+
+        e10.op1 = "Claro.";
+        e10.op2 = "Hmm... bueno.";
+        e10.op3 = "Solo si no me ignoras despues.";
+        e10.op4 = "Eh... si.";
+
+    }
+    else if (clase == 1) { // NPC
+
+        e10.op1 = "Claro, toma.";
+        e10.op2 = "Mmm... si, supongo.";
+        e10.op3 = "Bueno, pero cobrare por mensaje.";
+        e10.op4 = "Eh... claro.";
+
+    }
+    else if (clase == 2) { // GYMRAT
+
+        e10.op1 = "Claro.";
+        e10.op2 = "Va, pero casi no reviso el cel.";
+        e10.op3 = "Solo si mandas memes fitness.";
+        e10.op4 = "Si... toma.";
+
+    }
+    else if (clase == 3) { // OTAKU
+
+        e10.op1 = "Chi UwU";
+        e10.op2 = "Mmm... bueno nya.";
+        e10.op3 = "Solo si no haces spam.";
+        e10.op4 = "E-esta bien.";
+
+    }
+
+    h.push_back(e10);
+
+    // =========================
+    // DIA 3 - ESCENA 3
+    // =========================
+
+    Escenario e11;
+
+    e11.pregunta = "¿Que respondes?";
+
+    e11.imp1 = 5;
+    e11.imp2 = -2;
+    e11.imp3 = -3;
+    e11.imp4 = -5;
+
+    if (clase == 0) {
+
+        e11.op1 = "\"Obvio, feliz cumpleaños\"";
+        e11.op2 = "\"Feliz aniversario...\"";
+        e11.op3 = "\"El dia que nos conocimos?\"";
+        e11.op4 = "\"Era una salida normal, no?\"";
+
+    }
+    else if (clase == 1) {
+
+        e11.op1 = "\"Obvio, feliz cumpleaños\"";
+        e11.op2 = "\"Feliz aniversario...\"";
+        e11.op3 = "\"El primer dia que hablamos?\"";
+        e11.op4 = "\"Eh... era una cita cualquiera?\"";
+
+    }
+    else if (clase == 2) {
+
+        e11.op1 = "\"Obvio, feliz cumpleaños\"";
+        e11.op2 = "\"Feliz aniversario preciosa\"";
+        e11.op3 = "\"Cuando nos conocimos?\"";
+        e11.op4 = "\"Era una salida?\"";
+
+    }
+    else if (clase == 3) {
+
+        e11.op1 = "\"Obvio waifu, feliz cumpleaños UwU\"";
+        e11.op2 = "\"Feliz aniversario nya\"";
+        e11.op3 = "\"El inicio de nuestro arco?\"";
+        e11.op4 = "\"Era relleno?\"";
+
+    }
+
+    h.push_back(e11);
 
 
     return h;
 }
-    // funcion para que mis fondos esten bien puestos
-   void  ajustar(sf::Sprite& s, sf::Texture& t) {
-        s.setScale({1080.f / t.getSize().x,614.f / t.getSize().y});
+
+void procesarRegalo(
+    int& scene,
+    int siguienteScene,
+    Novia& mitilina,
+    sf::Vector2f mousePos,
+    sf::FloatRect zonaFlores,
+    sf::FloatRect zonaCarta,
+    sf::FloatRect zonaPastel,
+    sf::FloatRect zonaCollar
+) {
+
+    bool regaloElegido = false;
+
+    if (zonaFlores.contains(mousePos)) {
+        regaloElegido = true;
+    }
+
+    else if (zonaCarta.contains(mousePos)) {
+        regaloElegido = true;
+    }
+
+    else if (zonaPastel.contains(mousePos)) {
+        regaloElegido = true;
+    }
+
+    else if (zonaCollar.contains(mousePos)) {
+        regaloElegido = true;
+    }
+
+    // si eligio cualquier regalo
+    if (regaloElegido) {
+
+        mitilina.modificarAmor(3);
+
+        cout << "Le diste un regalo a tu novia." << endl;
+
+        mitilina.mostrar();
+
+        scene = siguienteScene;
+    }
+}
+
+// funcion para que mis fondos esten bien puestos
+void ajustar(sf::Sprite& s, sf::Texture& t) {
+
+    if (t.getSize().x == 0 || t.getSize().y == 0) {
+        cout << "ERROR: textura invalida al ajustar sprite" << endl;
+        return;
+    }
+
+    s.setScale({
+        1080.f / static_cast<float>(t.getSize().x),
+        614.f / static_cast<float>(t.getSize().y)
+        });
+}
+
+void dibujarOpciones(
+    sf::RenderWindow& ventana,
+    sf::Text& pregunta,
+    sf::Text& op1,
+    sf::Text& op2,
+    sf::Text& op3,
+    sf::Text& op4,
+    vector<Escenario>& historia,
+    int escenarioActual
+) {
+    if (historia.empty()) {
+        return;
+    }
+
+    if (escenarioActual < 0 || escenarioActual >= historia.size()) {
+        return;
+    }
+    pregunta.setString(historia[escenarioActual].pregunta);
+
+    op1.setString(historia[escenarioActual].op1);
+    op2.setString(historia[escenarioActual].op2);
+    op3.setString(historia[escenarioActual].op3);
+    op4.setString(historia[escenarioActual].op4);
+
+    ventana.draw(pregunta);
+    ventana.draw(op1);
+    ventana.draw(op2);
+    ventana.draw(op3);
+    ventana.draw(op4);
+}
+struct SceneData {
+    sf::Sprite* fondo = nullptr;
+
+    string texto = "";
+
+    bool tieneOpciones = false;
+
+    bool continuarArriba = false;
+    bool continuarAbajo = false;
+
+    int siguienteEscena = -1;
+
+    int indiceHistoria = -1;
+};
+void renderizarEscena(
+    sf::RenderWindow& ventana,
+    SceneData& escena,
+    sf::Text& textolore,
+    sf::Text& textoPregunta,
+    sf::Text& top1,
+    sf::Text& top2,
+    sf::Text& top3,
+    sf::Text& top4,
+    vector<Escenario>& historia,
+    int escenarioActual
+) {
+
+    // dibujar fondo
+    if (escena.fondo != nullptr) {
+        ventana.draw(*escena.fondo);
+    }
+
+    // dibujar texto normal
+    if (!escena.texto.empty()) {
+
+        textolore.setString(escena.texto);
+        ventana.draw(textolore);
+    }
+
+    // dibujar opciones
+    if (
+        escena.tieneOpciones &&
+        escena.indiceHistoria >= 0 &&
+        escena.indiceHistoria < historia.size()
+        )
+    {
+        dibujarOpciones(
+            ventana,
+            textoPregunta,
+            top1,
+            top2,
+            top3,
+            top4,
+            historia,
+            escena.indiceHistoria
+        );
+    }
+    else {
+
+        textoPregunta.setString("");
+
+        top1.setString("");
+        top2.setString("");
+        top3.setString("");
+        top4.setString("");
+    }
+}
+
+void procesarDecision(
+    int& scene,
+    int siguienteScene,
+    int& escenarioActual,
+    vector<Escenario>& historia,
+    unique_ptr<Jugador>& miJugador,
+    Novia& mitilina,
+    sf::Vector2f mousePos,
+    sf::FloatRect zOp1,
+    sf::FloatRect zOp2,
+    sf::FloatRect zOp3,
+    sf::FloatRect zOp4
+) {
+
+    // validar historia
+    if (escenarioActual < 0 || escenarioActual >= historia.size()) {
+        cout << "ERROR: escenarioActual fuera de rango" << endl;
+        return;
+    }
+
+    int impacto = -67;
+
+    if (zOp1.contains(mousePos)) {
+        impacto = historia[escenarioActual].imp1;
+        scene = siguienteScene;
+    }
+    else if (zOp2.contains(mousePos)) {
+        impacto = historia[escenarioActual].imp2;
+        scene = siguienteScene;
+    }
+    else if (zOp3.contains(mousePos)) {
+        impacto = historia[escenarioActual].imp3;
+        scene = siguienteScene;
+    }
+    else if (zOp4.contains(mousePos)) {
+        impacto = historia[escenarioActual].imp4;
+        scene = siguienteScene;
+    }
+
+    if (impacto != -67) {
+
+        cout << "Escenario actual: " << escenarioActual << endl;
+        cout << "Scene actual: " << scene << endl;
+
+        mitilina.mostrar();
+
+        if (miJugador) {
+            miJugador->aplicarImpacto(mitilina, impacto);
         }
+        else {
+            cout << "ERROR: miJugador es nullptr" << endl;
+        }
+
+        mitilina.mostrar();
+
+        if (mitilina.relacionTerminada()) {
+            scene = 199;
+            return;
+        }
+    }
+}
+
+void cargarTextura(sf::Texture& textura, string ruta) {
+
+    cout << "Intentando cargar: " << ruta << endl;
+
+    if (!textura.loadFromFile(ruta)) {
+
+        cout << " ERROR cargando: " << ruta << endl;
+    }
+    else {
+
+        cout << " Cargada correctamente: " << ruta << endl;
+    }
+}
+
 
 
 int main() {
-    
-    
+
+
     //crear ventana
     sf::RenderWindow ventana(sf::VideoMode({ 1080, 614 }), "ONE WEEK");
 
     Novia mitilina; //novia
-    Jugador* miJugador = nullptr; //aqui se le guarda un espacio reservado a la memoria para que no se crashie
+    unique_ptr<Jugador> miJugador = nullptr; //aqui se le guarda un espacio reservado a la memoria para que no se crashie
 
-    int scene = 0;
+    vector<SceneData> escenas(200);
     int escenarioActual = 0;
     vector<Escenario> historia;
+    int scene = 0;
 
-   
 
     //musica
     sf::Music musica;
     if (!musica.openFromFile("../assets/Musica/musicalofi.mp3")) {
-        return -1; }
+        return -1;
+    }
     musica.setLooping(true);// que se repita
     musica.setVolume(25); // volumen
     musica.play(); //reproducir
@@ -388,234 +903,901 @@ int main() {
     sf::Text textoPregunta(fuente); //se carga la fuente
     textoPregunta.setCharacterSize(25); //tamano
     textoPregunta.setFillColor(sf::Color::White);//color
-    textoPregunta.setPosition({ 300.f, 400.f }); // posicion
+    textoPregunta.setPosition({ 150.f, 370.f }); // posicion
 
     sf::Text top1(fuente), top2(fuente), top3(fuente), top4(fuente); //cargar fuentes
 
-    top1.setCharacterSize(22); //tamano
+    top1.setCharacterSize(20); //tamano
     top1.setFillColor(sf::Color::White); //color
 
-    top2.setCharacterSize(22);
+    top2.setCharacterSize(20);
     top2.setFillColor(sf::Color::White);
 
-    top3.setCharacterSize(22);
+    top3.setCharacterSize(20);
     top3.setFillColor(sf::Color::White);
 
-    top4.setCharacterSize(22);
+    top4.setCharacterSize(20);
     top4.setFillColor(sf::Color::White);
 
-    top1.setPosition({ 160.f, 490.f });
-    top2.setPosition({ 550.f, 490.f });
-    top3.setPosition({ 160.f, 560.f });
-    top4.setPosition({ 550.f, 560.f });
+    top1.setPosition({ 155.f, 480.f });
+    top2.setPosition({ 545.f, 480.f });
 
-    //  Textura y Sprites (fondos)
+    top3.setPosition({ 155.f, 555.f });
+    top4.setPosition({ 545.f, 555.f });
 
-    //fondo jugar
+    // ==========================
+    // FONDOS Y TEXTURAS
+    // ==========================
+
+    // fondo jugar
     sf::Texture fondoinicio;
-    fondoinicio.loadFromFile("../assets/fondos/inicio.jpeg");
+    cargarTextura(fondoinicio, "../assets/fondos/inicio.jpeg");
 
     sf::Sprite bg0(fondoinicio);
-    ajustar(bg0, fondoinicio); // funcion de ajustar
+    ajustar(bg0, fondoinicio);
 
-    //elige personaje
+    // elige personaje
     sf::Texture personajes;
-    personajes.loadFromFile("../assets/fondos/medescribencomo.jpeg");
+    cargarTextura(personajes, "../assets/fondos/medescribencomo.jpeg");
+
     sf::Sprite bg1(personajes);
     ajustar(bg1, personajes);
 
-
-    //dibujo de la novia 
+    // dibujo de la novia
     sf::Texture noviaboton;
-    noviaboton.loadFromFile("../assets/fondos/noviacuadrocontinuar.png");
+    cargarTextura(noviaboton, "../assets/fondos/noviacuadrocontinuar.png");
 
     sf::Sprite bg2(noviaboton);
     ajustar(bg2, noviaboton);
 
     sf::Texture fotonovia;
-    fotonovia.loadFromFile("../assets/fondos/noviacontinuar.png");
+    cargarTextura(fotonovia, "../assets/fondos/noviacontinuar.png");
 
     sf::Sprite bg3(fotonovia);
     ajustar(bg3, fotonovia);
 
-    //textura mensaje de buenos dias con botones
+    // textura mensaje de buenos dias con botones
     sf::Texture msjbuenosdias;
-    msjbuenosdias.loadFromFile("../assets/fondos/buenosdiasopciones.jpeg");
+    cargarTextura(msjbuenosdias, "../assets/fondos/buenosdiasopciones.jpeg");
 
     sf::Sprite bg4(msjbuenosdias);
     ajustar(bg4, msjbuenosdias);
 
-    //textura dia 1
-
+    // textura dia 1
     sf::Texture dia1;
-    dia1.loadFromFile("../assets/fondos/dia1.png");
+    cargarTextura(dia1, "../assets/fondos/dia1.png");
 
     sf::Sprite bg5(dia1);
     ajustar(bg5, dia1);
 
-    //pasillo
+    // pasillo
     sf::Texture pasillo;
-    pasillo.loadFromFile("../assets/fondos/pasillocontinuar.png");
+    cargarTextura(pasillo, "../assets/fondos/pasillocontinuar.png");
 
     sf::Sprite bg6(pasillo);
     ajustar(bg6, pasillo);
-    
 
-    //escema tulipanes
-    
+    // escena tulipanes
     sf::Texture tulipanes;
-    tulipanes.loadFromFile("../assets/fondos/tulipanes.png");
+    cargarTextura(tulipanes, "../assets/fondos/tulipanes.png");
 
     sf::Sprite bg7(tulipanes);
     ajustar(bg7, tulipanes);
-    
-    //escena illeana
+
+    // escena illeana
     sf::Texture illeana;
-    illeana.loadFromFile("../assets/fondos/illeanapasillo.png");
+    cargarTextura(illeana, "../assets/fondos/illeanapasillo.png");
 
     sf::Sprite bg8(illeana);
     ajustar(bg8, illeana);
 
-    //escena illeana con opciones
+    // escena illeana con opciones
     sf::Texture illeanapasillo;
-    illeanapasillo.loadFromFile("../assets/fondos/illeanapasillocuadro1.png");
+    cargarTextura(illeanapasillo, "../assets/fondos/illeanapasillocuadro1.png");
 
     sf::Sprite bg9(illeanapasillo);
     ajustar(bg9, illeanapasillo);
 
-    //escena del cuarto con un boton
+    // escena del cuarto con un boton
     sf::Texture cuartocontexto;
-    cuartocontexto.loadFromFile("../assets/fondos/cuartotexto.png");
+    cargarTextura(cuartocontexto, "../assets/fondos/cuartotexto.png");
 
     sf::Sprite bg10(cuartocontexto);
     ajustar(bg10, cuartocontexto);
 
-    //escena de desicion sobre el domingo
+    // escena de decision sobre el domingo
     sf::Texture domingo;
-    domingo.loadFromFile("../assets/fondos/fechaimportante1.png");
+    cargarTextura(domingo, "../assets/fondos/fechaimportante1.png");
 
     sf::Sprite bg11(domingo);
     ajustar(bg11, domingo);
 
-    //escena de cuarto con boton de continuar de noche
+    // escena de cuarto con boton de continuar de noche
     sf::Texture cuartoscuro;
-    cuartoscuro.loadFromFile("../assets/fondos/cuartosinluz.png");
+    cargarTextura(cuartoscuro, "../assets/fondos/cuartosinluz.png");
 
     sf::Sprite bg12(cuartoscuro);
     ajustar(bg12, cuartoscuro);
 
-    //fin del dia menu
+    // fin del dia menu
     sf::Texture finmenu;
-    finmenu.loadFromFile("../assets/fondos/findiamenu.png");
+    cargarTextura(finmenu, "../assets/fondos/findiamenu.png");
 
     sf::Sprite bgMenu(finmenu);
     ajustar(bgMenu, finmenu);
 
-    //escena de las 4 opciones de regalos
+    // escena de las 4 opciones de regalos
     sf::Texture regalos;
-    regalos.loadFromFile("../assets/fondos/Regalos.png");
+    cargarTextura(regalos, "../assets/fondos/Regalos.png");
 
     sf::Sprite bgRegalos(regalos);
     ajustar(bgRegalos, regalos);
 
-    //escena del dia 2
+    // escena del dia 2
     sf::Texture dia2;
-    dia2.loadFromFile("../assets/fondos/Dia2.png");
+    cargarTextura(dia2, "../assets/fondos/Dia2.png");
 
     sf::Sprite bg13(dia2);
     ajustar(bg13, dia2);
 
-    //alarma del martes
+    // alarma del martes
     sf::Texture martes;
-    martes.loadFromFile("../assets/fondos/AlarmaMartes.jpeg");
+    cargarTextura(martes, "../assets/fondos/AlarmaMartes.jpeg");
 
     sf::Sprite bg14(martes);
     ajustar(bg14, martes);
 
-    //cuarto lluvioso con opciones
+    // cuarto lluvioso con opciones
     sf::Texture cuartolluvia;
-    cuartolluvia.loadFromFile("../assets/fondos/cuartolluvioso.jpeg");
+    cargarTextura(cuartolluvia, "../assets/fondos/cuartolluvioso.jpeg");
 
     sf::Sprite bg15(cuartolluvia);
     ajustar(bg15, cuartolluvia);
 
-    //dia de lluvia al inicio
+    // dia de lluvia al inicio
     sf::Texture lluvia1;
-    lluvia1.loadFromFile("../assets/fondos/lluviacampus.png");
+    cargarTextura(lluvia1, "../assets/fondos/lluviacampus.png");
 
     sf::Sprite bg16(lluvia1);
     ajustar(bg16, lluvia1);
 
-    //escena lluvia 2
+    // escena lluvia 2
     sf::Texture lluvia2;
-    lluvia2.loadFromFile("../assets/fondos/lluvia2.png");
+    cargarTextura(lluvia2, "../assets/fondos/lluvia2.png");
 
     sf::Sprite bg17(lluvia2);
     ajustar(bg17, lluvia2);
 
-    //lluvia con opciones
+    // lluvia con opciones
     sf::Texture lluviaop;
-    lluviaop.loadFromFile("../assets/fondos/Lluviaopciones.jpeg");
+    cargarTextura(lluviaop, "../assets/fondos/Lluviaopciones.jpeg");
 
     sf::Sprite bg18(lluviaop);
     ajustar(bg18, lluviaop);
 
-    //escena de lluvia 3
+    // escena de lluvia 3
     sf::Texture lluvia3;
-    lluvia3.loadFromFile("../assets/fondos/lluvia3.png");
+    cargarTextura(lluvia3, "../assets/fondos/lluvia3.png");
 
     sf::Sprite bg19(lluvia3);
     ajustar(bg19, lluvia3);
 
-    //lluvia con girasoles
+    // lluvia con girasoles
     sf::Texture lluviagira;
-    lluviagira.loadFromFile("../assets/fondos/lluviagirasoles.png");
+    cargarTextura(lluviagira, "../assets/fondos/lluviagirasoles.png");
 
     sf::Sprite bg20(lluviagira);
     ajustar(bg20, lluviagira);
 
-    //celular en la lluvia con un mensaje
+    // celular en la lluvia con un mensaje
     sf::Texture telelluvia;
-    telelluvia.loadFromFile("../assets/fondos/telgirasoles.png");
+    cargarTextura(telelluvia, "../assets/fondos/telgirasoles.png");
 
     sf::Sprite bg21(telelluvia);
     ajustar(bg21, telelluvia);
 
-    //escena del mensaje abierto con illeana 
+    // escena del mensaje abierto con illeana
     sf::Texture mensajegirasol;
-    mensajegirasol.loadFromFile("../assets/fondos/mensajegira.png");
+    cargarTextura(mensajegirasol, "../assets/fondos/mensajegira.png");
 
     sf::Sprite bg22(mensajegirasol);
     ajustar(bg22, mensajegirasol);
 
-    //escena de los girasoles con las opciones donde illeana le pregunta si es tu novia
-
+    // escena de los girasoles con opciones
     sf::Texture giraop;
-    giraop.loadFromFile("../assets/fondos/girasolesopciones.jpeg");
+    cargarTextura(giraop, "../assets/fondos/girasolesopciones.jpeg");
 
     sf::Sprite bg23(giraop);
     ajustar(bg23, giraop);
 
-    //escena del pasillo con illeana avisandote del domingo
-
+    // escena del pasillo con illeana avisandote del domingo
     sf::Texture pasIlleana;
-    pasIlleana.loadFromFile("../assets/fondos/pasilloilleana.png");
+    cargarTextura(pasIlleana, "../assets/fondos/pasilloilleana.png");
 
     sf::Sprite bg24(pasIlleana);
     ajustar(bg24, pasIlleana);
+    // dia 3
+    sf::Texture dia3;
+    cargarTextura(dia3, "../assets/fondos/Dia3.jpeg");
+
+    sf::Sprite bg25(dia3);
+    ajustar(bg25, dia3);
+
+    // mensaje de texto del miercoles
+    sf::Texture mensajem;
+    cargarTextura(mensajem, "../assets/fondos/Mensaje del miercoles.PNG");
+
+    sf::Sprite bg26(mensajem);
+    ajustar(bg26, mensajem);
+
+    // mensaje de texto del miercoles completo
+    sf::Texture mensajemcompleto;
+    cargarTextura(mensajemcompleto, "../assets/fondos/Mensaje del miercoles completo.PNG");
+
+    sf::Sprite bg27(mensajemcompleto);
+    ajustar(bg27, mensajemcompleto);
+
+    // mensaje de miercoles opciones
+    sf::Texture mensajemopciones;
+    cargarTextura(mensajemopciones, "../assets/fondos/Mensaje del miercoles opciones.PNG");
+
+    sf::Sprite bg28(mensajemopciones);
+    ajustar(bg28, mensajemopciones);
+
+    // cuarto con el cel
+    sf::Texture cuartoconcel;
+    cargarTextura(cuartoconcel, "../assets/fondos/CuartoconCel.PNG");
+
+    sf::Sprite bg29(cuartoconcel);
+    ajustar(bg29, cuartoconcel);
+
+    // Illeana pensando
+    sf::Texture illeanapiensa;
+    cargarTextura(illeanapiensa, "../assets/fondos/Illiana pensando.PNG");
+
+    sf::Sprite bg30(illeanapiensa);
+    ajustar(bg30, illeanapiensa);
+
+    // Illeana pide numero
+    sf::Texture illeananumero;
+    cargarTextura(illeananumero, "../assets/fondos/Illiana te pide el numero.PNG");
+
+    sf::Sprite bg31(illeananumero);
+    ajustar(bg31, illeananumero);
+
+    // Opciones numero
+    sf::Texture illeananumop;
+    cargarTextura(illeananumop, "../assets/fondos/Illiana te pide el numero opciones.PNG");
+
+    sf::Sprite bg32(illeananumop);
+    ajustar(bg32, illeananumop);
+
+    // Illeana avergonzada
+    sf::Texture illeanaApenada;
+    cargarTextura(illeanaApenada, "../assets/fondos/Illiana avergonzada.PNG");
+
+    sf::Sprite bg33(illeanaApenada);
+    ajustar(bg33, illeanaApenada);
+
+    // Mensaje de Illeana
+    sf::Texture mensajeIlleana;
+    cargarTextura(mensajeIlleana, "../assets/fondos/MensajedeIlliana.PNG");
+
+    sf::Sprite bg34(mensajeIlleana);
+    ajustar(bg34, mensajeIlleana);
+
+    // Novia esperando en cafe
+    sf::Texture cafe1;
+    cargarTextura(cafe1, "../assets/fondos/Tu novia te espera en el cafe.PNG");
+
+    sf::Sprite bg35(cafe1);
+    ajustar(bg35, cafe1);
+
+    // Novia cafe 2
+    sf::Texture cafe2;
+    cargarTextura(cafe2, "../assets/fondos/Noviaencafe2.PNG");
+
+    sf::Sprite bg36(cafe2);
+    ajustar(bg36, cafe2);
+
+    // Novia cafe 1
+    sf::Texture cafe3;
+    cargarTextura(cafe3, "../assets/fondos/Noviaencafe1.PNG");
+
+    sf::Sprite bg37(cafe3);
+    ajustar(bg37, cafe3);
+
+    // Opciones cafe
+    sf::Texture cafeop;
+    cargarTextura(cafeop, "../assets/fondos/Noviaencafeopciones.PNG");
+
+    sf::Sprite bg38(cafeop);
+    ajustar(bg38, cafeop);
+
+    // Novia cafe 3
+    sf::Texture cafe4;
+    cargarTextura(cafe4, "../assets/fondos/Noviaencafe3.PNG");
+
+    sf::Sprite bg39(cafe4);
+    ajustar(bg39, cafe4);
 
 
 
+    // ==========================
+// CONFIGURACION DE ESCENAS
+// ==========================
 
-    
+    escenas[0] = {
+        &bg0,
+        "",
+        false,
+        false,
+        false,
+        1
+    };
+
+    escenas[1] = {
+        &bg1,
+        "",
+        false,
+        false,
+        false,
+        2
+    };
+
+    escenas[2] = {
+        &bg2,
+        "Tengo una bella novia. Describiria a mi novia como una chica muy alegre,\n"
+        "divertida y personalmente, muy linda.\n"
+        "Comenzamos a andar desde la prepa, pero ahora que comenzamos la universidad\n"
+        "la he notado un poco rara, lastimosamente no quedamos en la misma universidad pero\n"
+        "al menos puedo verla despues de clases. Y asi empezamos nuestra primera semana a\n"
+        "distancia,no creo que nos vaya tan mal... eso espero...",
+        false,
+        true,
+        false,
+        3
+    };
+
+    escenas[3] = {
+        &bg3,
+        "",
+        false,
+        false,
+        true,
+        4
+    };
+
+    escenas[4] = {
+        &bg5,
+        "",
+        false,
+        true,
+        false,
+        5
+    };
+
+    escenas[5] = {
+      &bg4,
+     "",
+     true,
+     false,
+     false,
+     6,
+     0
+    };
+
+    escenas[6] = {
+        &bg6,
+        "Despues de responder el mensaje, guardo el celular y empiezo a caminar hacia\n"
+        "mi primera clase.\n"
+        "El aire se siente distinto , nueva universidad, nueva rutina, un nuevo comienzo.\n\n"
+        "*vibra el celular: mensaje de la novia*",
+        false,
+        true,
+        false,
+        7
+    };
+
+    escenas[7] = {
+        &bg7,
+        "Sonrei un poco y segui caminando.\nLa amo...",
+        false,
+        true,
+        false,
+        8
+    };
+
+    escenas[8] = {
+        &bg8,
+        "\nJusto cuando estoy por entrar al salon pero algo me interrumpe...\n"
+        "Una chica esta recargada sobre la pared sonriendo ligeramente.",
+        false,
+        true,
+        false,
+        9
+    };
+
+    escenas[9] = {
+ &bg9,
+ "",
+ true,
+ false,
+ false,
+ 10,
+ 1
+    };
+
+    escenas[10] = {
+        &bg6,
+        "Intercambiamos unas palabras antes de que tenga que entrar a clase.\n"
+        "No fue nada, pero tampoco nada.\n"
+        "Camino a mi asiento intentando no pensar demasiado en eso.\n"
+        "Dejo mi mochila y comienzo a poner atencion a la clase.",
+        false,
+        true,
+        false,
+        11
+    };
+
+    escenas[11] = {
+        &bg10,
+        "Fue un dia bastante pesado...\n"
+        "*ring ring* El celular esta sonando, deberia revisarlo",
+        false,
+        true,
+        false,
+        12
+    };
+
+    escenas[12] = {
+     &bg11,
+      "",
+     true,
+     false,
+     false,
+     13,
+     2
+    };
+    escenas[13] = {
+        &bg12,
+        "Dejo el celular y me recuesto.\n"
+        "El dia fue pesado y apenas es lunes...\n"
+        "No puedo dejar de pensar en ella.\n"
+        "El proximo dia sera mejor.",
+        false,
+        true,
+        false,
+        14
+    };
+    escenas[14] = {
+ &bgMenu,
+ "",
+ false,
+ false,
+ false,
+ 15
+    };
+
+    escenas[15] = {
+        &bg13,
+        "",
+        false,
+        true,
+        false,
+        16
+    };
+
+    escenas[16] = {
+        &bg14,
+        "",
+        false,
+        false,
+        false,
+        17
+    };
+
+    escenas[17] = {
+ &bg15,
+ "",
+ true,
+ false,
+ false,
+ 18,
+ 3
+    };
+
+    escenas[18] = {
+    &bg16,
+    "Llegando al campus con mi paraguas.\n"
+    "La lluvia caia constante...\n"
+    "de esas que no molestan, pero tampoco te dejan ignorarla.\n\n"
+    "El ambiente era tranquilo.\n"
+    "Demasiado tranquilo.\n\n",
+    false,
+    true,
+    false,
+    19
+    };
+
+    escenas[19] = {
+        &bg17,
+        "En mi camino me encuentro con Illeana.\n"
+        "Parece que quedo atrapada por la lluvia.",
+        false,
+        true,
+        false,
+        20
+    };
+
+    escenas[20] = {
+      &bg18,
+     "",
+     true,
+     false,
+     false,
+     21,
+     4
+    };
+
+    escenas[21] = {
+        &bg19,
+        "Tu: Otra vez tu\nIlleana: Creo que sí coincidimos después de todo\nSe acerca un poco a tu paraguas sin preguntar directamente",
+        false,
+        true,
+        false,
+        22
+    };
+
+    escenas[22] = {
+        &bg20,
+        "Empezamos a caminar juntos hacia clase, la conversación era tranquila,\ncon la lluvia llenando los silencios.\nEn el camino, pasamos por los jardines de la escuela y\nnos detuvimos junto a los girasoles.",
+        false,
+        true,
+        false,
+        23
+    };
+
+    escenas[23] = {
+        &bg21,
+        "",
+        false,
+        true,
+        false,
+        24
+    };
+
+    escenas[24] = {
+        &bg22,
+        "Es tu novia?",
+        false,
+        true,
+        false,
+        25
+    };
+
+    escenas[25] = {
+     &bg23,
+     "",
+     true,
+     false,
+     false,
+     26,
+     5
+    };
+
+    escenas[26] = {
+  &bg24,
+  "Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Illeana volteó hacia mi."
+  "Oye…\nEl domingo…\nva a haber algo interesante cerca de aquí, deberías venir",
+  false,
+  true,
+  false,
+  27
+    };
+
+    escenas[27] = {
+ &bgMenu,
+ "",
+ false,
+ false,
+ false,
+ 28
+    };
+
+
+
+    // =========================
+ // DIA 3
+ // =========================
+
+    escenas[28] = {
+        &bg25,
+        "",
+        false,
+        true,
+        false,
+        29
+    };
+
+    escenas[29] = {
+        &bg10,
+        "Ay, parece que ya no esta lloviendo,\npero el ambiente sigue pesado...\n\n"
+        "Como si algo se hubiera quedado desde ayer.",
+        false,
+        true,
+        false,
+        30
+    };
+
+    escenas[30] = {
+        &bg26,
+        "",
+        false,
+        true,
+        false,
+        31
+    };
+
+    escenas[31] = {
+        &bg27,
+        "Decido revisar mi celular y encuentro unos mensajes",
+        false,
+        true,
+        false,
+        32
+    };
+
+    escenas[32] = {
+        &bg28,
+        "",
+        true,
+        false,
+        false,
+        33,
+        8
+    };
+    escenas[33] = {
+&bg29,
+"Guardo el celular.\n"
+"No se por que...\n"
+"pero esa pregunta se sintio mas pesada de lo normal.\n"
+"Como si ella hubiera notado algo\n"
+"que ni yo entiendo todavia.\n"
+"Creo que es mejor alistarme para clases.",
+    false,
+    true,
+    false,
+    34
+    };
+
+    escenas[34] = {
+        &bg6,
+        "Al llegar al campus todo seguia normal.\n"
+        "Caminaba tranquilo hasta mi salon de clases hasta que—",
+        false,
+        true,
+        false,
+        35
+    };
+
+    escenas[35] = {
+        &bg24,
+        "\"Hey\"",
+        false,
+        true,
+        false,
+        36
+    };
+
+    escenas[36] = {
+        &bg24,
+        "Illeana se me acerca como si ya fuera costumbre.\n"
+        "Parece ser que ya somos amigos.\n"
+        "\"Oye...\"\n",
+        false,
+        true,
+        false,
+        37
+    };
+
+    escenas[37] = {
+        &bg30,
+        "\"Estuve pensando en lo que te dije ayer\"",
+        false,
+        true,
+        false,
+        38
+    };
+
+    escenas[38] = { // borton corregido
+        &bg31,
+        "Lo del domingo...\n"
+        "Creo que estaria mas facil si te paso\n"
+        "la info por mensaje",
+        false,
+        true,
+        false,
+        39
+    };
+
+    escenas[39] = { //estoy aqui con las opciones
+        &bg32,
+        "",
+        true,
+        false,
+        false,
+        40,
+        9
+    };
+    escenas[40] = {
+&bg24,
+"Dudo unos segundos antes de darle mi numero.\n\n"
+"No deberia sentirse como algo importante...\n"
+"pero aun asi,\n"
+"siento una pequeña incomodidad en el pecho.",
+    false,
+    true,
+    false,
+    41
+    };
+
+    escenas[41] = {
+        &bg33,
+        "\"Gracias...\n"
+        "No pense que dirias que si tan facil\"\n\n"
+        "\"El domingo te mando la info\"",
+        false,
+        true,
+        false,
+        42
+    };
+
+
+    escenas[42] = {
+&bg34,
+"Me manda un mensaje para confirmar.\n"
+"Antes de guardar el celular,\n"
+"alcanzo a notar su foto de perfil.\n"
+"Un girasol.\n"
+"No se por que,pero me quedo pensando en eso.",
+    false,
+    true,
+    false,
+    43
+    };
+
+    escenas[43] = {
+        &bg6,
+        "Seguimos hablando hasta que empezaron las clases.\n"
+        "Pero siento que algo cambio...\n"
+        "y no se si fue para bien.",
+        false,
+        true,
+        false,
+        44
+    };
+
+    escenas[44] = {//mira a la novia en el cafe
+        &bg35,
+        "El dia pasa lento entre clases, apuntes y ruido...\n"
+        "Solo espero a que llegue la tarde.",
+        false,
+        true,
+        false,
+        45
+    };
+
+    escenas[45] = {
+        &bg36,
+        "Al darse cuenta de mi presencia,\n"
+        "se acerca con una sonrisa.\n"
+        "De esas sonrisas que no se fingen.",
+        false,
+        true,
+        false,
+        46
+    };
+    escenas[46] = {
+&bg37,
+"\"¡Hey!\"\n"
+"\"Pense que ibas a llegar tarde\"\n\n"
+"\"Hoy es un dia importante...\"",
+    false,
+    true,
+    false,
+    47
+    };
+
+    escenas[47] = {
+        &bg36,
+        "\"Si te acordaste, verdad?\"",
+        false,
+        true,
+        false,
+        48
+    };
+
+    escenas[48] = {
+        &bg38,
+        "",
+        true,
+        false,
+        false,
+        49,
+        10
+    };
+
+    escenas[49] = { //boton en el lugar equivocado
+        &bg39,
+        "Me mira unos segundos,\n"
+        "con una mirada que no puedo descifrar.",
+        false,
+        true,
+        false,
+        50
+    };
+
+    escenas[50] = {
+        &bg36,
+        "Pero al final sonrie.\n"
+        "Pasamos un buen rato en el cafe.",
+        false,
+        true,
+        false,
+        51
+    };
+
+    escenas[51] = {
+    &bgMenu,
+    "",
+    false,
+    false,
+    false,
+    52
+    };
+    escenas[52] = {
+    &bgRegalos,
+    "",
+    false,
+    false,
+    false,
+    -1
+    };
+    escenas[100] = {
+        &bgRegalos,
+        "",
+        false,
+        false,
+        false,
+        15
+    };
+
+    escenas[101] = {
+        &bgRegalos,
+        "",
+        false,
+        false,
+        false,
+        28
+    };
+
+    escenas[199] = {
+ &bg12,
+ "Ella decidio terminar contigo...\n\nGAME OVER",
+ false,
+ false,
+ false,
+ 199
+    };
     // boton invisible inicio
 
     sf::FloatRect zonaJugar({ 477.f, 400.f }, { 150.f, 60.f });
 
     //continuar arriba escena 1  arriba
     sf::FloatRect zonaContinuar0({ 795.f, 27.f }, { 250.f, 45.f });
-    
- 
+
+
 
     //boton continuar escena 2 abajo
                                 //posicion          ancho y alto
@@ -629,10 +1811,11 @@ int main() {
     sf::FloatRect zonaOtaku({ 863.f, 450.f }, { 200.f, 80.f });
 
     // zonas de las 4 opciones de elejir el personaje
-    sf::FloatRect zOp1({ 160.f, 485.f }, { 350.f, 60.f });
-    sf::FloatRect zOp2({ 550.f, 485.f }, { 350.f, 60.f });
-    sf::FloatRect zOp3({ 160.f, 555.f }, { 350.f, 60.f });
-    sf::FloatRect zOp4({ 550.f, 555.f }, { 350.f, 60.f });
+    sf::FloatRect zOp1({ 140.f, 470.f }, { 390.f, 75.f });
+    sf::FloatRect zOp2({ 530.f, 470.f }, { 390.f, 75.f });
+
+    sf::FloatRect zOp3({ 140.f, 545.f }, { 390.f, 75.f });
+    sf::FloatRect zOp4({ 530.f, 545.f }, { 390.f, 75.f });
 
 
     //botones del menu del final del dia
@@ -662,7 +1845,12 @@ int main() {
 
     sf::FloatRect zonaAlarma2({ 470.f,490.f }, { 80.f, 30.f });
 
-
+    sf::RectangleShape debugRect;
+    debugRect.setFillColor(sf::Color(0, 255, 0, 100)); // Verde semitransparente
+    debugRect.setOutlineColor(sf::Color::Green);
+    debugRect.setOutlineThickness(2.f);
+    debugRect.setPosition(zonaAlarma1.position); // Accede directamente al sf::Vector2f de posición
+    debugRect.setSize(zonaAlarma1.size);
 
 
     //bucle 
@@ -690,579 +1878,223 @@ int main() {
                     }
                     else if (scene == 1) { //elige su personaje
                         if (zonaToxico.contains(mousePos)) {
-                            miJugador = new Toxico(); //creacion de clases, con el new es apra que sobreviban y no se borren en las escenas
+
+                            miJugador = make_unique<Toxico>();
                             historia = cargarHistoria(0);
                             scene = 2;
                         }
+
                         else if (zonaNPC.contains(mousePos)) {
-                            miJugador = new NPC();
+
+                            miJugador = make_unique<NPC>();
                             historia = cargarHistoria(1);
                             scene = 2;
                         }
+
                         else if (zonaGym.contains(mousePos)) {
-                            miJugador = new Gymrat();
+
+                            miJugador = make_unique<Gymrat>();
                             historia = cargarHistoria(2);
                             scene = 2;
                         }
+
                         else if (zonaOtaku.contains(mousePos)) {
-                            miJugador = new Otaku();
+
+                            miJugador = make_unique<Otaku>();
                             historia = cargarHistoria(3);
                             scene = 2;
                         }
                     }
-                    else if (scene == 2) { //escena introductoria
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 3;
-                        }
+                    if (scene < 0 || scene >= (int)escenas.size()) {
+                        cout << "ERROR: scene fuera de rango" << endl;
+                        scene = 0;
+                        continue;
                     }
-                    else if (scene == 3) { //escena de foto de la novia
-                        if (zonaContinuar.contains(mousePos)) {
-                            scene = 4;
-                        }
+                    SceneData* actual = &escenas[scene];
 
+                    // continuar arriba
+                    if (actual->continuarArriba &&
+                        zonaContinuar0.contains(mousePos)) {
+
+                        if (
+                            actual->siguienteEscena >= 0 &&
+                            actual->siguienteEscena < (int)escenas.size()
+                            ) {
+
+                            scene = actual->siguienteEscena;
+                        }
+                        else {
+
+                            cout << "ERROR: siguienteEscena invalida" << endl;
+                        }
+                        continue;
                     }
-                    else if (scene == 4) { //escena de dia 1
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 5;
-                        }
 
+                    // continuar abajo
+                    if (actual->continuarAbajo &&
+                        zonaContinuar.contains(mousePos)) {
+
+                        if (
+                            actual->siguienteEscena >= 0 &&
+                            actual->siguienteEscena < (int)escenas.size()
+                            ) {
+
+                            scene = actual->siguienteEscena;
+                        }
+                        else {
+
+                            cout << "ERROR: siguienteEscena invalida" << endl;
+                        }
+                        continue;
                     }
-                    else if (scene == 5) {
-                        int impactoElegido = -67; // variable centinela
-
-                        // dependiendo el boton que eligio con su opcion se guarda el impacto -5,0,3,5
-                        if (zOp1.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp1; // busca cuanto vale el impacto del struct 
-                            scene = 6;
-                        }
-                        else if (zOp2.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp2;
-                            scene = 6;
-                        }
-                        else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp3;
-                            scene = 6;
-                        }
-                        else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp4;
-                            scene = 6;
-                        }
-
-                        //esto es para saber si pico un boton
-                        if (impactoElegido != -67) {
-
-                            //objeto mi jugador uso su funcion aplicarimpacto y le mando la novia y el impacto -5,0,3,5 que esta gaurdado arriba
-                            miJugador->aplicarImpacto(mitilina, impactoElegido);
-
-                            //para ver si funciona
-                            mitilina.mostrar();
-
-                            //avanzo en mi vector para que no se quede en los mismos dialogos
-                            if (escenarioActual < historia.size() - 1) {
-                                escenarioActual++;
-                            }
-
-                        }
 
 
-                    }
-                    else if (scene == 6) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 7;
-                        }
 
-                    }
-                    else if (scene == 7) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 8;
-                        }
-                    }
-                    else if (scene == 8) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 9;
-                        }
-                    }
-                    else if (scene == 9) {
-                        int impactoElegido = -67; // variable centinela
+                    // MENU DIA 1
+                    // MENU DIA 1
+                    if (scene == 14) {
 
-                        // dependiendo el boton que eligio con su opcion se guarda el impacto -5,0,3,5
-                        if (zOp1.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp1;
-                            scene = 10;
-                        }
-                        else if (zOp2.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp2;
-                            scene = 10;
-                        }
-                        else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp3;
-                            scene = 10;
-                        }
-                        else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoElegido = historia[escenarioActual].imp4;
-                            scene = 10;
-                        }
-
-                        //esto es para saber si pico un boton
-                        if (impactoElegido != -67) {
-
-                            //objeto mi jugador uso su funcion aplicarimpacto y le mando la novia y el impacto -5,0,3,5 que esta gaurdado arriba
-                            miJugador->aplicarImpacto(mitilina, impactoElegido);
-
-                            //para ver si funciona
-                            mitilina.mostrar();
-
-                            //avanzo en mi vector para que no se quede en los mismos dialogos
-                            if (escenarioActual < historia.size() - 1) {
-                                escenarioActual++;
-                            }
-
-                        }
-                    }
-                    else if (scene == 10) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 11;
-                        }
-                    }
-                    else if (scene == 11) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 12;
-                        }
-                    }
-                    else if (scene == 12) {
-                        int impactoCentinela = -67;
-
-                        if (zOp1.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp1;
-                            scene = 13;
-                        }
-                        else if (zOp2.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp2;
-                            scene = 13;
-                        }
-                        else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp3;
-                            scene = 13;
-                        }
-                        else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp4;
-                            scene = 13;
-                        }
-                        if (impactoCentinela != -67) {
-                            miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                            mitilina.mostrar();
-
-                            if (escenarioActual < historia.size() - 1) {
-                                escenarioActual++;
-                            }
-                        }
-                    }
-                    else if (scene == 13) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 14; //escena del menu
-                        }
-                    }
-                    else if (scene == 14) {
                         if (zonaContM.contains(mousePos)) {
-                            scene = 15; //escena del dia 2
-                        }
-                        if (zonaRegalos.contains(mousePos)) {
-                            scene = -1; //escena de los regalos
-                            
-
-                        }
-                    }
-                    else if (scene == -1){
-                        if (zonaCollar.contains(mousePos) || zonaFlores.contains(mousePos) || zonaPastel.contains(mousePos) || zonaCarta.contains(mousePos)) {
                             scene = 15;
+                            continue;
+                        }
 
+                        else if (zonaRegalos.contains(mousePos)) {
+                            scene = 100;
+                            continue;
                         }
                     }
-
-                    else if (scene == 15) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                            scene = 16;
-                        }
-                    }
-
+                    // ESCENA ALARMA
                     else if (scene == 16) {
-                        if (zonaAlarma1.contains(mousePos) || zonaAlarma2.contains(mousePos)) {
+
+                        if (zonaAlarma1.contains(mousePos)) {
                             scene = 17;
+                            continue;
+                        }
+
+                        else if (zonaAlarma2.contains(mousePos)) {
+                            scene = 17;
+                            continue;
                         }
                     }
-                    else if (scene == 17) { //EN ESTA ESCENA FALTA LA FUNCION DEL ATRACTIVO PARA QUE NO MODIFIQUE A LA NOVIA
-                        int impactoCentinela = -67;
 
-                        if (zOp1.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp1;
-                            scene = 18;
-                        }
-                        else if (zOp2.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp2;
-                            scene = 18;
-                        }
-                        else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp3;
-                            scene = 18;
-                        }
-                        else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp4;
-                            scene = 18;
-                        }
-                        if (impactoCentinela != -67) {
-                            miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                            mitilina.mostrar();
-
-                            if (escenarioActual < historia.size() - 1) {
-                                escenarioActual++;
-                            }
-                        }
-                        }
-                    else if (scene == 18) {
-                            if (zonaContinuar0.contains(mousePos)) {
-                                scene = 19;
-                            }
-                            }
-                    else if (scene == 19) {
-                                if (zonaContinuar0.contains(mousePos)) {
-                                    scene = 20;
-                                }
-                                }
-                    else if (scene == 20) {
-                         int impactoCentinela = -67;
-
-                        if (zOp1.contains(mousePos)) {
-                          mitilina.mostrar(); //ver stats inciales
-                          impactoCentinela = historia[escenarioActual].imp1;
-                          scene = 21;
-                         }
-                         else if (zOp2.contains(mousePos)) {
-                          mitilina.mostrar(); //ver stats inciales
-                          impactoCentinela = historia[escenarioActual].imp2;
-                          scene = 21;
-                         }
-                          else if (zOp3.contains(mousePos)) {
-                           mitilina.mostrar(); //ver stats inciales
-                           impactoCentinela = historia[escenarioActual].imp3;
-                           scene = 21;
-                         }
-                          else if (zOp4.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp4;
-                            scene = 21;
-                         }
-                         if (impactoCentinela != -67) {
-                          miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                          mitilina.mostrar();
-
-                            if (escenarioActual < historia.size() - 1) {
-                              escenarioActual++;
-                            }
-                         }
-                    }
-                    else if (scene == 21) {
-                      if (zonaContinuar0.contains(mousePos)) {
-                          scene = 22;
-                       }
-                    }
-                    else if (scene == 22) {
-                        if (zonaContinuar0.contains(mousePos)) {
-                          scene = 23;
-                        }
-                     }
-                    else if (scene == 23) {
-                      if (zonaContinuar0.contains(mousePos)) {
-                          scene = 24;
-                       }
-                     }
-                    else if (scene == 24) {
-                         if (zonaContinuar0.contains(mousePos)) {
-                             scene = 25;
-                           }
-                    }
-                    else if (scene == 25) {
-                      int impactoCentinela = -67;
-
-                       if (zOp1.contains(mousePos)) {
-                           mitilina.mostrar(); //ver stats inciales
-                           impactoCentinela = historia[escenarioActual].imp1;
-                           scene = 26;
-                        }
-                        else if (zOp2.contains(mousePos)) {
-                         mitilina.mostrar(); //ver stats inciales
-                         impactoCentinela = historia[escenarioActual].imp2;
-                         scene = 26;
-                         }
-                         else if (zOp3.contains(mousePos)) {
-                            mitilina.mostrar(); //ver stats inciales
-                            impactoCentinela = historia[escenarioActual].imp3;
-                            scene = 26;
-                         }
-                          else if (zOp4.contains(mousePos)) {
-                                mitilina.mostrar(); //ver stats inciales
-                                impactoCentinela = historia[escenarioActual].imp4;
-                                scene = 26;
-                          }
-                          if (impactoCentinela != -67) {
-                              miJugador->aplicarImpacto(mitilina, impactoCentinela);
-                              mitilina.mostrar();
-
-                               if (escenarioActual < historia.size() - 1) {
-                                  escenarioActual++;
-                               }
-                           }
-                     }
-                    else if (scene == 26) {
-                          if (zonaContinuar0.contains(mousePos)) {
-                           scene = 27;
-                           }
-
-                      }
+                    // MENU DIA 2
                     else if (scene == 27) {
+
                         if (zonaContM.contains(mousePos)) {
-                            scene = 28; //escena del dia 3
-                        }
-                         if (zonaRegalos.contains(mousePos)) {
-                            scene = -2; //escena de los regalos
-                         }
-                      }
-                    else if (scene == -2) {
-                        if (zonaCollar.contains(mousePos) || zonaFlores.contains(mousePos) || zonaPastel.contains(mousePos) || zonaCarta.contains(mousePos)) { //faltaria anadir que afecte a los atributos
                             scene = 28;
+                            continue;
+                        }
 
+                        else if (zonaRegalos.contains(mousePos)) {
+                            scene = 101;
+                            continue;
+                        }
+                    }
+                    // MENU FINAL
+                    else if (scene == 51) {
+
+                        if (zonaContM.contains(mousePos)) {
+                            scene = 52;
+                            continue;
+                        }
+
+                        else if (zonaRegalos.contains(mousePos)) {
+                            scene = 52;
+                            continue;
                         }
                     }
 
 
-                }
-            }
-        }
+                    // REGALOS DIA 1
+                    else if (scene == 100) {
 
-    // mostrar los dibujos
-    ventana.clear(sf::Color::Black);
+                        procesarRegalo(
+                            scene,
+                            15,
+                            mitilina,
+                            mousePos,
+                            zonaFlores,
+                            zonaCarta,
+                            zonaPastel,
+                            zonaCollar
+                        );
 
-    if (scene == 0) { // menu Principal
-        ventana.draw(bg0);
-
-
-    }
-    else if (scene == 1) { //elije personaje
-        ventana.draw(bg1);
-    }
-    else if (scene == 2) { //foto de la novia con texto
-        ventana.draw(bg2);
-        textolore.setString("Tengo una bella novia. Describiria a mi novia como una chica muy alegre,\ndivertida y personalmente, muy linda.\nComenzamos a andar desde la prepa, pero ahora que comenzamos la universidad\nla he notado un poco rara, lastimosamente no quedamos en la misma universidad pero\nal menos puedo verla despues de clases. Y asi empezamos nuestra primera semana a\ndistancia,no creo que nos vaya tan mal... eso espero...");
-        ventana.draw(textolore);
-    }
-    else if (scene == 3) {
-        ventana.draw(bg3);
-
-    }
-    else if (scene == 4) {
-        ventana.draw(bg5);
-    }
-    else if (scene == 5 && !historia.empty()) {
-        ventana.draw(bg4);
-
-        textoPregunta.setString(historia[escenarioActual].pregunta);
-        top1.setString(historia[escenarioActual].op1);
-        top2.setString(historia[escenarioActual].op2);
-        top3.setString(historia[escenarioActual].op3);
-        top4.setString(historia[escenarioActual].op4);
-
-        ventana.draw(textoPregunta);
-        ventana.draw(top1); 
-        ventana.draw(top2);
-        ventana.draw(top3); 
-        ventana.draw(top4);
-
-
-    }
-    else if (scene == 6) {
-        ventana.draw(bg6);
-        textolore.setString("Despues de responder el mensaje, guardo el celular y empiezo a caminar hacia\nmi primera clase.\n\El aire se siente distinto , nueva universidad, nueva rutina, un nuevo comienzo.\n\n*vibra el celular: mensaje de la novia*");
-        ventana.draw(textolore);
-    }
-    else if (scene == 7) {
-        ventana.draw(bg7);
-        textolore.setString("Sonrei un poco y segui caminando.\nLa amo...");
-        ventana.draw(textolore);
-    }
-    else if (scene == 8) {
-        ventana.draw(bg8);
-        textolore.setString("\nJusto cuando estoy por entrar al salon pero algo me interrumpe...\nUna chica esta recargada sobre la pared sonriendo ligeramente.");
-        ventana.draw(textolore);
-    }
-    else if (scene == 9) {
-        ventana.draw(bg9);
-        textoPregunta.setString(historia[escenarioActual].pregunta);
-        top1.setString(historia[escenarioActual].op1);
-        top2.setString(historia[escenarioActual].op2);
-        top3.setString(historia[escenarioActual].op3);
-        top4.setString(historia[escenarioActual].op4);
-
-        ventana.draw(textoPregunta);
-        ventana.draw(top1); 
-        ventana.draw(top2);
-        ventana.draw(top3); 
-        ventana.draw(top4);
-    }
-    else if (scene == 10) {
-        ventana.draw(bg6);
-        textolore.setString("Intercambiamos unas palabras antes de que tenga que entrar a clase.\n No fue nada, pero tampoco nada.\nCamino a mi asiento intentando no pensar demasiado en eso.\nDejo mi mochila y comienzo a poner atencion a la clase. ");
-        ventana.draw(textolore);
-    }
-    else if (scene == 11) {
-        ventana.draw(bg10);
-        textolore.setString("Fue un dia bastante pesado...\n*ring ring* El celular esta sonando, deberia revisarlo");
-        ventana.draw(textolore);
-    }
-    else if (scene == 12) {
-        ventana.draw(bg11);
-
-        textoPregunta.setString(historia[escenarioActual].pregunta);
-        top1.setString(historia[escenarioActual].op1);
-        top2.setString(historia[escenarioActual].op2);
-        top3.setString(historia[escenarioActual].op3);
-        top4.setString(historia[escenarioActual].op4);
-
-        ventana.draw(textoPregunta);
-        ventana.draw(top1); 
-        ventana.draw(top2);
-        ventana.draw(top3);
-        ventana.draw(top4);
-    }
-    else if (scene == 13) {
-        ventana.draw(bg12);
-        textolore.setString("Dejo el celular y me recuesto.\nEl dia fue pesado y apenas es lunes...\nNo puedo dejar de pensar en ella.\nEl proximo dia sera mejor.");
-        ventana.draw(textolore);
-    }
-    else if (scene == 14) {
-        ventana.draw(bgMenu);
-        
-    }
-    else if (scene == 15) { //escena del dia 2
-        ventana.draw(bg13);
-    }
-    else if (scene == -1) { //escena del menu de los regalos
-        ventana.draw(bgRegalos);
-        
-    }
-
-    else if (scene == 16) {
-        ventana.draw(bg14);
-
-        }
-    else if (scene == 17) {
-            ventana.draw(bg15);
-
-            textoPregunta.setString(historia[escenarioActual].pregunta);
-            top1.setString(historia[escenarioActual].op1);
-            top2.setString(historia[escenarioActual].op2);
-            top3.setString(historia[escenarioActual].op3);
-            top4.setString(historia[escenarioActual].op4);
-
-            ventana.draw(textoPregunta);
-            ventana.draw(top1);
-            ventana.draw(top2);
-            ventana.draw(top3);
-            ventana.draw(top4);
-            }
-    else if (scene == 18) {
-                ventana.draw(bg16);
-                textolore.setString("Llegando al campus con mi paraguas. La lluvia caia constante...de esas que no molestan,\npero tampoco te dejan ignorarla.\nEl ambiente era tranquilo en el campus...demasiado tranquilo.\nEn mi camino, me encuentro con Illeana, parece que quedo atrapada en la lluvia");
-                ventana.draw(textolore);
-                }
-    else if (scene == 19) {
-                    ventana.draw(bg17);
-                    textolore.setString("Esta bajo un pequenio techo, mirando la lluvia como si no tuviera prisa.\n\nLevanta la mirada y me encuentra. Sonrie");
-                    ventana.draw(textolore);
+                        continue;
                     }
-    else if (scene == 20) {
-       ventana.draw(bg18);
-       textoPregunta.setString(historia[escenarioActual].pregunta);
-       top1.setString(historia[escenarioActual].op1);
-       top2.setString(historia[escenarioActual].op2);
-       top3.setString(historia[escenarioActual].op3);
-       top4.setString(historia[escenarioActual].op4);
 
-        ventana.draw(textoPregunta);
-        ventana.draw(top1);
-        ventana.draw(top2);
-        ventana.draw(top3);
-        ventana.draw(top4);
+                    // REGALOS FINAL
+                    else if (scene == 101) {
+
+                        procesarRegalo(
+                            scene,
+                            28,
+                            mitilina,
+                            mousePos,
+                            zonaFlores,
+                            zonaCarta,
+                            zonaPastel,
+                            zonaCollar
+                        );
+
+                        continue;
+                    }
+
+                    // ESCENAS NORMALES CON OPCIONES
+                    else if (actual->tieneOpciones) {
+
+                        escenarioActual = actual->indiceHistoria;
+
+                        procesarDecision(
+                            scene,
+                            actual->siguienteEscena,
+                            escenarioActual,
+                            historia,
+                            miJugador,
+                            mitilina,
+                            mousePos,
+                            zOp1,
+                            zOp2,
+                            zOp3,
+                            zOp4
+                        );
+                    }
 
 
-     }
-    else if (scene == 21) {
-       ventana.draw(bg19);
-        textolore.setString("Otra vez tu...\nIlleana: Creo que si coincidimos despues de todo\n\nSe acerca un poco a tu paraguas sin preguntar directamente.");
-        ventana.draw(textolore);
-                            }
-    else if (scene == 22) {
-         ventana.draw(bg20);
-         textolore.setString("Empezamos a caminar juntos hacia clase, la conversasion era tranquila,\ncon la lluvia llenando los silencios.\nEn el camino, pasamos por los jardines de la escuela y nos detuvimos junto a los girasoles.\nCuando de repente...");
-         ventana.draw(textolore);
+
+                }
+            }
+        }
+
+        // mostrar los dibujos
+        ventana.clear(sf::Color::Black);
+
+        if (scene < 0 || scene >= (int)escenas.size()) {
+            cout << "ERROR: scene fuera de rango" << endl;
+            scene = 0;
+        }
+
+        SceneData* actual = &escenas[scene];
+
+        // ACTUALIZAR ESCENARIO
+        if (actual->indiceHistoria >= 0) {
+            escenarioActual = actual->indiceHistoria;
+        }
+
+        renderizarEscena(
+            ventana,
+            *actual,
+            textolore,
+            textoPregunta,
+            top1,
+            top2,
+            top3,
+            top4,
+            historia,
+            escenarioActual
+        );
+
+        ventana.display();
     }
-    else if (scene == 23) {
-       ventana.draw(bg21);
-
-     }
-    else if (scene == 24) {
-        ventana.draw(bg22);
-        textolore.setString("Illeana: Tu novia??");
-        ventana.draw(textolore);
-    }
-    else if (scene == 25) {
-       ventana.draw(bg23);
-
-      textoPregunta.setString(historia[escenarioActual].pregunta);
-      top1.setString(historia[escenarioActual].op1);
-      top2.setString(historia[escenarioActual].op2);
-      top3.setString(historia[escenarioActual].op3);
-      top4.setString(historia[escenarioActual].op4);
-
-      ventana.draw(textoPregunta);
-      ventana.draw(top1);
-      ventana.draw(top2);
-      ventana.draw(top3);
-      ventana.draw(top4);
-    }
-    else if (scene == 26) {
-      ventana.draw(bg24);
-      textolore.setString("Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Illeana volteo hacia mi.\nOye...El domingo... va a haber algo interesante cerca de aqui, deberias venir :)\nUff, por fin termino el día.Fue pesado...");
-      ventana.draw(textolore);
-    }
-    else if (scene == 27) {
-     ventana.draw(bgMenu);
-    }
-    else if (scene == -2) {
-     ventana.draw(bgRegalos);
-    }
-    else if (scene == 28) {
-     textolore.setString("aqui comienza la escena del dia 3");
-      ventana.draw(textolore);
-      }
-
-    ventana.display();
+    return 0;
 }
-        return 0;
-    }
-
-  
