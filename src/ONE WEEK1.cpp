@@ -471,7 +471,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 
 
-
+    //Dia 3
     // Dentro de cargarHistoria(), después de e8
 
     Escenario e9;
@@ -487,10 +487,10 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { // TOXICO
 
-        e9.op1 = "Todo bien amor, solo queria verte.";
-        e9.op2 = "Si, solo tuve un mal dia.";
-        e9.op3 = "Estoy bien.";
-        e9.op4 = "No pasa nada.";
+        e9.op1 = "Todo bien amor, solo te extrañaba.";
+        e9.op2 = "Si, solo fue un dia algo cansado.";
+        e9.op3 = "See...";
+        e9.op4 = "Nada que te importe.";
 
     }
     else if (clase == 1) { // NPC
@@ -544,10 +544,10 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { // TOXICO
 
-        e10.op1 = "Claro.";
-        e10.op2 = "Hmm... bueno.";
-        e10.op3 = "Solo si no me ignoras despues.";
-        e10.op4 = "Eh... si.";
+        e10.op1 = "Claro, te paso mi numero y lo que quieras";
+        e10.op2 = "Eh... si quieres.";
+        e10.op3 = "Va, a mi novia le agradara que haga amistades";
+        e10.op4 = "Bueno";
 
     }
     else if (clase == 1) { // NPC
@@ -590,15 +590,15 @@ vector<Escenario> cargarHistoria(int clase) {
     e11.imp3 = -3;
     e11.imp4 = -5;
 
-    if (clase == 0) {
+    if (clase == 0) { //TOXICO
 
         e11.op1 = "\"Obvio, feliz cumpleaños\"";
-        e11.op2 = "\"Feliz aniversario...\"";
+        e11.op2 = "\"Feliz aniversario!\"";
         e11.op3 = "\"El dia que nos conocimos?\"";
-        e11.op4 = "\"Era una salida normal, no?\"";
+        e11.op4 = "\"Claro, era... este... aja...\"";
 
     }
-    else if (clase == 1) {
+    else if (clase == 1) { //NPC
 
         e11.op1 = "\"Obvio, feliz cumpleaños\"";
         e11.op2 = "\"Feliz aniversario...\"";
@@ -606,7 +606,7 @@ vector<Escenario> cargarHistoria(int clase) {
         e11.op4 = "\"Eh... era una cita cualquiera?\"";
 
     }
-    else if (clase == 2) {
+    else if (clase == 2) { //GYMRAT
 
         e11.op1 = "\"Obvio, feliz cumpleaños\"";
         e11.op2 = "\"Feliz aniversario preciosa\"";
@@ -614,7 +614,7 @@ vector<Escenario> cargarHistoria(int clase) {
         e11.op4 = "\"Era una salida?\"";
 
     }
-    else if (clase == 3) {
+    else if (clase == 3) { //OTAKU
 
         e11.op1 = "\"Obvio waifu, feliz cumpleaños UwU\"";
         e11.op2 = "\"Feliz aniversario nya\"";
