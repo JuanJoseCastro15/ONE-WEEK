@@ -767,8 +767,196 @@ vector<Escenario> cargarHistoria(int clase) {
 
     h.push_back(e14);
 
-    //Aqui le sigues Pao :3
+    //Dia5 Escenario1
 
+    Escenario e15;
+
+    e15.pregunta = "“Sé que la regué  y disculpame, actúe por impulso/n"
+        "y no pienso lo que hago . Me quiero esforzar para que esto funcione,/n"
+        "así que te aseguro que pondré todo lo que pueda de mi parte./n"
+        "Quiero que sepas lo arrepentido que estoy.";
+
+
+    e15.imp1 = 1;
+    e15.imp2 = 2;
+    e15.imp3 = 4;
+    e15.imp4 = -5;
+
+    if (clase == 0) {
+
+        e15.op1 = "\"Puedo demostrar cuan arrepentido estoy con un abrazo?\"";
+        e15.op2 = "\"*le besas la frente*\"";
+        e15.op3 = "\"Me aceptas un beso?\"";
+        e15.op4 = "\"Bueno, ya hice mi trabajo, ya estamos bien, no?\"";
+
+    }
+    else if (clase == 1) {
+
+        e15.op1 = "\"Me aceptas un abrazo como disculpa?\"";
+        e15.op2 = "\"*le da un beso en la frente*\"";
+        e15.op3 = "\"Un beso de reconciliacion?\"";
+        e15.op4 = "\"Bueno, ya lo arreglamos, no?\"";
+
+    }
+    else if (clase == 2) {
+
+        e15.op1 = "\"*Te acercas y la abrazas*\"";
+        e15.op2 = "\"*Te acercas y le das un beso en la frente*\"";
+        e15.op3 = "\"*Te acercas y la besas*\"";
+        e15.op4 = "\"Bueno, ya nos arreglamos, no?\"";
+
+    }
+    else if (clase == 3) {
+
+        e15.op1 = "\"Podrias perdonar a este terroncito de azucar\n con un abrazo\"";
+        e15.op2 = "\"*Le da un beso de manera kawaii*\"";
+        e15.op3 = "\"Un besito de reconciliacion, waifu-chan?\"";
+        e15.op4 = "\"Ash, ya lo arreglamos baka?\"";
+
+    }
+
+    h.push_back(e15);
+
+    //Dia5 Escenario2
+    Escenario e16;
+
+    e16.pregunta = "“Como de costumbre, milagrosamente te encontraste a Illeana./n"
+        "Decides acercarte y comienzas a darle una explicacion/nsobre lo ayer\"";
+
+    e16.imp1 = -5;
+    e16.imp2 = -3;
+    e16.imp3 = 1;
+    e16.imp4 = -5;
+
+    if (clase == 0) {
+
+        e16.op1 = "\"Perdon por la aparicion de mi novia/n"
+            "a veces es molesta\"";
+        e16.op2 = "\"Perdon por irme sin explicacion\"";
+        e16.op3 = "\"Que rollo con el pollo\"";
+        e16.op4 = "\"Oye, por tu cculpa me tuve que disculpar\"";
+
+    }
+    else if (clase == 1) {
+
+        e16.op1 = "\"Disculpame, no esperaba que apareciera\"";
+        e16.op2 = "\"No quise dejarte asi, perdoname\"";
+        e16.op3 = "\"Asi que..como te fue con la tarea?\"";
+        e16.op4 = "\"Oye, ayer me metiste en un problemon\"";
+
+    }
+    else if (clase == 2) {
+
+        e16.op1 = "\"Disculpa, mi novia a veces es asi\"";
+        e16.op2 = "\"Perdon por dejarte plantada, no/n "
+            "fue mi intencion\"";
+        e16.op3 = "\"Ey, como estas?todo bien?\"";
+        e16.op4 = "\"Sabes que me has metido en problemas\"";
+
+    }
+    else if (clase == 3) {
+
+        e16.op1 = "\"Perdon que mi novia nos interrumpiera Illeana-chan\"";
+        e16.op2 = "\"Perdon por dejarte plantada como arbol\"";
+        e16.op3 = "\"Ya viste YBC? 7w7\"";
+        e16.op4 = "\"Oi oi oi, me metiste en problemas\"";
+
+    }
+
+    h.push_back(e16);
+
+    //Dia5 Escenario3
+    Escenario e17;
+
+    e17.pregunta = "“Llegando, notaste muchas flores bonitas, cual escoges?”";
+
+    e17.imp1 = 2;
+    e17.imp2 = -5;
+    e17.imp3 = 5;
+    e17.imp4 = -2;
+
+    if (clase == 0) {
+
+        e17.op1 = "\"Rosas, un clasico\"";
+        e17.op2 = "\"Girasoles, el mas barato\"";
+        e17.op3 = "\"Tulipanes, a algunos les gusta\"";
+        e17.op4 = "\"Flores beso, el nombre  y la apariencia se/n ven interesantes\"";
+
+    }
+    else if (clase == 1) {
+
+        e17.op1 = "\"La rosa es una flor muy clasica\"";
+        e17.op2 = "\"Los girasoles brindan mucha alegria\"";
+        e17.op3 = "\"Los tulipanes representan el amor perfecto, no?\"";
+        e17.op4 = "\"Es muy unica\"";
+
+    }
+    else if (clase == 2) {
+
+        e17.op1 = "\"Las rosas siempre son las mejores\"";
+        e17.op2 = "\"Unos brillantes girasoles estarian bien, no?\"";
+        e17.op3 = "\"Los tulipanes son bastante hermosos\"";
+        e17.op4 = "\"Las flores beso son tan buenas como el ejercicio\"";
+
+    }
+    else if (clase == 3) {
+
+        e17.op1 = "\"Supongo que las rosas le gustaran\"";
+        e17.op2 = "\"Los girasoles como la frase: gira, gira tu calzon\"";
+        e17.op3 = "\"Los tulipanes son hemochos uwu\"";
+        e17.op4 = "\"Es al mas barata, podre usar lo demas para un manga\"";
+
+    }
+
+    h.push_back(e17);
+
+
+    //Dia5 Escenario4
+    Escenario e18;
+
+    e18.pregunta = "“Le escribes”";
+
+    e18.imp1 = 2;
+    e18.imp2 = 5;
+    e18.imp3 = -1;
+    e18.imp4 = -5;
+
+    if (clase == 0) {
+
+        e18.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
+        e18.op2 = "\"Pide permiso para salir manana a las 6pm\"";
+        e18.op3 = "\"Te tengo una sorpresa manana a las 6pm, alistate\"";
+        e18.op4 = "\"Oye, manana teniamos que hacer algo?\"";
+
+    }
+    else if (clase == 1) {
+
+        e18.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
+        e18.op2 = "\"Pide permiso porque mañana voy a pasar a las 6\"";
+            e18.op3 = "\"Te tengo un regalo :), manana a las 6/n prepárate para ser sorprendida\"";
+        e18.op4 = "\"Entonces, manana hay plan o no?\"";
+
+    }
+    else if (clase == 2) {
+
+        e18.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
+        e18.op2 = "\"Oye, pide permiso, manana pasare por ti a las 6\"";
+        e18.op3 = "\"Tengo una sorpresa para ti, pero debes de estar lista a las 6\"";
+        e18.op4 = "\"¿Te parece si no voy al gym mañana y salimos?/n ¿Como a las 6?\"";
+
+    }
+    else if (clase == 3) {
+
+        e18.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
+        e18.op2 = "\"Manana paso por ti a las 6 , ponte guapa...\"";
+        e18.op3 = "\"Manana desbloqueas evento exclusivo conmigo.\"";
+        e18.op4 = "\"Supongo que manana continua esta situacion/n rara entre nosotros.\"";
+
+    }
+
+    h.push_back(e18);
+
+	//Dia6 Escenario1
     return h;
 }
 
@@ -1488,7 +1676,73 @@ int main() {
     ajustar(bg56, MensajeOpciones1);
 
     //Dia5
-    //Aqui le sigues Mia
+    
+    //dia 5
+    sf::Texture Dia6;
+    cargarTextura(Dia6, "../assets/fondos/Dia6.jpeg");
+
+    sf::Sprite bg57(Dia6);
+    ajustar(bg57, Dia6);
+
+    //Casanovia
+    sf::Texture Casanovia;
+    cargarTextura(Casanovia, "../assets/fondos/Casanovia.png");
+
+    sf::Sprite bg58(Casanovia);
+    ajustar(bg58, Casanovia);
+
+    //Noviapuerta
+    sf::Texture Noviapuerta;
+    cargarTextura(Noviapuerta, "../assets/fondos/Noviapuerta.png");
+
+    sf::Sprite bg59(Noviapuerta);
+    ajustar(bg59, Noviapuerta);
+
+    //Novia Uni
+    sf::Texture noviaescuela;
+    cargarTextura(noviaescuela, "../assets/fondos/noviaescuela.png");
+
+    sf::Sprite bg60(noviaescuela);
+    ajustar(bg60, noviaescuela);
+
+    //IlleanaenojadaPasillo
+    sf::Texture Pasilloenojada;
+    cargarTextura(Pasilloenojada, "../assets/fondos/pasilloenojada.png");
+
+    sf::Sprite bg61(Pasilloenojada);
+    ajustar(bg61, Pasilloenojada);
+
+    //Pasilloenojada
+    sf::Texture Pasilloenojada2;
+    cargarTextura(Pasilloenojada2, "../assets/fondos/Pasilloenojada2.png");
+
+    sf::Sprite bg62(Pasilloenojada2);
+    ajustar(bg62, Pasilloenojada2);
+
+    //Floreria
+    sf::Texture Floreria;
+    cargarTextura(Floreria, "../assets/fondos/Floreria.png");
+
+    sf::Sprite bg63(Floreria);
+    ajustar(bg63, Floreria);
+
+    //Nochecel
+    sf::Texture Nochecel;
+    cargarTextura(Nochecel, "../assets/fondos/Nochecel.png");
+
+    sf::Sprite bg64(Nochecel);
+    ajustar(bg64, Nochecel);
+
+
+    //Mandarmensaje
+    sf::Texture Mandarmensaje;
+    cargarTextura(Mandarmensaje, "../assets/fondos/Mandarmensaje.png");
+
+    sf::Sprite bg65(Mandarmensaje);
+    ajustar(bg65, Mandarmensaje);
+
+
+
 
 // ==========================
 // CONFIGURACION DE ESCENAS
@@ -1628,10 +1882,10 @@ int main() {
     };
     escenas[13] = {
         &bg12,
-        "Dejo el celular y me recuesto.\n"
-        "El dia fue pesado y apenas es lunes...\n"
-        "No puedo dejar de pensar en ella.\n"
-        "El proximo dia sera mejor.",
+        "Fue un dia de muchas emociones.\n"
+        "Desde el mensaje de la mañana, hasta la lluvia...\n"
+        "Ver a Illeana sola, mojada y sonriendo...\n\n"
+        "Sencillamente perfecto.",
         false,
         true,
         false,
@@ -2045,7 +2299,8 @@ int main() {
 
     escenas[54] = {
         &bg10,
-        "Los jueves tengo clases por la tarde, así que mejor me voy temprano\na comprar la comida para cenar",
+        "Los jueves tengo clases por la tarde, así que mejor me voy temprano\n"
+        "a comprar la comida para cenar",
         false,
         true,
         false,
@@ -2054,7 +2309,8 @@ int main() {
 
     escenas[55] = {
         &bg41,
-        "El camino es tranquilo, ando pensando en mis tareas de la semana cuando escucho una risa conocida. Veo hacía la calle y ahí la veo...",
+        "El camino es tranquilo, ando pensando en mis tareas de la semana cuando escucho\n"
+        "una risa conocida. Veo hacía la calle y ahí la veo...",
         false,
         true,
         false,
@@ -2136,7 +2392,7 @@ int main() {
 
     escenas[64] = {
         &bg48,
-        "Recibes un mensaje de tu novia",
+        "",
         false,
         true,
         false,
@@ -2145,9 +2401,10 @@ int main() {
 
     escenas[65] = {
         &bg48,
-        "*Se alcanza a leer* Me levante con la sorpresa que mi tía y primo vinieron de visita. En la mañana estaba con mi primo esperando a que mi tía saliera de la tienda",
-        true,
+        "*Se alcanza a leer* Me levante con la sorpresa que mi tía y primo vinieron de visita.\n"
+        "En la mañana estaba con mi primo esperando a que mi tía saliera de la tienda",
         false,
+        true,
         false,
         66,
         12
@@ -2164,7 +2421,11 @@ int main() {
 
     escenas[67] = {
         &bg30,
-        "Que estresante. \nComo es costumbre, encontré a Illeana en el pasillo.Aún faltaba tiempo para entrar a clases entonces nos quedamos platicando.Le conté sobre lo mal que iba mi día.\n Entre ver a mi novia con alguien más y olvidar mi teléfono me la estaba pasando fatal.Incluso nos quedamos platicando en la salida.",
+        "Que estresante. \n"
+        "Como es costumbre, encontré a Illeana en el pasillo.Aún faltaba tiempo para entrar a clases\n"
+        "entonces nos quedamos platicando.Le conté sobre lo mal que iba mi día.\n"
+        "Entre ver a mi novia con alguien más y olvidar mi teléfono me la estaba\n"
+        "pasando fatal.Incluso nos quedamos platicando en la salida.",
         false,
         true,
         false,
@@ -2173,7 +2434,8 @@ int main() {
 
     escenas[68] = {
         &bg49,
-        "¿Como te sentiste despues de eso?\nSupongo que muy feo, terminaras con ella?",
+        "¿Como te sentiste despues de eso?\n"
+        "Supongo que muy feo, terminaras con ella?",
         false,
         true,
         false,
@@ -2201,7 +2463,8 @@ int main() {
 
     escenas[71] = {
         &bg52,
-        "Me veía con una mirada decepcionada, pues llevaba horas sin contestarle y ademas estaba con alguien mas.",
+        "Me veía con una mirada decepcionada, pues llevaba horas sin\n"
+        "contestarle y ademas estaba con alguien mas.",
         false,
         true,
         false,
@@ -2210,7 +2473,8 @@ int main() {
 
     escenas[72] = {
         &bg53,
-        "Me di cuenta de lo mal que se veía y me consumieron las emociones.\nAl ver a las dos, hui  ..como buena gallina que soy y las deje a las dos plantadas.",
+        "Me di cuenta de lo mal que se veía y me consumieron las emociones.\n"
+        "Al ver a las dos, hui  ..como buena gallina .",
         false,
         true,
         false,
@@ -2218,25 +2482,207 @@ int main() {
     };
 
     escenas[73] = {
-        &bgMenu,
-        "",
+        &bg29,
+        "Al llegar a casa, corri a mi cuarto. Mi telefono estaba en mi cama",
         false,
-        false,
+        true,
         false,
         74
     };
 
     escenas[74] = {
+        &bg55,
+        "... ay no",
+        false,
+        true,
+        false,
+        75
+    };
+
+    escenas[75] = {
+        &bg56,
+        "",
+        true,
+        false,
+        false,
+        76,
+    };
+
+    escenas[76] = {
+        &bg12,
+        "\"Ha sido un dia horroroso.\" \n"
+        "Luego de quedarme un rato despierto, mejor decidi, descansar,\n"
+        "es mejor arreglar esto con la mente despejada.",
+        false,
+        true,
+        false,
+        77,
+    };
+
+    escenas[77] = {
+        &bgMenu,
+        "",
+        false,
+        false,
+        false,
+        78
+    };
+
+    escenas[78] = {
         &bgRegalos,
         "",
         false,
         false,
         false,
-        -1
+        79
+    };
+    //Dia 5
+    escenas[79] = {
+      &bg57,
+      "",
+      true,
+      false,
+      false,
+      80
     };
 
-    //Dia 5
-    //Aqui empiezas Mia :3
+    escenas[80] = {
+      &bg10,
+      "No me quiero levantar. Despues de todo el caos\n"
+      "el silencio pesa mas que cualquier discusion. \n"
+      "Pero debo arreglar las cosas. No es solo una \n"
+      "amiga, es mi novia....\n\n"
+      "Debo salir a buscarla.",
+      false,
+      true,
+      false,
+      81
+    };
+
+    escenas[81] = {
+            &bg58,
+            "Llego a su casa, me abrio la puerta y decido explicarme",
+            false,
+            true,
+            false,
+            82
+    };
+
+    escenas[82] = {
+            &bg59,
+            "",
+            true,
+            false,
+            false,
+            83
+    };
+
+    escenas[83] = {
+            &bg60,
+            "Luego de hablar un tiempo, acepto mi disculpa./n"
+            "Parecia feliz de que todo regresara a la /n"
+            "normalidad. Decidi acompantarla a la universidad/n y luego me fui a clase",
+            false,
+            true,
+            false,
+            84
+    };
+
+    escenas[84] = {
+            &bg61,
+            "Como siempre, me encuentro con Illeana antes/n"
+            "de clases, pero parece que no esta /n"
+            "de buenas. Debo acercarme y darle una explicacion/n",
+            false,
+            true,
+            false,
+            85
+    };
+
+    escenas[86] = {
+            &bg62,
+            "",
+            false,
+            true,
+            false,
+            87
+    };
+
+    escenas[88] = {
+            &bg30,
+            "Luego de nuestra platica parece que nuestra relacion cambio",
+            false,
+            true,
+            false,
+            89
+    };
+
+    escenas[89] = {
+            &bg6,
+            "Pasaron las clases y me di cuenta que faltaba /n"
+            "un dia para el 14 de febrero y no he/n" 
+            "comprado nada de regalo…”deberia ir  la floreria”",
+            false,
+            true,
+            false,
+            90
+    };
+    escenas[91] = {
+            &bg63,
+            "",
+            true,
+            false,
+            false,
+            92
+    };
+    escenas[92] = {
+            &bg12,
+            "Compre flores y fui caminando a mi casa./n"
+            "Me siento bastante feliz. Busque ropa decente /n"
+            "y tambien mi perfume favorito/n",
+            false,
+            true,
+            false,
+            93
+    };
+
+    escenas[93] = {
+            &bg64,
+            "Parece que ya todo esta listo, ahora solo falta avisar",
+            false,
+            true,
+            false,
+            94
+    };
+
+    escenas[94] = {
+            &bg65,
+            "",
+            true,
+            false,
+            false,
+            95
+    };
+
+    escenas[95] = {
+            &bg12,
+            "Me recuesto tras terminar mis pendientes/n"
+            "Por fin mañana será un día de descanso./n"
+            "No puedo esperar.",
+            false,
+            true,
+            false,
+            96
+    };
+    escenas[96] = {
+            &bgRegalos,
+            "",
+            false,
+            false,
+            false,
+            97
+    };
+
 
     escenas[100] = {
         &bgRegalos,
@@ -2507,7 +2953,7 @@ int main() {
                     }
 
                     // REGALOS
-                    else if (scene == 100 || scene == 101 || scene == 52 || scene == 74 ) {
+                    else if (scene == 100) {
 
                         procesarRegalo(
                             scene,
@@ -2523,6 +2969,52 @@ int main() {
                         continue;
                     }
 
+                    else if (scene == 52) {
+
+                        procesarRegalo(
+                            scene,
+                            53,
+                            mitilina,
+                            mousePos,
+                            zonaFlores,
+                            zonaCarta,
+                            zonaPastel,
+                            zonaCollar
+                        );
+
+                        continue;
+                    }
+
+                    else if (scene == 74) {
+
+                        procesarRegalo(
+                            scene,
+                            75,
+                            mitilina,
+                            mousePos,
+                            zonaFlores,
+                            zonaCarta,
+                            zonaPastel,
+                            zonaCollar
+                        );
+
+                        continue;
+                        }
+
+                    else if (scene == 96) {
+
+                        procesarRegalo(
+                            scene,
+                            97,
+                            mitilina,
+                            mousePos,
+                            zonaFlores,
+                            zonaCarta,
+                            zonaPastel,
+                            zonaCollar
+                        );
+                        continue;
+                    }
                     // REGALOS FINAL
                     else if (scene == 101) {
 
