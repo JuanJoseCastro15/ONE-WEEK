@@ -625,6 +625,149 @@ vector<Escenario> cargarHistoria(int clase) {
 
     h.push_back(e11);
 
+    //Dia 4
+    //Escena1
+
+    Escenario e12;
+
+    e12.pregunta = "¿Que respondes?";
+
+    //Pendiente de cambios, tanto los valores de impacto como las respuestas del gymrat
+    e12.imp1 = 0;
+    e12.imp2 = -2;
+    e12.imp3 = -3;
+    e12.imp4 = -5;
+
+    if (clase == 0) { //TOXICO
+
+        e12.op1 = "Pues si tomar un licuado es desayunar, entonces sí.";
+        e12.op2 = "¿Y eso a ti que te importa?";
+        e12.op3 = "Pues si tomar un licuado es desayunar, entonces sí.";
+        e12.op4 = "De hecho no, ayer se me revolvio el estomago";
+
+    }
+    else if (clase == 1) { //NPC
+
+        e12.op1 = "Si, y tu?";
+        e12.op2 = "Lindo saber que te importa, creí que ibas a estar muy ocupada";
+        e12.op3 = "No he tenido hambre, he tenido un dia muy malo";
+        e12.op4 = "*Dejarla en visto*";
+
+    }
+    else if (clase == 2) { //GYMRAT
+
+        e12.op1 = "si, un licuado de proteína y 7 huevos revueltos :D";
+        e12.op2 = "¿Qué te importa?";
+        e12.op3 = "Últimamente se me revuelve el estómago";
+        e12.op4 = "*ignorarla*";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e12.op1 = "Chi";
+        e12.op2 = "Todo bien, baka :/";
+        e12.op3 = "Me he sentido un poco down  T.T";
+        e12.op4 = "*Dejarla en visto*";
+
+    }
+
+    h.push_back(e12);
+
+    //Escena2
+
+    Escenario e13;
+
+    e13.pregunta = "¿Cómo te sentiste después de eso ? Supongo que muy feo, terminarás con ella? No seas migajero.";
+
+    //Pendiente de cambios
+    e13.imp1 = 0;
+    e13.imp2 = -2;
+    e13.imp3 = -3;
+    e13.imp4 = -5;
+
+    if (clase == 0) { //TOXICO
+
+        e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente";
+        e13.op2 = "Como por?, claro que no";
+        e13.op3 = "Tendre que pensarlo";
+        e13.op4 = "*Contemplar el panorama completo mientras mantienes una mirada fija al techo*";
+
+    }
+    else if (clase == 1) { //NPC
+
+        e13.op1 = "Sí, creo que sí";
+        e13.op2 = "Han pasado muchas cosas, no creo que sea para tanto";
+        e13.op3 = "Hemos estado juntos mucho tiempo, debo pensarlo";
+        e13.op4 = "...";
+
+    }
+    else if (clase == 2) { //GYMRAT
+
+        e13.op1 = "Creo que sí… fue bueno mientras duró";
+        e13.op2 = "Por supuesto que no";
+        e13.op3 = "Es una decisión difícil, debo pensarlo";
+        e13.op4 = "Alza la vista al cielo pensando";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e13.op1 = "Chi UnU";
+        e13.op2 = "Baka, no creo que sea tanto";
+        e13.op3 = "No lo se Illeana-chan";
+        e13.op4 = "*hacer ruidos raros*";
+
+    }
+
+    h.push_back(e13);
+
+    //Escena3
+
+    Escenario e14;
+
+    e14.pregunta = "Te sientes culpable..Decides buscarla";
+
+    //Pendiente de cambios
+    e14.imp1 = 0;
+    e14.imp2 = -2;
+    e14.imp3 = -3;
+    e14.imp4 = -5;
+
+    if (clase == 0) { //TOXICO
+
+        e14.op1 = "No puede ser, ni modo, toca disculparme";
+        e14.op2 = "Perfecto, tengo que llamarle para disculparme";
+        e14.op3 = "Mmm, ya me enoje luego lo intento arreglar";
+        e14.op4 = "Mejor intento pescar un nuevo pez, Illeana suena a una buena opción";
+
+    }
+    else if (clase == 1) { //NPC
+
+        e14.op1 = "Ay no, debo mandarle mensaje";
+        e14.op2 = "Ay no, debo hablar con ella, debería marcarle";
+        e14.op3 = "Que desastre";
+        e14.op4 = "Debo…debo hablar con alguien. Illeana quizá este libre";
+
+    }
+    else if (clase == 2) { //GYMRAT
+
+        e14.op1 = "Necesito mandarle mensaje, no quiero que estemos mal";
+        e14.op2 = "Necesito marcarle, es urgente";
+        e14.op3 = "*Te pones a hacer lagartijas*";
+        e14.op4 = "Ileana me comprende más, debería hablarle";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e14.op1 = "Ooh oh, debo mandarle mensaje a mi sempai";
+        e14.op2 = "No puede ser, le debo marcar a mi novia-chan";
+        e14.op3 = "*te pones a ver anime*";
+        e14.op4 = "Deberia buscar a Illeana-chan, ella si me entiende";
+
+    }
+
+    h.push_back(e14);
+
+    //Aqui le sigues Pao :3
 
     return h;
 }
@@ -1221,9 +1364,133 @@ int main() {
     sf::Sprite bg39(cafe4);
     ajustar(bg39, cafe4);
 
+    //Dia 4
+    // Alarma Jueves
+    sf::Texture AlarmaJueves;
+    cargarTextura(AlarmaJueves, "../assets/fondos/AlarmaJueves.PNG");
 
+    sf::Sprite bg40(AlarmaJueves);
+    ajustar(bg40, AlarmaJueves);
 
-    // ==========================
+    // Camino a la tienda
+    sf::Texture CaminoaTienda;
+    cargarTextura(CaminoaTienda, "../assets/fondos/Caminoatienda.png");
+
+    sf::Sprite bg41(CaminoaTienda);
+    ajustar(bg41, CaminoaTienda);
+
+    // Novia con otro
+    sf::Texture NoviaOtro;
+    cargarTextura(NoviaOtro, "../assets/fondos/NoviaconOtro.png");
+
+    sf::Sprite bg42(NoviaOtro);
+    ajustar(bg42, NoviaOtro);
+
+    // Novia con otro pero mas de cerca
+    sf::Texture NoviaOtro2;
+    cargarTextura(NoviaOtro2, "../assets/fondos/NoviaconOtro2.png");
+
+    sf::Sprite bg43(NoviaOtro2);
+    ajustar(bg43, NoviaOtro2);
+
+    // Mejor se va
+    sf::Texture MejorSeVa;
+    cargarTextura(MejorSeVa, "../assets/fondos/mejorseVa.png");
+
+    sf::Sprite bg44(MejorSeVa);
+    ajustar(bg44, MejorSeVa);
+
+    //Escenario 1
+    // Nuevo mensaje 
+    sf::Texture NuevoMensaje;
+    cargarTextura(NuevoMensaje, "../assets/fondos/NuevoMensaje.png");
+
+    sf::Sprite bg45(NuevoMensaje);
+    ajustar(bg45, NuevoMensaje);
+
+    // Nuevo mensaje 1
+    sf::Texture NuevoMensaje1;
+    cargarTextura(NuevoMensaje1, "../assets/fondos/NuevoMensaje1.png");
+
+    sf::Sprite bg46(NuevoMensaje1);
+    ajustar(bg46, NuevoMensaje1);
+
+    // Nuevo mensaje Opciones
+    sf::Texture NuevoMensajeOpciones;
+    cargarTextura(NuevoMensajeOpciones, "../assets/fondos/mensajeOpciones.png");
+
+    sf::Sprite bg47(NuevoMensajeOpciones);
+    ajustar(bg47, NuevoMensajeOpciones);
+
+    // Telefono en cama
+    sf::Texture TelefonoEnCama;
+    cargarTextura(TelefonoEnCama, "../assets/fondos/Telefonoencama.png");
+
+    sf::Sprite bg48(TelefonoEnCama);
+    ajustar(bg48, TelefonoEnCama);
+
+    // Dia 4 Escenario 2
+    // Illiana salida 1
+    sf::Texture IllianaSalida1;
+    cargarTextura(IllianaSalida1, "../assets/fondos/Illianasalida1.png");
+
+    sf::Sprite bg49(IllianaSalida1);
+    ajustar(bg49, IllianaSalida1);
+
+    // Illiana salida 2
+    sf::Texture IllianaSalida2;
+    cargarTextura(IllianaSalida2, "../assets/fondos/Illianasalida2.png");
+
+    sf::Sprite bg50(IllianaSalida2);
+    ajustar(bg50, IllianaSalida2);
+
+    // Novia lejos
+    sf::Texture NoviaLejos;
+    cargarTextura(NoviaLejos, "../assets/fondos/novialejos.png");
+
+    sf::Sprite bg51(NoviaLejos);
+    ajustar(bg51, NoviaLejos);
+
+    // Novia triste
+    sf::Texture NoviaTriste;
+    cargarTextura(NoviaTriste, "../assets/fondos/noviatriste.png");
+
+    sf::Sprite bg52(NoviaTriste);
+    ajustar(bg52, NoviaTriste);
+
+    // Novia huyendo
+    sf::Texture Huyendo;
+    cargarTextura(Huyendo, "../assets/fondos/huyendo.png");
+
+    sf::Sprite bg53(Huyendo);
+    ajustar(bg53, Huyendo);
+
+    // Nuevo mensaje 1
+    sf::Texture CuartoConTelefono;
+    cargarTextura(CuartoConTelefono, "../assets/fondos/cuartoconcel.png");
+
+    sf::Sprite bg54(CuartoConTelefono);
+    ajustar(bg54, CuartoConTelefono);
+
+    // Ver mensaje
+    sf::Texture VerMensaje;
+    cargarTextura(VerMensaje, "../assets/fondos/VerMensaje.png");
+
+    sf::Sprite bg55(VerMensaje);
+    ajustar(bg55, VerMensaje);
+
+    //Escenario3
+    // Mensajes opciones 1
+    sf::Texture MensajeOpciones1;
+    cargarTextura(MensajeOpciones1, "../assets/fondos/MensajeOpciones1.png");
+
+    sf::Sprite bg56(MensajeOpciones1);
+    ajustar(bg56, MensajeOpciones1);
+
+    //Dia5
+    //Aqui le sigues Mia
+
+// ==========================
 // CONFIGURACION DE ESCENAS
 // ==========================
 
@@ -1756,14 +2023,221 @@ int main() {
     false,
     52
     };
+
     escenas[52] = {
     &bgRegalos,
     "",
     false,
     false,
     false,
-    -1
+    53
     };
+
+    //Dia 4
+    escenas[53] = {
+        &bg40,
+        "",
+        false,
+        false,
+        false,
+        54
+    };
+
+    escenas[54] = {
+        &bg10,
+        "Los jueves tengo clases por la tarde, así que mejor me voy temprano\na comprar la comida para cenar",
+        false,
+        true,
+        false,
+        55
+    };
+
+    escenas[55] = {
+        &bg41,
+        "El camino es tranquilo, ando pensando en mis tareas de la semana cuando escucho una risa conocida. Veo hacía la calle y ahí la veo...",
+        false,
+        true,
+        false,
+        56
+    };
+
+    escenas[56] = {
+        &bg42,
+        "Mi novia con alguien más...",
+        false,
+        true,
+        false,
+        57
+    };
+
+    escenas[57] = {
+        &bg43,
+        "Por un momento me quedo sin aire, parece muy cercana a ese chico.",
+        false,
+        true,
+        false,
+        58
+    };
+
+    escenas[58] = {
+        &bg44,
+        "Mejor me voy a casa. no quiero hacer una escena",
+        false,
+        true,
+        false,
+        59
+    };
+
+    escenas[59] = {
+        &bg10,
+        "Llego a la casa aun de malas.",
+        false,
+        true,
+        false,
+        60
+    };
+
+    escenas[60] = {
+        &bg45,
+        "Estoy arreglandome para las clases cuando me llega un mensaje de mi novia",
+        false,
+        true,
+        false,
+        61
+    };
+
+    escenas[61] = {
+        &bg46,
+        "Hola amor, ya desayunaste?",
+        false,
+        true,
+        false,
+        62
+    };
+
+    escenas[62] = {
+        &bg47,
+        "Que le respondo?",
+        true,
+        false,
+        false,
+        63,
+        11
+    };
+
+    escenas[63] = {
+        &bg10,
+        "Escucho la voz de mi mamá desde la cocina y dejo mi telefono en la cama",
+        false,
+        true,
+        false,
+        64
+    };
+
+    escenas[64] = {
+        &bg48,
+        "Recibes un mensaje de tu novia",
+        false,
+        true,
+        false,
+        65
+    };
+
+    escenas[65] = {
+        &bg48,
+        "*Se alcanza a leer* Me levante con la sorpresa que mi tía y primo vinieron de visita. En la mañana estaba con mi primo esperando a que mi tía saliera de la tienda",
+        true,
+        false,
+        false,
+        66,
+        12
+    };
+
+    escenas[66] = {
+        &bg6,
+        "Llego la tarde y fuí a clases...",
+        false,
+        true,
+        false,
+        67
+    };
+
+    escenas[67] = {
+        &bg30,
+        "Que estresante. \nComo es costumbre, encontré a Illeana en el pasillo.Aún faltaba tiempo para entrar a clases entonces nos quedamos platicando.Le conté sobre lo mal que iba mi día.\n Entre ver a mi novia con alguien más y olvidar mi teléfono me la estaba pasando fatal.Incluso nos quedamos platicando en la salida.",
+        false,
+        true,
+        false,
+        68
+    };
+
+    escenas[68] = {
+        &bg49,
+        "¿Como te sentiste despues de eso?\nSupongo que muy feo, terminaras con ella?",
+        false,
+        true,
+        false,
+        69
+    };
+
+    escenas[69] = {
+        &bg50,
+        "No seas migajero.",
+        true,
+        false,
+        false,
+        70,
+        13
+    };
+
+    escenas[70] = {
+        &bg51,
+        "Voltee a ver el otro lado de la calle y para mi sorpresa, ahi estaba ella.",
+        false,
+        true,
+        false,
+        71
+    };
+
+    escenas[71] = {
+        &bg52,
+        "Me veía con una mirada decepcionada, pues llevaba horas sin contestarle y ademas estaba con alguien mas.",
+        false,
+        true,
+        false,
+        72
+    };
+
+    escenas[72] = {
+        &bg53,
+        "Me di cuenta de lo mal que se veía y me consumieron las emociones.\nAl ver a las dos, hui  ..como buena gallina que soy y las deje a las dos plantadas.",
+        false,
+        true,
+        false,
+        73
+    };
+
+    escenas[73] = {
+        &bgMenu,
+        "",
+        false,
+        false,
+        false,
+        74
+    };
+
+    escenas[74] = {
+        &bgRegalos,
+        "",
+        false,
+        false,
+        false,
+        -1
+    };
+
+    //Dia 5
+    //Aqui empiezas Mia :3
+
     escenas[100] = {
         &bgRegalos,
         "",
@@ -1949,8 +2423,6 @@ int main() {
                     }
 
 
-
-                    // MENU DIA 1
                     // MENU DIA 1
                     if (scene == 14) {
 
@@ -1964,6 +2436,7 @@ int main() {
                             continue;
                         }
                     }
+
                     // ESCENA ALARMA
                     else if (scene == 16) {
 
@@ -1991,11 +2464,11 @@ int main() {
                             continue;
                         }
                     }
-                    // MENU FINAL
+                    // MENU Dia 3
                     else if (scene == 51) {
 
                         if (zonaContM.contains(mousePos)) {
-                            scene = 52;
+                            scene = 53;
                             continue;
                         }
 
@@ -2005,9 +2478,36 @@ int main() {
                         }
                     }
 
+                    // ESCENA ALARMA Jueves
+                    else if (scene == 53) {
 
-                    // REGALOS DIA 1
-                    else if (scene == 100) {
+                        if (zonaAlarma1.contains(mousePos)) {
+                            scene = 54;
+                            continue;
+                        }
+
+                        else if (zonaAlarma2.contains(mousePos)) {
+                            scene = 54;
+                            continue;
+                        }
+                    }
+
+                    // MENU Dia 4
+                    else if (scene == 73) {
+
+                        if (zonaContM.contains(mousePos)) {
+                            scene = -1;
+                            continue;
+                        }
+
+                        else if (zonaRegalos.contains(mousePos)) {
+                            scene = 74;
+                            continue;
+                        }
+                    }
+
+                    // REGALOS
+                    else if (scene == 100 || scene == 101 || scene == 52 || scene == 74 ) {
 
                         procesarRegalo(
                             scene,
