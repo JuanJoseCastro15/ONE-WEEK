@@ -544,10 +544,10 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { // TOXICO
 
-        e10.op1 = "Claro, te paso mi numero y lo que quieras";
+        e10.op1 = "Claro, te paso mi numero y lo que quieras.";
         e10.op2 = "Eh... si quieres.";
-        e10.op3 = "Va, a mi novia le agradara que haga amistades";
-        e10.op4 = "Bueno";
+        e10.op3 = "Va, a mi novia le agradara que haga amistades.";
+        e10.op4 = "Bueno.";
 
     }
     else if (clase == 1) { // NPC
@@ -592,10 +592,10 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { //TOXICO
 
-        e11.op1 = "\"Obvio, feliz cumpleaños\"";
-        e11.op2 = "\"Feliz aniversario!\"";
-        e11.op3 = "\"El dia que nos conocimos?\"";
-        e11.op4 = "\"Claro, era... este... aja...\"";
+        e11.op1 = "Obvio, feliz cumpleaños";
+        e11.op2 = "Feliz aniversario!";
+        e11.op3 = "El dia que nos conocimos?";
+        e11.op4 = "Claro, era... este... aja...";
 
     }
     else if (clase == 1) { //NPC
@@ -687,9 +687,9 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { //TOXICO
 
-        e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente";
-        e13.op2 = "Como por?, claro que no";
-        e13.op3 = "Tendre que pensarlo";
+        e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente.";
+        e13.op2 = "Como por?, claro que no.";
+        e13.op3 = "Tendre que pensarlo.";
         e13.op4 = "*Contemplar el panorama completo mientras mantienes una mirada fija al techo*";
 
     }
@@ -734,10 +734,10 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { //TOXICO
 
-        e14.op1 = "No puede ser, ni modo, toca disculparme";
-        e14.op2 = "Perfecto, tengo que llamarle para disculparme";
-        e14.op3 = "Mmm, ya me enoje luego lo intento arreglar";
-        e14.op4 = "Mejor intento pescar un nuevo pez, Illeana suena a una buena opción";
+        e14.op1 = "No puede ser, ni modo, toca disculparme.";
+        e14.op2 = "Perfecto, tengo que llamarle para disculparme.";
+        e14.op3 = "Mmm, ya me enoje luego lo intento arreglar.";
+        e14.op4 = "Mejor intento pescar un nuevo pez, Illeana suena a una buena opción.";
 
     }
     else if (clase == 1) { //NPC
