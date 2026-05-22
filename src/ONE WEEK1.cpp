@@ -677,7 +677,8 @@ vector<Escenario> cargarHistoria(int clase) {
 
     Escenario e13;
 
-    e13.pregunta = "¿Cómo te sentiste después de eso ? Supongo que muy feo, terminarás con ella? No seas migajero.";
+    e13.pregunta = "¿Cómo te sentiste después de eso ?\n"
+        "Supongo que muy feo, terminarás con ella? No seas migajero.";
 
     //Pendiente de cambios
     e13.imp1 = 0;
@@ -687,10 +688,18 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { //TOXICO
 
+<<<<<<< HEAD
+        e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente";
+        e13.op2 = "Como por?, claro que no";
+        e13.op3 = "Tendre que pensarlo";
+        e13.op4 = "*Contemplar el panorama completo mientras\n"
+            "mantienes una mirada fija al techo*";
+=======
         e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente.";
         e13.op2 = "Como por?, claro que no.";
         e13.op3 = "Tendre que pensarlo.";
         e13.op4 = "*Contemplar el panorama completo mientras mantienes una mirada fija al techo*";
+>>>>>>> 40c8728ab27a169183879f1c900930a0da8c0f7b
 
     }
     else if (clase == 1) { //NPC
@@ -734,10 +743,18 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { //TOXICO
 
+<<<<<<< HEAD
+        e14.op1 = "No puede ser, ni modo, toca disculparme";
+        e14.op2 = "Perfecto, tengo que llamarle para disculparme";
+        e14.op3 = "Mmm, ya me enoje luego lo intento arreglar";
+        e14.op4 = "Mejor intento pescar un nuevo pez,\n"
+            "Illeana suena a una buena opción";
+=======
         e14.op1 = "No puede ser, ni modo, toca disculparme.";
         e14.op2 = "Perfecto, tengo que llamarle para disculparme.";
         e14.op3 = "Mmm, ya me enoje luego lo intento arreglar.";
         e14.op4 = "Mejor intento pescar un nuevo pez, Illeana suena a una buena opción.";
+>>>>>>> 40c8728ab27a169183879f1c900930a0da8c0f7b
 
     }
     else if (clase == 1) { //NPC
@@ -771,9 +788,9 @@ vector<Escenario> cargarHistoria(int clase) {
 
     Escenario e15;
 
-    e15.pregunta = "“Sé que la regué  y disculpame, actúe por impulso/n"
-        "y no pienso lo que hago . Me quiero esforzar para que esto funcione,/n"
-        "así que te aseguro que pondré todo lo que pueda de mi parte./n"
+    e15.pregunta = "“Se que la regue  y disculpame, actue por impulso\n"
+        "y no pienso lo que hago . Me quiero esforzar para que esto funcione,\n"
+        "asi que te aseguro que pondre todo lo que pueda de mi parte.\n"
         "Quiero que sepas lo arrepentido que estoy.";
 
 
@@ -808,7 +825,8 @@ vector<Escenario> cargarHistoria(int clase) {
     }
     else if (clase == 3) {
 
-        e15.op1 = "\"Podrias perdonar a este terroncito de azucar\n con un abrazo\"";
+        e15.op1 = "\"Podrias perdonar a este terroncito de azucar\n"
+            "con un abrazo\"";
         e15.op2 = "\"*Le da un beso de manera kawaii*\"";
         e15.op3 = "\"Un besito de reconciliacion, waifu-chan?\"";
         e15.op4 = "\"Ash, ya lo arreglamos baka?\"";
@@ -820,7 +838,7 @@ vector<Escenario> cargarHistoria(int clase) {
     //Dia5 Escenario2
     Escenario e16;
 
-    e16.pregunta = "“Como de costumbre, milagrosamente te encontraste a Illeana./n"
+    e16.pregunta = "“Como de costumbre, milagrosamente te encontraste a Illeana.\n"
         "Decides acercarte y comienzas a darle una explicacion/nsobre lo ayer\"";
 
     e16.imp1 = -5;
@@ -830,7 +848,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) {
 
-        e16.op1 = "\"Perdon por la aparicion de mi novia/n"
+        e16.op1 = "\"Perdon por la aparicion de mi novia\n"
             "a veces es molesta\"";
         e16.op2 = "\"Perdon por irme sin explicacion\"";
         e16.op3 = "\"Que rollo con el pollo\"";
@@ -880,14 +898,14 @@ vector<Escenario> cargarHistoria(int clase) {
         e17.op1 = "\"Rosas, un clasico\"";
         e17.op2 = "\"Girasoles, el mas barato\"";
         e17.op3 = "\"Tulipanes, a algunos les gusta\"";
-        e17.op4 = "\"Flores beso, el nombre  y la apariencia se/n ven interesantes\"";
+        e17.op4 = "\"Flores beso, el nombre  y la apari\nencia se ven interesantes\"";
 
     }
     else if (clase == 1) {
 
         e17.op1 = "\"La rosa es una flor muy clasica\"";
         e17.op2 = "\"Los girasoles brindan mucha alegria\"";
-        e17.op3 = "\"Los tulipanes representan el amor perfecto, no?\"";
+        e17.op3 = "\"Los tulipanes representan el amor\n perfecto, no?\"";
         e17.op4 = "\"Es muy unica\"";
 
     }
@@ -896,15 +914,15 @@ vector<Escenario> cargarHistoria(int clase) {
         e17.op1 = "\"Las rosas siempre son las mejores\"";
         e17.op2 = "\"Unos brillantes girasoles estarian bien, no?\"";
         e17.op3 = "\"Los tulipanes son bastante hermosos\"";
-        e17.op4 = "\"Las flores beso son tan buenas como el ejercicio\"";
+        e17.op4 = "\"Las flores beso son tan buenas como \nel ejercicio\"";
 
     }
     else if (clase == 3) {
 
         e17.op1 = "\"Supongo que las rosas le gustaran\"";
-        e17.op2 = "\"Los girasoles como la frase: gira, gira tu calzon\"";
+        e17.op2 = "\"Los girasoles como la frase: gira, gira\n tu calzon\"";
         e17.op3 = "\"Los tulipanes son hemochos uwu\"";
-        e17.op4 = "\"Es al mas barata, podre usar lo demas para un manga\"";
+        e17.op4 = "\"Es al mas barata, podre usar lo demas\n para un manga\"";
 
     }
 
@@ -925,32 +943,32 @@ vector<Escenario> cargarHistoria(int clase) {
 
         e18.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
         e18.op2 = "\"Pide permiso para salir manana a las 6pm\"";
-        e18.op3 = "\"Te tengo una sorpresa manana a las 6pm, alistate\"";
+        e18.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
         e18.op4 = "\"Oye, manana teniamos que hacer algo?\"";
 
     }
     else if (clase == 1) {
 
         e18.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
-        e18.op2 = "\"Pide permiso porque mañana voy a pasar a las 6\"";
-            e18.op3 = "\"Te tengo un regalo :), manana a las 6/n prepárate para ser sorprendida\"";
+        e18.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
+            e18.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
         e18.op4 = "\"Entonces, manana hay plan o no?\"";
 
     }
     else if (clase == 2) {
 
         e18.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
-        e18.op2 = "\"Oye, pide permiso, manana pasare por ti a las 6\"";
-        e18.op3 = "\"Tengo una sorpresa para ti, pero debes de estar lista a las 6\"";
-        e18.op4 = "\"¿Te parece si no voy al gym mañana y salimos?/n ¿Como a las 6?\"";
+        e18.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
+        e18.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
+        e18.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
 
     }
     else if (clase == 3) {
 
         e18.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
-        e18.op2 = "\"Manana paso por ti a las 6 , ponte guapa...\"";
-        e18.op3 = "\"Manana desbloqueas evento exclusivo conmigo.\"";
-        e18.op4 = "\"Supongo que manana continua esta situacion/n rara entre nosotros.\"";
+        e18.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
+        e18.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
+        e18.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
 
     }
 
@@ -1373,7 +1391,7 @@ int main() {
 
     // alarma del martes
     sf::Texture martes;
-    cargarTextura(martes, "../assets/fondos/AlarmaMartes.jpeg");
+    cargarTextura(martes, "../assets/fondos/AlarmaMartes.png");
 
     sf::Sprite bg14(martes);
     ajustar(bg14, martes);
@@ -1741,7 +1759,24 @@ int main() {
     sf::Sprite bg65(Mandarmensaje);
     ajustar(bg65, Mandarmensaje);
 
+    //AlarmaLunes
+    sf::Texture AlarmaLunes;
+    cargarTextura(AlarmaLunes, "../assets/fondos/AlarmaLunes.png");
 
+    sf::Sprite bg66(AlarmaLunes);
+    ajustar(bg66, AlarmaLunes);
+
+	//AlarmaMiercoles
+    sf::Texture AlarmaMiercoles;
+    cargarTextura(AlarmaMiercoles, "../assets/fondos/AlarmaMiercoles.png");
+    sf::Sprite bg67(AlarmaMiercoles);
+	ajustar(bg67, AlarmaMiercoles);
+
+    //AlarmaViernes
+    sf::Texture AlarmaViernes;
+    cargarTextura(AlarmaViernes, "../assets/fondos/AlarmaViernes.png");
+    sf::Sprite bg68(AlarmaViernes);
+    ajustar(bg68, AlarmaViernes);
 
 
 // ==========================
@@ -1797,18 +1832,26 @@ int main() {
         false,
         5
     };
-
     escenas[5] = {
+      &bg66,
+     "",
+     false,
+     false,
+     false,
+     6
+    };
+
+    escenas[6] = {
       &bg4,
      "",
      true,
      false,
      false,
-     6,
+     7,
      0
     };
 
-    escenas[6] = {
+    escenas[7] = {
         &bg6,
         "Despues de responder el mensaje, guardo el celular y empiezo a caminar hacia\n"
         "mi primera clase.\n"
@@ -1817,22 +1860,12 @@ int main() {
         false,
         true,
         false,
-        7
-    };
-
-    escenas[7] = {
-        &bg7,
-        "Sonrei un poco y segui caminando.\nLa amo...",
-        false,
-        true,
-        false,
         8
     };
 
     escenas[8] = {
-        &bg8,
-        "\nJusto cuando estoy por entrar al salon pero algo me interrumpe...\n"
-        "Una chica esta recargada sobre la pared sonriendo ligeramente.",
+        &bg7,
+        "Sonrei un poco y segui caminando.\nLa amo...",
         false,
         true,
         false,
@@ -1840,16 +1873,26 @@ int main() {
     };
 
     escenas[9] = {
+        &bg8,
+        "\nJusto cuando estoy por entrar al salon pero algo me interrumpe...\n"
+        "Una chica esta recargada sobre la pared sonriendo ligeramente.",
+        false,
+        true,
+        false,
+        10
+    };
+
+    escenas[10] = {
  &bg9,
  "",
  true,
  false,
  false,
- 10,
+ 11,
  1
     };
 
-    escenas[10] = {
+    escenas[11] = {
         &bg6,
         "Intercambiamos unas palabras antes de que tenga que entrar a clase.\n"
         "No fue nada, pero tampoco nada.\n"
@@ -1858,29 +1901,29 @@ int main() {
         false,
         true,
         false,
-        11
+        12
     };
 
-    escenas[11] = {
+    escenas[12] = {
         &bg10,
         "Fue un dia bastante pesado...\n"
         "*ring ring* El celular esta sonando, deberia revisarlo",
         false,
         true,
         false,
-        12
+        13
     };
 
-    escenas[12] = {
+    escenas[13] = {
      &bg11,
       "",
      true,
      false,
      false,
-     13,
+     14,
      2
     };
-    escenas[13] = {
+    escenas[14] = {
         &bg12,
         "Fue un dia de muchas emociones.\n"
         "Desde el mensaje de la mañana, hasta la lluvia...\n"
@@ -1889,46 +1932,46 @@ int main() {
         false,
         true,
         false,
-        14
+        15
     };
-    escenas[14] = {
+    escenas[15] = {
  &bgMenu,
  "",
  false,
  false,
  false,
- 15
+ 16
     };
 
-    escenas[15] = {
+    escenas[16] = {
         &bg13,
         "",
         false,
         true,
         false,
-        16
+        17
     };
 
-    escenas[16] = {
+    escenas[17] = {
         &bg14,
         "",
         false,
         false,
         false,
-        17
+        18
     };
 
-    escenas[17] = {
+    escenas[18] = {
  &bg15,
  "",
  true,
  false,
  false,
- 18,
+ 19,
  3
     };
 
-    escenas[18] = {
+    escenas[19] = {
     &bg16,
     "Llegando al campus con mi paraguas.\n"
     "La lluvia caia constante...\n"
@@ -1938,41 +1981,32 @@ int main() {
     false,
     true,
     false,
-    19
+    20
     };
 
-    escenas[19] = {
+    escenas[20] = {
         &bg17,
         "En mi camino me encuentro con Illeana.\n"
         "Parece que quedo atrapada por la lluvia.",
         false,
         true,
         false,
-        20
+        21
     };
 
-    escenas[20] = {
+    escenas[21] = {
       &bg18,
      "",
      true,
      false,
      false,
-     21,
+     22,
      4
     };
 
-    escenas[21] = {
+    escenas[22] = {
         &bg19,
         "Tu: Otra vez tu\nIlleana: Creo que sí coincidimos después de todo\nSe acerca un poco a tu paraguas sin preguntar directamente",
-        false,
-        true,
-        false,
-        22
-    };
-
-    escenas[22] = {
-        &bg20,
-        "Empezamos a caminar juntos hacia clase, la conversación era tranquila,\ncon la lluvia llenando los silencios.\nEn el camino, pasamos por los jardines de la escuela y\nnos detuvimos junto a los girasoles.",
         false,
         true,
         false,
@@ -1980,8 +2014,8 @@ int main() {
     };
 
     escenas[23] = {
-        &bg21,
-        "",
+        &bg20,
+        "Empezamos a caminar juntos hacia clase, la conversación era tranquila,\ncon la lluvia llenando los silencios.\nEn el camino, pasamos por los jardines de la escuela y\nnos detuvimos junto a los girasoles.",
         false,
         true,
         false,
@@ -1989,8 +2023,8 @@ int main() {
     };
 
     escenas[24] = {
-        &bg22,
-        "Es tu novia?",
+        &bg21,
+        "",
         false,
         true,
         false,
@@ -1998,32 +2032,41 @@ int main() {
     };
 
     escenas[25] = {
+        &bg22,
+        "Es tu novia?",
+        false,
+        true,
+        false,
+        26
+    };
+
+    escenas[26] = {
      &bg23,
      "",
      true,
      false,
      false,
-     26,
+     27,
      5
     };
 
-    escenas[26] = {
+    escenas[27] = {
   &bg24,
   "Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Illeana volteó hacia mi."
   "Oye…\nEl domingo…\nva a haber algo interesante cerca de aquí, deberías venir",
   false,
   true,
   false,
-  27
+  28
     };
 
-    escenas[27] = {
+    escenas[28] = {
  &bgMenu,
  "",
  false,
  false,
  false,
- 28
+ 29
     };
 
 
@@ -2032,19 +2075,9 @@ int main() {
  // DIA 3
  // =========================
 
-    escenas[28] = {
+    escenas[29] = {
         &bg25,
         "",
-        false,
-        true,
-        false,
-        29
-    };
-
-    escenas[29] = {
-        &bg10,
-        "Ay, parece que ya no esta lloviendo,\npero el ambiente sigue pesado...\n\n"
-        "Como si algo se hubiera quedado desde ayer.",
         false,
         true,
         false,
@@ -2052,17 +2085,18 @@ int main() {
     };
 
     escenas[30] = {
-        &bg26,
+        &bg67,
         "",
         false,
-        true,
+        false,
         false,
         31
     };
 
     escenas[31] = {
-        &bg27,
-        "Decido revisar mi celular y encuentro unos mensajes",
+        &bg10,
+        "Ay, parece que ya no esta lloviendo,\npero el ambiente sigue pesado...\n\n"
+        "Como si algo se hubiera quedado desde ayer.",
         false,
         true,
         false,
@@ -2070,15 +2104,33 @@ int main() {
     };
 
     escenas[32] = {
+        &bg26,
+        "",
+        false,
+        true,
+        false,
+        33
+    };
+
+    escenas[33] = {
+        &bg27,
+        "Decido revisar mi celular y encuentro unos mensajes",
+        false,
+        true,
+        false,
+        34
+    };
+
+    escenas[34] = {
         &bg28,
         "",
         true,
         false,
         false,
-        33,
+        35,
         8
     };
-    escenas[33] = {
+    escenas[35] = {
 &bg29,
 "Guardo el celular.\n"
 "No se por que...\n"
@@ -2089,33 +2141,13 @@ int main() {
     false,
     true,
     false,
-    34
-    };
-
-    escenas[34] = {
-        &bg6,
-        "Al llegar al campus todo seguia normal.\n"
-        "Caminaba tranquilo hasta mi salon de clases hasta que—",
-        false,
-        true,
-        false,
-        35
-    };
-
-    escenas[35] = {
-        &bg24,
-        "\"Hey\"",
-        false,
-        true,
-        false,
-        36
+    36
     };
 
     escenas[36] = {
-        &bg24,
-        "Illeana se me acerca como si ya fuera costumbre.\n"
-        "Parece ser que ya somos amigos.\n"
-        "\"Oye...\"\n",
+        &bg6,
+        "Al llegar al campus todo seguia normal.\n"
+        "Caminaba tranquilo hasta mi salon de clases hasta que—",
         false,
         true,
         false,
@@ -2123,15 +2155,35 @@ int main() {
     };
 
     escenas[37] = {
-        &bg30,
-        "\"Estuve pensando en lo que te dije ayer\"",
+        &bg24,
+        "\"Hey\"",
         false,
         true,
         false,
         38
     };
 
-    escenas[38] = { // borton corregido
+    escenas[38] = {
+        &bg24,
+        "Illeana se me acerca como si ya fuera costumbre.\n"
+        "Parece ser que ya somos amigos.\n"
+        "\"Oye...\"\n",
+        false,
+        true,
+        false,
+        39
+    };
+
+    escenas[39] = {
+        &bg30,
+        "\"Estuve pensando en lo que te dije ayer\"",
+        false,
+        true,
+        false,
+        40
+    };
+
+    escenas[40] = { // borton corregido
         &bg31,
         "Lo del domingo...\n"
         "Creo que estaria mas facil si te paso\n"
@@ -2139,19 +2191,19 @@ int main() {
         false,
         true,
         false,
-        39
+        41
     };
 
-    escenas[39] = { //estoy aqui con las opciones
+    escenas[41] = { //estoy aqui con las opciones
         &bg32,
         "",
         true,
         false,
         false,
-        40,
+        42,
         9
     };
-    escenas[40] = {
+    escenas[42] = {
 &bg24,
 "Dudo unos segundos antes de darle mi numero.\n\n"
 "No deberia sentirse como algo importante...\n"
@@ -2160,10 +2212,10 @@ int main() {
     false,
     true,
     false,
-    41
+    43
     };
 
-    escenas[41] = {
+    escenas[43] = {
         &bg33,
         "\"Gracias...\n"
         "No pense que dirias que si tan facil\"\n\n"
@@ -2171,11 +2223,11 @@ int main() {
         false,
         true,
         false,
-        42
+        44
     };
 
 
-    escenas[42] = {
+    escenas[44] = {
 &bg34,
 "Me manda un mensaje para confirmar.\n"
 "Antes de guardar el celular,\n"
@@ -2185,10 +2237,10 @@ int main() {
     false,
     true,
     false,
-    43
+    45
     };
 
-    escenas[43] = {
+    escenas[45] = {
         &bg6,
         "Seguimos hablando hasta que empezaron las clases.\n"
         "Pero siento que algo cambio...\n"
@@ -2196,20 +2248,20 @@ int main() {
         false,
         true,
         false,
-        44
+        46
     };
 
-    escenas[44] = {//mira a la novia en el cafe
+    escenas[46] = {//mira a la novia en el cafe
         &bg35,
         "El dia pasa lento entre clases, apuntes y ruido...\n"
         "Solo espero a que llegue la tarde.",
         false,
         true,
         false,
-        45
+        47
     };
 
-    escenas[45] = {
+    escenas[47] = {
         &bg36,
         "Al darse cuenta de mi presencia,\n"
         "se acerca con una sonrisa.\n"
@@ -2217,9 +2269,9 @@ int main() {
         false,
         true,
         false,
-        46
+        48
     };
-    escenas[46] = {
+    escenas[48] = {
 &bg37,
 "\"¡Hey!\"\n"
 "\"Pense que ibas a llegar tarde\"\n\n"
@@ -2227,32 +2279,12 @@ int main() {
     false,
     true,
     false,
-    47
+    49
     };
 
-    escenas[47] = {
+    escenas[49] = {
         &bg36,
         "\"Si te acordaste, verdad?\"",
-        false,
-        true,
-        false,
-        48
-    };
-
-    escenas[48] = {
-        &bg38,
-        "",
-        true,
-        false,
-        false,
-        49,
-        10
-    };
-
-    escenas[49] = { //boton en el lugar equivocado
-        &bg39,
-        "Me mira unos segundos,\n"
-        "con una mirada que no puedo descifrar.",
         false,
         true,
         false,
@@ -2260,66 +2292,67 @@ int main() {
     };
 
     escenas[50] = {
+        &bg38,
+        "",
+        true,
+        false,
+        false,
+        51,
+        10
+    };
+
+    escenas[51] = { //boton en el lugar equivocado
+        &bg39,
+        "Me mira unos segundos,\n"
+        "con una mirada que no puedo descifrar.",
+        false,
+        true,
+        false,
+        52
+    };
+
+    escenas[52] = {
         &bg36,
         "Pero al final sonrie.\n"
         "Pasamos un buen rato en el cafe.",
         false,
         true,
         false,
-        51
+        53
     };
 
-    escenas[51] = {
+    escenas[53] = {
     &bgMenu,
     "",
     false,
     false,
     false,
-    52
+    54
     };
 
-    escenas[52] = {
+    escenas[54] = {
     &bgRegalos,
     "",
     false,
     false,
     false,
-    53
+    55
     };
 
     //Dia 4
-    escenas[53] = {
+    escenas[55] = {
         &bg40,
         "",
         false,
         false,
         false,
-        54
-    };
-
-    escenas[54] = {
-        &bg10,
-        "Los jueves tengo clases por la tarde, así que mejor me voy temprano\n"
-        "a comprar la comida para cenar",
-        false,
-        true,
-        false,
-        55
-    };
-
-    escenas[55] = {
-        &bg41,
-        "El camino es tranquilo, ando pensando en mis tareas de la semana cuando escucho\n"
-        "una risa conocida. Veo hacía la calle y ahí la veo...",
-        false,
-        true,
-        false,
         56
     };
 
     escenas[56] = {
-        &bg42,
-        "Mi novia con alguien más...",
+        &bg10,
+        "Los jueves tengo clases por la tarde, así que mejor me voy temprano\n"
+        "a comprar la comida para cenar",
         false,
         true,
         false,
@@ -2327,8 +2360,9 @@ int main() {
     };
 
     escenas[57] = {
-        &bg43,
-        "Por un momento me quedo sin aire, parece muy cercana a ese chico.",
+        &bg41,
+        "El camino es tranquilo, ando pensando en mis tareas de la semana cuando escucho\n"
+        "una risa conocida. Veo hacía la calle y ahí la veo...",
         false,
         true,
         false,
@@ -2336,8 +2370,8 @@ int main() {
     };
 
     escenas[58] = {
-        &bg44,
-        "Mejor me voy a casa. no quiero hacer una escena",
+        &bg42,
+        "Mi novia con alguien más...",
         false,
         true,
         false,
@@ -2345,8 +2379,8 @@ int main() {
     };
 
     escenas[59] = {
-        &bg10,
-        "Llego a la casa aun de malas.",
+        &bg43,
+        "Por un momento me quedo sin aire, parece muy cercana a ese chico.",
         false,
         true,
         false,
@@ -2354,8 +2388,8 @@ int main() {
     };
 
     escenas[60] = {
-        &bg45,
-        "Estoy arreglandome para las clases cuando me llega un mensaje de mi novia",
+        &bg44,
+        "Mejor me voy a casa. no quiero hacer una escena",
         false,
         true,
         false,
@@ -2363,8 +2397,8 @@ int main() {
     };
 
     escenas[61] = {
-        &bg46,
-        "Hola amor, ya desayunaste?",
+        &bg10,
+        "Llego a la casa aun de malas.",
         false,
         true,
         false,
@@ -2372,18 +2406,17 @@ int main() {
     };
 
     escenas[62] = {
-        &bg47,
-        "Que le respondo?",
+        &bg45,
+        "Estoy arreglandome para las clases cuando me llega un mensaje de mi novia",
+        false,
         true,
         false,
-        false,
-        63,
-        11
+        63
     };
 
     escenas[63] = {
-        &bg10,
-        "Escucho la voz de mi mamá desde la cocina y dejo mi telefono en la cama",
+        &bg46,
+        "Hola amor, ya desayunaste?",
         false,
         true,
         false,
@@ -2391,28 +2424,27 @@ int main() {
     };
 
     escenas[64] = {
-        &bg48,
-        "",
-        false,
+        &bg47,
+        "Que le respondo?",
         true,
         false,
-        65
+        false,
+        65,
+        11
     };
 
     escenas[65] = {
-        &bg48,
-        "*Se alcanza a leer* Me levante con la sorpresa que mi tía y primo vinieron de visita.\n"
-        "En la mañana estaba con mi primo esperando a que mi tía saliera de la tienda",
+        &bg10,
+        "Escucho la voz de mi mamá desde la cocina y dejo mi telefono en la cama",
         false,
         true,
         false,
-        66,
-        12
+        66
     };
 
     escenas[66] = {
-        &bg6,
-        "Llego la tarde y fuí a clases...",
+        &bg48,
+        "",
         false,
         true,
         false,
@@ -2420,12 +2452,9 @@ int main() {
     };
 
     escenas[67] = {
-        &bg30,
-        "Que estresante. \n"
-        "Como es costumbre, encontré a Illeana en el pasillo.Aún faltaba tiempo para entrar a clases\n"
-        "entonces nos quedamos platicando.Le conté sobre lo mal que iba mi día.\n"
-        "Entre ver a mi novia con alguien más y olvidar mi teléfono me la estaba\n"
-        "pasando fatal.Incluso nos quedamos platicando en la salida.",
+        &bg48,
+        "*Se alcanza a leer* Me levante con la sorpresa que mi tía y primo vinieron de visita.\n"
+        "En la mañana estaba con mi primo esperando a que mi tía saliera de la tienda",
         false,
         true,
         false,
@@ -2433,9 +2462,8 @@ int main() {
     };
 
     escenas[68] = {
-        &bg49,
-        "¿Como te sentiste despues de eso?\n"
-        "Supongo que muy feo, terminaras con ella?",
+        &bg6,
+        "Llego la tarde y fuí a clases...",
         false,
         true,
         false,
@@ -2443,18 +2471,22 @@ int main() {
     };
 
     escenas[69] = {
-        &bg50,
-        "No seas migajero.",
+        &bg30,
+        "Que estresante. \n"
+        "Como es costumbre, encontré a Illeana en el pasillo.Aún faltaba tiempo para\n"
+        "entrar a clases entonces nos quedamos platicando.Le conté sobre lo mal \n"
+        "que iba mi día. Entre ver a mi novia con alguien más y olvidar mi telefono \n"
+        "me la estaba pasando fatal.Incluso nos quedamos platicando en la salida.",
+        false,
         true,
         false,
-        false,
-        70,
-        13
+        70
     };
 
     escenas[70] = {
-        &bg51,
-        "Voltee a ver el otro lado de la calle y para mi sorpresa, ahi estaba ella.",
+        &bg49,
+        "¿Como te sentiste despues de eso?\n"
+        "Supongo que muy feo, terminaras con ella?",
         false,
         true,
         false,
@@ -2462,19 +2494,18 @@ int main() {
     };
 
     escenas[71] = {
-        &bg52,
-        "Me veía con una mirada decepcionada, pues llevaba horas sin\n"
-        "contestarle y ademas estaba con alguien mas.",
-        false,
+        &bg50,
+        "No seas migajero.",
         true,
         false,
-        72
+        false,
+        72,
+        12
     };
 
     escenas[72] = {
-        &bg53,
-        "Me di cuenta de lo mal que se veía y me consumieron las emociones.\n"
-        "Al ver a las dos, hui  ..como buena gallina .",
+        &bg51,
+        "Voltee a ver el otro lado de la calle y para mi sorpresa, ahi estaba ella.",
         false,
         true,
         false,
@@ -2482,8 +2513,9 @@ int main() {
     };
 
     escenas[73] = {
-        &bg29,
-        "Al llegar a casa, corri a mi cuarto. Mi telefono estaba en mi cama",
+        &bg52,
+        "Me veía con una mirada decepcionada, pues llevaba horas sin\n"
+        "contestarle y ademas estaba con alguien mas.",
         false,
         true,
         false,
@@ -2491,8 +2523,9 @@ int main() {
     };
 
     escenas[74] = {
-        &bg55,
-        "... ay no",
+        &bg53,
+        "Me di cuenta de lo mal que se veía y me consumieron las emociones.\n"
+        "Al ver a las dos, hui  ..como buena gallina .",
         false,
         true,
         false,
@@ -2500,15 +2533,34 @@ int main() {
     };
 
     escenas[75] = {
+        &bg29,
+        "Al llegar a casa, corri a mi cuarto. Mi telefono estaba en mi cama",
+        false,
+        true,
+        false,
+        76
+    };
+
+    escenas[76] = {
+        &bg55,
+        "... ay no",
+        false,
+        true,
+        false,
+        77
+    };
+
+    escenas[77] = {
         &bg56,
         "",
         true,
         false,
         false,
-        76,
+        78,
+        13
     };
 
-    escenas[76] = {
+    escenas[78] = {
         &bg12,
         "\"Ha sido un dia horroroso.\" \n"
         "Luego de quedarme un rato despierto, mejor decidi, descansar,\n"
@@ -2516,37 +2568,46 @@ int main() {
         false,
         true,
         false,
-        77,
+        79,
     };
 
-    escenas[77] = {
+    escenas[79] = {
         &bgMenu,
         "",
         false,
         false,
         false,
-        78
+        80,
     };
 
-    escenas[78] = {
+    escenas[80] = {
         &bgRegalos,
         "",
         false,
         false,
         false,
-        79
+        81
     };
     //Dia 5
-    escenas[79] = {
+    escenas[81] = {
       &bg57,
       "",
+      false,
       true,
       false,
-      false,
-      80
+      82
     };
 
-    escenas[80] = {
+    escenas[82] = {
+     &bg68,
+     "",
+     false,
+     false,
+     false,
+     83
+    };
+
+    escenas[83] = {
       &bg10,
       "No me quiero levantar. Despues de todo el caos\n"
       "el silencio pesa mas que cualquier discusion. \n"
@@ -2556,76 +2617,78 @@ int main() {
       false,
       true,
       false,
-      81
-    };
-
-    escenas[81] = {
-            &bg58,
-            "Llego a su casa, me abrio la puerta y decido explicarme",
-            false,
-            true,
-            false,
-            82
-    };
-
-    escenas[82] = {
-            &bg59,
-            "",
-            true,
-            false,
-            false,
-            83
-    };
-
-    escenas[83] = {
-            &bg60,
-            "Luego de hablar un tiempo, acepto mi disculpa./n"
-            "Parecia feliz de que todo regresara a la /n"
-            "normalidad. Decidi acompantarla a la universidad/n y luego me fui a clase",
-            false,
-            true,
-            false,
-            84
+      84
     };
 
     escenas[84] = {
-            &bg61,
-            "Como siempre, me encuentro con Illeana antes/n"
-            "de clases, pero parece que no esta /n"
-            "de buenas. Debo acercarme y darle una explicacion/n",
+            &bg58,
+            "Llego a su casa, me abrio la puerta y decido explicarme",
             false,
             true,
             false,
             85
     };
 
-    escenas[86] = {
-            &bg62,
+    escenas[85] = {
+            &bg59,
             "",
+            true,
+            false,
+            false,
+            86,
+            14
+    };
+
+    escenas[86] = {
+            &bg60,
+            "Luego de hablar un tiempo, acepto mi disculpa.\n"
+            "Parecia feliz de que todo regresara a la \n"
+            "normalidad. Decidi acompantarla a la universidad\n y luego me fui a clase",
             false,
             true,
             false,
             87
     };
 
+    escenas[87] = {
+            &bg61,
+            "Como siempre, me encuentro con Illeana antes\n"
+            "de clases, pero parece que no esta \n"
+            "de buenas. Debo acercarme y darle una explicacion\n",
+            false,
+            true,
+            false,
+            88
+    };
+
     escenas[88] = {
+            &bg62,
+            "",
+            true,
+            false,
+            false,
+            89,
+            15
+    };
+
+    escenas[89] = {
             &bg30,
             "Luego de nuestra platica parece que nuestra relacion cambio",
             false,
             true,
             false,
-            89
+            90
     };
 
-    escenas[89] = {
+    escenas[90] = {
             &bg6,
-            "Pasaron las clases y me di cuenta que faltaba /n"
-            "un dia para el 14 de febrero y no he/n" 
+            "Pasaron las clases y me di cuenta que faltaba \n"
+            "un dia para el 14 de febrero y no he\n" 
             "comprado nada de regalo…”deberia ir  la floreria”",
             false,
             true,
             false,
-            90
+            91
     };
     escenas[91] = {
             &bg63,
@@ -2633,13 +2696,14 @@ int main() {
             true,
             false,
             false,
-            92
+            92,
+            16
     };
     escenas[92] = {
             &bg12,
-            "Compre flores y fui caminando a mi casa./n"
-            "Me siento bastante feliz. Busque ropa decente /n"
-            "y tambien mi perfume favorito/n",
+            "Compre flores y fui caminando a mi casa.\n"
+            "Me siento bastante feliz. Busque ropa decente \n"
+            "y tambien mi perfume favorito\n",
             false,
             true,
             false,
@@ -2661,13 +2725,14 @@ int main() {
             true,
             false,
             false,
-            95
+            95,
+            17
     };
 
     escenas[95] = {
             &bg12,
-            "Me recuesto tras terminar mis pendientes/n"
-            "Por fin mañana será un día de descanso./n"
+            "Me recuesto tras terminar mis pendientes\n"
+            "Por fin mañana será un día de descanso.\n"
             "No puedo esperar.",
             false,
             true,
@@ -2675,12 +2740,20 @@ int main() {
             96
     };
     escenas[96] = {
-            &bgRegalos,
+            &bgMenu,
             "",
             false,
             false,
             false,
             97
+    };
+    escenas[97] = {
+           &bgRegalos,
+           "",
+           false,
+           false,
+           false,
+           98
     };
 
 
@@ -2867,13 +2940,25 @@ int main() {
                         }
                         continue;
                     }
+					// ESCENA ALARMA Lunes
+                    else if (scene == 5) {
 
+                        if (zonaAlarma1.contains(mousePos)) {
+                            scene = 6;
+                            continue;
+                        }
+
+                        else if (zonaAlarma2.contains(mousePos)) {
+                            scene = 6;
+                            continue;
+                        }
+                    }
 
                     // MENU DIA 1
-                    if (scene == 14) {
+                    if (scene == 15) {
 
                         if (zonaContM.contains(mousePos)) {
-                            scene = 15;
+                            scene = 16;
                             continue;
                         }
 
@@ -2883,25 +2968,25 @@ int main() {
                         }
                     }
 
-                    // ESCENA ALARMA
-                    else if (scene == 16) {
+                    // ESCENA ALARMA MARTES
+                    else if (scene == 17) {
 
                         if (zonaAlarma1.contains(mousePos)) {
-                            scene = 17;
+                            scene = 18;
                             continue;
                         }
 
                         else if (zonaAlarma2.contains(mousePos)) {
-                            scene = 17;
+                            scene = 18;
                             continue;
                         }
                     }
 
                     // MENU DIA 2
-                    else if (scene == 27) {
+                    else if (scene == 28) {
 
                         if (zonaContM.contains(mousePos)) {
-                            scene = 28;
+                            scene = 29;
                             continue;
                         }
 
@@ -2910,36 +2995,78 @@ int main() {
                             continue;
                         }
                     }
+
+                    // ESCENA ALARMA MIERCOLES
+                    else if (scene == 30) {
+
+                        if (zonaAlarma1.contains(mousePos)) {
+                            scene = 31;
+                            continue;
+                        }
+
+                        else if (zonaAlarma2.contains(mousePos)) {
+                            scene = 31;
+                            continue;
+                        }
+                    }
                     // MENU Dia 3
-                    else if (scene == 51) {
+                    else if (scene == 53) {
 
                         if (zonaContM.contains(mousePos)) {
-                            scene = 53;
+                            scene = 55;
                             continue;
                         }
 
                         else if (zonaRegalos.contains(mousePos)) {
-                            scene = 52;
+                            scene = 54;
                             continue;
                         }
                     }
 
                     // ESCENA ALARMA Jueves
-                    else if (scene == 53) {
+                    else if (scene == 55) {
 
                         if (zonaAlarma1.contains(mousePos)) {
-                            scene = 54;
+                            scene = 56;
                             continue;
                         }
 
                         else if (zonaAlarma2.contains(mousePos)) {
-                            scene = 54;
+                            scene = 56;
                             continue;
                         }
                     }
 
                     // MENU Dia 4
-                    else if (scene == 73) {
+                    else if (scene == 79) {
+
+                        if (zonaContM.contains(mousePos)) {
+                            scene = 81;
+                            continue;
+                        }
+
+                        else if (zonaRegalos.contains(mousePos)) {
+                            scene = 80;
+                            continue;
+                        }
+                    }
+
+                    // ESCENA ALARMA Viernes
+                    else if (scene == 82) {
+
+                        if (zonaAlarma1.contains(mousePos)) {
+                            scene = 83;
+                            continue;
+                        }
+
+                        else if (zonaAlarma2.contains(mousePos)) {
+                            scene = 83;
+                            continue;
+                        }
+                    }
+
+                    // MENU Dia 5
+                    else if (scene == 96) {
 
                         if (zonaContM.contains(mousePos)) {
                             scene = -1;
@@ -2947,7 +3074,7 @@ int main() {
                         }
 
                         else if (zonaRegalos.contains(mousePos)) {
-                            scene = 74;
+                            scene = 97;
                             continue;
                         }
                     }
@@ -2985,11 +3112,11 @@ int main() {
                         continue;
                     }
 
-                    else if (scene == 74) {
+                    else if (scene == 78) {
 
                         procesarRegalo(
                             scene,
-                            75,
+                            79,
                             mitilina,
                             mousePos,
                             zonaFlores,
@@ -3001,11 +3128,11 @@ int main() {
                         continue;
                         }
 
-                    else if (scene == 96) {
+                    else if (scene == 97) {
 
                         procesarRegalo(
                             scene,
-                            97,
+                            -1,
                             mitilina,
                             mousePos,
                             zonaFlores,
