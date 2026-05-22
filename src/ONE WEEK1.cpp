@@ -763,7 +763,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
         e18.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
         e18.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
-            e18.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
+        e18.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
         e18.op4 = "\"Entonces, manana hay plan o no?\"";
 
     }
@@ -786,7 +786,141 @@ vector<Escenario> cargarHistoria(int clase) {
 
     h.push_back(e18);
 
-	//Dia6 Escenario1
+	//Dia6 Escenario 1
+    Escenario e19;
+
+    e19.pregunta = "“Llega el mesero a tomar su orden,\n¿Ya están listos para ordenar?”";
+
+    e19.imp1 = 2;
+    e19.imp2 = 5;
+    e19.imp3 = -1;
+    e19.imp4 = -5;
+
+    if (clase == 0) {
+
+        e19.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
+        e19.op2 = "\"Pide permiso para salir manana a las 6pm\"";
+        e19.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
+        e19.op4 = "\"Oye, manana teniamos que hacer algo?\"";
+
+    }
+    else if (clase == 1) {
+
+        e19.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
+        e19.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
+        e19.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
+        e19.op4 = "\"Entonces, manana hay plan o no?\"";
+
+    }
+    else if (clase == 2) {
+
+        e19.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
+        e19.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
+        e19.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
+        e19.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
+
+    }
+    else if (clase == 3) {
+
+        e19.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
+        e19.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
+        e19.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
+        e19.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
+
+    }
+
+    h.push_back(e19);
+
+    //Dia6 Escenario 2
+    Escenario e20;
+
+    e20.pregunta = "“Sin darme cuenta, mi novia me estaba preguntando sobre quién era ella.\nN: “Acaso no es la chica del otro día?”";
+
+    e20.imp1 = 2;
+    e20.imp2 = 5;
+    e20.imp3 = -1;
+    e20.imp4 = -5;
+
+    if (clase == 0) { //Toxico
+
+        e20.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
+        e20.op2 = "\"Pide permiso para salir manana a las 6pm\"";
+        e20.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
+        e20.op4 = "\"Oye, manana teniamos que hacer algo?\"";
+
+    }
+    else if (clase == 1) { 
+
+        e20.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
+        e20.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
+        e20.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
+        e20.op4 = "\"Entonces, manana hay plan o no?\"";
+
+    }
+    else if (clase == 2) {
+
+        e20.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
+        e20.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
+        e20.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
+        e20.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
+
+    }
+    else if (clase == 3) {
+
+        e20.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
+        e20.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
+        e20.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
+        e20.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
+
+    }
+
+    h.push_back(e20);
+
+    //Dia6 Escenario 3
+    Escenario e21;
+
+    e21.pregunta = "“Llega el mesero a tomar su orden,\n¿Ya están listos para ordenar?”";
+
+    e21.imp1 = 2;
+    e21.imp2 = 5;
+    e21.imp3 = -1;
+    e21.imp4 = -5;
+
+    if (clase == 0) {
+
+        e21.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
+        e21.op2 = "\"Pide permiso para salir manana a las 6pm\"";
+        e21.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
+        e21.op4 = "\"Oye, manana teniamos que hacer algo?\"";
+
+    }
+    else if (clase == 1) {
+
+        e21.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
+        e21.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
+        e21.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
+        e21.op4 = "\"Entonces, manana hay plan o no?\"";
+
+    }
+    else if (clase == 2) {
+
+        e21.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
+        e21.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
+        e21.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
+        e21.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
+
+    }
+    else if (clase == 3) {
+
+        e21.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
+        e21.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
+        e21.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
+        e21.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
+
+    }
+
+    h.push_back(e21);
+
     return h;
 }
 
@@ -1605,7 +1739,92 @@ int main() {
     sf::Sprite bg68(AlarmaViernes);
     ajustar(bg68, AlarmaViernes);
 
+    //Dia 6
 
+    //
+    sf::Texture Dia5;
+    cargarTextura(Dia5, "../assets/fondos/Dia5.jpeg");
+    sf::Sprite bg69(Dia5);
+    ajustar(bg69, Dia5);
+
+    //AlarmaSabado
+    sf::Texture AlarmaSabado;
+    cargarTextura(AlarmaSabado, "../assets/fondos/AlarmaSabado.png");
+    sf::Sprite bg70(AlarmaSabado);
+    ajustar(bg70, AlarmaSabado);
+
+    //Cuarto tarde
+    sf::Texture CuartoTarde;
+    cargarTextura(CuartoTarde, "../assets/fondos/Cuartotarde.png");
+    sf::Sprite bg71(CuartoTarde);
+    ajustar(bg71, CuartoTarde);
+
+    //Llegando al sushi
+    sf::Texture LlegandoSushi;
+    cargarTextura(LlegandoSushi, "../assets/fondos/llegandosushi.png");
+    sf::Sprite bg72(LlegandoSushi);
+    ajustar(bg72, LlegandoSushi);
+
+    //Saludo en el sushi
+    sf::Texture SaludoSushi;
+    cargarTextura(SaludoSushi, "../assets/fondos/Saludosushi.png");
+    sf::Sprite bg73(SaludoSushi);
+    ajustar(bg73, SaludoSushi);
+
+    //Regalo en el sushi
+    sf::Texture RegaloSushi;
+    cargarTextura(RegaloSushi, "../assets/fondos/Regalosushi.png");
+    sf::Sprite bg74(RegaloSushi);
+    ajustar(bg74, RegaloSushi);
+
+    //Felicidad en el sushi
+    sf::Texture SushizFeliz;
+    cargarTextura(SushizFeliz, "../assets/fondos/Sushifeliz.png");
+    sf::Sprite bg75(SushizFeliz);
+    ajustar(bg75, SushizFeliz);
+
+    //Felicidad en la comida
+    sf::Texture ComidaFeliz;
+    cargarTextura(ComidaFeliz, "../assets/fondos/Comidafeliz.png");
+    sf::Sprite bg76(ComidaFeliz);
+    ajustar(bg76, ComidaFeliz);
+
+    //Escenario 1 Dia6
+    //Sushi Mesero
+    sf::Texture SushiMesero;
+    cargarTextura(SushiMesero, "../assets/fondos/Sushimesero.png");
+    sf::Sprite bg77(SushiMesero);
+    ajustar(bg77, SushiMesero);
+
+    //Novia escucha
+    sf::Texture NoviaEscucha;
+    cargarTextura(NoviaEscucha, "../assets/fondos/Noviaescucha.png");
+    sf::Sprite bg78(NoviaEscucha);
+    ajustar(bg78, NoviaEscucha);
+
+    //Novia escucha OP
+    sf::Texture NoviaEscuchaOP;
+    cargarTextura(NoviaEscuchaOP, "../assets/fondos/NoviaescuchaOP.png");
+    sf::Sprite bg80(NoviaEscuchaOP);
+    ajustar(bg80, NoviaEscuchaOP);
+
+    //Novia enojada
+    sf::Texture NoviaEnojada;
+    cargarTextura(NoviaEnojada, "../assets/fondos/Noviaenojada.png");
+    sf::Sprite bg81(NoviaEnojada);
+    ajustar(bg81, NoviaEnojada);
+
+    //Novia tensa
+    sf::Texture Noviatensa;
+    cargarTextura(Noviatensa, "../assets/fondos/Noviatensa.png");
+    sf::Sprite bg83(Noviatensa);
+    ajustar(bg83, Noviatensa);
+
+    //Illiana llega
+    sf::Texture Illeanallega;
+    cargarTextura(Illeanallega, "../assets/fondos/Illeanallega.png");
+    sf::Sprite bg84(Illeanallega);
+    ajustar(bg84, Illeanallega);
 // ==========================
 // CONFIGURACION DE ESCENAS
 // ==========================
@@ -2582,7 +2801,22 @@ int main() {
            false,
            98
     };
-
+    escenas[98] = {
+           &bg69,
+           "",
+           false,
+           true,
+           false,
+           99
+    };
+    escenas[99] = {
+           &bg70,
+           "",
+           false,
+           false,
+           false,
+           102
+    };
 
     escenas[100] = {
         &bgRegalos,
@@ -2602,6 +2836,150 @@ int main() {
         29
     };
 
+    escenas[102] = {
+           &bg10,
+           "Como quería estar libre para el día de hoy, estuve trabajando en todos mis pendientes por la noche terminando muy tarde.\nAsi que hoy me levanté tarde para poder descansar bien, al fin y al cabo hoy es sabado y es 14 de febrero.",
+           false,
+           true,
+           false,
+           103
+    };
+
+    escenas[103] = {
+           &bg71,
+           "Luego de unas horas me doy cuenta de que ya casi se acerca la hora de vernos,\nasí que comencé a alistarme. Tome todas mis cosas incluyendo el regalo y sali de casa.",
+           false,
+           true,
+           false,
+           104
+    };
+
+    escenas[104] = {
+           &bg72,
+           "Mientras camino, reflexiono en lo caótica que ha sido la semana, y sin darme cuenta,\nhe llegado al lugar de encuentro.",
+           false,
+           true,
+           false,
+           105
+    };
+
+    escenas[105] = {
+           &bg73,
+           "Yo: Hey amor!!! ¿Llevas mucho tiempo esperando?\nNovia: no, acabo de llegar.\n*le das las flores*",
+           false,
+           true,
+           false,
+           106
+    };
+
+    escenas[106] = {
+           &bg74,
+           "omggg que hermosas",
+           false,
+           true,
+           false,
+           107
+    };
+
+    escenas[107] = {
+           &bg75,
+           "Yo: ¿Nos vamos?\nNovia:Si\n*Comenzamos a caminar hacia el sushi, mientras me contaba cómo fue su primera semana en la universidad*",
+           false,
+           true,
+           false,
+           108
+    };
+
+    escenas[108] = {
+           &bg76,
+           "*Me contó que hizo muchas amigas  y que\nla están saturando de proyectos pero aún así tiene tiempo para verme*",
+           false,
+           true,
+           false,
+           109
+    };
+
+    escenas[109] = {
+           &bg77,
+           "",
+           true,
+           false,
+           false,
+           110,
+           18
+    };
+
+    escenas[110] = {
+           &bg76,
+           "El mesero tomó su orden y se fue. Seguimos\nplaticando sobre la universidad y como nos estamos adaptando",
+           false,
+           true,
+           false,
+           111,
+    };
+
+    escenas[111] = {
+           &bg78,
+           "De repente escuchamos unos murmullos en la parte de atras.",
+           false,
+           true,
+           false,
+           112,
+    };
+
+    escenas[112] = {
+           &bg78,
+           "Volteo y era Illeana, celebrando con unas amigas\nque le estaban echando carrilla,  me quede congelado",
+           false,
+           true,
+           false,
+           113,
+    };
+
+    escenas[113] = {
+           &bg80,
+           "",
+           true,
+           false,
+           false,
+           114,
+    };
+
+    escenas[114] = {
+           &bg81,
+           "Mi novia estuvo dudando pero le aseguré que no era nada.\nIgual ella decidió confiar. Llegaron nuestros alimentos y los disfrutamos.",
+           false,
+           true,
+           false,
+           115,
+    };
+
+    escenas[115] = {
+           &bg81,
+           "Cuando menos lo esperaba el ruido se escuchaba\nmás fuerte, volteo y noto que Illeana se está acercando a nosotros.",
+           false,
+           true,
+           false,
+           116,
+    };
+
+    escenas[116] = {
+           &bg83,
+           "Ay no",
+           false,
+           true,
+           false,
+           117,
+    };
+
+    escenas[117] = {
+           &bg84,
+           "Ileana: Holaaa, feliz san valentín",
+           false,
+           true,
+           false,
+           118,
+    };
     escenas[199] = {
  &bg12,
  "Ella decidio terminar contigo...\n\nGAME OVER",
@@ -2896,12 +3274,26 @@ int main() {
                     else if (scene == 96) {
 
                         if (zonaContM.contains(mousePos)) {
-                            scene = -1;
+                            scene = 98;
                             continue;
                         }
 
                         else if (zonaRegalos.contains(mousePos)) {
                             scene = 97;
+                            continue;
+                        }
+                    }
+
+                    //Alarma Sabado (Dia 6)
+                    else if (scene == 99) {
+
+                        if (zonaAlarma1.contains(mousePos)) {
+                            scene = 102;
+                            continue;
+                        }
+
+                        else if (zonaAlarma2.contains(mousePos)) {
+                            scene = 102;
                             continue;
                         }
                     }
@@ -2959,7 +3351,7 @@ int main() {
 
                         procesarRegalo(
                             scene,
-                            -1,
+                            98,
                             mitilina,
                             mousePos,
                             zonaFlores,
