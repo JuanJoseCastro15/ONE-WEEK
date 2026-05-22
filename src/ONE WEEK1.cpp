@@ -13,6 +13,9 @@ private:
     int Confianza, Amor, Felicidad;
 public:
     Novia() : Confianza(105), Amor(70), Felicidad(105) {}
+    void modificarAmor(int valor) {
+        Amor += valor;
+    }
 
     void modificarConfianza(int valor) {
         Confianza += valor;
@@ -33,19 +36,10 @@ public:
         if (Felicidad < 0)
             Felicidad = 0;
     }
-    void modificarAmor(int valor) {
-
-        Amor += valor;
-
-        if (Amor > 100)
-            Amor = 100;
-
-        if (Amor < 0)
-            Amor = 0;
-    }
+    
     void actualizarAmor() {
 
-        Amor += ((Confianza - 100) + (Felicidad - 100)) / 50;
+        Amor = 70 + ((Confianza - 100) + (Felicidad - 100)) / 2;
 
         if (Amor > 100)
             Amor = 100;
@@ -979,24 +973,26 @@ void procesarRegalo(
 
     if (zonaFlores.contains(mousePos)) {
         regaloElegido = true;
+        mitilina.modificarConfianza(2);
     }
 
     else if (zonaCarta.contains(mousePos)) {
         regaloElegido = true;
+        mitilina.modificarConfianza(2);
     }
 
     else if (zonaPastel.contains(mousePos)) {
         regaloElegido = true;
+        mitilina.modificarFelicidad(2);
     }
 
     else if (zonaCollar.contains(mousePos)) {
         regaloElegido = true;
+        mitilina.modificarFelicidad(2);
     }
 
     // si eligio cualquier regalo
     if (regaloElegido) {
-
-        mitilina.modificarAmor(3);
 
         cout << "Le diste un regalo a tu novia." << endl;
 
@@ -1162,16 +1158,29 @@ void procesarDecision(
         cout << "Escenario actual: " << escenarioActual << endl;
         cout << "Scene actual: " << scene << endl;
 
-        mitilina.mostrar();
+       bool afectaFelicidad = (escenarioActual == 0 ||
+           escenarioActual == 2 ||
+           escenarioActual == 4 ||
+           escenarioActual == 6 ||
+           escenarioActual == 8 ||
+           escenarioActual == 10 ||
+           escenarioActual == 12 ||
+           escenarioActual == 14 ||
+           escenarioActual == 16 ||
+           escenarioActual == 18 
+           );
+       if (afectaFelicidad) {
 
-        if (miJugador) {
-            miJugador->aplicarImpacto(mitilina, impacto);
-        }
-        else {
-            cout << "ERROR: miJugador es nullptr" << endl;
-        }
+           mitilina.modificarFelicidad(impacto);
+           mitilina.actualizarAmor();
+       }
+       else {
 
-        mitilina.mostrar();
+           mitilina.modificarConfianza(impacto);
+           mitilina.actualizarAmor();
+       }
+
+       mitilina.mostrar();
 
         if (mitilina.relacionTerminada()) {
             scene = 199;
