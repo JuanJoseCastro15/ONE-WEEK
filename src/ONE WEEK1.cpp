@@ -632,7 +632,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
     e12.pregunta = "¿Que respondes?";
 
-    //Pendiente de cambios, tanto los valores de impacto como las respuestas del gymrat
+    //Pendiente de cambios,
     e12.imp1 = 0;
     e12.imp2 = -2;
     e12.imp3 = -3;
@@ -688,20 +688,13 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { //TOXICO
 
-<<<<<<< HEAD
         e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente";
         e13.op2 = "Como por?, claro que no";
         e13.op3 = "Tendre que pensarlo";
         e13.op4 = "*Contemplar el panorama completo mientras\n"
             "mantienes una mirada fija al techo*";
-=======
-        e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente.";
-        e13.op2 = "Como por?, claro que no.";
-        e13.op3 = "Tendre que pensarlo.";
-        e13.op4 = "*Contemplar el panorama completo mientras mantienes una mirada fija al techo*";
->>>>>>> 40c8728ab27a169183879f1c900930a0da8c0f7b
-
     }
+
     else if (clase == 1) { //NPC
 
         e13.op1 = "Sí, creo que sí";
@@ -743,18 +736,11 @@ vector<Escenario> cargarHistoria(int clase) {
 
     if (clase == 0) { //TOXICO
 
-<<<<<<< HEAD
         e14.op1 = "No puede ser, ni modo, toca disculparme";
         e14.op2 = "Perfecto, tengo que llamarle para disculparme";
         e14.op3 = "Mmm, ya me enoje luego lo intento arreglar";
         e14.op4 = "Mejor intento pescar un nuevo pez,\n"
             "Illeana suena a una buena opción";
-=======
-        e14.op1 = "No puede ser, ni modo, toca disculparme.";
-        e14.op2 = "Perfecto, tengo que llamarle para disculparme.";
-        e14.op3 = "Mmm, ya me enoje luego lo intento arreglar.";
-        e14.op4 = "Mejor intento pescar un nuevo pez, Illeana suena a una buena opción.";
->>>>>>> 40c8728ab27a169183879f1c900930a0da8c0f7b
 
     }
     else if (clase == 1) { //NPC
@@ -2772,7 +2758,7 @@ int main() {
         false,
         false,
         false,
-        28
+        29
     };
 
     escenas[199] = {
@@ -3084,7 +3070,7 @@ int main() {
 
                         procesarRegalo(
                             scene,
-                            15,
+                            16,
                             mitilina,
                             mousePos,
                             zonaFlores,
@@ -3096,11 +3082,11 @@ int main() {
                         continue;
                     }
 
-                    else if (scene == 52) {
+                    else if (scene == 54) {
 
                         procesarRegalo(
                             scene,
-                            53,
+                            55,
                             mitilina,
                             mousePos,
                             zonaFlores,
@@ -3112,11 +3098,11 @@ int main() {
                         continue;
                     }
 
-                    else if (scene == 78) {
+                    else if (scene == 80) {
 
                         procesarRegalo(
                             scene,
-                            79,
+                            81,
                             mitilina,
                             mousePos,
                             zonaFlores,
@@ -3147,7 +3133,7 @@ int main() {
 
                         procesarRegalo(
                             scene,
-                            28,
+                            29,
                             mitilina,
                             mousePos,
                             zonaFlores,
