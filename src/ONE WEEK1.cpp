@@ -17,915 +17,905 @@ struct Escenario {
 
 vector<Escenario> cargarHistoria(int clase) {
     vector <Escenario> h;
+    Escenario e0;
+    e0.pregunta = "Ring * Te llega un mensaje de tu novia * : Buenos dias!!!"; //toxico =1, npc = 1, gymrat =2, otaku = 3
+
+    e0.imp1 = 5;
+    e0.imp2 = 3;
+    e0.imp3 = 0;
+    e0.imp4 = -5;
+
+
+    if (clase == 0) { //TOXICO
+        e0.op1 = "Buenos dias";
+        e0.op2 = "Buenos dias bebe, como amaneciste?";
+        e0.op3 = "Buenos dias amor";
+        e0.op4 = "Ok";
+    }
+    else if (clase == 1) { //NPC
+        e0.op1 = "Buenos dias";
+        e0.op2 = "Buenos dias, pense en ti al despertar";
+        e0.op3 = "Buenos dias princesa";
+        e0.op4 = "Buenos dias, hasta que me hablas";
+    }
+    else if (clase == 2) { //GYMRAT
+        e0.op1 = "Buenos dias";
+        e0.op2 = "Buenos dias, pense en ti";
+        e0.op3 = "Buenos dias hermosa, hoy entreno amarte mas";
+        e0.op4 = "Que tienen de bueno? me duele todo";
+    }
+    else if (clase == 3) { //OTAKU
+        e0.op1 = "Buenos dias OwO";
+        e0.op2 = "Como amanecio mi waifu pechocha";
+        e0.op3 = "Ohayooooo amor 7w7";
+        e0.op4 = "Te tardaste en decirme, bakaaa";
+    }
+
+    h.push_back(e0);
+
+    //escena 2
     Escenario e1;
-    e1.pregunta = "Ring * Te llega un mensaje de tu novia * : Buenos dias!!!"; //toxico =1, npc = 1, gymrat =2, otaku = 3
+    e1.pregunta = "Te he visto por aqui, pero no en clases * comienza a acercarse *\nComo te llamas?";
 
-    e1.imp1 = 5;
-    e1.imp2 = 3;
+    e1.imp1 = 0;
+    e1.imp2 = -5;
     e1.imp3 = 0;
-    e1.imp4 = -5;
+    e1.imp4 = -3;
 
-
-    if (clase == 0) { // TOXICO
-        e1.op1 = "Buenos dias";
-        e1.op2 = "Buenos dias bebe, como amaneciste?";
-        e1.op3 = "Buenos dias amor";
-        e1.op4 = "Ok";
+    if (clase == 0) { //TOXICO
+        e1.op1 = "*solo la saluda con la mano*";
+        e1.op2 = "Hola, soy ..., pero puedes llamarme tu\nfuturo duenio";
+        e1.op3 = "A ok";
+        e1.op4 = "Que te importa? *con tono misterioso*";
     }
-    else if (clase == 1) { // NPC
-        e1.op1 = "Buenos dias";
-        e1.op2 = "Buenos dias, pense en ti al despertar";
-        e1.op3 = "Buenos dias princesa";
-        e1.op4 = "Buenos dias, hasta que me hablas";
+    else if (clase == 1) { //NPC
+        e1.op1 = "Hola soy...";
+        e1.op2 = "Hola soy..., podria acostrumbrarme a verte.";
+        e1.op3 = "*con sus manos hace un like*";
+        e1.op4 = "Hola, que lindo coincidir contigo";
     }
-    else if (clase == 2) { // GYMRAT
-        e1.op1 = "Buenos dias";
-        e1.op2 = "Buenos dias, pense en ti";
-        e1.op3 = "Buenos dias hermosa, hoy entreno amarte mas";
-        e1.op4 = "Que tienen de bueno? me duele todo";
+    else if (clase == 2) { //GYMRAT
+        e1.op1 = "Hola? Soy ...";
+        e1.op2 = "Mucho gusto soy ...,y parece que he\nencontrado una nueva motivacion";
+        e1.op3 = "eh?";
+        e1.op4 = "Hola, no creo que nos hayamos visto";
     }
-    else if (clase == 3) { // OTAKU
-        e1.op1 = "Buenos dias OwO";
-        e1.op2 = "Como amanecio mi waifu pechocha";
-        e1.op3 = "Ohayooooo amor 7w7";
-        e1.op4 = "Te tardaste en decirme, bakaaa";
+    else if (clase == 3) { //OTAKU
+        e1.op1 = "Hola..*se sonroja*";
+        e1.op2 = "Soy...pero puedo ser tu sempai 7w7";
+        e1.op3 = "...";
+        e1.op4 = "Ehh mmmm, eres una chica muy kawaii";
     }
 
     h.push_back(e1);
 
-    //escena 2
     Escenario e2;
-    e2.pregunta = "Te he visto por aqui, pero no en clases * comienza a acercarse *\nComo te llamas?";
+    e2.pregunta = "Que le respondes a tu novia?...";
 
-    e2.imp1 = 0;
-    e2.imp2 = -5;
-    e2.imp3 = 0;
-    e2.imp4 = -3;
+    e2.imp1 = 3;
+    e2.imp2 = 0;
+    e2.imp3 = -3;
+    e2.imp4 = -5;
 
-    if (clase == 0) { // TOXICO
-        e2.op1 = "*solo la saluda con la mano*";
-        e2.op2 = "Hola, soy ..., pero puedes llamarme tu\nfuturo duenio";
-        e2.op3 = "A ok";
-        e2.op4 = "Que te importa? *con tono misterioso*";
+    if (clase == 0) { //TOXICO
+        e2.op1 = "Estoy contando los dias para verte preciosa";
+        e2.op2 = "Un anio mas de peleas, yeeeeey";
+        e2.op3 = "Que?, si este domingo estoy ocupado\n(ver tik tok)";
+        e2.op4 = "Es la champions?";
     }
-    else if (clase == 1) { // NPC
-        e2.op1 = "Hola soy...";
-        e2.op2 = "Hola soy..., podria acostrumbrarme a verte.";
-        e2.op3 = "*con sus manos hace un like*";
-        e2.op4 = "Hola, que lindo coincidir contigo";
+    else if (clase == 1) { //NPC
+        e2.op1 = "Espero con ansias verte";
+        e2.op2 = "Me alegra celebrar un anio";
+        e2.op3 = "Que tiene el domingo?";
+        e2.op4 = "Para que o que?";
     }
-    else if (clase == 2) { // GYMRAT
-        e2.op1 = "Hola? Soy ...";
-        e2.op2 = "Mucho gusto soy ...,y parece que he\nencontrado una nueva motivacion";
-        e2.op3 = "eh?";
-        e2.op4 = "Hola, no creo que nos hayamos visto";
+    else if (clase == 2) { //GYMRAT
+        e2.op1 = "Así es, amor, ya ansío poder verte";
+        e2.op2 = "La serie de nuestra vida ha llegado\na una nueva repeticion";
+        e2.op3 = "Se me olvido, pero no se me olvido entrenar";
+        e2.op4 = "Ando ocupado construyendo mi mejor version.";
     }
-    else if (clase == 3) { // OTAKU
-        e2.op1 = "Hola..*se sonroja*";
-        e2.op2 = "Soy...pero puedo ser tu sempai 7w7";
-        e2.op3 = "...";
-        e2.op4 = "Ehh mmmm, eres una chica muy kawaii";
+    else if (clase == 3) { //OTAKU
+        e2.op1 = "Me emociona mas que un evento de fortnite\n>.<";
+        e2.op2 = "Ya casi llega la fecha en donde empezo\nnuestro arco de amor";
+        e2.op3 = "El estreno de la nueva temporada de\nMy Dress-Up Darling?";
+        e2.op4 = "Sigue molestando y te anotare\nen mi libreta >;v";
     }
-
     h.push_back(e2);
 
     Escenario e3;
-    e3.pregunta = "Que le respondes a tu novia?...";
+    e3.pregunta = "Hoy hace un poco mas de frío, parece que va a llover.\nMas vale que vaya bien abrigado.";
 
     e3.imp1 = 3;
-    e3.imp2 = 0;
-    e3.imp3 = -3;
+    e3.imp2 = 1;
+    e3.imp3 = 0;
     e3.imp4 = -5;
 
-    if (clase == 0) { // TOXICO
-        e3.op1 = "Estoy contando los dias para verte preciosa";
-        e3.op2 = "Un anio mas de peleas, yeeeeey";
-        e3.op3 = "Que?, si este domingo estoy ocupado\n(ver tik tok)";
-        e3.op4 = "Es la champions?";
+    if (clase == 0) { //TOXICO
+        e3.op1 = "La bufanda que hizo la tipa con la que ando";
+        e3.op2 = "Un abrigo para frio";
+        e3.op3 = "Mi camisa Gucci (Imitacion de temu)";
+        e3.op4 = "Una camiseta con la frase\n“El pobre es pobre por que quiere”";
     }
-    else if (clase == 1) { // NPC
-        e3.op1 = "Espero con ansias verte";
-        e3.op2 = "Me alegra celebrar un anio";
-        e3.op3 = "Que tiene el domingo?";
-        e3.op4 = "Para que o que?";
+    else if (clase == 1) { //NPC
+        e3.op1 = "La bufanda que me hizo mi novia";
+        e3.op2 = "Algo para calentar";
+        e3.op3 = "Mi confiable sudadera gris";
+        e3.op4 = " Ropa que aún no se ha lavado";
     }
-    else if (clase == 2) { // GYMRAT
-        e3.op1 = "Así es, amor, ya ansío poder verte";
-        e3.op2 = "La serie de nuestra vida ha llegado\na una nueva repeticion";
-        e3.op3 = "Se me olvido, pero no se me olvido entrenar";
-        e3.op4 = "Ando ocupado construyendo mi mejor version.";
+    else if (clase == 2) { //GYMRAT
+        e3.op1 = "La bufanda que me hizo mi PR";
+        e3.op2 = "Blindado contra el frio";
+        e3.op3 = "Sudadera";
+        e3.op4 = "Un pans y un muscle fit";
     }
-    else if (clase == 3) { // OTAKU
-        e3.op1 = "Me emociona mas que un evento de fortnite\n>.<";
-        e3.op2 = "Ya casi llega la fecha en donde empezo\nnuestro arco de amor";
-        e3.op3 = "El estreno de la nueva temporada de\nMy Dress-Up Darling?";
-        e3.op4 = "Sigue molestando y te anotare\nen mi libreta >;v";
+    else if (clase == 3) { //OTAKU
+        e3.op1 = "La bufanda que me hizo mi noviecita-chan";
+        e3.op2 = "Abrigadito y calientito";
+        e3.op3 = "Una camisa de Naruto";
+        e3.op4 = "Una camisa de una chica sacando la\nlengua y mirando hacia arriba";
+
     }
+
     h.push_back(e3);
 
     Escenario e4;
-    e4.pregunta = "Hoy hace un poco mas de frío, parece que va a llover.\nMas vale que vaya bien abrigado.";
+    e4.pregunta = "Esta bajo un pequeño techo, mirando la lluvia como si no tuviera prisa.\nLevanta la mirada y me encuentra. Sonrie.";
 
-    e4.imp1 = 3;
-    e4.imp2 = 1;
+    e4.imp1 = -3;
+    e4.imp2 = -5;
     e4.imp3 = 0;
-    e4.imp4 = -5;
+    e4.imp4 = 2;
 
-    if (clase == 0) { // TOXICO
-        e4.op1 = "La bufanda que hizo la tipa con la que ando";
-        e4.op2 = "Un abrigo para frio";
-        e4.op3 = "Mi camisa Gucci (Imitacion de temu)";
-        e4.op4 = "Una camiseta con la frase\n“El pobre es pobre por que quiere”";
+    if (clase == 0) { //TOXICO
+        e4.op1 = "Acercarme mientras hago poses chistosas";
+        e4.op2 = "Acercarse y decir: Esperaste mucho por mi?";
+        e4.op3 = "Saludar rápido";
+        e4.op4 = "Hola… Alicia?";
     }
-    else if (clase == 1) { // NPC
-        e4.op1 = "La bufanda que me hizo mi novia";
-        e4.op2 = "Algo para calentar";
-        e4.op3 = "Mi confiable sudadera gris";
-        e4.op4 = " Ropa que aún no se ha lavado";
+    else if (clase == 1) { //NPC
+        e4.op1 = "Acercarme con una sonrisa";
+        e4.op2 = "Acercarse y decir:Esperaba verte de nuevo";
+        e4.op3 = "Saludar con la mano al pasar.";
+        e4.op4 = "Tratar de alejarme, arrepentirme, acercarme ";
     }
-    else if (clase == 2) { // GYMRAT
-        e4.op1 = "La bufanda que me hizo mi PR";
-        e4.op2 = "Blindado contra el frio";
-        e4.op3 = "Sudadera";
-        e4.op4 = "Un pans y un muscle fit";
+    else if (clase == 2) { //GYMRAT
+        e4.op1 = "Acercarme lentamente";
+        e4.op2 = "Acercase y decir:\nCreo que te estas volviendo parte de mi rutina";
+        e4.op3 = "Saludar";
+        e4.op4 = "Acercarme y decir: Hola...tu...";
     }
-    else if (clase == 3) { // OTAKU
-        e4.op1 = "La bufanda que me hizo mi noviecita-chan";
-        e4.op2 = "Abrigadito y calientito";
-        e4.op3 = "Una camisa de Naruto";
-        e4.op4 = "Una camisa de una chica sacando la\nlengua y mirando hacia arriba";
+    else if (clase == 3) { //OTAKU
+        e4.op1 = "Acercarme corriendo como naruto";
+        e4.op2 = "Acercarme y decir:\nEsto ya parece opening de Your Name";
+        e4.op3 = "Acercarme a Illeana-chan";
+        e4.op4 = "Acercarme haciendo pausas raras";
 
     }
 
     h.push_back(e4);
 
     Escenario e5;
-    e5.pregunta = "Esta bajo un pequeño techo, mirando la lluvia como si no tuviera prisa.\nLevanta la mirada y me encuentra. Sonrie.";
+    e5.pregunta = "Que le respondes a tu novia?";
 
-    e5.imp1 = 3;
-    e5.imp2 = 1;
-    e5.imp3 = 0;
-    e5.imp4 = -5;
+    e5.imp1 = 5;
+    e5.imp2 = 0;
+    e5.imp3 = -5;
+    e5.imp4 = -2;
 
-    if (clase == 0) { // TOXICO
-        e5.op1 = "Acercarme mientras hago poses chistosas";
-        e5.op2 = "Acercarse y decir: Esperaste mucho por mi?";
-        e5.op3 = "Saludar rápido";
-        e5.op4 = "Hola… Alicia?";
+    if (clase == 0) { //TOXICO
+        e5.op1 = "Obvio, con este y con cualquier clima";
+        e5.op2 = "No estaria mal";
+        e5.op3 = "*No responder*";
+        e5.op4 = "Gracias";
     }
-    else if (clase == 1) { // NPC
-        e5.op1 = "Acercarme con una sonrisa";
-        e5.op2 = "Acercarse y decir:Esperaba verte de nuevo";
-        e5.op3 = "Saludar con la mano al pasar.";
-        e5.op4 = "Tratar de alejarme, arrepentirme, acercarme ";
+    else if (clase == 1) { //NPC
+        e5.op1 = "Y tambien quiero verte mi vida";
+        e5.op2 = "Yo igual";
+        e5.op3 = "Dejarla en visto";
+        e5.op4 = "oks";
     }
-    else if (clase == 2) { // GYMRAT
-        e5.op1 = "Acercarme lentamente";
-        e5.op2 = "Acercase y decir:\nCreo que te estas volviendo parte de mi rutina";
-        e5.op3 = "Saludar";
-        e5.op4 = "Acercarme y decir: Hola...tu...";
+    else if (clase == 2) { //GYMRAT
+        e5.op1 = "No cancelo entrenamiento...pero\npor ti hago una excepcion";
+        e5.op2 = "Yo tambien";
+        e5.op3 = "*No responder*";
+        e5.op4 = "Eso suena a plan obligatorio";
     }
-    else if (clase == 3) { // OTAKU
-        e5.op1 = "Acercarme corriendo como naruto";
-        e5.op2 = "Acercarme y decir:\nEsto ya parece opening de Your Name";
-        e5.op3 = "Acercarme a Illeana-chan";
-        e5.op4 = "Acercarme haciendo pausas raras";
+    else if (clase == 3) { //OTAKU
+        e5.op1 = "Yo tambien te quiero ver pinchecha hemocha,\nnya";
+        e5.op2 = "Chi amor UwU";
+        e5.op3 = "Dejarla en visto";
+        e5.op4 = "ok :/";
 
     }
 
     h.push_back(e5);
 
     Escenario e6;
-    e6.pregunta = "Que le respondes a tu novia?";
+    e6.pregunta = "Hoy es un dia importante...\nQue le dices a tu novia?";
 
-    e6.imp1 = 5;
-    e6.imp2 = 1;
-    e6.imp3 = -2;
+    e6.imp1 = 3;
+    e6.imp2 = 4;
+    e6.imp3 = -3;
     e6.imp4 = -5;
 
-    if (clase == 0) { // TOXICO
-        e6.op1 = "Obvio, con este y con cualquier clima";
-        e6.op2 = "No estaria mal";
-        e6.op3 = "*No responder*";
-        e6.op4 = "Gracias";
+    if (clase == 0) { //TOXICO
+        e6.op1 = "Obvio me acorde";
+        e6.op2 = "Feliz dia amor";
+        e6.op3 = "Ah era hoy?";
+        e6.op4 = "Ni idea";
     }
-    else if (clase == 1) { // NPC
-        e6.op1 = "Y tambien quiero verte mi vida";
-        e6.op2 = "Yo igual";
-        e6.op3 = "Dejarla en visto";
-        e6.op4 = "oks";
+    else if (clase == 1) { //NPC
+        e6.op1 = "Claro que me acorde";
+        e6.op2 = "Feliz dia mi amor";
+        e6.op3 = "Perdon, olvide la fecha";
+        e6.op4 = "Que tenia hoy?";
     }
-    else if (clase == 2) { // GYMRAT
-        e6.op1 = "No cancelo entrenamiento...pero\npor ti hago una excepcion";
-        e6.op2 = "Yo tambien";
-        e6.op3 = "*No responder*";
-        e6.op4 = "Eso suena a plan obligatorio";
+    else if (clase == 2) { //GYMRAT
+        e6.op1 = "Nunca olvidaria nuestro dia";
+        e6.op2 = "Feliz dia preciosa";
+        e6.op3 = "Andaba entrenando...";
+        e6.op4 = "No tuve tiempo";
     }
-    else if (clase == 3) { // OTAKU
-        e6.op1 = "Yo tambien te quiero ver pinchecha hemocha,\nnya";
-        e6.op2 = "Chi amor UwU";
-        e6.op3 = "Dejarla en visto";
-        e6.op4 = "ok :/";
-
+    else if (clase == 3) { //OTAKU
+        e6.op1 = "Nuestro evento canonico UwU";
+        e6.op2 = "Feliz dia waifu";
+        e6.op3 = "Mi memoria filler fallo";
+        e6.op4 = "No recuerdo ese arco";
     }
 
     h.push_back(e6);
 
     Escenario e7;
-    e7.pregunta = "Hoy es un dia importante...\nQue le dices a tu novia?";
+    e7.pregunta = "Ella te pregunta si de verdad la amas...";
 
     e7.imp1 = 5;
     e7.imp2 = 2;
-    e7.imp3 = -2;
+    e7.imp3 = -3;
     e7.imp4 = -5;
 
-    if (clase == 0) { // TOXICO
-        e7.op1 = "Obvio me acorde";
-        e7.op2 = "Feliz dia amor";
-        e7.op3 = "Ah era hoy?";
-        e7.op4 = "Ni idea";
+    if (clase == 0) { //TOXICO
+        e7.op1 = "Claro que si";
+        e7.op2 = "Eres mia";
+        e7.op3 = "No se";
+        e7.op4 = "Que flojera";
     }
-    else if (clase == 1) { // NPC
-        e7.op1 = "Claro que me acorde";
-        e7.op2 = "Feliz dia mi amor";
-        e7.op3 = "Perdon, olvide la fecha";
-        e7.op4 = "Que tenia hoy?";
+    else if (clase == 1) { //NPC
+        e7.op1 = "Muchisimo";
+        e7.op2 = "Siempre estare contigo";
+        e7.op3 = "A veces lo dudo";
+        e7.op4 = "No me molestes";
     }
-    else if (clase == 2) { // GYMRAT
-        e7.op1 = "Nunca olvidaria nuestro dia";
-        e7.op2 = "Feliz dia preciosa";
-        e7.op3 = "Andaba entrenando...";
-        e7.op4 = "No tuve tiempo";
+    else if (clase == 2) { //GYMRAT
+        e7.op1 = "Mas que al gym";
+        e7.op2 = "Siempre";
+        e7.op3 = "Estoy confundido";
+        e7.op4 = "Estoy ocupado";
     }
-    else if (clase == 3) { // OTAKU
-        e7.op1 = "Nuestro evento canonico UwU";
-        e7.op2 = "Feliz dia waifu";
-        e7.op3 = "Mi memoria filler fallo";
-        e7.op4 = "No recuerdo ese arco";
+    else if (clase == 3) { //OTAKU
+        e7.op1 = "Mas que al anime";
+        e7.op2 = "Tu eres mi protagonista";
+        e7.op3 = "No se...";
+        e7.op4 = "zzz";
     }
 
     h.push_back(e7);
 
-    Escenario e8;
-    e8.pregunta = "Ella te pregunta si de verdad la amas...";
-
-    e8.imp1 = 5;
-    e8.imp2 = 2;
-    e8.imp3 = -3;
-    e8.imp4 = -5;
-
-    if (clase == 0) {
-        e8.op1 = "Claro que si";
-        e8.op2 = "Eres mia";
-        e8.op3 = "No se";
-        e8.op4 = "Que flojera";
-    }
-    else if (clase == 1) {
-        e8.op1 = "Muchisimo";
-        e8.op2 = "Siempre estare contigo";
-        e8.op3 = "A veces lo dudo";
-        e8.op4 = "No me molestes";
-    }
-    else if (clase == 2) {
-        e8.op1 = "Mas que al gym";
-        e8.op2 = "Siempre";
-        e8.op3 = "Estoy confundido";
-        e8.op4 = "Estoy ocupado";
-    }
-    else if (clase == 3) {
-        e8.op1 = "Mas que al anime";
-        e8.op2 = "Tu eres mi protagonista";
-        e8.op3 = "No se...";
-        e8.op4 = "zzz";
-    }
-
-    h.push_back(e8);
-
 
 
     //Dia 3
-    // Dentro de cargarHistoria(), después de e8
+    // Dentro de cargarHistoria(), después de e7
 
-    Escenario e9;
+    Escenario e8;
 
-    e9.pregunta = "Buenos días <3\n"
+    e8.pregunta = "Buenos días <3\n"
         "Ayer te sentí un poco raro...\n"
         "¿Todo bien?";
 
-    e9.imp1 = 5;
-    e9.imp2 = 2;
-    e9.imp3 = -2;
-    e9.imp4 = -5;
+    e8.imp1 = 5;
+    e8.imp2 = 2;
+    e8.imp3 = -2;
+    e8.imp4 = -5;
 
-    if (clase == 0) { // TOXICO
+    if (clase == 0) { //TOXICO
 
-        e9.op1 = "Todo bien amor, solo te extrañaba.";
-        e9.op2 = "Si, solo fue un dia algo cansado.";
-        e9.op3 = "See...";
-        e9.op4 = "Nada que te importe.";
-
-    }
-    else if (clase == 1) { // NPC
-
-        e9.op1 = "Perdon amor, creo que solo estaba cansado.\nTe prometo que estoy bien.";
-
-        e9.op2 = "Todo bien, solo tuve un dia pesado.";
-
-        e9.op3 = "Si estoy bien.";
-
-        e9.op4 = "No pasa nada, no te preocupes.";
+        e8.op1 = "Todo bien amor, solo te extrañaba.";
+        e8.op2 = "Si, solo fue un dia algo cansado.";
+        e8.op3 = "See...";
+        e8.op4 = "Nada que te importe.";
 
     }
-    else if (clase == 2) { // GYMRAT
+    else if (clase == 1) { //NPC
 
-        e9.op1 = "Todo bien preciosa,\nsolo ando destruido del gym.";
-
-        e9.op2 = "Solo tuve un dia pesado.";
-
-        e9.op3 = "Estoy bien.";
-
-        e9.op4 = "Nah, todo normal.";
+        e8.op1 = "Perdon amor, creo que solo estaba cansado.\nTe prometo que estoy bien.";
+        e8.op2 = "Todo bien, solo tuve un dia pesado.";
+        e8.op3 = "Si estoy bien.";
+        e8.op4 = "No pasa nada, no te preocupes.";
 
     }
-    else if (clase == 3) { // OTAKU
+    else if (clase == 2) { //GYMRAT
 
-        e9.op1 = "Todo bien mi waifu hermosa UwU";
-
-        e9.op2 = "Solo andaba sin energia ayer.";
-
-        e9.op3 = "Toy bien.";
-
-        e9.op4 = "Nada importante nya.";
+        e8.op1 = "Todo bien preciosa,\nsolo ando destruido del gym.";
+        e8.op2 = "Solo tuve un dia pesado.";
+        e8.op3 = "Estoy bien.";
+        e8.op4 = "Nah, todo normal.";
 
     }
-    h.push_back(e9);
+    else if (clase == 3) { //OTAKU
+
+        e8.op1 = "Todo bien mi waifu hermosa UwU";
+        e8.op2 = "Solo andaba sin energia ayer.";
+        e8.op3 = "Toy bien.";
+        e8.op4 = "Nada importante nya.";
+
+    }
+    h.push_back(e8);
 
     // =========================
     // DIA 3 - ESCENA 2
     // =========================
 
-    Escenario e10;
+    Escenario e9;
 
-    e10.pregunta = "Illeana me mira directamente.\n"
+    e9.pregunta = "Illeana me mira directamente.\n"
         "¿Me pasas tu numero?";
 
-    e10.imp1 = -4;
-    e10.imp2 = 2;
-    e10.imp3 = 3;
-    e10.imp4 = 0;
+    e9.imp1 = -4;
+    e9.imp2 = 2;
+    e9.imp3 = 3;
+    e9.imp4 = 0;
 
-    if (clase == 0) { // TOXICO
+    if (clase == 0) { //TOXICO
 
-        e10.op1 = "Claro, te paso mi numero y lo que quieras.";
-        e10.op2 = "Eh... si quieres.";
-        e10.op3 = "Va, a mi novia le agradara que haga amistades.";
-        e10.op4 = "Bueno.";
+        e9.op1 = "Claro, te paso mi numero y lo que quieras.";
+        e9.op2 = "Eh... si quieres.";
+        e9.op3 = "Va, a mi novia le agradara que haga amistades.";
+        e9.op4 = "Bueno.";
 
     }
     else if (clase == 1) { // NPC
 
-        e10.op1 = "Claro, toma.";
-        e10.op2 = "Mmm... si, supongo.";
-        e10.op3 = "Bueno, pero cobrare por mensaje.";
-        e10.op4 = "Eh... claro.";
+        e9.op1 = "Claro, toma.";
+        e9.op2 = "Mmm... si, supongo.";
+        e9.op3 = "Bueno, pero cobrare por mensaje.";
+        e9.op4 = "Eh... claro.";
 
     }
     else if (clase == 2) { // GYMRAT
 
-        e10.op1 = "Claro.";
-        e10.op2 = "Va, pero casi no reviso el cel.";
-        e10.op3 = "Solo si mandas memes fitness.";
-        e10.op4 = "Si... toma.";
+        e9.op1 = "Claro.";
+        e9.op2 = "Va, pero casi no reviso el cel.";
+        e9.op3 = "Solo si mandas memes fitness.";
+        e9.op4 = "Si... toma.";
 
     }
     else if (clase == 3) { // OTAKU
 
-        e10.op1 = "Chi UwU";
-        e10.op2 = "Mmm... bueno nya.";
-        e10.op3 = "Solo si no haces spam.";
-        e10.op4 = "E-esta bien.";
+        e9.op1 = "Chi UwU";
+        e9.op2 = "Mmm... bueno nya.";
+        e9.op3 = "Solo si no haces spam.";
+        e9.op4 = "E-esta bien.";
 
     }
 
-    h.push_back(e10);
+    h.push_back(e9);
 
     // =========================
     // DIA 3 - ESCENA 3
     // =========================
 
+    Escenario e10;
+
+    e10.pregunta = "¿Que respondes?";
+
+    e10.imp1 = 5;
+    e10.imp2 = -2;
+    e10.imp3 = -3;
+    e10.imp4 = -5;
+
+    if (clase == 0) { //TOXICO
+
+        e10.op1 = "Obvio, feliz cumpleaños";
+        e10.op2 = "Feliz aniversario!";
+        e10.op3 = "El dia que nos conocimos?";
+        e10.op4 = "Claro, era... este... aja...";
+
+    }
+    else if (clase == 1) { //NPC
+
+        e10.op1 = "\"Obvio, feliz cumpleaños\"";
+        e10.op2 = "\"Feliz aniversario...\"";
+        e10.op3 = "\"El primer dia que hablamos?\"";
+        e10.op4 = "\"Eh... era una cita cualquiera?\"";
+
+    }
+    else if (clase == 2) { //GYMRAT
+
+        e10.op1 = "\"Obvio, feliz cumpleaños\"";
+        e10.op2 = "\"Feliz aniversario preciosa\"";
+        e10.op3 = "\"Cuando nos conocimos?\"";
+        e10.op4 = "\"Era una salida?\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e10.op1 = "\"Obvio waifu, feliz cumpleaños UwU\"";
+        e10.op2 = "\"Feliz aniversario nya\"";
+        e10.op3 = "\"El inicio de nuestro arco?\"";
+        e10.op4 = "\"Era relleno?\"";
+
+    }
+
+    h.push_back(e10);
+
+    //Dia 4
+    //Escena1
+
     Escenario e11;
 
     e11.pregunta = "¿Que respondes?";
 
-    e11.imp1 = 5;
+    //Pendiente de cambios,
+    e11.imp1 = 0;
     e11.imp2 = -2;
     e11.imp3 = -3;
     e11.imp4 = -5;
 
     if (clase == 0) { //TOXICO
 
-        e11.op1 = "Obvio, feliz cumpleaños";
-        e11.op2 = "Feliz aniversario!";
-        e11.op3 = "El dia que nos conocimos?";
-        e11.op4 = "Claro, era... este... aja...";
+        e11.op1 = "Pues si tomar un licuado es desayunar, entonces sí.";
+        e11.op2 = "¿Y eso a ti que te importa?";
+        e11.op3 = "Pues si tomar un licuado es desayunar, entonces sí.";
+        e11.op4 = "De hecho no, ayer se me revolvio el estomago";
 
     }
     else if (clase == 1) { //NPC
 
-        e11.op1 = "\"Obvio, feliz cumpleaños\"";
-        e11.op2 = "\"Feliz aniversario...\"";
-        e11.op3 = "\"El primer dia que hablamos?\"";
-        e11.op4 = "\"Eh... era una cita cualquiera?\"";
+        e11.op1 = "Si, y tu?";
+        e11.op2 = "Lindo saber que te importa, creí que ibas a estar muy ocupada";
+        e11.op3 = "No he tenido hambre, he tenido un dia muy malo";
+        e11.op4 = "*Dejarla en visto*";
 
     }
     else if (clase == 2) { //GYMRAT
 
-        e11.op1 = "\"Obvio, feliz cumpleaños\"";
-        e11.op2 = "\"Feliz aniversario preciosa\"";
-        e11.op3 = "\"Cuando nos conocimos?\"";
-        e11.op4 = "\"Era una salida?\"";
+        e11.op1 = "si, un licuado de proteína y 7 huevos revueltos :D";
+        e11.op2 = "¿Qué te importa?";
+        e11.op3 = "Últimamente se me revuelve el estómago";
+        e11.op4 = "*ignorarla*";
 
     }
     else if (clase == 3) { //OTAKU
 
-        e11.op1 = "\"Obvio waifu, feliz cumpleaños UwU\"";
-        e11.op2 = "\"Feliz aniversario nya\"";
-        e11.op3 = "\"El inicio de nuestro arco?\"";
-        e11.op4 = "\"Era relleno?\"";
+        e11.op1 = "Chi";
+        e11.op2 = "Todo bien, baka :/";
+        e11.op3 = "Me he sentido un poco down  T.T";
+        e11.op4 = "*Dejarla en visto*";
 
     }
 
     h.push_back(e11);
 
-    //Dia 4
-    //Escena1
+    //Escena2
 
     Escenario e12;
 
-    e12.pregunta = "¿Que respondes?";
+    e12.pregunta = "¿Cómo te sentiste después de eso ?\n"
+        "Supongo que muy feo, terminarás con ella? No seas migajero.";
 
-    //Pendiente de cambios,
-    e12.imp1 = 0;
-    e12.imp2 = -2;
-    e12.imp3 = -3;
-    e12.imp4 = -5;
+    //Pendiente de cambios
+    e12.imp1 = -5;
+    e12.imp2 = 4;
+    e12.imp3 = 0;
+    e12.imp4 = 2;
 
     if (clase == 0) { //TOXICO
 
-        e12.op1 = "Pues si tomar un licuado es desayunar, entonces sí.";
-        e12.op2 = "¿Y eso a ti que te importa?";
-        e12.op3 = "Pues si tomar un licuado es desayunar, entonces sí.";
-        e12.op4 = "De hecho no, ayer se me revolvio el estomago";
-
+        e12.op1 = "Yo creo que si, igual ya tengo a alguien más en mente";
+        e12.op2 = "Como por?, claro que no";
+        e12.op3 = "Tendre que pensarlo";
+        e12.op4 = "*Contemplar el panorama completo mientras\n"
+            "mantienes una mirada fija a algun lugar*";
     }
+
     else if (clase == 1) { //NPC
 
-        e12.op1 = "Si, y tu?";
-        e12.op2 = "Lindo saber que te importa, creí que ibas a estar muy ocupada";
-        e12.op3 = "No he tenido hambre, he tenido un dia muy malo";
-        e12.op4 = "*Dejarla en visto*";
+        e12.op1 = "Sí, creo que sí";
+        e12.op2 = "Han pasado muchas cosas, no creo que sea para tanto";
+        e12.op3 = "Hemos estado juntos mucho tiempo, debo pensarlo";
+        e12.op4 = "...";
 
     }
     else if (clase == 2) { //GYMRAT
 
-        e12.op1 = "si, un licuado de proteína y 7 huevos revueltos :D";
-        e12.op2 = "¿Qué te importa?";
-        e12.op3 = "Últimamente se me revuelve el estómago";
-        e12.op4 = "*ignorarla*";
+        e12.op1 = "Creo que sí… fue bueno mientras duró";
+        e12.op2 = "Por supuesto que no";
+        e12.op3 = "Es una decisión difícil, debo pensarlo";
+        e12.op4 = "Alza la vista al cielo pensando";
 
     }
     else if (clase == 3) { //OTAKU
 
-        e12.op1 = "Chi";
-        e12.op2 = "Todo bien, baka :/";
-        e12.op3 = "Me he sentido un poco down  T.T";
-        e12.op4 = "*Dejarla en visto*";
+        e12.op1 = "Chi UnU";
+        e12.op2 = "Baka, no creo que sea tanto";
+        e12.op3 = "No lo se Illeana-chan";
+        e12.op4 = "*hacer ruidos raros*";
 
     }
 
     h.push_back(e12);
 
-    //Escena2
+    //Escena3
 
     Escenario e13;
 
-    e13.pregunta = "¿Cómo te sentiste después de eso ?\n"
-        "Supongo que muy feo, terminarás con ella? No seas migajero.";
+    e13.pregunta = "Te sientes culpable..Decides buscarla";
 
     //Pendiente de cambios
     e13.imp1 = 0;
-    e13.imp2 = -2;
-    e13.imp3 = -3;
+    e13.imp2 = 3;
+    e13.imp3 = -4;
     e13.imp4 = -5;
 
     if (clase == 0) { //TOXICO
 
-        e13.op1 = "Yo creo que si, igual ya tengo a alguien más en mente";
-        e13.op2 = "Como por?, claro que no";
-        e13.op3 = "Tendre que pensarlo";
-        e13.op4 = "*Contemplar el panorama completo mientras\n"
-            "mantienes una mirada fija al techo*";
-    }
-
-    else if (clase == 1) { //NPC
-
-        e13.op1 = "Sí, creo que sí";
-        e13.op2 = "Han pasado muchas cosas, no creo que sea para tanto";
-        e13.op3 = "Hemos estado juntos mucho tiempo, debo pensarlo";
-        e13.op4 = "...";
-
-    }
-    else if (clase == 2) { //GYMRAT
-
-        e13.op1 = "Creo que sí… fue bueno mientras duró";
-        e13.op2 = "Por supuesto que no";
-        e13.op3 = "Es una decisión difícil, debo pensarlo";
-        e13.op4 = "Alza la vista al cielo pensando";
-
-    }
-    else if (clase == 3) { //OTAKU
-
-        e13.op1 = "Chi UnU";
-        e13.op2 = "Baka, no creo que sea tanto";
-        e13.op3 = "No lo se Illeana-chan";
-        e13.op4 = "*hacer ruidos raros*";
-
-    }
-
-    h.push_back(e13);
-
-    //Escena3
-
-    Escenario e14;
-
-    e14.pregunta = "Te sientes culpable..Decides buscarla";
-
-    //Pendiente de cambios
-    e14.imp1 = 0;
-    e14.imp2 = -2;
-    e14.imp3 = -3;
-    e14.imp4 = -5;
-
-    if (clase == 0) { //TOXICO
-
-        e14.op1 = "No puede ser, ni modo, toca disculparme";
-        e14.op2 = "Perfecto, tengo que llamarle para disculparme";
-        e14.op3 = "Mmm, ya me enoje luego lo intento arreglar";
-        e14.op4 = "Mejor intento pescar un nuevo pez,\n"
+        e13.op1 = "No puede ser, ni modo, toca disculparme";
+        e13.op2 = "Perfecto, tengo que llamarle para disculparme";
+        e13.op3 = "Mmm, ya me enoje luego lo intento arreglar";
+        e13.op4 = "Mejor intento pescar un nuevo pez,\n"
             "Illeana suena a una buena opción";
 
     }
     else if (clase == 1) { //NPC
 
-        e14.op1 = "Ay no, debo mandarle mensaje";
-        e14.op2 = "Ay no, debo hablar con ella, debería marcarle";
-        e14.op3 = "Que desastre";
-        e14.op4 = "Debo…debo hablar con alguien. Illeana quizá este libre";
+        e13.op1 = "Ay no, debo mandarle mensaje";
+        e13.op2 = "Ay no, debo hablar con ella, debería marcarle";
+        e13.op3 = "Que desastre";
+        e13.op4 = "Debo…debo hablar con alguien. Illeana quizá este libre";
 
     }
     else if (clase == 2) { //GYMRAT
 
-        e14.op1 = "Necesito mandarle mensaje, no quiero que estemos mal";
-        e14.op2 = "Necesito marcarle, es urgente";
-        e14.op3 = "*Te pones a hacer lagartijas*";
-        e14.op4 = "Ileana me comprende más, debería hablarle";
+        e13.op1 = "Necesito mandarle mensaje, no quiero que estemos mal";
+        e13.op2 = "Necesito marcarle, es urgente";
+        e13.op3 = "*Te pones a hacer lagartijas*";
+        e13.op4 = "Ileana me comprende más, debería hablarle";
 
     }
     else if (clase == 3) { //OTAKU
 
-        e14.op1 = "Ooh oh, debo mandarle mensaje a mi sempai";
-        e14.op2 = "No puede ser, le debo marcar a mi novia-chan";
-        e14.op3 = "*te pones a ver anime*";
-        e14.op4 = "Deberia buscar a Illeana-chan, ella si me entiende";
+        e13.op1 = "Ooh oh, debo mandarle mensaje a mi sempai";
+        e13.op2 = "No puede ser, le debo marcar a mi novia-chan";
+        e13.op3 = "*te pones a ver anime*";
+        e13.op4 = "Deberia buscar a Illeana-chan, ella si me entiende";
 
     }
 
-    h.push_back(e14);
+    h.push_back(e13);
 
     //Dia5 Escenario1
 
-    Escenario e15;
+    Escenario e14;
 
-    e15.pregunta = "“Se que la regue  y disculpame, actue por impulso\n"
+    e14.pregunta = "“Se que la regue  y disculpame, actue por impulso\n"
         "y no pienso lo que hago . Me quiero esforzar para que esto funcione,\n"
         "asi que te aseguro que pondre todo lo que pueda de mi parte.\n"
         "Quiero que sepas lo arrepentido que estoy.";
 
 
-    e15.imp1 = 1;
-    e15.imp2 = 2;
-    e15.imp3 = 4;
+    e14.imp1 = 1;
+    e14.imp2 = 2;
+    e14.imp3 = 4;
+    e14.imp4 = -5;
+
+    if (clase == 0) { //TOXICO
+
+        e14.op1 = "\"Puedo demostrar cuan arrepentido estoy con un abrazo?\"";
+        e14.op2 = "\"*le besas la frente*\"";
+        e14.op3 = "\"Me aceptas un beso?\"";
+        e14.op4 = "\"Bueno, ya hice mi trabajo, ya estamos bien, no?\"";
+
+    }
+    else if (clase == 1) { //NPC
+
+        e14.op1 = "\"Me aceptas un abrazo como disculpa?\"";
+        e14.op2 = "\"*le da un beso en la frente*\"";
+        e14.op3 = "\"Un beso de reconciliacion?\"";
+        e14.op4 = "\"Bueno, ya lo arreglamos, no?\"";
+
+    }
+    else if (clase == 2) { //GYMRAT
+
+        e14.op1 = "\"*Te acercas y la abrazas*\"";
+        e14.op2 = "\"*Te acercas y le das un beso en la frente*\"";
+        e14.op3 = "\"*Te acercas y la besas*\"";
+        e14.op4 = "\"Bueno, ya nos arreglamos, no?\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e14.op1 = "\"Podrias perdonar a este terroncito de azucar\n"
+            "con un abrazo\"";
+        e14.op2 = "\"*Le da un beso de manera kawaii*\"";
+        e14.op3 = "\"Un besito de reconciliacion, waifu-chan?\"";
+        e14.op4 = "\"Ash, ya lo arreglamos baka?\"";
+
+    }
+
+    h.push_back(e14);
+
+    //Dia5 Escenario2
+    Escenario e15;
+
+    e15.pregunta = "“Como de costumbre, milagrosamente te encontraste a Illeana.\n"
+        "Decides acercarte y comienzas a darle una explicacion/nsobre lo ayer\"";
+
+    e15.imp1 = -5;
+    e15.imp2 = -3;
+    e15.imp3 = 1;
     e15.imp4 = -5;
 
-    if (clase == 0) {
+    if (clase == 0) { //TOXICO
 
-        e15.op1 = "\"Puedo demostrar cuan arrepentido estoy con un abrazo?\"";
-        e15.op2 = "\"*le besas la frente*\"";
-        e15.op3 = "\"Me aceptas un beso?\"";
-        e15.op4 = "\"Bueno, ya hice mi trabajo, ya estamos bien, no?\"";
-
-    }
-    else if (clase == 1) {
-
-        e15.op1 = "\"Me aceptas un abrazo como disculpa?\"";
-        e15.op2 = "\"*le da un beso en la frente*\"";
-        e15.op3 = "\"Un beso de reconciliacion?\"";
-        e15.op4 = "\"Bueno, ya lo arreglamos, no?\"";
+        e15.op1 = "\"Perdon por la aparicion de mi novia\n"
+            "a veces es molesta\"";
+        e15.op2 = "\"Perdon por irme sin explicacion\"";
+        e15.op3 = "\"Que rollo con el pollo\"";
+        e15.op4 = "\"Oye, por tu cculpa me tuve que disculpar\"";
 
     }
-    else if (clase == 2) {
+    else if (clase == 1) { //NPC
 
-        e15.op1 = "\"*Te acercas y la abrazas*\"";
-        e15.op2 = "\"*Te acercas y le das un beso en la frente*\"";
-        e15.op3 = "\"*Te acercas y la besas*\"";
-        e15.op4 = "\"Bueno, ya nos arreglamos, no?\"";
+        e15.op1 = "\"Disculpame, no esperaba que apareciera\"";
+        e15.op2 = "\"No quise dejarte asi, perdoname\"";
+        e15.op3 = "\"Asi que..como te fue con la tarea?\"";
+        e15.op4 = "\"Oye, ayer me metiste en un problemon\"";
 
     }
-    else if (clase == 3) {
+    else if (clase == 2) { //GYMRAT
 
-        e15.op1 = "\"Podrias perdonar a este terroncito de azucar\n"
-            "con un abrazo\"";
-        e15.op2 = "\"*Le da un beso de manera kawaii*\"";
-        e15.op3 = "\"Un besito de reconciliacion, waifu-chan?\"";
-        e15.op4 = "\"Ash, ya lo arreglamos baka?\"";
+        e15.op1 = "\"Disculpa, mi novia a veces es asi\"";
+        e15.op2 = "\"Perdon por dejarte plantada, no/n "
+            "fue mi intencion\"";
+        e15.op3 = "\"Ey, como estas?todo bien?\"";
+        e15.op4 = "\"Sabes que me has metido en problemas\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e15.op1 = "\"Perdon que mi novia nos interrumpiera Illeana-chan\"";
+        e15.op2 = "\"Perdon por dejarte plantada como arbol\"";
+        e15.op3 = "\"Ya viste YBC? 7w7\"";
+        e15.op4 = "\"Oi oi oi, me metiste en problemas\"";
 
     }
 
     h.push_back(e15);
 
-    //Dia5 Escenario2
+    //Dia5 Escenario3
     Escenario e16;
 
-    e16.pregunta = "“Como de costumbre, milagrosamente te encontraste a Illeana.\n"
-        "Decides acercarte y comienzas a darle una explicacion/nsobre lo ayer\"";
+    e16.pregunta = "“Llegando, notaste muchas flores bonitas, cual escoges?”";
 
-    e16.imp1 = -5;
-    e16.imp2 = -3;
-    e16.imp3 = 1;
-    e16.imp4 = -5;
+    e16.imp1 = 2;
+    e16.imp2 = -5;
+    e16.imp3 = 5;
+    e16.imp4 = -2;
 
-    if (clase == 0) {
+    if (clase == 0) { //TOXICO
 
-        e16.op1 = "\"Perdon por la aparicion de mi novia\n"
-            "a veces es molesta\"";
-        e16.op2 = "\"Perdon por irme sin explicacion\"";
-        e16.op3 = "\"Que rollo con el pollo\"";
-        e16.op4 = "\"Oye, por tu cculpa me tuve que disculpar\"";
+        e16.op1 = "\"Rosas, un clasico\"";
+        e16.op2 = "\"Girasoles, el mas barato\"";
+        e16.op3 = "\"Tulipanes, a algunos les gusta\"";
+        e16.op4 = "\"Flores beso, el nombre  y la apari\nencia se ven interesantes\"";
 
     }
-    else if (clase == 1) {
+    else if (clase == 1) { //NPC
 
-        e16.op1 = "\"Disculpame, no esperaba que apareciera\"";
-        e16.op2 = "\"No quise dejarte asi, perdoname\"";
-        e16.op3 = "\"Asi que..como te fue con la tarea?\"";
-        e16.op4 = "\"Oye, ayer me metiste en un problemon\"";
-
-    }
-    else if (clase == 2) {
-
-        e16.op1 = "\"Disculpa, mi novia a veces es asi\"";
-        e16.op2 = "\"Perdon por dejarte plantada, no/n "
-            "fue mi intencion\"";
-        e16.op3 = "\"Ey, como estas?todo bien?\"";
-        e16.op4 = "\"Sabes que me has metido en problemas\"";
+        e16.op1 = "\"La rosa es una flor muy clasica\"";
+        e16.op2 = "\"Los girasoles brindan mucha alegria\"";
+        e16.op3 = "\"Los tulipanes representan el amor\n perfecto, no?\"";
+        e16.op4 = "\"Es muy unica\"";
 
     }
-    else if (clase == 3) {
+    else if (clase == 2) { //GYMRAT
 
-        e16.op1 = "\"Perdon que mi novia nos interrumpiera Illeana-chan\"";
-        e16.op2 = "\"Perdon por dejarte plantada como arbol\"";
-        e16.op3 = "\"Ya viste YBC? 7w7\"";
-        e16.op4 = "\"Oi oi oi, me metiste en problemas\"";
+        e16.op1 = "\"Las rosas siempre son las mejores\"";
+        e16.op2 = "\"Unos brillantes girasoles estarian bien, no?\"";
+        e16.op3 = "\"Los tulipanes son bastante hermosos\"";
+        e16.op4 = "\"Las flores beso son tan buenas como \nel ejercicio\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e16.op1 = "\"Supongo que las rosas le gustaran\"";
+        e16.op2 = "\"Los girasoles como la frase: gira, gira\n tu calzon\"";
+        e16.op3 = "\"Los tulipanes son hemochos uwu\"";
+        e16.op4 = "\"Es al mas barata, podre usar lo demas\n para un manga\"";
 
     }
 
     h.push_back(e16);
 
-    //Dia5 Escenario3
+
+    //Dia5 Escenario4
     Escenario e17;
 
-    e17.pregunta = "“Llegando, notaste muchas flores bonitas, cual escoges?”";
+    e17.pregunta = "“Le escribes”";
 
     e17.imp1 = 2;
-    e17.imp2 = -5;
-    e17.imp3 = 5;
-    e17.imp4 = -2;
+    e17.imp2 = 5;
+    e17.imp3 = -1;
+    e17.imp4 = -5;
 
-    if (clase == 0) {
+    if (clase == 0) { //TOXICO
 
-        e17.op1 = "\"Rosas, un clasico\"";
-        e17.op2 = "\"Girasoles, el mas barato\"";
-        e17.op3 = "\"Tulipanes, a algunos les gusta\"";
-        e17.op4 = "\"Flores beso, el nombre  y la apari\nencia se ven interesantes\"";
-
-    }
-    else if (clase == 1) {
-
-        e17.op1 = "\"La rosa es una flor muy clasica\"";
-        e17.op2 = "\"Los girasoles brindan mucha alegria\"";
-        e17.op3 = "\"Los tulipanes representan el amor\n perfecto, no?\"";
-        e17.op4 = "\"Es muy unica\"";
+        e17.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
+        e17.op2 = "\"Pide permiso para salir manana a las 6pm\"";
+        e17.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
+        e17.op4 = "\"Oye, manana teniamos que hacer algo?\"";
 
     }
-    else if (clase == 2) {
+    else if (clase == 1) { //NPC
 
-        e17.op1 = "\"Las rosas siempre son las mejores\"";
-        e17.op2 = "\"Unos brillantes girasoles estarian bien, no?\"";
-        e17.op3 = "\"Los tulipanes son bastante hermosos\"";
-        e17.op4 = "\"Las flores beso son tan buenas como \nel ejercicio\"";
+        e17.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
+        e17.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
+        e17.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
+        e17.op4 = "\"Entonces, manana hay plan o no?\"";
 
     }
-    else if (clase == 3) {
+    else if (clase == 2) { //GYMRAT
 
-        e17.op1 = "\"Supongo que las rosas le gustaran\"";
-        e17.op2 = "\"Los girasoles como la frase: gira, gira\n tu calzon\"";
-        e17.op3 = "\"Los tulipanes son hemochos uwu\"";
-        e17.op4 = "\"Es al mas barata, podre usar lo demas\n para un manga\"";
+        e17.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
+        e17.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
+        e17.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
+        e17.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e17.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
+        e17.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
+        e17.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
+        e17.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
 
     }
 
     h.push_back(e17);
 
-
-    //Dia5 Escenario4
+	//Dia6 Escenario 1
     Escenario e18;
 
-    e18.pregunta = "“Le escribes”";
+    e18.pregunta = "“Llega el mesero a tomar su orden,\n¿Ya están listos para ordenar?”";
 
-    e18.imp1 = 2;
-    e18.imp2 = 5;
-    e18.imp3 = -1;
+    e18.imp1 = 0;
+    e18.imp2 = -2;
+    e18.imp3 = 3;
     e18.imp4 = -5;
 
-    if (clase == 0) {
+    if (clase == 0) { //TOXICO
 
-        e18.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
-        e18.op2 = "\"Pide permiso para salir manana a las 6pm\"";
-        e18.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
-        e18.op4 = "\"Oye, manana teniamos que hacer algo?\"";
-
-    }
-    else if (clase == 1) {
-
-        e18.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
-        e18.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
-        e18.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
-        e18.op4 = "\"Entonces, manana hay plan o no?\"";
+        e18.op1 = "\"Claro, quiero un rollo california en salsa chipotle\"";
+        e18.op2 = "\"Pues hemos estado como 10 minutos aqui asi que, yo diria que si\"";
+        e18.op3 = "\"Esta vez quiero que mi amor escoga por mi\"";
+        e18.op4 = "\"Al fin, minimo compensas la tardanza con una buena vista, seria un gohan\"";
 
     }
-    else if (clase == 2) {
+    else if (clase == 1) { //NPC
 
-        e18.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
-        e18.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
-        e18.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
-        e18.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
+        e18.op1 = "\"Si, nos gustarían los rollos especiales de San Valentin\"";
+        e18.op2 = "\"Desde hace como 10 minutos. Pero lo bueno que llegas\"";
+        e18.op3 = "\"Amm, si no sé que quieraa amor...\"";
+        e18.op4 = "\"Con esos ojitos, te perdono la tardanza,\nvamos a querer unos rollos\"";
 
     }
-    else if (clase == 3) {
+    else if (clase == 2) { //GYMRAT
 
-        e18.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
-        e18.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
+        e18.op1 = "\"Claro, deseamos unos rollos especiales de San Valentin,\ncon extra proteina por favor\"";
+        e18.op2 = "\"Pensaba que estabas muy ocupado,\nmira quiero unos rollos San Valentin\n a las 6\"";
         e18.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
-        e18.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
+        e18.op4 = "\"Que bueno que llegas, vamos a ordenar unos rollos San Valentin\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e18.op1 = "\"haiii, quiero crunchyroll para los dos\"";
+        e18.op2 = "\"Hazta que llegas maid-sama :'v\"";
+        e18.op3 = "\"Sii... que pida ella por mi...\"";
+        e18.op4 = "\"Creo que este restaurante tiene demasiado  fanservice 7w7\"";
 
     }
 
     h.push_back(e18);
 
-	//Dia6 Escenario 1
+    //Dia6 Escenario 2
     Escenario e19;
 
-    e19.pregunta = "“Llega el mesero a tomar su orden,\n¿Ya están listos para ordenar?”";
+    e19.pregunta = "“Sin darme cuenta, mi novia me estaba preguntando sobre quién era ella.\nN: “Acaso no es la chica del otro día?”";
 
-    e19.imp1 = 2;
-    e19.imp2 = 5;
-    e19.imp3 = -1;
-    e19.imp4 = -5;
+    e19.imp1 = -1;
+    e19.imp2 = 3;
+    e19.imp3 = -3;
+    e19.imp4 = -2;
 
-    if (clase == 0) {
+    if (clase == 0) { //TOXICO
 
-        e19.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
-        e19.op2 = "\"Pide permiso para salir manana a las 6pm\"";
-        e19.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
-        e19.op4 = "\"Oye, manana teniamos que hacer algo?\"";
-
-    }
-    else if (clase == 1) {
-
-        e19.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
-        e19.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
-        e19.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
-        e19.op4 = "\"Entonces, manana hay plan o no?\"";
+        e19.op1 = "\"¿Sepa, tu la conoces de algo?\"";
+        e19.op2 = "\"Ah si, es una amiga de mi escuela\"";
+        e19.op3 = "\"Ah si, es mi besty\"";
+        e19.op4 = "\"*Te come la lengua el gato*\"";
 
     }
-    else if (clase == 2) {
+    else if (clase == 1) { //NPC
 
-        e19.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
-        e19.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
-        e19.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
-        e19.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
+        e19.op1 = "\"Ah, es ahm- una conocida\"";
+        e19.op2 = "\"Oh, una amiga de la escuela\"";
+        e19.op3 = "\"Es una...amiguita de la escuela\"";
+        e19.op4 = "\"*No responder*\"";
 
     }
-    else if (clase == 3) {
+    else if (clase == 2) { //GYMRAT
 
-        e19.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
-        e19.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
-        e19.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
-        e19.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
+        e19.op1 = "\"Sinceramente, no se quien es, no la conozco\"";
+        e19.op2 = "\"Mira amor ella es Illeana, de la uni\"";
+        e19.op3 = "\"Ella es Illeana, es una amiguita de la universidad\"";
+        e19.op4 = "\"*No responder*\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e19.op1 = "\"Ella? Nah, literalmente NPC genérico del fondo\"";
+        e19.op2 = "\"Es compa del server, nada mas.\"";
+        e19.op3 = "\"Ella solo es una amiguita, no le des mucha bola jeje\"";
+        e19.op4 = "\"*No responder*\"";
 
     }
 
     h.push_back(e19);
 
-    //Dia6 Escenario 2
+    //Dia6 Escenario 3
     Escenario e20;
 
-    e20.pregunta = "“Sin darme cuenta, mi novia me estaba preguntando sobre quién era ella.\nN: “Acaso no es la chica del otro día?”";
-
+    e20.pregunta = "\"“Illeana: Holaa feliz san valentin,\nquien es ella??? *Que respondes ?*\"";
     e20.imp1 = 2;
-    e20.imp2 = 5;
-    e20.imp3 = -1;
-    e20.imp4 = -5;
+    e20.imp2 = -2;
+    e20.imp3 = -5;
+    e20.imp4 = 5;
 
-    if (clase == 0) { //Toxico
+    if (clase == 0) { //TOXICO
 
-        e20.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
-        e20.op2 = "\"Pide permiso para salir manana a las 6pm\"";
-        e20.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
-        e20.op4 = "\"Oye, manana teniamos que hacer algo?\"";
-
-    }
-    else if (clase == 1) { 
-
-        e20.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
-        e20.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
-        e20.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
-        e20.op4 = "\"Entonces, manana hay plan o no?\"";
+        e20.op1 = "\"Ella es mi novia\"";
+        e20.op2 = "\"¿Que ondaaaa, como andas?\"";
+        e20.op3 = "\"Se podria decir que es mi mejor amiga\"";
+        e20.op4 = "\"Ella es mi mujer\"";
 
     }
-    else if (clase == 2) {
+    else if (clase == 1) { //NPC
 
-        e20.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
-        e20.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
-        e20.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
-        e20.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
+        e20.op1 = "\"Ella es mi novia\"";
+        e20.op2 = "\"Hola Illeana, no te había visto\"";
+        e20.op3 = "\"Es una amiga muy cercana\"";
+        e20.op4 = "\"Ah, Illiana, te presento al amor de mi vida\"";
 
     }
-    else if (clase == 3) {
+    else if (clase == 2) { //GYMRAT
 
-        e20.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
-        e20.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
-        e20.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
-        e20.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
+        e20.op1 = "\"Ileana, te presento a mi novia\"";
+        e20.op2 = "\"Ey Ileana, no habia notado tu presencia\"";
+        e20.op3 = "\"Ella es una amiga\"";
+        e20.op4 = "\"Ella es mi novia, mi amor, mi reina, mi motivación para vivir\"";
+
+    }
+    else if (clase == 3) { //OTAKU
+
+        e20.op1 = "\"Es mi novia, la waifu oficial del canon\"";
+        e20.op2 = "\"Ahhh… cutscene incómoda… skip…\"";
+        e20.op3 = "\"Es mi onichan nada mas\"";
+        e20.op4 = "\"Si, es ella… mi personaje de rango S\"";
 
     }
 
     h.push_back(e20);
-
-    //Dia6 Escenario 3
-    Escenario e21;
-
-    e21.pregunta = "“Llega el mesero a tomar su orden,\n¿Ya están listos para ordenar?”";
-
-    e21.imp1 = 2;
-    e21.imp2 = 5;
-    e21.imp3 = -1;
-    e21.imp4 = -5;
-
-    if (clase == 0) {
-
-        e21.op1 = "\"Ponte linda, manana paso por ti a las 6pm\"";
-        e21.op2 = "\"Pide permiso para salir manana a las 6pm\"";
-        e21.op3 = "\"Te tengo una sorpresa manana a las 6pm,\n alistate\"";
-        e21.op4 = "\"Oye, manana teniamos que hacer algo?\"";
-
-    }
-    else if (clase == 1) {
-
-        e21.op1 = "\"Preparate. Mañana paso por ti a las 6 ;)\"";
-        e21.op2 = "\"Pide permiso porque mañana voy a pasar a\n las 6\"";
-        e21.op3 = "\"Te tengo un regalo :), manana a las 6\n prepárate para ser sorprendida\"";
-        e21.op4 = "\"Entonces, manana hay plan o no?\"";
-
-    }
-    else if (clase == 2) {
-
-        e21.op1 = "\"manana tu y yo, 6pm, para que estes lista\"";
-        e21.op2 = "\"Oye, pide permiso, manana pasare por ti\n a las 6\"";
-        e21.op3 = "\"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6\"";
-        e21.op4 = "\"¿Te parece si no voy al gym mañana y\n salimos?¿Como a las 6?\"";
-
-    }
-    else if (clase == 3) {
-
-        e21.op1 = "\"Sempaiiii, manana a las 6 OwO\"";
-        e21.op2 = "\"Manana paso por ti a las 6 , ponte\n guapa...\"";
-        e21.op3 = "\"Manana desbloqueas evento exclusivo\n conmigo.\"";
-        e21.op4 = "\"Supongo que manana continua esta situacion\n rara entre nosotros.\"";
-
-    }
-
-    h.push_back(e21);
 
     return h;
 }
@@ -1831,6 +1821,18 @@ int main() {
     cargarTextura(Illeanallega, "../assets/fondos/Illeanallega.png");
     sf::Sprite bg84(Illeanallega);
     ajustar(bg84, Illeanallega);
+
+    //Illiana llega OP
+    sf::Texture IlleanallegaOP;
+    cargarTextura(IlleanallegaOP, "../assets/fondos/Illeanallegaop.png");
+    sf::Sprite bg85(IlleanallegaOP);
+    ajustar(bg85, IlleanallegaOP);
+
+    //Illiana se va
+    sf::Texture IlleanaSeVa;
+    cargarTextura(IlleanaSeVa, "../assets/fondos/Illeanaseva.png");
+    sf::Sprite bg86(IlleanaSeVa);
+    ajustar(bg86, IlleanaSeVa);
 // ==========================
 // CONFIGURACION DE ESCENAS
 // ==========================
@@ -2921,7 +2923,7 @@ int main() {
            false,
            true,
            false,
-           111,
+           111
     };
 
     escenas[111] = {
@@ -2930,7 +2932,7 @@ int main() {
            false,
            true,
            false,
-           112,
+           112
     };
 
     escenas[112] = {
@@ -2939,7 +2941,7 @@ int main() {
            false,
            true,
            false,
-           113,
+           113
     };
 
     escenas[113] = {
@@ -2948,7 +2950,7 @@ int main() {
            true,
            false,
            false,
-           114,
+           114
     };
 
     escenas[114] = {
@@ -2957,7 +2959,7 @@ int main() {
            false,
            true,
            false,
-           115,
+           115
     };
 
     escenas[115] = {
@@ -2966,7 +2968,7 @@ int main() {
            false,
            true,
            false,
-           116,
+           116
     };
 
     escenas[116] = {
@@ -2975,7 +2977,7 @@ int main() {
            false,
            true,
            false,
-           117,
+           117
     };
 
     escenas[117] = {
@@ -2984,7 +2986,61 @@ int main() {
            false,
            true,
            false,
-           118,
+           118
+    };
+
+    escenas[118] = {
+           &bg85,
+           "",
+           true,
+           false,
+           false,
+           119
+    };
+
+    escenas[119] = {
+           &bg86,
+           "Illeana: Es lindo conocerte. En fin,\n[jugador] espero poder verte mañana,\nluego te mando la ubicación más tarde, va?",
+           false,
+           true,
+           false,
+           120
+    };
+
+    escenas[120] = {
+           &bg81,
+           "Después de ese incómodo momento,\nterminamos de comer y pagamos la cuenta.\nLa lleve a su casa.",
+           false,
+           true,
+           false,
+           121
+    };
+
+    escenas[121] = {
+           &bg12,
+           "Espero que mañana sea un mejor día.",
+           false,
+           true,
+           false,
+           122
+    };
+
+    escenas[122] = {
+        &bgMenu,
+        "",
+        false,
+        false,
+        false,
+        123,
+    };
+
+    escenas[123] = {
+        &bgRegalos,
+        "",
+        false,
+        false,
+        false,
+        -1
     };
     escenas[199] = {
  &bg12,
@@ -3303,7 +3359,19 @@ int main() {
                             continue;
                         }
                     }
+                    //Menu dia 6
+                    else if (scene == 122) {
 
+                        if (zonaContM.contains(mousePos)) {
+                            scene = -1;
+                            continue;
+                        }
+
+                        else if (zonaRegalos.contains(mousePos)) {
+                            scene = 123;
+                            continue;
+                        }
+                    }
                     // REGALOS
                     else if (scene == 100) {
 
@@ -3383,6 +3451,22 @@ int main() {
 
                         continue;
                     }
+
+                    else if (scene == 123) {
+
+                        procesarRegalo(
+                            scene,
+                            -1,
+                            mitilina,
+                            mousePos,
+                            zonaFlores,
+                            zonaCarta,
+                            zonaPastel,
+                            zonaCollar
+                        );
+
+                        continue;
+                        }
 
                     // ESCENAS NORMALES CON OPCIONES
                     else if (actual->tieneOpciones) {
