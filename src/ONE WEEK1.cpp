@@ -4,10 +4,16 @@
 #include <string>
 #include <vector>
 #include <SFML/Audio.hpp>
-#include "ONE WEEK1.h"
+#include "Clases.h"
 
 using namespace std;
 
+struct Escenario {
+    string pregunta;
+    string op1, op2, op3, op4;
+    int imp1, imp2, imp3, imp4;
+
+};
 
 vector<Escenario> cargarHistoria(int clase) {
     vector <Escenario> h;
