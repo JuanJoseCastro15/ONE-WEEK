@@ -2950,7 +2950,8 @@ int main() {
            true,
            false,
            false,
-           114
+           114,
+           19
     };
 
     escenas[114] = {
@@ -2995,7 +2996,8 @@ int main() {
            true,
            false,
            false,
-           119
+           119,
+           20
     };
 
     escenas[119] = {
