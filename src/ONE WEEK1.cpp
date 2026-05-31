@@ -1223,9 +1223,8 @@ int main() {
 
 
 
-<<<<<<< Updated upstream
-    // ==========================
-=======
+   
+
     // Camino a la tienda
     sf::Texture CaminoaTienda;
     cargarTextura(CaminoaTienda, "../assets/fondos/Caminoatienda.png");
@@ -1531,7 +1530,7 @@ int main() {
     ajustar(menuS, menuSalir);
 
 // ==========================
->>>>>>> Stashed changes
+
 // CONFIGURACION DE ESCENAS
 // ==========================
 
@@ -2168,18 +2167,12 @@ int main() {
 
     //BOTONES MENU DE CONTINUAR Y SALIR
 
-    sf::FloatRect zonaContinuarMenu({ 400.f,320.f }, { 100.f, 350.f });
+    sf::FloatRect zonaMenu({ 378.f, 310.f }, { 390.f, 65.f });
+    sf::FloatRect zonaSalir({ 367.f, 440.f }, { 410.f, 65.f });
 
 
 
 
-
-    sf::RectangleShape debugRect;
-    debugRect.setFillColor(sf::Color(0, 255, 0, 100)); // Verde semitransparente
-    debugRect.setOutlineColor(sf::Color::Green);
-    debugRect.setOutlineThickness(2.f);
-    debugRect.setPosition(zonaContinuarMenu.position); // Accede directamente al sf::Vector2f de posición
-    debugRect.setSize(zonaContinuarMenu.size);
 
 
     //bucle 
@@ -2409,7 +2402,7 @@ int main() {
         if (actual->indiceHistoria >= 0) {
             escenarioActual = actual->indiceHistoria;
         }
-        ventana.draw(debugRect);
+ 
 
         renderizarEscena(
             ventana,
