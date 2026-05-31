@@ -1223,10 +1223,329 @@ int main() {
 
 
 
+<<<<<<< Updated upstream
     // ==========================
+=======
+    // Camino a la tienda
+    sf::Texture CaminoaTienda;
+    cargarTextura(CaminoaTienda, "../assets/fondos/Caminoatienda.png");
+
+    sf::Sprite bg41(CaminoaTienda);
+    ajustar(bg41, CaminoaTienda);
+
+    // Novia con otro
+    sf::Texture NoviaOtro;
+    cargarTextura(NoviaOtro, "../assets/fondos/NoviaconOtro.png");
+
+    sf::Sprite bg42(NoviaOtro);
+    ajustar(bg42, NoviaOtro);
+
+    // Novia con otro pero mas de cerca
+    sf::Texture NoviaOtro2;
+    cargarTextura(NoviaOtro2, "../assets/fondos/NoviaconOtro2.png");
+
+    sf::Sprite bg43(NoviaOtro2);
+    ajustar(bg43, NoviaOtro2);
+
+    // Mejor se va
+    sf::Texture MejorSeVa;
+    cargarTextura(MejorSeVa, "../assets/fondos/mejorseVa.png");
+
+    sf::Sprite bg44(MejorSeVa);
+    ajustar(bg44, MejorSeVa);
+
+    //Escenario 1
+    // Nuevo mensaje 
+    sf::Texture NuevoMensaje;
+    cargarTextura(NuevoMensaje, "../assets/fondos/NuevoMensaje.png");
+
+    sf::Sprite bg45(NuevoMensaje);
+    ajustar(bg45, NuevoMensaje);
+
+    // Nuevo mensaje 1
+    sf::Texture NuevoMensaje1;
+    cargarTextura(NuevoMensaje1, "../assets/fondos/NuevoMensaje1.png");
+
+    sf::Sprite bg46(NuevoMensaje1);
+    ajustar(bg46, NuevoMensaje1);
+
+    // Nuevo mensaje Opciones
+    sf::Texture NuevoMensajeOpciones;
+    cargarTextura(NuevoMensajeOpciones, "../assets/fondos/mensajeOpciones.png");
+
+    sf::Sprite bg47(NuevoMensajeOpciones);
+    ajustar(bg47, NuevoMensajeOpciones);
+
+    // Telefono en cama
+    sf::Texture TelefonoEnCama;
+    cargarTextura(TelefonoEnCama, "../assets/fondos/Telefonoencama.png");
+
+    sf::Sprite bg48(TelefonoEnCama);
+    ajustar(bg48, TelefonoEnCama);
+
+    // Dia 4 Escenario 2
+    // Illiana salida 1
+    sf::Texture IllianaSalida1;
+    cargarTextura(IllianaSalida1, "../assets/fondos/Illianasalida1.png");
+
+    sf::Sprite bg49(IllianaSalida1);
+    ajustar(bg49, IllianaSalida1);
+
+    // Illiana salida 2
+    sf::Texture IllianaSalida2;
+    cargarTextura(IllianaSalida2, "../assets/fondos/Illianasalida2.png");
+
+    sf::Sprite bg50(IllianaSalida2);
+    ajustar(bg50, IllianaSalida2);
+
+    // Novia lejos
+    sf::Texture NoviaLejos;
+    cargarTextura(NoviaLejos, "../assets/fondos/novialejos.png");
+
+    sf::Sprite bg51(NoviaLejos);
+    ajustar(bg51, NoviaLejos);
+
+    // Novia triste
+    sf::Texture NoviaTriste;
+    cargarTextura(NoviaTriste, "../assets/fondos/noviatriste.png");
+
+    sf::Sprite bg52(NoviaTriste);
+    ajustar(bg52, NoviaTriste);
+
+    // Novia huyendo
+    sf::Texture Huyendo;
+    cargarTextura(Huyendo, "../assets/fondos/huyendo.png");
+
+    sf::Sprite bg53(Huyendo);
+    ajustar(bg53, Huyendo);
+
+    // Nuevo mensaje 1
+    sf::Texture CuartoConTelefono;
+    cargarTextura(CuartoConTelefono, "../assets/fondos/cuartoconcel.png");
+
+    sf::Sprite bg54(CuartoConTelefono);
+    ajustar(bg54, CuartoConTelefono);
+
+    // Ver mensaje
+    sf::Texture VerMensaje;
+    cargarTextura(VerMensaje, "../assets/fondos/VerMensaje.png");
+
+    sf::Sprite bg55(VerMensaje);
+    ajustar(bg55, VerMensaje);
+
+    //Escenario3
+    // Mensajes opciones 1
+    sf::Texture MensajeOpciones1;
+    cargarTextura(MensajeOpciones1, "../assets/fondos/MensajeOpciones1.png");
+
+    sf::Sprite bg56(MensajeOpciones1);
+    ajustar(bg56, MensajeOpciones1);
+
+    //Dia5
+    
+    //dia 5
+    sf::Texture Dia6;
+    cargarTextura(Dia6, "../assets/fondos/Dia6.jpeg");
+
+    sf::Sprite bg57(Dia6);
+    ajustar(bg57, Dia6);
+
+    //Casanovia
+    sf::Texture Casanovia;
+    cargarTextura(Casanovia, "../assets/fondos/Casanovia.png");
+
+    sf::Sprite bg58(Casanovia);
+    ajustar(bg58, Casanovia);
+
+    //Noviapuerta
+    sf::Texture Noviapuerta;
+    cargarTextura(Noviapuerta, "../assets/fondos/Noviapuerta.png");
+
+    sf::Sprite bg59(Noviapuerta);
+    ajustar(bg59, Noviapuerta);
+
+    //Novia Uni
+    sf::Texture noviaescuela;
+    cargarTextura(noviaescuela, "../assets/fondos/noviaescuela.png");
+
+    sf::Sprite bg60(noviaescuela);
+    ajustar(bg60, noviaescuela);
+
+    //IlleanaenojadaPasillo
+    sf::Texture Pasilloenojada;
+    cargarTextura(Pasilloenojada, "../assets/fondos/pasilloenojada.png");
+
+    sf::Sprite bg61(Pasilloenojada);
+    ajustar(bg61, Pasilloenojada);
+
+    //Pasilloenojada
+    sf::Texture Pasilloenojada2;
+    cargarTextura(Pasilloenojada2, "../assets/fondos/Pasilloenojada2.png");
+
+    sf::Sprite bg62(Pasilloenojada2);
+    ajustar(bg62, Pasilloenojada2);
+
+    //Floreria
+    sf::Texture Floreria;
+    cargarTextura(Floreria, "../assets/fondos/Floreria.png");
+
+    sf::Sprite bg63(Floreria);
+    ajustar(bg63, Floreria);
+
+    //Nochecel
+    sf::Texture Nochecel;
+    cargarTextura(Nochecel, "../assets/fondos/Nochecel.png");
+
+    sf::Sprite bg64(Nochecel);
+    ajustar(bg64, Nochecel);
+
+
+    //Mandarmensaje
+    sf::Texture Mandarmensaje;
+    cargarTextura(Mandarmensaje, "../assets/fondos/Mandarmensaje.png");
+
+    sf::Sprite bg65(Mandarmensaje);
+    ajustar(bg65, Mandarmensaje);
+
+    //AlarmaLunes
+    sf::Texture AlarmaLunes;
+    cargarTextura(AlarmaLunes, "../assets/fondos/AlarmaLunes.png");
+
+    sf::Sprite bg66(AlarmaLunes);
+    ajustar(bg66, AlarmaLunes);
+
+	//AlarmaMiercoles
+    sf::Texture AlarmaMiercoles;
+    cargarTextura(AlarmaMiercoles, "../assets/fondos/AlarmaMiercoles.png");
+    sf::Sprite bg67(AlarmaMiercoles);
+	ajustar(bg67, AlarmaMiercoles);
+
+    //AlarmaViernes
+    sf::Texture AlarmaViernes;
+    cargarTextura(AlarmaViernes, "../assets/fondos/AlarmaViernes.png");
+    sf::Sprite bg68(AlarmaViernes);
+    ajustar(bg68, AlarmaViernes);
+
+    //Dia 6
+
+    //
+    sf::Texture Dia5;
+    cargarTextura(Dia5, "../assets/fondos/Dia5.jpeg");
+    sf::Sprite bg69(Dia5);
+    ajustar(bg69, Dia5);
+
+    //AlarmaSabado
+    sf::Texture AlarmaSabado;
+    cargarTextura(AlarmaSabado, "../assets/fondos/AlarmaSabado.png");
+    sf::Sprite bg70(AlarmaSabado);
+    ajustar(bg70, AlarmaSabado);
+
+    //Cuarto tarde
+    sf::Texture CuartoTarde;
+    cargarTextura(CuartoTarde, "../assets/fondos/Cuartotarde.png");
+    sf::Sprite bg71(CuartoTarde);
+    ajustar(bg71, CuartoTarde);
+
+    //Llegando al sushi
+    sf::Texture LlegandoSushi;
+    cargarTextura(LlegandoSushi, "../assets/fondos/llegandosushi.png");
+    sf::Sprite bg72(LlegandoSushi);
+    ajustar(bg72, LlegandoSushi);
+
+    //Saludo en el sushi
+    sf::Texture SaludoSushi;
+    cargarTextura(SaludoSushi, "../assets/fondos/Saludosushi.png");
+    sf::Sprite bg73(SaludoSushi);
+    ajustar(bg73, SaludoSushi);
+
+    //Regalo en el sushi
+    sf::Texture RegaloSushi;
+    cargarTextura(RegaloSushi, "../assets/fondos/Regalosushi.png");
+    sf::Sprite bg74(RegaloSushi);
+    ajustar(bg74, RegaloSushi);
+
+    //Felicidad en el sushi
+    sf::Texture SushizFeliz;
+    cargarTextura(SushizFeliz, "../assets/fondos/Sushifeliz.png");
+    sf::Sprite bg75(SushizFeliz);
+    ajustar(bg75, SushizFeliz);
+
+    //Felicidad en la comida
+    sf::Texture ComidaFeliz;
+    cargarTextura(ComidaFeliz, "../assets/fondos/Comidafeliz.png");
+    sf::Sprite bg76(ComidaFeliz);
+    ajustar(bg76, ComidaFeliz);
+
+    //Escenario 1 Dia6
+    //Sushi Mesero
+    sf::Texture SushiMesero;
+    cargarTextura(SushiMesero, "../assets/fondos/Sushimesero.png");
+    sf::Sprite bg77(SushiMesero);
+    ajustar(bg77, SushiMesero);
+
+    //Novia escucha
+    sf::Texture NoviaEscucha;
+    cargarTextura(NoviaEscucha, "../assets/fondos/Noviaescucha.png");
+    sf::Sprite bg78(NoviaEscucha);
+    ajustar(bg78, NoviaEscucha);
+
+    //Novia escucha OP
+    sf::Texture NoviaEscuchaOP;
+    cargarTextura(NoviaEscuchaOP, "../assets/fondos/NoviaescuchaOP.png");
+    sf::Sprite bg80(NoviaEscuchaOP);
+    ajustar(bg80, NoviaEscuchaOP);
+
+    //Novia enojada
+    sf::Texture NoviaEnojada;
+    cargarTextura(NoviaEnojada, "../assets/fondos/Noviaenojada.png");
+    sf::Sprite bg81(NoviaEnojada);
+    ajustar(bg81, NoviaEnojada);
+
+    //Novia tensa
+    sf::Texture Noviatensa;
+    cargarTextura(Noviatensa, "../assets/fondos/Noviatensa.png");
+    sf::Sprite bg83(Noviatensa);
+    ajustar(bg83, Noviatensa);
+
+    //Illiana llega
+    sf::Texture Illeanallega;
+    cargarTextura(Illeanallega, "../assets/fondos/Illeanallega.png");
+    sf::Sprite bg84(Illeanallega);
+    ajustar(bg84, Illeanallega);
+
+    //Illiana llega OP
+    sf::Texture IlleanallegaOP;
+    cargarTextura(IlleanallegaOP, "../assets/fondos/Illeanallegaop.png");
+    sf::Sprite bg85(IlleanallegaOP);
+    ajustar(bg85, IlleanallegaOP);
+
+    //Illiana se va
+    sf::Texture IlleanaSeVa;
+    cargarTextura(IlleanaSeVa, "../assets/fondos/Illeanaseva.png");
+    sf::Sprite bg86(IlleanaSeVa);
+    ajustar(bg86, IlleanaSeVa);
+
+    sf::Texture menuSalir;
+    cargarTextura(menuSalir, "../assets/fondos/menuSalir.jpeg");
+    sf::Sprite menuS(menuSalir);
+    ajustar(menuS, menuSalir);
+
+// ==========================
+>>>>>>> Stashed changes
 // CONFIGURACION DE ESCENAS
 // ==========================
 
+    escenas[0] = {
+        &menuS,
+        "",
+        false,
+        false,
+        false,
+        1
+    };
+
+
+/*
     escenas[0] = {
         &bg0,
         "",
@@ -1234,7 +1553,7 @@ int main() {
         false,
         false,
         1
-    };
+    }; */
 
     escenas[1] = {
         &bg1,
@@ -1845,12 +2164,22 @@ int main() {
 
     sf::FloatRect zonaAlarma2({ 470.f,490.f }, { 80.f, 30.f });
 
+
+
+    //BOTONES MENU DE CONTINUAR Y SALIR
+
+    sf::FloatRect zonaContinuarMenu({ 400.f,320.f }, { 100.f, 350.f });
+
+
+
+
+
     sf::RectangleShape debugRect;
     debugRect.setFillColor(sf::Color(0, 255, 0, 100)); // Verde semitransparente
     debugRect.setOutlineColor(sf::Color::Green);
     debugRect.setOutlineThickness(2.f);
-    debugRect.setPosition(zonaAlarma1.position); // Accede directamente al sf::Vector2f de posición
-    debugRect.setSize(zonaAlarma1.size);
+    debugRect.setPosition(zonaContinuarMenu.position); // Accede directamente al sf::Vector2f de posición
+    debugRect.setSize(zonaContinuarMenu.size);
 
 
     //bucle 
@@ -2080,6 +2409,7 @@ int main() {
         if (actual->indiceHistoria >= 0) {
             escenarioActual = actual->indiceHistoria;
         }
+        ventana.draw(debugRect);
 
         renderizarEscena(
             ventana,
