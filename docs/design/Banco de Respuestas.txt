@@ -493,6 +493,7 @@ NPC: “Pide permiso porque manana voy a pasar a las 6”
 Toxico: “Pide permiso para salir manana a las 6pm”
 Gymrat: “Oye, pide permiso, manana pasare por ti a las 6”
 
+<<<<<<< HEAD
 Opcion 3:
 Otaku: “Manana desbloqueas evento exclusivo conmigo.”
 NPC: “Te tengo un regalo :), manana a las 6 preparate para ser sorprendida”
@@ -504,6 +505,28 @@ Otaku: “Supongo que manana continua esta situacion rara entre nosotros.”
 NPC: “Entonces, manana hay plan o no?”
 Toxico: “Oye, manana teniamos que hacer algo?”
 Gymrat: “Te parece si no voy al gym manana y salimos? Como a las 6?”
+=======
+Opción 1: Contestas normal
+     Otaku: "haiii, quiero crunchyroll para los dos"
+     NPC: “Si, nos gustarían los rollos especiales de San Valentin“
+     Toxico: "Claro, quiero un rollo california en salsa chipotle"
+     Gymrat:
+Opción 2: contestas pasivo agresivo
+     Otaku: "Hazta que llegas maid-sama :'v"
+     NPC: “Desde hace como 10 minutos. Pero lo bueno que llegas” 
+     Toxico: "Pues hemos estado como 10 minutos aqui asi que yo diria que si"
+     Gymrat:
+Opción 3: contestar pasivamente:
+     Otaku: "Sii... que pida ella por mi..."
+     NPC: "Amm, si no sé que quieraa amor..." 
+     Toxico: "Esta vez quiero que mi amor escoga por mi"
+     Gymrat:
+Opción 4: le coqueteas al mesero
+     Otaku: "Creo que este restaurante tiene demasiado  fanservice 7w7"
+     NPC: "Con esos ojitos, te perdono la tardanza, vamos a querer unos rollos"
+     Toxico: "Al fin, minimo compensas la tardanza con una buena vista, seria un gohan"
+     Gymrat:
+>>>>>>> fe8380a58ed6622d52c94e42e378afa4fba447bc
 
 
 D6_E1
@@ -538,6 +561,7 @@ Gymrat: “Ufff que macizo hermano, queremos unos rollos y saber a donde vas a e
 D6_E2
 Sin darme cuenta mi novia me estaba preguntando sobre quien era ella
 
+<<<<<<< HEAD
 Opcion 1:
 Otaku: “Ella? Nah, literalmente NPC generico del fondo”
 NPC: “Ah, es ahm... una conocida”
@@ -589,6 +613,48 @@ Otaku: “Si, es ella... mi personaje de rango S.”
 NPC: “Ah, Illeana, te presento al amor de mi vida [ ]”
 Toxico: “...”
 Gymrat: “Ella es mi novia, mi amor, mi reina, mi motivacion”
+=======
+Opcion 1: negarla totalmente decir que es una extraña
+    Otaku: "Ella? Nah, literalmente NPC genérico del fondo"
+    NPC: "Ah, es ahm- una conocida"
+    Toxico: "¿Sepa, tu la conoces de algo?"
+    Gymrat:
+Opcion 2: Decir que es una amiga
+    Otaku: "Es compa del server, nada mas."
+    NPC: "Oh, una amiga de la escuela"
+    Toxico: "Ah si, es una amiga de mi escuela"
+    Gymrat:
+Opcion 3 : decir que es una amiguita
+    Otaku: "Ella solo es una amiguita, no le des mucha bola jeje”
+    NPC: "Es una...amiguita de la escuela"
+    Toxico: "Ah si, es mi besty"
+    Gymrat:
+Opcion 4: No responder
+
+D6E3:
+Illeana: Holaa feliz san valentin, quien es ella???
+Que respondes? 
+Opcion 1: Decir con seguridad tu novia (neutral)
+   Otaku: "Es mi novia, la waifu oficial del canon"
+   NPC: "Ella es mi novia, [ ]"
+   Toxico: "Ella es mi novia"
+   Gymrat:
+Opcion 2: Cambiar de tema (tipo solo saludas y no contestas) negativa
+   Otaku: "Ahhh… cutscene incómoda… skip…"
+   NPC: "Hola Illeana, no te había visto"
+   Toxico: "¿Que ondaaaa, como andas?"
+   Gymrat:
+Opcion 3: Decir que es una amiga (MUY MALA)
+   Otaku: "Es mi onichan nada mas"
+   NPC: "Es una amiga muy cercana" 
+   Toxico: "Se podria decir que es mi mejor amiga"
+   Gymrat:
+Opcion 4: Una respuesta afirmando y chuleando a tu novia (positiva)
+   Otaku: Si, es ella… mi personaje de rango S .
+   NPC: "Ah, Illiana, te presento al amor de mi vida [ ]"
+   Toxico: "Ella es mi mujer"
+   Gymrat: 
+>>>>>>> fe8380a58ed6622d52c94e42e378afa4fba447bc
 
 D7E1: 
 Hice reservación a las 6:00 , después de todo me toca invitarte.
@@ -598,6 +664,7 @@ Que le contestas?
 Opcion 1: te amo
     Otaku: "Sugoiiii, te amo"
     NPC: "Yo tambien te amo, mi vida"
+<<<<<<< HEAD
     Toxico:
     Gymrat: "Muchas gracias amor, te amo"
 Opcion2: responder  neutral
@@ -615,3 +682,22 @@ Opcion 4: yo tambien
     NPC: "Si, yo tambien"
     Toxico:
     Gymrat: "Yo igual"
+=======
+    Toxico: "Yo mas preciosa hermosa"
+    Gymrat:
+Opcion2: responder  neutral
+    Otaku: "gachas hemocha"
+    NPC: "Yo igual te amo"
+    Toxico: "Yo tambien te amo"
+    Gymrat:
+Opcion 3: no contestar
+    Otaku: "owo"
+    NPC: "..."
+    Toxico: "Gracias..."
+    Gymrat:
+Opcion 4: yo tambien
+    Otaku: "etooo, yo tambien"
+    NPC: "Si, yo tambien"
+    Toxico: "Yo tambien"
+    Gymrat:
+>>>>>>> fe8380a58ed6622d52c94e42e378afa4fba447bc
