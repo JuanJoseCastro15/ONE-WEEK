@@ -18,6 +18,9 @@
     <ClCompile Include="ONE WEEK1.cpp">
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Clases.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\assets\Fondos\botones.jpeg">
@@ -147,5 +150,10 @@
     <None Include="sfml-graphics-3.dll" />
     <None Include="sfml-audio-d-3.dll" />
     <None Include="sfml-audio-3.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Clases.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

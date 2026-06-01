@@ -193,30 +193,7 @@ Opción 4: Responder mientras escondes el celular -menos confianza
         Gymrat: “Eso suena a plan obligatorio”
 
 
-D2E5:
-Tienes novia, no? 
- Respuesta
 
-Opción 1: Sí directo +confianza novia
-        Otaku:
-        NPC: “Si, andamos desde la prepa”
-        Toxico: 
-        Gymrat: 
-Opción 2: “Sí… supongo” -felicidad
-        Otaku: 
-        NPC: “Si…hemos, tenido problemas”
-        Toxico: 
-        Gymrat: 
-Opción 3: “¿Por qué lo preguntas?” neutral
-        Otaku: 
-        NPC: “De donde viene la pregunta?”
-        Toxico: 
-        Gymrat: 
-Opción 4: Evadir —---confianza 
-        Otaku: 
-        NPC: “Porque? Interesada?” 
-        Toxico: 
-        Gymrat: 
 
 D3_E1
 Mensaje de mi novia:
@@ -224,24 +201,24 @@ Mensaje de mi novia:
 “Ayer te sentí un poco raro… ¿todo bien?”
 
 Opción 1: Responder lindo y tranquilizarla mucho amor y confianza
-Otaku: 
+Otaku: “Chi amor, solo estaba raro por un capitulo de manga que lei :(”
 NPC: “Si amor, solo he tenido muchos trabajos. Pero todo bien :)”
-Toxico:
+Toxico:”Todo bien amor, solo te extrañaba.”
 Gymrat: 
 Opción 2: Responder normal natural
-Otaku: 
+Otaku: “Shi mi pookie”
 NPC:” Si solo he estado atareado” 
-Toxico:
+Toxico: ”Si, solo fue un dia algo cansado.”
 Gymrat: 
 Opción 3: Responder seco amor
-Otaku: 
+Otaku: “mmm, si :v”
 NPC: “Sip, todo tranquilo” 
-Toxico:
+Toxico: ”See...”
 Gymrat: 
 Opción 4: Evadir la pregunta -confianza
-Otaku: 
+Otaku: “Estoy leyendo manga, no molestes mi chakra”
 NPC: “Estar a distancia te hace imaginar cosas”
-Toxico:
+Toxico: ”Nada que te importe.”
 Gymrat: 
 
 
@@ -250,24 +227,24 @@ Te mira directo.
 “¿Me pasas tu número?(Illiana)
 Decisión
 Opción 1: Dárselo sin problema -confianza novia
-Otaku: 
+Otaku: “EMMM… esta bien …”
 NPC: “Claro, es (664) 123-456”
-Toxico:
+Toxico: ”Claro, te paso mi numero y lo que quieras.”
 Gymrat: 
 Opción 2: Dudar un poco antes de dárselo +poca confianza novia
-Otaku: 
+Otaku: “Etoooo … emmmm… okay”
 NPC: “Uhmmm…si, claro”
-Toxico:
+Toxico: ”Eh... si quieres.”
 Gymrat: 
 Opción 3: Hacer una broma antes de dárselo + carisma
-Otaku: 
+Otaku: “Te lo doy, pero no lo anotes en tu Death Note”
 NPC: ” Qué directa. Apúntalo antes de que me arrepienta de ser tan fácil.” 
-Toxico:
+Toxico: ”Va, a mi novia le agradara que haga amistades.”
 Gymrat: 
 Opción 4: Mostrar incomodidad pero igual dárselo
-Otaku: 
+Otaku: “Aiiiiñ, noseeee”
 NPC: “Si lo necesitas? uhmmm…bueno…”
-Toxico:
+Toxico: ”Bueno.”
 Gymrat: 
 
 
@@ -279,24 +256,24 @@ ríe
 
 Respuesta
 Opción 1: “Obvio, feliz cumpleaños ” Amor confianza
-     Otaku: 
+     Otaku: “haiii, feliz cumpleaños sempaiii”
      NPC: “Por supuesto, feliz cumpleaños amor”
-     Toxico:
+     Toxico: ”Obvio, feliz cumpleaños”
      Gymrat: 
 Opción 2: “Feliz Aniversario… - menos confianza
-     Otaku: 
+     Otaku: “Es la fecha de cuando empezó nuestro arco de amor :3”
      NPC: “Tss, obvio…feliz aniversario” 
-     Toxico:
+     Toxico: ”Feliz aniversario!”
      Gymrat: 
 Opción 3: “El primer dia que nos conocimos”  – menos confianza
-     Otaku: 
+     Otaku: “El primer dia que te robaste mi kokoro UwU”
      NPC: “Sip, cuando nos conocimos”
-     Toxico:
+     Toxico: ”El dia que nos conocimos?”
      Gymrat: 
 Opción 4: “una cita cualquiera?” amor fuerte - amor
-     Otaku: 
+     Otaku: “Una cita cualquiera, baaaaakaaa”
      NPC: ”Apoco se celebra algo?”
-     Toxico:
+     Toxico: ”Claro, era... este... aja...”
      Gymrat: 
 
 
@@ -305,47 +282,47 @@ D4E1:
 “:P”
 Que le contestas?
 Opción 1: Contestas como si nada hubiera pasado (neutral)
-     Otaku: 
+     Otaku: “Chi”
      NPC: “Si, y tú?”
-     Toxico:
+     Toxico: ”Pues si tomar un licuado es desayunar, entonces sí.”
      Gymrat:
 Opción 2: Contestar agresivamente (-confianza)
-     Otaku: 
+     Otaku: “Todo bien, baka :/”
      NPC: “Lindo saber que te importa, creí que ibas a estar muy ocupada” 
-     Toxico:
+     Toxico: ”¿Y eso a ti que te importa?”
      Gymrat:
 Opción 3: Contestas triste
-     Otaku: 
+     Otaku: “Me he sentido un poco down  T.T”
      NPC: “No he tenido hambre, he tenido un dia muy malo”
-     Toxico:
+     Toxico: ”Pues si tomar un licuado es desayunar, entonces sí.”
      Gymrat:
 Opción 4: la dejas en visto
-     Otaku: 
+     Otaku:  *Dejarla en visto*
      NPC: *Dejarla en visto*
-     Toxico:
+     Toxico: ”De hecho no, ayer se me revolvio el estomago”
      Gymrat:
 
 D4E2:
 “¿Cómo te sentiste después de eso ? Supongo que muy feo, terminarás con ella? No seas migajero.”
 Opción 1: Si
-    Otaku: 
+    Otaku:  “Chi UnU”
     NPC: “Sí, creo que sí”
-    Toxico:
+    Toxico: ”Yo creo que si, igual ya tengo a alguien más en mente.”
     Gymrat:
 Opción 2: No
-    Otaku: 
+    Otaku:  “Baka, no creo que sea tanto”
     NPC: “Han pasado muchas cosas, no creo que sea para tanto” 
-    Toxico:
+    Toxico: ”Como por?, claro que no.”
     Gymrat:
 Opción 3: Tal vez
-    Otaku: 
+    Otaku: “No lo se Illeana-chan”
     NPC: “Hemos estado juntos mucho tiempo, debo pensarlo” 
-    Toxico:
+    Toxico: ”Tendre que pensarlo.”
     Gymrat:
 Opción 4: no decir nada
-    Otaku: 
+    Otaku:  *hacer ruidos raros*
     NPC: “...”
-    Toxico:
+    Toxico: ”*Contemplar el panorama completo mientras mantienes una mirada fija al techo*”
     Gymrat:
 D4E3
 “Me levante con la sorpresa que mi tía y primo vinieron de visita, en la mañana estaba con mi primo  esperando a que mi tía saliera de la tienda …”
@@ -353,48 +330,48 @@ Te sientes culpable..
 Decides buscarla
 
 Acción 1: le mandas mensaje
-    Otaku: 
+    Otaku: “Ooh oh, debo mandarle mensaje a mi sempai”
     NPC: “Debo mandar un mensaje rápido”
-    Toxico:
+    Toxico: ”No puede ser, ni modo, toca disculparme.”
     Gymrat:
 Accion 2: le marcas
-    Otaku: 
+    Otaku: “No puede ser, le debo marcar a mi novia-chan” 
     NPC: “Es serio, hay que marcarle”
-    Toxico:
+    Toxico: ”Perfecto, tengo que llamarle para disculparme.”
     Gymrat:
 Acción 3:  no haces nada
-    Otaku: 
+    Otaku: *te pones a ver anime*
     NPC: “Que desastre”
-    Toxico:
+    Toxico: ”Mmm, ya me enoje luego lo intento arreglar.”
     Gymrat:
 Accion 4: Le mandas mensaje a illeana (-1000000 de aura super negativa)
-     Otaku: 
+     Otaku:  “Deberia buscar a Illeana-chan, ella si me entiende”
      NPC: “Debo…debo hablar con alguien. Illeana quizá este libre”
-     Toxico:
+     Toxico: ”Mejor intento pescar un nuevo pez, Illeana suena a una buena opción.”
      Gymrat:
 
 D5E1:
 “Se que la regue  y disculpame, actúe por impulso  y no pienso lo que hago . Me quiero esforzar para que esto funcione, así que te aseguro que pondré todo lo que pueda de mi parte. Quiero que sepas lo arrepentido que estoy.”
 
 Acción 1: la abrazas
-     Otaku: 
+     Otaku: "Podrias perdonar a este terroncito de azucar con un abrazo?
      NPC: "Me aceptas un abrazo como disculpa?"
-     Toxico:
+     Toxico: ”Puedo demostrar cuan arrepentido estoy con un abrazo?”
      Gymrat:
 Acción 2: la besas en la frente
-     Otaku: 
+     Otaku: *le da un beso de manera kawaii*
      NPC: *le da un beso en la frente* 
-     Toxico:
+     Toxico: ”*Le besas la frente*”
      Gymrat:
 Acción 3: beso en la boca
-     Otaku: 
+     Otaku: "Un besito de reconciliacion waifu-chan?"
      NPC: "Un beso de reconciliacion?"
-     Toxico:
+     Toxico: ”Me aceptas un beso?”
      Gymrat:
 Acción 4:  le dices “ya me disculpe, contenta?”
-     Otaku: 
+     Otaku: "ash ya lo arreglamos baka?"
      NPC: “ Bueno, entonces ya nos arreglamos no?”
-     Toxico:
+     Toxico: ”Bueno, ya hice mi trabajo, ya estamos bien no?”
      Gymrat:
 
 D5E2:
@@ -403,48 +380,48 @@ Escenario 2:
 Sobre lo de ayer…
 
 Accion 1: perdon por que mi novia nos interrumpiera
-     Otaku: 
+     Otaku: "Perdon que mi novia nos interrumpiera illeana-chan"
      NPC: "Disculpame, no esperaba que apareciera" 
-     Toxico:
+     Toxico: ”Perdon por la aparicion de mi novia, a veces es molesta”
      Gymrat:
 Accion 2: disculpame por dejarte asi plantada
-     Otaku: 
+     Otaku: "Perdon por dejarte plantada como arbol"
      NPC: "No quise dejarte asi, perdoname" 
-     Toxico:
+     Toxico: ”Perdon por irme sin explicacion”
      Gymrat:
 Accion 3: Actuar como que no paso nada
-     Otaku: 
+     Otaku: "Viste YBC" 7w7
      NPC: "Asi que...como te fue con la tarea?"
-     Toxico:
+     Toxico: ”Que rollo con el pollo”
      Gymrat:
 Accion 4: Me metiste en muchos problemas 
-     Otaku: 
+     Otaku: "Oi oi oi, me metiste en problemas"
      NPC: "Oye, ayer me metiste en un problemon" 
-     Toxico:
+     Toxico: ”Oye, por tu culpa me tuve que disculpar”
      Gymrat:
 
 D5E3:
 Llegando notaste muchos ramos bonitos, cual escoges?
 
 Opcion 1: Rosas (neutral)
-     Otaku: 
+     Otaku: "Supongo que las rosas le gustaran"
      NPC: “Es una flor muy clásica”
-     Toxico:
+     Toxico: ”Rosas, un clasico.”
      Gymrat:
 Opción 2: Girasoles (PEOR)
-     Otaku: 
+     Otaku: "Los girasoles como la frase gira gira tu calzon"
      NPC: “Los girasoles brindan mucha alegría”
-     Toxico:
+     Toxico: ”Girasoles, el mas barato.”
      Gymrat:
 Opción 3: Tulipanes (mucho amor felicidad lo que sea)
-     Otaku: 
+     Otaku: "Los tulipanes son hemochos uwu"
      NPC: “Representan el amor perfecto, ¿no?”
-     Toxico:
+     Toxico: ”Tulipanes, a algunos les gustan.”
      Gymrat:
 Opción 4: Flores beso (mala)
-     Otaku: 
+     Otaku: "Es la mas barata, podre usar lo demas para manga"
      NPC: “Es una flor única, como darle 10 besos de una”
-     Toxico:
+     Toxico: ”Flores beso, el nombre y la aparencia se ven interesantes.”
      Gymrat:
 
 D5E4: 
@@ -452,48 +429,48 @@ Enciendes tu celular  (presiona para encender / botón transparente)
 Le escribes
 
 Opción 1: Alistate manana paso por ti a las 6:00
-     Otaku: 
+     Otaku: "Sempaiiii, manana a las 6 OwO"
      NPC: “Preparate. Mañana paso por ti a las 6 ;)”
-     Toxico:
+     Toxico: ”Ponte linda que mañana paso por ti a las 6pm”
      Gymrat:
 Opción 2: Manana a las 6:00 pide permiso
-     Otaku: 
+     Otaku: "Manana paso por ti a las 6 , ponte guapa..."
      NPC: “Pide permiso porque mañana voy a pasar a las 6”
-     Toxico:
+     Toxico: ”Pide perimo para salir mañana a las 6pm”
      Gymrat:
 Opción 3:Tengo algo listo para mañana, prepárate
-     Otaku: 
+     Otaku: "Manana desbloqueas evento exclusivo conmigo."
      NPC: “Te tengo un regalo :), mañana a las 6 prepárate para ser sorprendida” 
-     Toxico:
+     Toxico: ”Te tengo una sorpresa mañana a las 6pm, alistate”
      Gymrat:
 Opción 4:  Mañana hay que salir, ¿verdad?
-     Otaku: 
+     Otaku: "Supongo que manana continua esta situacion rara entre nosotros."
      NPC: “Entonces, ¿mañana hay plan o no?
-     Toxico:
+     Toxico: ”Oye, mañana teniamos que hacer algo?”
      Gymrat:
 
 D6E1: 
 Llega el mesero a tomar su orden, Ya están listos para ordenar?
 
 Opción 1: Contestas normal
-     Otaku: 
+     Otaku: "haiii, quiero crunchyroll para los dos"
      NPC: “Si, nos gustarían los rollos especiales de San Valentin“
-     Toxico:
+     Toxico: "Claro, quiero un rollo california en salsa chipotle"
      Gymrat:
 Opción 2: contestas pasivo agresivo
-     Otaku: 
+     Otaku: "Hazta que llegas maid-sama :'v"
      NPC: “Desde hace como 10 minutos. Pero lo bueno que llegas” 
-     Toxico:
+     Toxico: "Pues hemos estado como 10 minutos aqui asi que yo diria que si"
      Gymrat:
-Opción 3: contestar pasiivamente:
-     Otaku: 
+Opción 3: contestar pasivamente:
+     Otaku: "Sii... que pida ella por mi..."
      NPC: "Amm, si no sé que quieraa amor..." 
-     Toxico:
+     Toxico: "Esta vez quiero que mi amor escoga por mi"
      Gymrat:
 Opción 4: le coqueteas al mesero
-     Otaku: 
+     Otaku: "Creo que este restaurante tiene demasiado  fanservice 7w7"
      NPC: "Con esos ojitos, te perdono la tardanza, vamos a querer unos rollos"
-     Toxico:
+     Toxico: "Al fin, minimo compensas la tardanza con una buena vista, seria un gohan"
      Gymrat:
 
 
@@ -501,19 +478,19 @@ D6E2:
 Sin darme cuenta mi novia me estaba preguntando sobre quien era ella
 
 Opcion 1: negarla totalmente decir que es una extraña
-    Otaku: 
+    Otaku: "Ella? Nah, literalmente NPC genérico del fondo"
     NPC: "Ah, es ahm- una conocida"
-    Toxico:
+    Toxico: "¿Sepa, tu la conoces de algo?"
     Gymrat:
 Opcion 2: Decir que es una amiga
-    Otaku: 
+    Otaku: "Es compa del server, nada mas."
     NPC: "Oh, una amiga de la escuela"
-    Toxico:
+    Toxico: "Ah si, es una amiga de mi escuela"
     Gymrat:
 Opcion 3 : decir que es una amiguita
-    Otaku: 
+    Otaku: "Ella solo es una amiguita, no le des mucha bola jeje”
     NPC: "Es una...amiguita de la escuela"
-    Toxico:
+    Toxico: "Ah si, es mi besty"
     Gymrat:
 Opcion 4: No responder
 
@@ -521,24 +498,24 @@ D6E3:
 Illeana: Holaa feliz san valentin, quien es ella???
 Que respondes? 
 Opcion 1: Decir con seguridad tu novia (neutral)
-   Otaku: 
+   Otaku: "Es mi novia, la waifu oficial del canon"
    NPC: "Ella es mi novia, [ ]"
-   Toxico:
+   Toxico: "Ella es mi novia"
    Gymrat:
 Opcion 2: Cambiar de tema (tipo solo saludas y no contestas) negativa
-   Otaku: 
+   Otaku: "Ahhh… cutscene incómoda… skip…"
    NPC: "Hola Illeana, no te había visto"
-   Toxico:
+   Toxico: "¿Que ondaaaa, como andas?"
    Gymrat:
 Opcion 3: Decir que es una amiga (MUY MALA)
-   Otaku: 
+   Otaku: "Es mi onichan nada mas"
    NPC: "Es una amiga muy cercana" 
-   Toxico:
+   Toxico: "Se podria decir que es mi mejor amiga"
    Gymrat:
 Opcion 4: Una respuesta afirmando y chuleando a tu novia (positiva)
-   Otaku: 
+   Otaku: Si, es ella… mi personaje de rango S .
    NPC: "Ah, Illiana, te presento al amor de mi vida [ ]"
-   Toxico: 
+   Toxico: "Ella es mi mujer"
    Gymrat: 
 
 D7E1: 
@@ -547,22 +524,22 @@ Te amo
 Que le contestas?
 
 Opcion 1: te amo
-    Otaku: 
+    Otaku: "Sugoiiii, te amo"
     NPC: "Yo tambien te amo, mi vida"
-    Toxico:
+    Toxico: "Yo mas preciosa hermosa"
     Gymrat:
 Opcion2: responder  neutral
-    Otaku: 
+    Otaku: "gachas hemocha"
     NPC: "Yo igual te amo"
-    Toxico:
+    Toxico: "Yo tambien te amo"
     Gymrat:
 Opcion 3: no contestar
-    Otaku: 
+    Otaku: "owo"
     NPC: "..."
-    Toxico:
+    Toxico: "Gracias..."
     Gymrat:
 Opcion 4: yo tambien
-    Otaku: 
+    Otaku: "etooo, yo tambien"
     NPC: "Si, yo tambien"
-    Toxico:
+    Toxico: "Yo tambien"
     Gymrat:
