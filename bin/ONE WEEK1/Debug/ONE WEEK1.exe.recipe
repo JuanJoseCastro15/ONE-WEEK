@@ -2,7 +2,11 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+<<<<<<< Updated upstream
       <FullPath>C:\Users\Usuario\Oneweeken64.7\bin\Debug\ONE WEEK1.exe</FullPath>
+=======
+      <FullPath>C:\Users\Usuario\Oneweeken64.11\bin\Debug\ONE WEEK1.exe</FullPath>
+>>>>>>> Stashed changes
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

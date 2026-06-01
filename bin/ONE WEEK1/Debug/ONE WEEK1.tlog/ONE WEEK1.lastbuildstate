@@ -1,2 +1,7 @@
+<<<<<<< Updated upstream
 PlatformToolSet=v145:VCToolArchitecture=Native64Bit:VCToolsVersion=14.51.36231:VCServicingVersionATL=14.51.36243:VCServicingVersionCrtHeaders=14.51.36243:VCServicingVersionCompilers=14.51.36243:TargetPlatformVersion=10.0.26100.0:
 Debug|x64|C:\Users\Usuario\Oneweeken64.7\src\|
+=======
+PlatformToolSet=v145:VCToolArchitecture=Native64Bit:VCToolsVersion=14.51.36231:VCServicingVersionATL=14.51.36244:VCServicingVersionCrtHeaders=14.51.36244:VCServicingVersionCompilers=14.51.36246:TargetPlatformVersion=10.0.26100.0:
+Debug|x64|C:\Users\Usuario\Oneweeken64.11\src\|
+>>>>>>> Stashed changes

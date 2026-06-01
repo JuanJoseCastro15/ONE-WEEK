@@ -958,7 +958,11 @@ void procesarRegalo(
 
         cout << "Le diste un regalo a tu novia." << endl;
 
+<<<<<<< Updated upstream
         mitilina.mostrar();
+=======
+		
+>>>>>>> Stashed changes
 
         scene = siguienteScene;
     }
@@ -1142,7 +1146,11 @@ void procesarDecision(
            mitilina.actualizarAmor();
        }
 
+<<<<<<< Updated upstream
        mitilina.mostrar();
+=======
+		
+>>>>>>> Stashed changes
 
         if (mitilina.relacionTerminada()) {
             scene = 199;

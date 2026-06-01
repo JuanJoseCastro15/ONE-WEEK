@@ -31,7 +31,9 @@ void Novia::modificarFelicidad(int valor) {
     if (Felicidad < 0)
         Felicidad = 0;
 }
-
+void Novia::modificarFelicidad() {
+    Felicidad += 1;
+}
 void Novia::actualizarAmor() {
 
     Amor = 70 + ((Confianza - 100) + (Felicidad - 100)) / 2;
@@ -43,11 +45,7 @@ void Novia::actualizarAmor() {
         Amor = 0;
 }
 
-void Novia::mostrar() {
-    cout << "Confianza: " << Confianza << endl;
-    cout << "Felicidad: " << Felicidad << endl;
-    cout << "Amor: " << Amor << endl;
-}
+
 
     //agregue esta funcion para ver si te terminan depues de tomar una decision
 
