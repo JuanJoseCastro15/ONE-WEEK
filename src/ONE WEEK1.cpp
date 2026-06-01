@@ -174,7 +174,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e4.op1 = L"Acercarme mientras hago poses chistosas";
 		e4.op2 = L"Acercarse y decir: Esperaste mucho por mi?";
 		e4.op3 = L"Saludar rápido";
-		e4.op4 = L"Hola… Alicia?";
+		e4.op4 = L"Hola... Alicia?";
 	}
 	else if (clase == 1) { //NPC
 		e4.op1 = L"Acercarme con una sonrisa";
@@ -466,7 +466,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	if (clase == 0) { //TOXICO
 
-		e11.op1 = L"Pues si tomar un licuado es desayunar, entonces sí.";
+		e11.op1 = L"Pues si tomar un licuado es desayunar,\nentonces sí.";
 		e11.op2 = L"Y eso a ti qué te importa?";
 		e11.op3 = L"De hecho no, ayer se me revolvió el estómago";
 		e11.op4 = L"*ignorarla*";
@@ -514,7 +514,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	if (clase == 0) { //TOXICO
 
-		e12.op1 = L"Yo creo que sí, igual ya tengo a alguien más en mente";
+		e12.op1 = L"Yo creo que sí, igual ya tengo a alguien más\nen mente";
 		e12.op2 = L"Cómo por?, claro que no";
 		e12.op3 = L"Tendré que pensarlo";
 		e12.op4 = L"*Contemplar el panorama completo mientras\n"
@@ -552,7 +552,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	Escenario e13;
 
-	e13.pregunta = L"Te sientes culpable..decides buscarla";
+	e13.pregunta = L"Te sientes culpable... decides buscarla";
 
 	//Pendiente de cambios
 	e13.imp1 = 0;
@@ -574,7 +574,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e13.op1 = L"Ay no, debo mandarle mensaje";
 		e13.op2 = L"Ay no, debo hablar con ella, debería marcarle";
 		e13.op3 = L"Que desastre";
-		e13.op4 = L"Debo…debo hablar con alguien. Illeana quizá este libre";
+		e13.op4 = L"Debo... Debo hablar con alguien. Illeana quizá este libre";
 
 	}
 	else if (clase == 2) { //GYMRAT
@@ -611,10 +611,10 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	if (clase == 0) { //TOXICO
 
-		e14.op1 = L"Puedo demostrar cuan arrepentido estoy con un abrazo?";
-		e14.op2 = L"*le besas la frente*";
+		e14.op1 = L"Puedo demostrar cuan arrepentido estoy con\n un abrazo?";
+		e14.op2 = L"*Le besas la frente*";
 		e14.op3 = L"Me aceptas un beso?";
-		e14.op4 = L"Bueno, ya hice mi trabajo, ya estamos bien, no?";
+		e14.op4 = L"Bueno, ya hice mi trabajo, ya estamos bien,\n no?";
 
 	}
 	else if (clase == 1) { //NPC
@@ -668,7 +668,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 		e15.op1 = L"Discúlpame, no esperaba que apareciera";
 		e15.op2 = L"No quise dejarte así, perdóname";
-		e15.op3 = L"Así que..cómo te fue con la tarea?";
+		e15.op3 = L"Así que... Cómo te fue con la tarea?";
 		e15.op4 = L"Oye, ayer me metiste en un problemón";
 
 	}
@@ -676,7 +676,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 		e15.op1 = L"Disculpa, mi novia a veces es así";
 		e15.op2 = L"Perdón por dejarte plantada, no fue mi intención";
-		e15.op3 = L"Ey, cómo estás? todo bien?";
+		e15.op3 = L"Ey, cómo estás? Todo bien?";
 		e15.op4 = L"Sabes que me has metido en problemas";
 	}
 	else if (clase == 3) { //OTAKU
@@ -705,7 +705,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e16.op1 = L"Rosas, un clásico";
 		e16.op2 = L"Girasoles, el más barato";
 		e16.op3 = L"Tulipanes, a algunos les gusta";
-		e16.op4 = L"Flores beso, el nombre  y la apariencia se ven interesantes";
+		e16.op4 = L"Flores beso, el nombre  y la apariencia se ven\n interesantes";
 
 	}
 	else if (clase == 1) { //NPC
@@ -874,7 +874,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	//Dia6 Escenario 3
 	Escenario e20;
 
-	e20.pregunta = L"Illeana: Holaa feliz san valentín{NOMBRE},\nquién es ella??? *Qué respondes?*";
+	e20.pregunta = L"Illeana: Holaa feliz san valentín {NOMBRE},\nquién es ella??? *Qué respondes?*";
 	e20.imp1 = 2;
 	e20.imp2 = -2;
 	e20.imp3 = -5;
@@ -893,7 +893,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e20.op1 = L"Ella es mi novia";
 		e20.op2 = L"Hola Illeana, no te había visto";
 		e20.op3 = L"Es una amiga muy cercana";
-		e20.op4 = L"Ah, Illiana, te presento al amor de mi vida";
+		e20.op4 = L"Ah, Illeana, te presento al amor de mi vida";
 
 	}
 	else if (clase == 2) { //GYMRAT
@@ -907,9 +907,9 @@ vector<Escenario> cargarHistoria(int clase) {
 	else if (clase == 3) { //OTAKU
 
 		e20.op1 = L"Es mi novia, la waifu oficial del canon";
-		e20.op2 = L"Ahhh… cutscene incómoda… skip…";
+		e20.op2 = L"Ahhh… cutscene incómoda... Skip...";
 		e20.op3 = L"Es mi onichan nada mas";
-		e20.op4 = L"Si, es ella… mi personaje de rango S";
+		e20.op4 = L"Si, es ella... Mi personaje de rango S";
 
 	}
 
@@ -927,7 +927,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 		e21.op1 = L"Te amo";
 		e21.op2 = L"Ah ok";
-		e21.op3 = L". . .";
+		e21.op3 = L"...";
 		e21.op4 = L"Yo igual";
 
 	}
@@ -997,8 +997,6 @@ void procesarRegalo(
 	if (regaloElegido) {
 
 		cout << "Le diste un regalo a tu novia." << endl;
-
-		mitilina.mostrar();
 
 		scene = siguienteScene;
 	}
@@ -1232,8 +1230,6 @@ void procesarDecision(
 			mitilina.modificarConfianza(impacto);
 			mitilina.actualizarAmor();
 		}
-
-		mitilina.mostrar();
 
 		if (mitilina.relacionTerminada()) {
 			scene = 199;
@@ -2086,7 +2082,7 @@ int main() {
 		L"Comenzamos a andar desde la prepa, pero ahora que comenzamos la universidad\n"
 		L"la he notado un poco rara, lastimosamente no quedamos en la misma universidad pero\n"
 		L"al menos puedo verla despues de clases. Y asi empezamos nuestra primera semana a\n"
-		L"distancia,no creo que nos vaya tan mal... eso espero...",
+		L"distancia,no creo que nos vaya tan mal... Eso espero...",
 		false,
 		true,
 		false,
@@ -2204,7 +2200,7 @@ L"",
 	escenas[15] = SceneData{
 		&bg12,
 		L"Que día tan interesante. Primer día de uni, y de mi \n"
-		L"ueva vida...\n"
+		L"nueva vida...\n"
 		L"\n\n"
 		L"Sencillamente perfecto.",
 		false,
@@ -2413,7 +2409,7 @@ L"",
 &bg29,
 L"Guardo el celular.\n"
 L"No sé por que...\n"
-L"pero esa pregunta se sintió más pesada de lo normal.\n"
+L"Pero esa pregunta se sintió más pesada de lo normal.\n"
 L"Como si ella hubiera notado algo que ni yo entiendo todavía.\n"
 L"Creo que es mejor alistarme para clases.",
 	false,
@@ -2494,7 +2490,7 @@ L"pequeña incomodidad en el pecho.",
 
 	escenas[44] = SceneData{
 		&bg33,
-		L"\"Gracias {NOMBRE}...no pensé que dirías que sí tan fácil\"\n\n"
+		L"\"Gracias {NOMBRE}... No pensé que dirías que sí tan fácil\"\n\n"
 		L"\"El domingo te mando la info\"",
 		false,
 		true,
@@ -2519,7 +2515,7 @@ L"pequeña incomodidad en el pecho.",
 		&bg6,
 		L"Seguimos hablando hasta que empezaron las clases.\n"
 		L"Pero siento que algo cambió...\n"
-		L"y no sé si fue para bien.",
+		L"Y no sé si fue para bien.",
 		false,
 		true,
 		false,
@@ -2799,7 +2795,7 @@ L"\"Hoy es un día importante...\"",
 	escenas[75] = SceneData{
 		&bg53,
 		L"Me di cuenta de lo mal que se veía y me consumieron las emociones.\n"
-		L"Al ver a las dos, hui  ..como buena gallina .",
+		L"Al ver a las dos, huí... Como buena gallina .",
 		false,
 		true,
 		false,
@@ -2808,7 +2804,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[76] = SceneData{
 		&bg29,
-		L"Al llegar a casa, corri a mi cuarto. Mi telefono estaba en mi cama",
+		L"Al llegar a casa, corrí a mi cuarto. Mi telefono estaba en mi cama",
 		false,
 		true,
 		false,
@@ -2817,7 +2813,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[77] = SceneData{
 		&bg55,
-		L"... ay no",
+		L"... Ay no",
 		false,
 		true,
 		false,
@@ -2837,7 +2833,7 @@ L"\"Hoy es un día importante...\"",
 	escenas[79] = SceneData{
 		&bg12,
 		L"\"Ha sido un dia horroroso.\" \n"
-		L"Luego de quedarme un rato despierto, mejor decidi, descansar,\n"
+		L"Luego de quedarme un rato despierto, mejor decidí, descansar,\n"
 		L"es mejor arreglar esto con la mente despejada.",
 		false,
 		true,
@@ -2956,7 +2952,7 @@ L"\"Hoy es un día importante...\"",
 	escenas[91] = SceneData{
 			&bg6,
 			L"Pasaron las clases y me dí cuenta que faltaba un día para el 14 de\n"
-			L"febrero y no he comprado nada de regalo... debería ir a la florería\n",
+			L"febrero y no he comprado nada de regalo... Debería ir a la florería\n",
 			false,
 			true,
 			false,
@@ -3064,7 +3060,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[103] = SceneData{
 		   &bg10,
-		   L"Como quería estar libre para el día de hoy, estuve trabajando en todos mis\n pendientes por la noche terminando muy tarde. Asi que hoy me levanté\n tarde para poder descansar bien, al fin y al cabo hoy es\n sabado y es 14 de febrero.",
+		   L"Como quería estar libre para el día de hoy, estuve trabajando en todos mis\n pendientes por la noche terminando muy tarde. Así que hoy me levanté\n tarde para poder descansar bien, al fin y al cabo hoy es\n sabado y es 14 de febrero.",
 		   false,
 		   true,
 		   false,
@@ -3100,7 +3096,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[107] = SceneData{
 		   &bg74,
-		   L"omggg que hermosas",
+		   L"Omggg que hermosas",
 		   false,
 		   true,
 		   false,
@@ -3118,7 +3114,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[109] = SceneData{
 		   &bg76,
-		   L"*Me contó que hizo muchas amigas  y que\nla están saturando de proyectos pero aún así tiene tiempo para verme*",
+		   L"*Me contó que hizo muchas amigas y que\nla están saturando de proyectos pero aún así tiene tiempo para verme*",
 		   false,
 		   true,
 		   false,
@@ -3155,7 +3151,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[113] = SceneData{
 		&bg88,
-		L"Volteo y era Illeana, celebrando con unas amigas\nque le estaban echando carrilla,  me quede congelado",
+		L"Volteo y era Illeana, celebrando con unas amigas\nque le estaban echando carrilla, me quedé congelado",
 		false,
 		true,
 		false,
@@ -3239,8 +3235,8 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[122] = SceneData{
 		   &bg89,
-		   L"El camino se sintió tenso, apenas y me habló en el  carro\n\n"
-		   L"Novia:  Mañana será nuestro aniversario, no quiero pelear, olvidemos esto por hoy.\n Nuestra conversación quedó en esas y regresé a mi casa",
+		   L"El camino se sintió tenso, apenas y me habló en el carro\n\n"
+		   L"Novia: Mañana será nuestro aniversario, no quiero pelear, olvidemos esto por hoy.\n Nuestra conversación quedó en esas y regresé a mi casa",
 		   false,
 		   true,
 		   false,
@@ -3285,7 +3281,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[127] = SceneData{
 		&bg10,
-		L"...Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes;\n de Illiana y mi novia:",
+		L"... Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes;\nde Illiana y mi novia:",
 		false,
 		true,
 		false,
@@ -3367,7 +3363,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[136] = SceneData{
 		&bg10,
-		L"“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio\n con Ileana siento que soy yo mismo y me\n quieren ser como soy…\n\n Con quién me voy?",
+		L"“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio\n con Ileana siento que soy yo mismo y me\n quiere ser como soy...\n\nCon quién me voy?",
 		false,
 		true,
 		false,
@@ -3385,7 +3381,7 @@ L"\"Hoy es un día importante...\"",
 
 	escenas[138] = SceneData{
 		&bg94,
-		L"Fui a la cita con mi novia, después de hablar arreglamos las cosas.\n Ha asado mucho tiempo desde entonces y por fin obtuvimos \n nuestro final feliz. ",
+		L"Fui a la cita con mi novia, después de hablar arreglamos las cosas.\n Han pasado mucho tiempo desde entonces y por fin obtuvimos \n nuestro final feliz. ",
 		false,
 		true,
 		false,
@@ -3417,7 +3413,7 @@ L"\"Hoy es un día importante...\"",
 	};
 	escenas[142] = SceneData{
 		&bg98,
-		L"Me fui con Illeana, y ese mismo dia mi novia me termino. \n Con el tiempo me empareje con Illiana pero todo habia sido una broma\n que hizo con sus amigos. Me humillaron.",
+		L"Me fui con Illeana, y ese mismo dia mi novia me termino. \n Con el tiempo me empareje con Illeana pero todo habia sido una broma\n que hizo con sus amigos. Me humillaron.",
 		false,
 		true,
 		false,
@@ -3679,11 +3675,13 @@ L"\"Hoy es un día importante...\"",
 
 						if (zonaAlarma1.contains(mousePos)) {
 							scene = 7;
+							mitilina.modificarFelicidad();
 							continue;
 						}
 
 						else if (zonaAlarma2.contains(mousePos)) {
 							scene = 7;
+							mitilina.modificarFelicidad();
 							continue;
 						}
 					}
