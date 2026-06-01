@@ -31,9 +31,17 @@ void Novia::modificarFelicidad(int valor) {
     if (Felicidad < 0)
         Felicidad = 0;
 }
+<<<<<<< HEAD
 void Novia::modificarFelicidad() {
     Felicidad += 1;
 }
+=======
+
+void Novia::modificarFelicidad() {
+    Felicidad += 1;
+}
+
+>>>>>>> b5a15ad3008740d684471c53614442e5e5cfb646
 void Novia::actualizarAmor() {
 
     Amor = 70 + ((Confianza - 100) + (Felicidad - 100)) / 2;
@@ -45,7 +53,10 @@ void Novia::actualizarAmor() {
         Amor = 0;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b5a15ad3008740d684471c53614442e5e5cfb646
 
     //agregue esta funcion para ver si te terminan depues de tomar una decision
 

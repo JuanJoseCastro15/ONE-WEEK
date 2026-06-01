@@ -10,10 +10,18 @@ public:
 
     void modificarConfianza(int valor);
 
+    
     void modificarFelicidad(int valor);
+<<<<<<< HEAD
     void modificarFelicidad();
     void actualizarAmor();
 
+=======
+
+    void modificarFelicidad();
+
+    void actualizarAmor();
+>>>>>>> b5a15ad3008740d684471c53614442e5e5cfb646
 
     //agregue esta funcion para ver si te terminan depues de tomar una decision
 
