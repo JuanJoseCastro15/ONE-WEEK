@@ -11,7 +11,4 @@ One week consiste en un simulador de citas, al estilo comedia romántica donde t
 Instalar toda la rama main 
 
 
-Correr el ONE WEEK1.cpp
-
-
-Ejecutar el ONE WEEK1.exe en la carpeta bin
+Ejecutar el .exe de la libreria bin/Debug
