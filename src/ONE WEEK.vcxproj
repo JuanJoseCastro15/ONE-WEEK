@@ -146,6 +146,9 @@ sfml-audio-d.lib
 sfml-window-d.lib;
 sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y /d "$(ProjectDir)..\lib\SFML\debug\*.dll" "$(TargetDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -164,6 +167,9 @@ sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependen
       <AdditionalLibraryDirectories>$(SolutionDir)../libs/SFML/lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y /d "$(ProjectDir)..\lib\SFML\release\*.dll" "$(TargetDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Clases.cpp" />
