@@ -14,12 +14,13 @@ using namespace std;
 struct Escenario {
 	wstring pregunta;
 	wstring op1, op2, op3, op4;
-	int imp1, imp2, imp3, imp4;
-
+	int imp1 = 0, imp2 = 0, imp3 = 0, imp4 = 0;
 };
 
 vector<Escenario> cargarHistoria(int clase) {
 	vector <Escenario> h;
+
+	//Dia 1
 	Escenario e0;
 	e0.pregunta = L"Ring * Te llega un mensaje de tu novia * : Buenos días {NOMBRE}!!!"; //toxico =1, npc = 1, gymrat =2, otaku = 3
 
@@ -56,7 +57,6 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	h.push_back(e0);
 
-	//escena 2
 	Escenario e1;
 	e1.pregunta = L"Te he visto por aquí, pero no en clases * comienza a acercarse *\nCómo te llamas?";
 
@@ -124,6 +124,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e2.op3 = L"El estreno de la nueva temporada de\nMy Dress-Up Darling?";
 		e2.op4 = L"Sigue molestando y te anotaré\nen mi libreta >;v";
 	}
+
 	h.push_back(e2);
 
 	Escenario e3;
@@ -302,10 +303,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	h.push_back(e7);
 
 
-
 	//Dia 3
-	// Dentro de cargarHistoria(), después de e7
-
 	Escenario e8;
 
 	e8.pregunta = L"Buenos días <3\n"
@@ -318,43 +316,33 @@ vector<Escenario> cargarHistoria(int clase) {
 	e8.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e8.op1 = L"Todo bien amor, solo te extrañaba.";
 		e8.op2 = L"Sí, solo fue un dia algo cansado.";
 		e8.op3 = L"See...";
 		e8.op4 = L"Nada que te importe.";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e8.op1 = L"Perdón amor, creo que solo estaba cansado.\nTe prometo que estoy bien.";
 		e8.op2 = L"Todo bien, solo tuve un dia pesado.";
 		e8.op3 = L"Sí, estoy bien.";
 		e8.op4 = L"No pasa nada, no te preocupes.";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e8.op1 = L"Todo bien preciosa,\nsolo ando destruido del gym.";
 		e8.op2 = L"Solo tuve un dia pesado.";
 		e8.op3 = L"Estoy bien.";
 		e8.op4 = L"Nah, todo normal.";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e8.op1 = L"Todo bien mi waifu hermosa UwU";
 		e8.op2 = L"Solo andaba sin energía ayer.";
 		e8.op3 = L"Toy bien.";
 		e8.op4 = L"Nada importante nya.";
-
 	}
+
 	h.push_back(e8);
 
-	// =========================
-	// DIA 3 - ESCENA 2
-	// =========================
-
+	//Dia 3
 	Escenario e9;
 
 	e9.pregunta = L"Illeana me mira directamente.\n"
@@ -366,43 +354,31 @@ vector<Escenario> cargarHistoria(int clase) {
 	e9.imp4 = 0;
 
 	if (clase == 0) { //TOXICO
-
 		e9.op1 = L"Claro, te paso mi numero y lo que quieras.";
 		e9.op2 = L"Eh... si quieres.";
 		e9.op3 = L"Va, a mi novia le agradara\n que haga amistades.";
 		e9.op4 = L"Bueno.";
-
 	}
 	else if (clase == 1) { // NPC
-
 		e9.op1 = L"Claro, toma.";
 		e9.op2 = L"Mmm... sí, supongo.";
 		e9.op3 = L"Bueno, pero cobrare por mensaje.";
 		e9.op4 = L"Eh... claro.";
-
 	}
 	else if (clase == 2) { // GYMRAT
-
 		e9.op1 = L"Claro.";
 		e9.op2 = L"Va, pero casi no reviso el cel.";
 		e9.op3 = L"Solo si mandas memes fitness.";
 		e9.op4 = L"Sí... toma.";
-
 	}
 	else if (clase == 3) { // OTAKU
-
 		e9.op1 = L"Chi UwU";
 		e9.op2 = L"Mmm... bueno nya.";
 		e9.op3 = L"Solo si no haces spam.";
 		e9.op4 = L"E-esta bien.";
-
 	}
 
 	h.push_back(e9);
-
-	// =========================
-	// DIA 3 - ESCENA 3
-	// =========================
 
 	Escenario e10;
 
@@ -414,187 +390,145 @@ vector<Escenario> cargarHistoria(int clase) {
 	e10.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e10.op1 = L"Obvio, feliz cumpleaños";
 		e10.op2 = L"Feliz aniversario!";
 		e10.op3 = L"El día que nos conocimos?";
 		e10.op4 = L"Claro, era... este... ajá...";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e10.op1 = L"\"Obvio, feliz cumpleaños\"";
 		e10.op2 = L"\"Feliz aniversario...\"";
 		e10.op3 = L"\"El primer día que hablamos?\"";
 		e10.op4 = L"\"Eh... era una cita cualquiera?\"";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e10.op1 = L"\"Obvio, feliz cumpleaños\"";
 		e10.op2 = L"\"Feliz aniversario preciosa\"";
 		e10.op3 = L"\"Cuándo nos conocimos?\"";
 		e10.op4 = L"\"Era una salida?\"";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e10.op1 = L"\"Obvio waifu, feliz cumpleaños UwU\"";
 		e10.op2 = L"\"Feliz aniversario nya\"";
 		e10.op3 = L"\"El inicio de nuestro arco?\"";
 		e10.op4 = L"\"Era relleno?\"";
-
 	}
 
 	h.push_back(e10);
 
 	//Dia 4
-	//Escena1
-
 	Escenario e11;
 
 	e11.pregunta = L"";
 
-	//Pendiente de cambios,
 	e11.imp1 = 0;
 	e11.imp2 = -2;
 	e11.imp3 = -3;
 	e11.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e11.op1 = L"Pues si tomar un licuado es desayunar,\nentonces sí.";
 		e11.op2 = L"Y eso a ti qué te importa?";
 		e11.op3 = L"De hecho no, ayer se me revolvió el estómago";
 		e11.op4 = L"*ignorarla*";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e11.op1 = L"Sí, y tu?";
 		e11.op2 = L"Lindo saber que te importa, creí que\nibas a estar muy ocupada";
 		e11.op3 = L"No he tenido hambre, he tenido un día muy malo";
 		e11.op4 = L"*Dejarla en visto*";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e11.op1 = L"Sí, un licuado de proteína y 7 huevos\n revueltos :D";
 		e11.op2 = L"¿Qué te importa?";
 		e11.op3 = L"Últimamente se me revuelve el estómago";
 		e11.op4 = L"*ignorarla*";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e11.op1 = L"Chi";
 		e11.op2 = L"Todo bien, baka :/";
 		e11.op3 = L"Me he sentido un poco down  T.T";
 		e11.op4 = L"*Dejarla en visto*";
-
 	}
 
 	h.push_back(e11);
-
-	//Escena2
 
 	Escenario e12;
 
 	e12.pregunta = L"Cómo te sentiste después de eso?\n"
 		L"Supongo que muy feo, terminarás con ella? No seas migajero {NOMBRE}.";
 
-	//Pendiente de cambios
 	e12.imp1 = -5;
 	e12.imp2 = 4;
 	e12.imp3 = 0;
 	e12.imp4 = 2;
 
 	if (clase == 0) { //TOXICO
-
 		e12.op1 = L"Yo creo que sí, igual ya tengo a alguien más\nen mente";
 		e12.op2 = L"Cómo por?, claro que no";
 		e12.op3 = L"Tendré que pensarlo";
 		e12.op4 = L"*Contemplar el panorama completo mientras\n"
 			L"*mantiene una mirada fija a algún lugar*";
 	}
-
 	else if (clase == 1) { //NPC
-
 		e12.op1 = L"Sí, creo que sí";
 		e12.op2 = L"Han pasado muchas cosas, no creo que sea\npara tanto";
 		e12.op3 = L"Hemos estado juntos mucho tiempo, debo\npensarlo";
 		e12.op4 = L"...";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e12.op1 = L"Creo que sí ... fue bueno mientras duró";
 		e12.op2 = L"Por supuesto que no";
 		e12.op3 = L"Es una decisión difícil, debo pensarlo";
 		e12.op4 = L"*Alza la vista al cielo pensando*";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e12.op1 = L"Chi UnU";
 		e12.op2 = L"Baka, no creo que sea tanto";
 		e12.op3 = L"No lo se Illeana-chan";
 		e12.op4 = L"*hacer ruidos raros*";
-
 	}
 
 	h.push_back(e12);
-
-	//Escena3
-
+	
 	Escenario e13;
 
 	e13.pregunta = L"Te sientes culpable... decides buscarla";
 
-	//Pendiente de cambios
 	e13.imp1 = 0;
 	e13.imp2 = 3;
 	e13.imp3 = -4;
 	e13.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e13.op1 = L"No puede ser, ni modo, toca disculparme";
 		e13.op2 = L"Perfecto, tengo que llamarle para disculparme";
 		e13.op3 = L"Mmm, ya me enojé luego lo intento arreglar";
 		e13.op4 = L"Mejor intento pescar un nuevo pez,\n"
 			L"Illeana suena a una buena opción";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e13.op1 = L"Ay no, debo mandarle mensaje";
 		e13.op2 = L"Ay no, debo hablar con ella, debería marcarle";
 		e13.op3 = L"Que desastre";
 		e13.op4 = L"Debo... Debo hablar con alguien. Illeana quizá\nesté libre";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e13.op1 = L"Necesito mandarle mensaje, no quiero que\nestemos mal";
 		e13.op2 = L"Necesito marcarle, es urgente";
 		e13.op3 = L"*Te pones a hacer lagartijas*";
 		e13.op4 = L"Ileana me comprende más, debería hablarle";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e13.op1 = L"Ooh oh, debo mandarle mensaje a mi sempai";
 		e13.op2 = L"No puede ser, le debo marcar a mi novia-chan";
 		e13.op3 = L"*te pones a ver anime*";
 		e13.op4 = L"Debería buscar a Illeana-chan, ella sí me\nentiende";
-
 	}
 
 	h.push_back(e13);
 
-	//Dia5 Escenario1
-
+	//Dia5
 	Escenario e14;
 
 	e14.pregunta = L"“Sé que la regue  y disculpame, actué por impulso y no pienso lo que hago.\n"
@@ -607,42 +541,33 @@ vector<Escenario> cargarHistoria(int clase) {
 	e14.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e14.op1 = L"Puedo demostrar cuan arrepentido estoy con\n un abrazo?";
 		e14.op2 = L"*Le besas la frente*";
 		e14.op3 = L"Me aceptas un beso?";
 		e14.op4 = L"Bueno, ya hice mi trabajo, ya estamos bien,\n no?";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e14.op1 = L"Me aceptas un abrazo como disculpa?";
 		e14.op2 = L"*le da un beso en la frente*";
 		e14.op3 = L"Un beso de reconciliacion?";
 		e14.op4 = L"Bueno, ya lo arreglamos, no?";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e14.op1 = L"*Te acercas y la abrazas*";
 		e14.op2 = L"*Te acercas y le das un beso en la frente*";
 		e14.op3 = L"*Te acercas y la besas*";
 		e14.op4 = L"Bueno, ya nos arreglamos, no?";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e14.op1 = L"Podrías perdonar a este terroncito de azúcar\n"
 			L"con un abrazo";
 		e14.op2 = L"*Le da un beso de manera kawaii*";
 		e14.op3 = L"Un besito de reconciliación, waifu-chan?";
 		e14.op4 = L"Ash, ya lo arreglamos baka?";
-
 	}
 
 	h.push_back(e14);
 
-	//Dia5 Escenario2
 	Escenario e15;
 
 	e15.pregunta = L"Como de costumbre, milagrosamente te encontraste a Illeana.\n"
@@ -654,7 +579,6 @@ vector<Escenario> cargarHistoria(int clase) {
 	e15.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e15.op1 = L"Perdón por la aparición de mi novia\n"
 			L"a veces es molesta";
 		e15.op2 = L"Perdón por irme sin explicación";
@@ -662,32 +586,26 @@ vector<Escenario> cargarHistoria(int clase) {
 		e15.op4 = L"Oye, por tu culpa me tuve que disculpar";
 	}
 	else if (clase == 1) { //NPC
-
 		e15.op1 = L"Discúlpame, no esperaba que apareciera";
 		e15.op2 = L"No quise dejarte así, perdóname";
 		e15.op3 = L"Así que... Cómo te fue con la tarea?";
 		e15.op4 = L"Oye, ayer me metiste en un problemón";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e15.op1 = L"Disculpa, mi novia a veces es así";
-		e15.op2 = L"Perdón por dejarte plantada, no fue mi intención";
+		e15.op2 = L"Perdón por dejarte plantada, no fue mi\nintención";
 		e15.op3 = L"Ey, cómo estás? Todo bien?";
 		e15.op4 = L"Sabes que me has metido en problemas";
 	}
 	else if (clase == 3) { //OTAKU
-
 		e15.op1 = L"Perdón que mi novia nos interrumpiera\nIlleana-chan";
 		e15.op2 = L"Perdón por dejarte plantada como árbol";
 		e15.op3 = L"Ya viste YBC? 7w7";
 		e15.op4 = L"Oi oi oi, me metiste en problemas";
-
 	}
 
 	h.push_back(e15);
 
-	//Dia5 Escenario3
 	Escenario e16;
 
 	e16.pregunta = L"Llegando, notaste muchas flores bonitas, cuál escoges?";
@@ -698,42 +616,32 @@ vector<Escenario> cargarHistoria(int clase) {
 	e16.imp4 = -2;
 
 	if (clase == 0) { //TOXICO
-
 		e16.op1 = L"Rosas, un clásico";
 		e16.op2 = L"Girasoles, el más barato";
 		e16.op3 = L"Tulipanes, a algunos les gusta";
 		e16.op4 = L"Flores beso, el nombre  y la apariencia se ven\n interesantes";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e16.op1 = L"La rosa es una flor muy clásica";
 		e16.op2 = L"Los girasoles brindan mucha alegría";
 		e16.op3 = L"Los tulipanes representan el amor\n perfecto, no?";
 		e16.op4 = L"Es muy única";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e16.op1 = L"Las rosas siempre son las mejores";
 		e16.op2 = L"Unos brillantes girasoles estarían bien, no?";
 		e16.op3 = L"Los tulipanes son bastante hermosos";
-		e16.op4 = L"Las flores beso son tan buenas como \nel ejercicio";
-
+		e16.op4 = L"Las flores beso son tan buenas como\nel ejercicio";
 	}
 	else if (clase == 3) { //OTAKU
-
 		e16.op1 = L"Supongo que las rosas le gustarán";
 		e16.op2 = L"Los girasoles como la frase: gira, gira\n tu calzón";
 		e16.op3 = L"Los tulipanes son hemochos uwu";
 		e16.op4 = L"Es al más barata, podre usar lo demás\n para un manga";
-
 	}
 
 	h.push_back(e16);
 
-
-	//Dia5 Escenario4
 	Escenario e17;
 
 	e17.pregunta = L"Le escribes";
@@ -744,41 +652,33 @@ vector<Escenario> cargarHistoria(int clase) {
 	e17.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e17.op1 = L"Ponte linda, mañana paso por ti a las 6pm";
 		e17.op2 = L"Pide permiso para salir mañana a las 6pm";
 		e17.op3 = L"Te tengo una sorpresa mañana a las 6pm,\n alístate";
 		e17.op4 = L"Oye, mañana teníamos que hacer algo?";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e17.op1 = L"Prepárate. Mañana paso por ti a las 6 ;)";
 		e17.op2 = L"Pide permiso porque mañana voy a pasar a\n las 6";
 		e17.op3 = L"Te tengo un regalo :), mañana a las 6\n prepárate para ser sorprendida";
 		e17.op4 = L"Entonces, mañana hay plan o no?";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e17.op1 = L"Mañana tú y yo, 6pm, para que estés lista";
 		e17.op2 = L"Oye, pide permiso, mañana pasaré por ti\n a las 6";
 		e17.op3 = L"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6";
 		e17.op4 = L"Te parece si no voy al gym mañana y\n salimos? Cómo a las 6?";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e17.op1 = L"Sempaiiii, mañana a las 6 OwO";
 		e17.op2 = L"Mañana paso por ti a las 6 , ponte\n guapa...";
 		e17.op3 = L"Mañana desbloqueas evento exclusivo\n conmigo.";
 		e17.op4 = L"Supongo que mañana continua esta situacion\n rara entre nosotros.";
-
 	}
 
 	h.push_back(e17);
 
-	//Dia6 Escenario 1
+	//Dia6 
 	Escenario e18;
 
 	e18.pregunta = L"*Llega el mesero a tomar su orden*,\n”Ya están listos para ordenar?”";
@@ -789,7 +689,6 @@ vector<Escenario> cargarHistoria(int clase) {
 	e18.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-
 		e18.op1 = L"Claro, quiero un rollo california en salsa\nchipotle";
 		e18.op2 = L"Pues hemos estado como 10 minutos aqui,\nasi que, yo diria que sí";
 		e18.op3 = L"Esta vez quiero que mi amor escoga por mi";
@@ -797,33 +696,26 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	}
 	else if (clase == 1) { //NPC
-
 		e18.op1 = L"Si, nos gustarían los rollos especiales de San\nValentín";
 		e18.op2 = L"Desde hace como 10 minutos. Pero lo bueno\nque llegas";
 		e18.op3 = L"Amm, si no sé que quieras amor...";
 		e18.op4 = L"Con esos ojitos, te perdono la tardanza,\nvamos a querer unos rollos\"";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e18.op1 = L"Claro, deseamos unos rollos especiales de San\nValentín, con extra proteina por favor\"";
 		e18.op2 = L"Pensaba que estabas muy ocupado,\nmira quiero unos rollos San Valentín\n a las 6\"";
 		e18.op3 = L"Manana desbloqueas evento exclusivo\n conmigo.\"";
 		e18.op4 = L"Que bueno que llegas, vamos a ordenar\n unos rollos San Valentín\"";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e18.op1 = L"haiii, quiero crunchyroll para los dos";
 		e18.op2 = L"Hazta que llegas maid-sama :'v";
 		e18.op3 = L"Sii... que pida ella por mi...";
 		e18.op4 = L"Creo que este restaurante tiene demasiado\nfanservice 7w7";
-
 	}
 
 	h.push_back(e18);
 
-	//Dia6 Escenario 2
 	Escenario e19;
 
 	e19.pregunta = L"“Sin darme cuenta, mi novia me estaba preguntando sobre quién era ella.\nN: “{NOMBRE} Acaso no es la chica del otro día?”";
@@ -834,80 +726,64 @@ vector<Escenario> cargarHistoria(int clase) {
 	e19.imp4 = -2;
 
 	if (clase == 0) { //TOXICO
-
 		e19.op1 = L"¿Sepa, tu la conoces de algo?";
 		e19.op2 = L"Ah si, es una amiga de mi escuela";
 		e19.op3 = L"Ah si, es mi besty";
 		e19.op4 = L"*Te come la lengua el gato*";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e19.op1 = L"Ah, es ahm- una conocida";
 		e19.op2 = L"Oh, una amiga de la escuela";
 		e19.op3 = L"Es una...amiguita de la escuela";
 		e19.op4 = L"*No responder*";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e19.op1 = L"Sinceramente, no sé quien es, no la conozco";
 		e19.op2 = L"Mira amor ella es Illeana, de la uni";
-		e19.op3 = L"Ella es Illeana, es una amiguita de la universidad";
+		e19.op3 = L"Ella es Illeana, es una amiguita de la\nuniversidad";
 		e19.op4 = L"*No responder*";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e19.op1 = L"Ella? Nah, literalmente NPC genérico del fondo";
 		e19.op2 = L"Es compa del server, nada mas.";
 		e19.op3 = L"Ella solo es una amiguita, no le des mucha bola\njeje";
 		e19.op4 = L"*No responder*";
-
 	}
 
 	h.push_back(e19);
 
-	//Dia6 Escenario 3
 	Escenario e20;
 
 	e20.pregunta = L"Illeana: Holaa feliz san valentín {NOMBRE},\nquién es ella??? *Qué respondes?*";
+
 	e20.imp1 = 2;
 	e20.imp2 = -2;
 	e20.imp3 = -5;
 	e20.imp4 = 5;
 
 	if (clase == 0) { //TOXICO
-
 		e20.op1 = L"Ella es mi novia";
 		e20.op2 = L"Qué ondaaaa, como andas?";
 		e20.op3 = L"Se podría decir que es mi mejor amiga";
 		e20.op4 = L"Ella es mi mujer";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e20.op1 = L"Ella es mi novia";
 		e20.op2 = L"Hola Illeana, no te había visto";
 		e20.op3 = L"Es una amiga muy cercana";
 		e20.op4 = L"Ah, Illeana, te presento al amor de mi vida";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e20.op1 = L"Ileana, te presento a mi novia";
 		e20.op2 = L"Ey Ileana, no había notado tu presencia";
 		e20.op3 = L"Ella es una amiga";
 		e20.op4 = L"Ella es mi novia, mi amor, mi reina, mi\nmotivación para vivir";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e20.op1 = L"Es mi novia, la waifu oficial del canon";
 		e20.op2 = L"Ahhh… cutscene incómoda... Skip...";
 		e20.op3 = L"Es mi onichan nada mas";
 		e20.op4 = L"Si, es ella... Mi personaje de rango S";
-
 	}
 
 	h.push_back(e20);
@@ -915,58 +791,43 @@ vector<Escenario> cargarHistoria(int clase) {
 	Escenario e21;
 
 	e21.pregunta = L"Hice reservación a las 6:00 , después de todo me toca invitarte.\nTe amo\n*Qué respondes?*";
+
 	e21.imp1 = 2;
 	e21.imp2 = -2;
 	e21.imp3 = -5;
 	e21.imp4 = 5;
 
 	if (clase == 0) { //TOXICO
-
 		e21.op1 = L"Te amo";
 		e21.op2 = L"Ah ok";
 		e21.op3 = L"...";
 		e21.op4 = L"Yo igual";
-
 	}
 	else if (clase == 1) { //NPC
-
 		e21.op1 = L"Te amo";
 		e21.op2 = L"Gracias";
 		e21.op3 = L"...";
 		e21.op4 = L"Yo igual";
-
 	}
 	else if (clase == 2) { //GYMRAT
-
 		e21.op1 = L"Te amo";
 		e21.op2 = L"...Muchas gracias, me alegra que lo sientas así";
 		e21.op3 = L"...";
 		e21.op4 = L"Yo igual";
-
 	}
 	else if (clase == 3) { //OTAKU
-
 		e21.op1 = L"Te amo";
 		e21.op2 = L"Te lo agradezco";
 		e21.op3 = L"...";
 		e21.op4 = L"Yo también";
-
 	}
 
 	h.push_back(e21);
+
 	return h;
 }
 
-void procesarRegalo(
-	int& scene,
-	int siguienteScene,
-	Novia& mitilina,
-	sf::Vector2f mousePos,
-	sf::FloatRect zonaFlores,
-	sf::FloatRect zonaCarta,
-	sf::FloatRect zonaPastel,
-	sf::FloatRect zonaCollar
-) {
+void procesarRegalo(int& scene,int siguienteScene,Novia& mitilina,sf::Vector2f mousePos,sf::FloatRect zonaFlores,sf::FloatRect zonaCarta,sf::FloatRect zonaPastel,sf::FloatRect zonaCollar) {
 
 	bool regaloElegido = false;
 
@@ -1000,10 +861,7 @@ void procesarRegalo(
 }
 
 //esta funcion busca todos lugares donde este {NOMBRE} y los reemplaza por el nombre del jugador, para que no se vea tan raro en el texto
-std::wstring reemplazarNombre(
-	std::wstring texto,
-	const std::wstring& nombreJugador
-) {
+std::wstring reemplazarNombre(std::wstring texto,const std::wstring& nombreJugador) {
 	size_t pos = texto.find(L"{NOMBRE}");
 
 	while (pos != std::wstring::npos) {
@@ -1028,15 +886,7 @@ void ajustar(sf::Sprite& s, sf::Texture& t) {
 		});
 }
 
-void dibujarOpciones(
-	sf::RenderWindow& ventana,
-	sf::Text& pregunta,
-	sf::Text& op1,
-	sf::Text& op2,
-	sf::Text& op3,
-	sf::Text& op4,
-	vector<Escenario>& historia,
-	int escenarioActual,
+void dibujarOpciones(sf::RenderWindow& ventana,sf::Text& pregunta,sf::Text& op1,sf::Text& op2,sf::Text& op3,sf::Text& op4,vector<Escenario>& historia,int escenarioActual,
 	const std::wstring& nombreJugador //agrega el nombre del jugador para que se pueda usar en las preguntas y opciones
 ) {
 	if (historia.empty()) {
@@ -1103,19 +953,8 @@ struct SceneData {
 };
 
 
-void renderizarEscena(
-	sf::RenderWindow& ventana,
-	SceneData& escena,
-	sf::Text& textolore,
-	sf::Text& textoPregunta,
-	sf::Text& top1,
-	sf::Text& top2,
-	sf::Text& top3,
-	sf::Text& top4,
-	vector<Escenario>& historia,
-	int escenarioActual,
-	const std::wstring& nombreJugador
-) {
+void renderizarEscena(sf::RenderWindow& ventana,SceneData& escena,sf::Text& textolore,sf::Text& textoPregunta,sf::Text& top1,sf::Text& top2,sf::Text& top3,sf::Text& top4,
+	vector<Escenario>& historia,int escenarioActual,const std::wstring& nombreJugador) {
 
 	// dibujar fondo
 	if (escena.fondo != nullptr) {
@@ -1138,22 +977,10 @@ void renderizarEscena(
 		escena.indiceHistoria < historia.size()
 		)
 	{
-		dibujarOpciones(
-			ventana,
-			textoPregunta,
-			top1,
-			top2,
-			top3,
-			top4,
-			historia,
-			escena.indiceHistoria,
-			nombreJugador
-		);
+		dibujarOpciones(ventana,textoPregunta,top1,top2,top3,top4,historia,escena.indiceHistoria,nombreJugador);
 	}
 	else {
-
 		textoPregunta.setString(L"");
-
 		top1.setString(L"");
 		top2.setString(L"");
 		top3.setString(L"");
@@ -1161,19 +988,8 @@ void renderizarEscena(
 	}
 }
 
-void procesarDecision(
-	int& scene,
-	int siguienteScene,
-	int& escenarioActual,
-	vector<Escenario>& historia,
-	unique_ptr<Jugador>& miJugador,
-	Novia& mitilina,
-	sf::Vector2f mousePos,
-	sf::FloatRect zOp1,
-	sf::FloatRect zOp2,
-	sf::FloatRect zOp3,
-	sf::FloatRect zOp4
-) {
+void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<Escenario>& historia,unique_ptr<Jugador>& miJugador,
+	Novia& mitilina,sf::Vector2f mousePos,sf::FloatRect zOp1,sf::FloatRect zOp2,sf::FloatRect zOp3,sf::FloatRect zOp4) {
 
 	// validar historia
 	if (escenarioActual < 0 || escenarioActual >= historia.size()) {
@@ -1205,18 +1021,7 @@ void procesarDecision(
 		cout << "Escenario actual: " << escenarioActual << endl;
 		cout << "Scene actual: " << scene << endl;
 
-		bool afectaFelicidad = (escenarioActual == 0 ||
-			escenarioActual == 2 ||
-			escenarioActual == 4 ||
-			escenarioActual == 6 ||
-			escenarioActual == 8 ||
-			escenarioActual == 10 ||
-			escenarioActual == 12 ||
-			escenarioActual == 14 ||
-			escenarioActual == 16 ||
-			escenarioActual == 18 ||
-			escenarioActual == 20 
-			);
+		bool afectaFelicidad = (escenarioActual % 2 == 0);
 		if (afectaFelicidad) {
 
 			mitilina.modificarFelicidad(impacto);
@@ -1236,17 +1041,11 @@ void procesarDecision(
 }
 
 void cargarTextura(sf::Texture& textura, string ruta) {
-
 	cout << "Intentando cargar: " << ruta << endl;
-
-	if (!textura.loadFromFile(ruta)) {
-
+	if (!textura.loadFromFile(ruta)) 
 		cout << " ERROR cargando: " << ruta << endl;
-	}
-	else {
-
+	else 
 		cout << " Cargada correctamente: " << ruta << endl;
-	}
 }
 
 //Para ver si el jugador usa caracteres validos, ya que se modifico la fuente
@@ -1264,10 +1063,7 @@ bool esCaracterValido(wchar_t c) {
 	return false; // Cualquier otra cosa (números, símbolos raros) se ignora porque borre algunos
 }
 
-
-
 int main() {
-
 
 	//crear ventana
 	sf::RenderWindow ventana(sf::VideoMode({ 1080, 614 }), "ONE WEEK");
@@ -1280,30 +1076,25 @@ int main() {
 	vector<Escenario> historia;
 	int scene = 0;
 
-
 	//musica
 	sf::Music musica;
-	if (!musica.openFromFile("assets/Musica/musicalofi.mp3")) {
+	if (!musica.openFromFile("assets/Musica/musicalofi.mp3"))
 		return -1;
-	}
+
 	musica.setLooping(true);// que se repita
 	musica.setVolume(25); // volumen
 	musica.play(); //reproducir
 
 	//fuentes
 	sf::Font fuente;//cargar fuente
-	if (!fuente.openFromFile("assets/Fuentes/cute_love_regular.ttf")) { //si la fuente no se abre entonces cierra todo
+	if (!fuente.openFromFile("assets/Fuentes/cute_love_regular.ttf")) //si la fuente no se abre entonces cierra todo
 		return -1;
-	}
-
 
 	//texto lore
 	sf::Text textolore(fuente);//se carga la fuente
 	textolore.setCharacterSize(25);//tamano
 	textolore.setFillColor(sf::Color::White);//color
 	textolore.setPosition({ 150.f, 420.f });// posicion
-
-
 
 	//texto opciones y pregunta
 	sf::Text textoPregunta(fuente); //se carga la fuente
@@ -1348,10 +1139,8 @@ int main() {
 	sf::Clock relojCursor;//para que parpadee la linea del cursor
 	bool mostrarCursor = true;
 
-	// ==========================
 	// FONDOS Y TEXTURAS
-	// ==========================
-
+	
 	// fondo jugar
 	sf::Texture fondoinicio;
 	cargarTextura(fondoinicio, "assets/fondos/inicio.jpeg");
@@ -2024,16 +1813,16 @@ int main() {
 	ajustar(bg98, Illeanamalo);
 
 	//Pantallafinal
-	sf::Texture Pantallafinal;
-	cargarTextura(Pantallafinal, "assets/fondos/Pantallafinal.png");
-	sf::Sprite bg99(Pantallafinal);
-	ajustar(bg99, Pantallafinal);
-
-	//creditos
 	sf::Texture creditos;
 	cargarTextura(creditos, "assets/fondos/creditos.png");
-	sf::Sprite bg100(creditos);
-	ajustar(bg100, creditos);
+	sf::Sprite bg99(creditos);
+	ajustar(bg99, creditos);
+
+	//creditos
+	sf::Texture Pantallafinal;
+	cargarTextura(Pantallafinal, "assets/fondos/Pantallafinal.png");
+	sf::Sprite bg100(Pantallafinal);
+	ajustar(bg100, Pantallafinal);
 
 	//pausaconesc
 	sf::Texture pausaconesc;
@@ -2041,9 +1830,7 @@ int main() {
 	sf::Sprite bg101(pausaconesc);
 	ajustar(bg101, pausaconesc);
 
-	// ==========================
 	// CONFIGURACION DE ESCENAS
-	// ==========================
 
 	escenas[0] = SceneData{
 		&bg0,
@@ -2053,7 +1840,6 @@ int main() {
 		false,
 		1
 	};
-
 	escenas[1] = SceneData{
 		&bg87,
 		L"",
@@ -2062,7 +1848,6 @@ int main() {
 		false,
 		1
 	};
-
 	escenas[2] = SceneData{
 		&bg1,
 		L"",
@@ -2071,7 +1856,6 @@ int main() {
 		false,
 		3
 	};
-
 	escenas[3] = SceneData{
 		&bg2,
 		L"Tengo una bella novia. Describiría a mi novia como una chica muy alegre,\n"
@@ -2085,7 +1869,6 @@ int main() {
 		false,
 		4
 	};
-
 	escenas[4] = SceneData{
 		&bg3,
 		L"",
@@ -2094,7 +1877,6 @@ int main() {
 		true,
 		5
 	};
-
 	escenas[5] = SceneData{
 		&bg5,
 		L"",
@@ -2104,24 +1886,22 @@ int main() {
 		6
 	};
 	escenas[6] = SceneData{
-	  &bg66,
-	 L"",
-	 false,
-	 false,
-	 false,
-	 7
+		&bg66,
+		L"",
+		false,
+		false,
+		false,
+		7
 	};
-
 	escenas[7] = SceneData{
-	  &bg4,
-	 L"",
-	 true,
-	 false,
-	 false,
-	 8,
-	 0
+		&bg4,
+		L"",
+		true,
+		false,
+		false,
+		8,
+		0
 	};
-
 	escenas[8] = SceneData{
 		&bg6,
 		L"Después de responder el mensaje, guardo el celular y empiezo a caminar hacia\n"
@@ -2133,7 +1913,6 @@ int main() {
 		false,
 		9
 	};
-
 	escenas[9] = SceneData{
 		&bg7,
 		L"Sonreí un poco y seguí caminando.\nLa amo...",
@@ -2142,7 +1921,6 @@ int main() {
 		false,
 		10
 	};
-
 	escenas[10] = SceneData{
 		&bg8,
 		L"\nJusto cuando estoy por entrar al salón pero algo me interrumpe...\n"
@@ -2152,7 +1930,6 @@ int main() {
 		false,
 		11
 	};
-
 	escenas[11] = SceneData{
 		&bg9,
 		L"",
@@ -2162,7 +1939,6 @@ int main() {
 		12,
 		1
 	};
-
 	escenas[12] = SceneData{
 		&bg6,
 		L"Intercambiamos unas palabras antes de que tenga que entrar a clase.\n"
@@ -2174,7 +1950,6 @@ int main() {
 		false,
 		13
 	};
-
 	escenas[13] = SceneData{
 		&bg10,
 		L"Fue un día bastante pesado...\n"
@@ -2184,7 +1959,6 @@ int main() {
 		false,
 		14
 	};
-
 	escenas[14] = SceneData{
 		&bg11,
 		L"",
@@ -2213,7 +1987,6 @@ int main() {
 		false,
 		17
 	};
-
 	escenas[17] = SceneData{
 		&bg13,
 		L"",
@@ -2222,7 +1995,6 @@ int main() {
 		false,
 		18
 	};
-
 	escenas[18] = SceneData{
 		&bg14,
 		L"",
@@ -2231,30 +2003,27 @@ int main() {
 		false,
 		19
 	};
-
 	escenas[19] = SceneData{
- &bg15,
- L"",
- true,
- false,
- false,
- 20,
- 3
+		&bg15,
+		L"",
+		true,
+		false,
+		false,
+		20,
+		3
 	};
-
 	escenas[20] = SceneData{
-	&bg16,
-	L"Llegando al campus con mi paraguas.\n"
-	L"La lluvia caía constante...\n"
-	L"de esas que no molestan, pero tampoco te dejan ignorarla.\n\n"
-	L"El ambiente era tranquilo.\n"
-	L"Demasiado tranquilo.\n\n",
-	false,
-	true,
-	false,
-	21
+		&bg16,
+		L"Llegando al campus con mi paraguas.\n"
+		L"La lluvia caía constante...\n"
+		L"de esas que no molestan, pero tampoco te dejan ignorarla.\n\n"
+		L"El ambiente era tranquilo.\n"
+		L"Demasiado tranquilo.\n\n",
+		false,
+		true,
+		false,
+		21
 	};
-
 	escenas[21] = SceneData{
 		&bg17,
 		L"En mi camino me encuentro con Illeana.\n"
@@ -2264,17 +2033,15 @@ int main() {
 		false,
 		22
 	};
-
 	escenas[22] = SceneData{
-	  &bg18,
-	 L"",
-	 true,
-	 false,
-	 false,
-	 23,
-	 4
+		&bg18,
+		L"",
+		true,
+		false,
+		false,
+		23,
+		4
 	};
-
 	escenas[23] = SceneData{
 		&bg19,
 		L"Tu: Otra vez tú\nIlleana: Creo que sí coincidimos después de todo {NOMBRE}\nSe acerca un poco a tu paraguas sin preguntar directamente",
@@ -2283,7 +2050,6 @@ int main() {
 		false,
 		24
 	};
-
 	escenas[24] = SceneData{
 		&bg20,
 		L"Empezamos a caminar juntos hacia clase, la conversación era tranquila,\ncon la lluvia llenando los silencios.\nEn el camino, pasamos por los jardines de la escuela y\nnos detuvimos junto a los girasoles.",
@@ -2292,7 +2058,6 @@ int main() {
 		false,
 		25
 	};
-
 	escenas[25] = SceneData{
 		&bg21,
 		L"",
@@ -2301,7 +2066,6 @@ int main() {
 		false,
 		26
 	};
-
 	escenas[26] = SceneData{
 		&bg22,
 		L"Es tu novia?",
@@ -2310,43 +2074,34 @@ int main() {
 		false,
 		27
 	};
-
 	escenas[27] = SceneData{
-	 &bg23,
-	 L"",
-	 true,
-	 false,
-	 false,
-	 28,
-	 5
+		&bg23,
+		L"",
+		true,
+		false,
+		false,
+		28,
+		5
 	};
-
 	escenas[28] = SceneData{
-  &bg24,
-  L"Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Illeana volteó hacia mi.\n"
-  L"'Oye...'\n"
-  L"'El domingo va a haber algo interesante cerca de aquí, deberías venir'",
-  false,
-  true,
-  false,
-  29
+		&bg24,
+		L"Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Illeana volteó hacia mi.\n"
+		L"'Oye...'\n"
+		L"'El domingo va a haber algo interesante cerca de aquí, deberías venir'",
+		false,
+		true,
+		false,
+		29
 	};
-
 	escenas[29] = SceneData{
- &bgMenu,
- L"",
- false,
- false,
- false,
- 30
+		&bgMenu,
+		L"",
+		false,
+		false,
+		false,
+		30
 	};
-
-
-
-	// =========================
- // DIA 3
- // =========================
-
+	//Dia 3
 	escenas[30] = SceneData{
 		&bg25,
 		L"",
@@ -2355,7 +2110,6 @@ int main() {
 		false,
 		31
 	};
-
 	escenas[31] = SceneData{
 		&bg67,
 		L"",
@@ -2364,7 +2118,6 @@ int main() {
 		false,
 		32
 	};
-
 	escenas[32] = SceneData{
 		&bg10,
 		L"Ay, parece que ya no esta lloviendo,\npero el ambiente sigue pesado...\n\n"
@@ -2374,7 +2127,6 @@ int main() {
 		false,
 		33
 	};
-
 	escenas[33] = SceneData{
 		&bg26,
 		L"",
@@ -2383,7 +2135,6 @@ int main() {
 		false,
 		34
 	};
-
 	escenas[34] = SceneData{
 		&bg27,
 		L"Decido revisar mi celular y encuentro unos mensajes",
@@ -2392,7 +2143,6 @@ int main() {
 		false,
 		35
 	};
-
 	escenas[35] = SceneData{
 		&bg28,
 		L"",
@@ -2403,18 +2153,17 @@ int main() {
 		8
 	};
 	escenas[36] = SceneData{
-&bg29,
-L"Guardo el celular.\n"
-L"No sé por que...\n"
-L"Pero esa pregunta se sintió más pesada de lo normal.\n"
-L"Como si ella hubiera notado algo que ni yo entiendo todavía.\n"
-L"Creo que es mejor alistarme para clases.",
-	false,
-	true,
-	false,
-	37
+		&bg29,
+		L"Guardo el celular.\n"
+		L"No sé por que...\n"
+		L"Pero esa pregunta se sintió más pesada de lo normal.\n"
+		L"Como si ella hubiera notado algo que ni yo entiendo todavía.\n"
+		L"Creo que es mejor alistarme para clases.",
+		false,
+		true,
+		false,
+		37
 	};
-
 	escenas[37] = SceneData{
 		&bg6,
 		L"Al llegar al campus todo seguía normal.\n"
@@ -2424,7 +2173,6 @@ L"Creo que es mejor alistarme para clases.",
 		false,
 		38
 	};
-
 	escenas[38] = SceneData{
 		&bg24,
 		L"Hey",
@@ -2433,7 +2181,6 @@ L"Creo que es mejor alistarme para clases.",
 		false,
 		39
 	};
-
 	escenas[39] = SceneData{
 		&bg24,
 		L"Illeana se me acerca como si ya fuera costumbre.\n"
@@ -2444,7 +2191,6 @@ L"Creo que es mejor alistarme para clases.",
 		false,
 		40
 	};
-
 	escenas[40] = SceneData{
 		&bg30,
 		L"Estuve pensando en lo que te dije ayer",
@@ -2453,8 +2199,7 @@ L"Creo que es mejor alistarme para clases.",
 		false,
 		41
 	};
-
-	escenas[41] = SceneData{ // borton corregido
+	escenas[41] = SceneData{ 
 		&bg31,
 		L"Lo del domingo...\n"
 		L"Creo que estaría más fácil si te paso\n"
@@ -2464,8 +2209,7 @@ L"Creo que es mejor alistarme para clases.",
 		false,
 		42
 	};
-
-	escenas[42] = SceneData{ //estoy aqui con las opciones
+	escenas[42] = SceneData{ 
 		&bg32,
 		L"",
 		true,
@@ -2475,16 +2219,15 @@ L"Creo que es mejor alistarme para clases.",
 		9
 	};
 	escenas[43] = SceneData{
-&bg24,
-L"Dudo unos segundos antes de darle mi número.\n\n"
-L"No debería sentirse como algo importante...pero aun así, siento una\n"
-L"pequeña incomodidad en el pecho.",
-	false,
-	true,
-	false,
-	44
+		&bg24,
+		L"Dudo unos segundos antes de darle mi número.\n\n"
+		L"No debería sentirse como algo importante...pero aun así, siento una\n"
+		L"pequeña incomodidad en el pecho.",
+		false,
+		true,
+		false,
+		44
 	};
-
 	escenas[44] = SceneData{
 		&bg33,
 		L"\"Gracias {NOMBRE}... No pensé que dirías que sí tan fácil\"\n\n"
@@ -2494,20 +2237,17 @@ L"pequeña incomodidad en el pecho.",
 		false,
 		45
 	};
-
-
 	escenas[45] = SceneData{
-	&bg34,
-	L"Me manda un mensaje para confirmar.\n"
-	L"Antes de guardar el celular, alcanzo a notar su foto de perfil.\n"
-	L"Un girasol.\n"
-	L"No sé por qué, pero me quedo pensando en eso.",
-	false,
-	true,
-	false,
-	46
+		&bg34,
+		L"Me manda un mensaje para confirmar.\n"
+		L"Antes de guardar el celular, alcanzo a notar su foto de perfil.\n"
+		L"Un girasol.\n"
+		L"No sé por qué, pero me quedo pensando en eso.",
+		false,
+		true,
+		false,
+		46
 	};
-
 	escenas[46] = SceneData{
 		&bg6,
 		L"Seguimos hablando hasta que empezaron las clases.\n"
@@ -2518,8 +2258,7 @@ L"pequeña incomodidad en el pecho.",
 		false,
 		47
 	};
-
-	escenas[47] = SceneData{//mira a la novia en el cafe
+	escenas[47] = SceneData{
 		&bg35,
 		L"El día pasa lento entre clases, apuntes y ruido...\n"
 		L"Solo espero a que llegue la tarde.",
@@ -2528,7 +2267,6 @@ L"pequeña incomodidad en el pecho.",
 		false,
 		48
 	};
-
 	escenas[48] = SceneData{
 		&bg36,
 		L"Al darse cuenta de mi presencia,\n"
@@ -2540,16 +2278,15 @@ L"pequeña incomodidad en el pecho.",
 		49
 	};
 	escenas[49] = SceneData{
-&bg37,
-L"\"¡Hey!\"\n"
-L"\"Pensé que ibas a llegar tarde\"\n\n"
-L"\"Hoy es un día importante...\"",
-	false,
-	true,
-	false,
-	50
+		&bg37,
+		L"\"¡Hey!\"\n"
+		L"\"Pensé que ibas a llegar tarde\"\n\n"
+		L"\"Hoy es un día importante...\"",
+		false,
+		true,
+		false,
+		50
 	};
-
 	escenas[50] = SceneData{
 		&bg36,
 		L"\"Sí te acordaste, verdad?\"",
@@ -2558,7 +2295,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		51
 	};
-
 	escenas[51] = SceneData{
 		&bg38,
 		L"",
@@ -2568,8 +2304,7 @@ L"\"Hoy es un día importante...\"",
 		52,
 		10
 	};
-
-	escenas[52] = SceneData{ //boton en el lugar equivocado
+	escenas[52] = SceneData{
 		&bg39,
 		L"Me mira unos segundos,\n"
 		L"con una mirada que no puedo descifrar.",
@@ -2578,7 +2313,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		53
 	};
-
 	escenas[53] = SceneData{
 		&bg36,
 		L"Pero al final sonríe.\n"
@@ -2588,25 +2322,22 @@ L"\"Hoy es un día importante...\"",
 		false,
 		54
 	};
-
 	escenas[54] = SceneData{
-	&bgMenu,
-	L"",
-	false,
-	false,
-	false,
-	55
+		&bgMenu,
+		L"",
+		false,
+		false,
+		false,
+		55
 	};
-
 	escenas[55] = SceneData{
-	&bgRegalos,
-	L"",
-	false,
-	false,
-	false,
-	56
+		&bgRegalos,
+		L"",
+		false,
+		false,
+		false,
+		56
 	};
-
 	//Dia 4
 	escenas[56] = SceneData{
 		&bg40,
@@ -2616,7 +2347,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		57
 	};
-
 	escenas[57] = SceneData{
 		&bg10,
 		L"Los jueves tengo clases por la tarde, así que mejor me voy temprano\n"
@@ -2626,7 +2356,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		58
 	};
-
 	escenas[58] = SceneData{
 		&bg41,
 		L"El camino es tranquilo, ando pensando en mis tareas de la semana cuando escucho\n"
@@ -2636,7 +2365,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		59
 	};
-
 	escenas[59] = SceneData{
 		&bg42,
 		L"Mi novia con alguien más...",
@@ -2645,7 +2373,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		60
 	};
-
 	escenas[60] = SceneData{
 		&bg43,
 		L"Por un momento me quedo sin aire, parece muy cercana a ese chico.",
@@ -2654,7 +2381,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		61
 	};
-
 	escenas[61] = SceneData{
 		&bg44,
 		L"Mejor me voy a casa. no quiero hacer una escena",
@@ -2663,7 +2389,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		62
 	};
-
 	escenas[62] = SceneData{
 		&bg10,
 		L"Llego a la casa aun de malas.",
@@ -2672,7 +2397,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		63
 	};
-
 	escenas[63] = SceneData{
 		&bg45,
 		L"Estoy arreglandomé para las clases cuando me llega un mensaje de mi novia",
@@ -2681,7 +2405,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		64
 	};
-
 	escenas[64] = SceneData{
 		&bg46,
 		L"Hola amor, ya desayunaste?",
@@ -2690,7 +2413,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		65
 	};
-
 	escenas[65] = SceneData{
 		&bg47,
 		L"Qué le respondo?",
@@ -2700,7 +2422,6 @@ L"\"Hoy es un día importante...\"",
 		66,
 		11
 	};
-
 	escenas[66] = SceneData{
 		&bg10,
 		L"Escucho la voz de mi mamá desde la cocina y dejo mi telefono en la cama",
@@ -2709,7 +2430,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		67
 	};
-
 	escenas[67] = SceneData{
 		&bg48,
 		L"",
@@ -2718,7 +2438,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		68
 	};
-
 	escenas[68] = SceneData{
 		&bg48,
 		L"",
@@ -2727,7 +2446,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		69
 	};
-
 	escenas[69] = SceneData{
 		&bg6,
 		L"Llego la tarde y fuí a clases...",
@@ -2736,7 +2454,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		70
 	};
-
 	escenas[70] = SceneData{
 		&bg30,
 		L"Que estresante. \n"
@@ -2749,7 +2466,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		71
 	};
-
 	escenas[71] = SceneData{
 		&bg49,
 		L"Cómo te sentiste despues de eso?\n"
@@ -2759,7 +2475,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		72
 	};
-
 	escenas[72] = SceneData{
 		&bg50,
 		L"",
@@ -2769,7 +2484,6 @@ L"\"Hoy es un día importante...\"",
 		73,
 		12
 	};
-
 	escenas[73] = SceneData{
 		&bg51,
 		L"Voltee a ver el otro lado de la calle y para mi sorpresa, ahi estaba ella.",
@@ -2778,7 +2492,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		74
 	};
-
 	escenas[74] = SceneData{
 		&bg52,
 		L"Me veía con una mirada decepcionada, pues llevaba horas sin\n"
@@ -2788,7 +2501,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		75
 	};
-
 	escenas[75] = SceneData{
 		&bg53,
 		L"Me di cuenta de lo mal que se veía y me consumieron las emociones.\n"
@@ -2798,7 +2510,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		76
 	};
-
 	escenas[76] = SceneData{
 		&bg29,
 		L"Al llegar a casa, corrí a mi cuarto. Mi telefono estaba en mi cama",
@@ -2807,7 +2518,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		77
 	};
-
 	escenas[77] = SceneData{
 		&bg55,
 		L"... Ay no",
@@ -2816,7 +2526,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		78
 	};
-
 	escenas[78] = SceneData{
 		&bg56,
 		L"",
@@ -2826,7 +2535,6 @@ L"\"Hoy es un día importante...\"",
 		79,
 		13
 	};
-
 	escenas[79] = SceneData{
 		&bg12,
 		L"\"Ha sido un dia horroroso.\" \n"
@@ -2837,7 +2545,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		80,
 	};
-
 	escenas[80] = SceneData{
 		&bgMenu,
 		L"",
@@ -2846,7 +2553,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		81,
 	};
-
 	escenas[81] = SceneData{
 		&bgRegalos,
 		L"",
@@ -2857,186 +2563,173 @@ L"\"Hoy es un día importante...\"",
 	};
 	//Dia 5
 	escenas[82] = SceneData{
-	  &bg57,
-	  L"",
-	  false,
-	  true,
-	  false,
-	  83
+		&bg57,
+		L"",
+		false,
+		true,
+		false,
+		83
 	};
-
 	escenas[83] = SceneData{
-	 &bg68,
-	 L"",
-	 false,
-	 false,
-	 false,
-	 84
+		&bg68,
+		L"",
+		false,
+		false,
+		false,
+		84
 	};
-
 	escenas[84] = SceneData{
-	  &bg10,
-	  L"No me quiero levantar. Después de todo el caos el\n"
-	  L"silencio pesa más que cualquier discusión. Pero debo \n"
-	  L"arreglar las cosas. No es solo una amiga, es mi novia... \n"
-	  L"Debo salir a buscarla.",
-	  false,
-	  true,
-	  false,
-	  85
+		&bg10,
+		L"No me quiero levantar. Después de todo el caos el\n"
+		L"silencio pesa más que cualquier discusión. Pero debo \n"
+		L"arreglar las cosas. No es solo una amiga, es mi novia... \n"
+		L"Debo salir a buscarla.",
+		false,
+		true,
+		false,
+		85
 	};
-
 	escenas[85] = SceneData{
-			&bg58,
-			L"Llego a su casa, me abrio la puerta y decido explicarme",
-			false,
-			true,
-			false,
-			86
+		&bg58,
+		L"Llego a su casa, me abrio la puerta y decido explicarme",
+		false,
+		true,
+		false,
+		86
 	};
-
 	escenas[86] = SceneData{
-			&bg59,
-			L"",
-			true,
-			false,
-			false,
-			87,
-			14
+		&bg59,
+		L"",
+		true,
+		false,
+		false,
+		87,
+		14
 	};
-
 	escenas[87] = SceneData{
-			&bg60,
-			L"Luego de hablar un tiempo, aceptó mi dísculpa.\n"
-			L"Parecía feliz de que todo regresara a la \n"
-			L"normalidad. Decidí acompañarla a la universidad\n y luego me fui a clase",
-			false,
-			true,
-			false,
-			88
+		&bg60,
+		L"Luego de hablar un tiempo, aceptó mi dísculpa.\n"
+		L"Parecía feliz de que todo regresara a la \n"
+		L"normalidad. Decidí acompañarla a la universidad\n y luego me fui a clase",
+		false,
+		true,
+		false,
+		88
 	};
-
 	escenas[88] = SceneData{
-			&bg61,
-			L"Como siempre, me encuentro con Illeana antes\n"
-			L"de clases, pero parece que no está \n"
-			L"de buenas. Debo acercarme y darle una explicación\n",
-			false,
-			true,
-			false,
-			89
+		&bg61,
+		L"Como siempre, me encuentro con Illeana antes\n"
+		L"de clases, pero parece que no está \n"
+		L"de buenas. Debo acercarme y darle una explicación\n",
+		false,
+		true,
+		false,
+		89
 	};
-
 	escenas[89] = SceneData{
-			&bg62,
-			L"",
-			true,
-			false,
-			false,
-			90,
-			15
+		&bg62,
+		L"",
+		true,
+		false,
+		false,
+		90,
+		15
 	};
-
 	escenas[90] = SceneData{
-			&bg30,
-			L"Luego de nuestra plática parece que nuestra relación cambio",
-			false,
-			true,
-			false,
-			91
+		&bg30,
+		L"Luego de nuestra plática parece que nuestra relación cambio",
+		false,
+		true,
+		false,
+		91
 	};
-
 	escenas[91] = SceneData{
-			&bg6,
-			L"Pasaron las clases y me dí cuenta que faltaba un día para el 14 de\n"
-			L"febrero y no he comprado nada de regalo... Debería ir a la florería\n",
-			false,
-			true,
-			false,
-			92
+		&bg6,
+		L"Pasaron las clases y me dí cuenta que faltaba un día para el 14 de\n"
+		L"febrero y no he comprado nada de regalo... Debería ir a la florería\n",
+		false,
+		true,
+		false,
+		92
 	};
 	escenas[92] = SceneData{
-			&bg63,
-			L"",
-			true,
-			false,
-			false,
-			93,
-			16
+		&bg63,
+		L"",
+		true,
+		false,
+		false,
+		93,
+		16
 	};
 	escenas[93] = SceneData{
-			&bg12,
-			L"Compré flores y fui caminando a mi casa.\n"
-			L"Me siento bastante feliz. Busqué ropa decente y también mi perfume favorito. \n\n"
-			L"Parece que ya todo está listo, ahora solo falta avisar\n",
-			false,
-			true,
-			false,
-			94
+		&bg12,
+		L"Compré flores y fui caminando a mi casa.\n"
+		L"Me siento bastante feliz. Busqué ropa decente y también mi perfume favorito. \n\n"
+		L"Parece que ya todo está listo, ahora solo falta avisar\n",
+		false,
+		true,
+		false,
+		94
 	};
-
 	escenas[94] = SceneData{
-			&bg64,
-			L"",
-			false,
-			true,
-			false,
-			95
+		&bg64,
+		L"",
+		false,
+		true,
+		false,
+		95
 	};
-
 	escenas[95] = SceneData{
-			&bg65,
-			L"",
-			true,
-			false,
-			false,
-			96,
-			17
+		&bg65,
+		L"",
+		true,
+		false,
+		false,
+		96,
+		17
 	};
-
 	escenas[96] = SceneData{
-			&bg12,
-			L"Me recuesto tras terminar mis pendientes.\n"
-			L"Por fin mañana será un día de descanso.\n"
-			L"No puedo esperar.",
-			false,
-			true,
-			false,
-			97
+		&bg12,
+		L"Me recuesto tras terminar mis pendientes.\n"
+		L"Por fin mañana será un día de descanso.\n"
+		L"No puedo esperar.",
+		false,
+		true,
+		false,
+		97
 	};
 	escenas[97] = SceneData{
-			&bgMenu,
-			L"",
-			false,
-			false,
-			false,
-			98
+		&bgMenu,
+		L"",
+		false,
+		false,
+		false,
+		98
 	};
 	escenas[98] = SceneData{
-		   &bgRegalos,
-		   L"",
-		   false,
-		   false,
-		   false,
-		   99
+		&bgRegalos,
+		L"",
+		false,
+		false,
+		false,
+		99
 	};
 	escenas[99] = SceneData{
-		   &bg69,
-		   L"",
-		   false,
-		   true,
-		   false,
-		   102
+		&bg69,
+		L"",
+		false,
+		true,
+		false,
+		102
 	};
 	escenas[102] = SceneData{
-		   &bg70,
-		   L"",
-		   false,
-		   false,
-		   false,
-		   103
+		&bg70,
+		L"",
+		false,
+		false,
+		false,
+		103
 	};
-
 	escenas[100] = SceneData{
 		&bgRegalos,
 		L"",
@@ -3045,7 +2738,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		15
 	};
-
 	escenas[101] = SceneData{
 		&bgRegalos,
 		L"",
@@ -3054,98 +2746,87 @@ L"\"Hoy es un día importante...\"",
 		false,
 		29
 	};
-
 	escenas[103] = SceneData{
-		   &bg10,
-		   L"Como quería estar libre para el día de hoy, estuve trabajando en todos mis\n pendientes por la noche terminando muy tarde. Así que hoy me levanté\n tarde para poder descansar bien, al fin y al cabo hoy es\n sabado y es 14 de febrero.",
-		   false,
-		   true,
-		   false,
-		   104
+		&bg10,
+		L"Como quería estar libre para el día de hoy, estuve trabajando en todos mis\n pendientes por la noche terminando muy tarde. Así que hoy me levanté\n tarde para poder descansar bien, al fin y al cabo hoy es\n sabado y es 14 de febrero.",
+		false,
+		true,
+		false,
+		104
 	};
-
 	escenas[104] = SceneData{
-		   &bg71,
-		   L"Luego de unas horas me doy cuenta de que ya casi se acerca la hora de vernos,\nasí que comencé a alistarme. Tome todas mis cosas incluyendo el regalo y sali de casa.",
-		   false,
-		   true,
-		   false,
-		   105
+		&bg71,
+		L"Luego de unas horas me doy cuenta de que ya casi se acerca la hora de vernos,\nasí que comencé a alistarme. Tome todas mis cosas incluyendo el regalo y sali de casa.",
+		false,
+		true,
+		false,
+		105
 	};
-
 	escenas[105] = SceneData{
-		   &bg72,
-		   L"Mientras camino, reflexiono en lo caótica que ha sido la semana, y sin darme cuenta,\nhe llegado al lugar de encuentro.",
-		   false,
-		   true,
-		   false,
-		   106
+		&bg72,
+		L"Mientras camino, reflexiono en lo caótica que ha sido la semana, y sin darme cuenta,\nhe llegado al lugar de encuentro.",
+		false,
+		true,
+		false,
+		106
 	};
-
 	escenas[106] = SceneData{
-		   &bg73,
-		   L"Yo: Hey amor!!! ¿Llevas mucho tiempo esperando?\nNovia: no, acabo de llegar.\n*le das las flores*",
-		   false,
-		   true,
-		   false,
-		   107
+		&bg73,
+		L"Yo: Hey amor!!! ¿Llevas mucho tiempo esperando?\nNovia: no, acabo de llegar.\n*le das las flores*",
+		false,
+		true,
+		false,
+		107
 	};
-
 	escenas[107] = SceneData{
-		   &bg74,
-		   L"Omggg que hermosas",
-		   false,
-		   true,
-		   false,
-		   108
+		&bg74,
+		L"Omggg que hermosas",
+		false,
+		true,
+		false,
+		108
 	};
-
 	escenas[108] = SceneData{
-		   &bg75,
-		   L"Yo: ¿Nos vamos?\nNovia:Si\n*Comenzamos a caminar hacia el sushi, mientras me contaba cómo fue su primera\n semana en la universidad*",
-		   false,
-		   true,
-		   false,
-		   109
+		&bg75,
+		L"Yo: ¿Nos vamos?\nNovia:Si\n*Comenzamos a caminar hacia el sushi, mientras me contaba cómo fue su primera\n semana en la universidad*",
+		false,
+		true,
+		false,
+		109
 	};
-
 	escenas[109] = SceneData{
-		   &bg76,
-		   L"*Me contó que hizo muchas amigas y que\nla están saturando de proyectos pero aún así tiene tiempo para verme*",
-		   false,
-		   true,
-		   false,
-		   110
+		&bg76,
+		L"*Me contó que hizo muchas amigas y que\nla están saturando de proyectos pero aún así tiene tiempo para verme*",
+		false,
+		true,
+		false,
+		110
 	};
-
 	escenas[110] = SceneData{
-		   &bg77,
-		   L"",
-		   true,
-		   false,
-		   false,
-		   111,
-		   18
+		&bg77,
+		L"",
+		true,
+		false,
+		false,
+		111,
+		18
 	};
-
 	escenas[111] = SceneData{
-		   &bg76,
-		   L"El mesero tomó su orden y se fue. Seguimos\nplaticando sobre la universidad y como nos estamos adaptando",
-		   false,
-		   true,
-		   false,
-		   112
+		&bg76,
+		L"El mesero tomó su orden y se fue. Seguimos\nplaticando sobre la universidad y como nos estamos adaptando",
+		false,
+		true,
+		false,
+		112
 	};
-
 	escenas[112] = SceneData{
-		   &bg78,
-		   L"De repente escuchamos unos murmullos en la parte de atras.",
-		   false,
-		   true,
-		   false,
-		   113
+		&bg78,
+		L"De repente escuchamos unos murmullos en la parte de atras.",
+		false,
+		true,
+		false,
+		113
 	};
-
 	escenas[113] = SceneData{
 		&bg88,
 		L"Volteo y era Illeana, celebrando con unas amigas\nque le estaban echando carrilla, me quedé congelado",
@@ -3154,101 +2835,89 @@ L"\"Hoy es un día importante...\"",
 		false,
 		114
 	};
-
-
 	escenas[114] = SceneData{
-		   &bg80,
-		   L"",
-		   true,
-		   false,
-		   false,
-		   115,
-		   19
+		&bg80,
+		L"",
+		true,
+		false,
+		false,
+		115,
+		19
 	};
-
 	escenas[115] = SceneData{
-		   &bg81,
-		   L"Mi novia estuvo dudando pero le aseguré que no era nada.\nIgual ella decidió confiar. Llegaron nuestros alimentos y los disfrutamos.",
-		   false,
-		   true,
-		   false,
-		   116
+		&bg81,
+		L"Mi novia estuvo dudando pero le aseguré que no era nada.\nIgual ella decidió confiar. Llegaron nuestros alimentos y los disfrutamos.",
+		false,
+		true,
+		false,
+		116
 	};
-
 	escenas[116] = SceneData{
-		   &bg81,
-		   L"Cuando menos lo esperaba el ruido se escuchaba\nmás fuerte, volteo y noto que Illeana se está acercando a nosotros.",
-		   false,
-		   true,
-		   false,
-		   117
+		&bg81,
+		L"Cuando menos lo esperaba el ruido se escuchaba\nmás fuerte, volteo y noto que Illeana se está acercando a nosotros.",
+		false,
+		true,
+		false,
+		117
 	};
-
 	escenas[117] = SceneData{
-		   &bg83,
-		   L"Ay no",
-		   false,
-		   true,
-		   false,
-		   118
+		&bg83,
+		L"Ay no",
+		false,
+		true,
+		false,
+		118
 	};
-
 	escenas[118] = SceneData{
-		   &bg84,
-		   L"Ileana: Holaaa, feliz san valentín",
-		   false,
-		   true,
-		   false,
-		   119
+		&bg84,
+		L"Ileana: Holaaa, feliz san valentín",
+		false,
+		true,
+		false,
+		119
 	};
-
 	escenas[119] = SceneData{
-		   &bg85,
-		   L"",
-		   true,
-		   false,
-		   false,
-		   120,
-		   20
+		&bg85,
+		L"",
+		true,
+		false,
+		false,
+		120,
+		20
 	};
-
 	escenas[120] = SceneData{
-		   &bg86,
-		   L"Illeana: Es lindo conocerte. En fin, {NOMBRE} espero poder verte mañana,\nluego te mando la ubicación más tarde, va?",
-		   false,
-		   true,
-		   false,
-		   121
+		&bg86,
+		L"Illeana: Es lindo conocerte. En fin, {NOMBRE} espero poder verte mañana,\nluego te mando la ubicación más tarde, va?",
+		false,
+		true,
+		false,
+		121
 	};
-
 	escenas[121] = SceneData{
-		   &bg81,
-		   L"Después de ese incómodo momento,\nterminamos de comer y pagamos la cuenta.\nLa lleve a su casa.",
-		   false,
-		   true,
-		   false,
-		   122
+		&bg81,
+		L"Después de ese incómodo momento,\nterminamos de comer y pagamos la cuenta.\nLa lleve a su casa.",
+		false,
+		true,
+		false,
+		122
 	};
-
 	escenas[122] = SceneData{
-		   &bg89,
-		   L"El camino se sintió tenso, apenas y me habló en el carro\n\n"
-		   L"Novia: Mañana será nuestro aniversario, no quiero pelear, olvidemos esto por hoy.\n Nuestra conversación quedó en esas y regresé a mi casa",
-		   false,
-		   true,
-		   false,
-		   123
+		&bg89,
+		L"El camino se sintió tenso, apenas y me habló en el carro\n\n"
+		L"Novia: Mañana será nuestro aniversario, no quiero pelear, olvidemos esto por hoy.\n Nuestra conversación quedó en esas y regresé a mi casa",
+		false,
+		true,
+		false,
+		123
 	};
-
 	escenas[123] = SceneData{
-		   &bg12,
-		   L"Espero que mañana sea un mejor día.",
-		   false,
-		   true,
-		   false,
-		   124
+		&bg12,
+		L"Espero que mañana sea un mejor día.",
+		false,
+		true,
+		false,
+		124
 	};
-
 	escenas[124] = SceneData{
 		&bgMenu,
 		L"",
@@ -3257,7 +2926,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		125,
 	};
-
 	escenas[125] = SceneData{
 		&bgRegalos,
 		L"",
@@ -3266,7 +2934,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		126
 	};
-
 	escenas[126] = SceneData{
 		&bg90,
 		L"",
@@ -3275,7 +2942,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		127,
 	};
-
 	escenas[127] = SceneData{
 		&bg10,
 		L"... Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes;\nde Illiana y mi novia:",
@@ -3284,7 +2950,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		128
 	};
-
 	escenas[128] = SceneData{
 		&bg91,
 		L"Obviamente le contestaste a tu amor",
@@ -3293,7 +2958,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		129
 	};
-
 	escenas[129] = SceneData{
 		&bg92,
 		L"",
@@ -3303,7 +2967,6 @@ L"\"Hoy es un día importante...\"",
 		130,
 		21
 	};
-
 	escenas[130] = SceneData{
 		&bg10,
 		L"Apagué el celular y comencé a recapitular todo lo vivido",
@@ -3312,7 +2975,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		131
 	};
-
 	escenas[131] = SceneData{
 		&bg20,
 		L"Recordé mis conversaciones con Illenaa, conocerla...\n\n",
@@ -3321,8 +2983,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		132
 	};
-
-
 	escenas[132] = SceneData{
 		&bg24,
 		L"Nuestras conversaciones en clase\n\n",
@@ -3331,7 +2991,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		133
 	};
-
 	escenas[133] = SceneData{
 	   &bg24,
 	   L"Nuestras conversaciones en clase\n\n",
@@ -3347,7 +3006,6 @@ L"\"Hoy es un día importante...\"",
 		true,
 		false,
 		135
-
 	};
 	escenas[135] = SceneData{
 		&bg60,
@@ -3357,7 +3015,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		136
 	};
-
 	escenas[136] = SceneData{
 		&bg10,
 		L"“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio\n con Ileana siento que soy yo mismo y me\n quiere ser como soy...\n\nCon quién me voy?",
@@ -3366,7 +3023,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		137
 	};
-
 	escenas[137] = SceneData{
 		&bg93,
 		L"",
@@ -3375,7 +3031,6 @@ L"\"Hoy es un día importante...\"",
 		false,
 		138,
 	};
-
 	escenas[138] = SceneData{
 		&bg94,
 		L"Fui a la cita con mi novia, después de hablar arreglamos las cosas.\n Han pasado mucho tiempo desde entonces y por fin obtuvimos \n nuestro final feliz. ",
@@ -3417,12 +3072,12 @@ L"\"Hoy es un día importante...\"",
 		143
 	};
 	escenas[143] = SceneData{
-	&bg99,
-	L"",
-	false,
-	true,
-	false,
-	144
+		&bg99,
+		L"",
+		false,
+		true,
+		false,
+		144
 	};
 	escenas[144] = SceneData{
 		&bg100,
@@ -3432,23 +3087,20 @@ L"\"Hoy es un día importante...\"",
 		false,
 		0
 	};
-
 	escenas[199] = SceneData{
- &bg12,
- L"Ella decidio terminar contigo...\n\nGAME OVER",
- false,
- false,
- false,
- 199
+		&bg12,
+		L"Ella decidio terminar contigo...\n\nGAME OVER",
+		false,
+		true,
+		false,
+		143
 	};
-	// boton invisible inicio
 
+	// boton invisible inicio
 	sf::FloatRect zonaJugar({ 477.f, 400.f }, { 150.f, 60.f });
 
 	//continuar arriba escena 1  arriba
 	sf::FloatRect zonaContinuar0({ 795.f, 27.f }, { 250.f, 45.f });
-
-
 
 	//boton continuar escena 2 abajo
 								//posicion          ancho y alto
@@ -3482,18 +3134,14 @@ L"\"Hoy es un día importante...\"",
 	//carta                        x y                ancho y alto
 	sf::FloatRect zonaCarta({ 567.f, 125.f }, { 250.f, 150.f });
 
-
-
 	//pastel                    x y                 ancho y alto
 	sf::FloatRect zonaPastel({ 277.f,320.f }, { 250.f, 150.f });
 
 	//collar                   x y                 ancho y alto
 	sf::FloatRect zonaCollar({ 567.f,320.f }, { 250.f, 150.f });
 
-	//boton de alarma 
-
+	//botones de alarma 
 	sf::FloatRect zonaAlarma1({ 500.f, 305.f }, { 105.f, 50.f });
-
 	sf::FloatRect zonaAlarma2({ 470.f,490.f }, { 80.f, 30.f });
 
 	sf::RectangleShape debugRect;
@@ -3581,14 +3229,12 @@ L"\"Hoy es un día importante...\"",
 					}
 				}
 			}
-
 			// click del mouse
 			if (auto* mouseEvent = event->getIf<sf::Event::MouseButtonPressed>()) {
 				if (mouseEvent->button == sf::Mouse::Button::Left) {
 
 					sf::Vector2i pixelPos = sf::Mouse::getPosition(ventana); //guarda donde presiono boton 
 					sf::Vector2f mousePos = ventana.mapPixelToCoords(pixelPos);//se guarda en la ventana comparandolo correctamente
-
 
 					// logica del menu principal
 					if (scene == 0) { //escena de presiona para jugar
@@ -3598,28 +3244,21 @@ L"\"Hoy es un día importante...\"",
 					}
 					else if (scene == 2) { //elige su personaje
 						if (zonaToxico.contains(mousePos)) {
-
 							miJugador = make_unique<Toxico>();
 							historia = cargarHistoria(0);
 							scene = 3;
 						}
-
 						else if (zonaNPC.contains(mousePos)) {
-
 							miJugador = make_unique<NPC>();
 							historia = cargarHistoria(1);
 							scene = 3;
 						}
-
 						else if (zonaGym.contains(mousePos)) {
-
 							miJugador = make_unique<Gymrat>();
 							historia = cargarHistoria(2);
 							scene = 3;
 						}
-
 						else if (zonaOtaku.contains(mousePos)) {
-
 							miJugador = make_unique<Otaku>();
 							historia = cargarHistoria(3);
 							scene = 3;
@@ -3631,40 +3270,24 @@ L"\"Hoy es un día importante...\"",
 						continue;
 					}
 					SceneData* actual = &escenas[scene];
-
 					// continuar arriba
-					if (actual->continuarArriba &&
-						zonaContinuar0.contains(mousePos)) {
+					if (actual->continuarArriba && zonaContinuar0.contains(mousePos)) {
 
-						if (
-							actual->siguienteEscena >= 0 &&
-							actual->siguienteEscena < (int)escenas.size()
-							) {
-
+						if (actual->siguienteEscena >= 0 && actual->siguienteEscena < (int)escenas.size())
 							scene = actual->siguienteEscena;
-						}
-						else {
-
+						else 
 							cout << "ERROR: siguienteEscena invalida" << endl;
-						}
+
 						continue;
 					}
-
 					// continuar abajo
-					if (actual->continuarAbajo &&
-						zonaContinuar.contains(mousePos)) {
+					if (actual->continuarAbajo && zonaContinuar.contains(mousePos)) {
 
-						if (
-							actual->siguienteEscena >= 0 &&
-							actual->siguienteEscena < (int)escenas.size()
-							) {
-
+						if (actual->siguienteEscena >= 0 && actual->siguienteEscena < (int)escenas.size())
 							scene = actual->siguienteEscena;
-						}
-						else {
-
+						else 
 							cout << "ERROR: siguienteEscena invalida" << endl;
-						}
+
 						continue;
 					}
 					// ESCENA ALARMA Lunes
@@ -3682,7 +3305,6 @@ L"\"Hoy es un día importante...\"",
 							continue;
 						}
 					}
-
 					// MENU DIA 1
 					if (scene == 16) {
 
@@ -3696,7 +3318,6 @@ L"\"Hoy es un día importante...\"",
 							continue;
 						}
 					}
-
 					// ESCENA ALARMA MARTES
 					else if (scene == 18) {
 
@@ -3710,7 +3331,6 @@ L"\"Hoy es un día importante...\"",
 							continue;
 						}
 					}
-
 					// MENU DIA 2
 					else if (scene == 29) {
 
@@ -3718,13 +3338,11 @@ L"\"Hoy es un día importante...\"",
 							scene = 30;
 							continue;
 						}
-
 						else if (zonaRegalos.contains(mousePos)) {
 							scene = 101;
 							continue;
 						}
 					}
-
 					// ESCENA ALARMA MIERCOLES
 					else if (scene == 31) {
 
@@ -3732,7 +3350,6 @@ L"\"Hoy es un día importante...\"",
 							scene = 32;
 							continue;
 						}
-
 						else if (zonaAlarma2.contains(mousePos)) {
 							scene = 32;
 							continue;
@@ -3745,13 +3362,11 @@ L"\"Hoy es un día importante...\"",
 							scene = 56;
 							continue;
 						}
-
 						else if (zonaRegalos.contains(mousePos)) {
 							scene = 55;
 							continue;
 						}
 					}
-
 					// ESCENA ALARMA Jueves
 					else if (scene == 56) {
 
@@ -3759,13 +3374,11 @@ L"\"Hoy es un día importante...\"",
 							scene = 57;
 							continue;
 						}
-
 						else if (zonaAlarma2.contains(mousePos)) {
 							scene = 57;
 							continue;
 						}
 					}
-
 					// MENU Dia 4
 					else if (scene == 80) {
 
@@ -3773,13 +3386,11 @@ L"\"Hoy es un día importante...\"",
 							scene = 82;
 							continue;
 						}
-
 						else if (zonaRegalos.contains(mousePos)) {
 							scene = 81;
 							continue;
 						}
 					}
-
 					// ESCENA ALARMA Viernes
 					else if (scene == 83) {
 
@@ -3787,13 +3398,11 @@ L"\"Hoy es un día importante...\"",
 							scene = 84;
 							continue;
 						}
-
 						else if (zonaAlarma2.contains(mousePos)) {
 							scene = 84;
 							continue;
 						}
 					}
-
 					// MENU Dia 5
 					else if (scene == 97) {
 
@@ -3801,13 +3410,11 @@ L"\"Hoy es un día importante...\"",
 							scene = 99;
 							continue;
 						}
-
 						else if (zonaRegalos.contains(mousePos)) {
 							scene = 98;
 							continue;
 						}
 					}
-
 					//Alarma Sabado (Dia 6)
 					else if (scene == 102) {
 
@@ -3815,7 +3422,6 @@ L"\"Hoy es un día importante...\"",
 							scene = 103;
 							continue;
 						}
-
 						else if (zonaAlarma2.contains(mousePos)) {
 							scene = 103;
 							continue;
@@ -3828,7 +3434,6 @@ L"\"Hoy es un día importante...\"",
 							scene = 126;
 							continue;
 						}
-
 						else if (zonaRegalos.contains(mousePos)) {
 							scene = 125;
 							continue;
@@ -3837,99 +3442,39 @@ L"\"Hoy es un día importante...\"",
 					// REGALOS
 					else if (scene == 100) {
 
-						procesarRegalo(
-							scene,
-							17,
-							mitilina,
-							mousePos,
-							zonaFlores,
-							zonaCarta,
-							zonaPastel,
-							zonaCollar
-						);
-
+						procesarRegalo(scene,17,mitilina,mousePos,zonaFlores,zonaCarta,zonaPastel,zonaCollar);
 						continue;
 					}
 
 					else if (scene == 55) {
 
-						procesarRegalo(
-							scene,
-							56,
-							mitilina,
-							mousePos,
-							zonaFlores,
-							zonaCarta,
-							zonaPastel,
-							zonaCollar
-						);
-
+						procesarRegalo(scene,56,mitilina,mousePos,zonaFlores,zonaCarta,zonaPastel,zonaCollar);
 						continue;
 					}
-
 					else if (scene == 81) {
 
-						procesarRegalo(
-							scene,
-							82,
-							mitilina,
-							mousePos,
-							zonaFlores,
-							zonaCarta,
-							zonaPastel,
-							zonaCollar
-						);
-
+						procesarRegalo(scene,82,mitilina,mousePos,zonaFlores,zonaCarta,zonaPastel,zonaCollar);
 						continue;
 					}
 
 					else if (scene == 98) {
 
-						procesarRegalo(
-							scene,
-							99,
-							mitilina,
-							mousePos,
-							zonaFlores,
-							zonaCarta,
-							zonaPastel,
-							zonaCollar
-						);
+						procesarRegalo(scene,99,mitilina,mousePos,zonaFlores,zonaCarta,zonaPastel,zonaCollar);
 						continue;
 					}
-					// REGALOS 2
+		
 					else if (scene == 101) {
 
-						procesarRegalo(
-							scene,
-							30,
-							mitilina,
-							mousePos,
-							zonaFlores,
-							zonaCarta,
-							zonaPastel,
-							zonaCollar
-						);
-
+						procesarRegalo(scene,30,mitilina,mousePos,zonaFlores,zonaCarta,zonaPastel,zonaCollar);
 						continue;
 					}
-					//Regalos6
+					
 					else if (scene == 125) {
 
-						procesarRegalo(
-							scene,
-							126,
-							mitilina,
-							mousePos,
-							zonaFlores,
-							zonaCarta,
-							zonaPastel,
-							zonaCollar
-						);
-
+						procesarRegalo(scene,126,mitilina,mousePos,zonaFlores,zonaCarta,zonaPastel,zonaCollar);
 						continue;
 					}
-					//ELEGIR7
+					
 					else if (scene == 137) {
 						
 						if (zonaContM.contains(mousePos)) {
@@ -3971,28 +3516,14 @@ L"\"Hoy es un día importante...\"",
 
 						escenarioActual = actual->indiceHistoria;
 
-						procesarDecision(
-							scene,
-							actual->siguienteEscena,
-							escenarioActual,
-							historia,
-							miJugador,
-							mitilina,
-							mousePos,
-							zOp1,
-							zOp2,
-							zOp3,
-							zOp4
-						);
+						procesarDecision(scene,actual->siguienteEscena,escenarioActual,historia,miJugador,mitilina,mousePos,zOp1,zOp2,zOp3,zOp4);
 					}
 
 				}
 			}
 		}
 
-	
-
-		//Para que e cursos paradee
+		//Para que el cursor parpadee
 		if (scene == 1) {
 			if (relojCursor.getElapsedTime().asMilliseconds() > 500) {
 				mostrarCursor = !mostrarCursor;
@@ -4020,19 +3551,7 @@ L"\"Hoy es un día importante...\"",
 		if (actual->indiceHistoria >= 0) {
 			escenarioActual = actual->indiceHistoria;
 		}
-		renderizarEscena(
-			ventana,
-			*actual,
-			textolore,
-			textoPregunta,
-			top1,
-			top2,
-			top3,
-			top4,
-			historia,
-			escenarioActual,
-			nombreJugador
-		);
+		renderizarEscena(ventana,*actual,textolore,textoPregunta,top1,top2,top3,top4,historia,escenarioActual,nombreJugador);
 		if (scene == 1) {
 			ventana.draw(cajaTexto);
 			ventana.draw(textoNombre);
