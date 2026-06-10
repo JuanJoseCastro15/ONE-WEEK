@@ -10,12 +10,14 @@ public:
 
     void modificarConfianza(int valor);
 
-    
+
     void modificarFelicidad(int valor);
 
     void modificarFelicidad();
 
     void actualizarAmor();
+	 // void mostrarEstado() const; Esta funcion es para mostrar el estado actual de la novia utilizar si los valores no se estan modificando correctamente, en tal caso, sacar de la nota 
+    // Esta funcion esta puesta como nota en los casos donde se utilizan las funciones, antes de la carga de texturas.
 
     //agregue esta funcion para ver si te terminan depues de tomar una decision
 
@@ -35,20 +37,25 @@ public:
     Jugador(int A, int C, int L);
     virtual ~Jugador() = default;
 
-    virtual int calcularFelicidad(int impact);
+    virtual int calcularFelicidadC(int impact);
+
+    virtual int calcularFelicidadA(int impact);
 
     virtual int calcularConfianza(int impact);
 
-    void aplicarImpacto(Novia& novia, int impact);
+    void aplicarImpactoCarisma(Novia& novia, int impact);
 
+    void aplicarImpactoAtractivo(Novia& novia, int impact);
+
+    void aplicarImpactoConfianza(Novia& novia, int impact);
 };
-
-
 class Otaku : public Jugador {
 public:
     Otaku();
 
-    int calcularFelicidad(int impact);
+    int calcularFelicidadC(int impact);
+    int calcularFelicidadA(int impact);
+    int calcularConfianza(int impact);
 };
 
 
@@ -56,22 +63,28 @@ class Toxico : public Jugador {
 public:
     Toxico();
 
-    int calcularFelicidad(int impact);
+    int calcularFelicidadC(int impact);
+    int calcularFelicidadA(int impact);
+    int calcularConfianza(int impact);
 };
 
 class Gymrat : public Jugador {
 public:
     Gymrat();
-
-    int calcularFelicidad(int impact);
+    int calcularFelicidadC(int impact);
+    int calcularFelicidadA(int impact);
+    int calcularConfianza(int impact);
 
 };
 
 class NPC : public Jugador {
 public:
     NPC();
-    int calcularFelicidad(int impact);
+    int calcularFelicidadC(int impact);
+    int calcularFelicidadA(int impact);
+    int calcularConfianza(int impact);
 };
+
 
 
 
