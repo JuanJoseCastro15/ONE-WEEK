@@ -1021,16 +1021,37 @@ void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<
 		cout << "Escenario actual: " << escenarioActual << endl;
 		cout << "Scene actual: " << scene << endl;
 
-		bool afectaFelicidad = (escenarioActual % 2 == 0);
-		if (afectaFelicidad) {
-
-			mitilina.modificarFelicidad(impacto);
-			mitilina.actualizarAmor();
+		// Escenarios de CARISMA
+		if (escenarioActual == 0 ||
+			escenarioActual == 2 ||
+			escenarioActual == 5 ||
+			escenarioActual == 8 ||
+			escenarioActual == 11 ||
+			escenarioActual == 18 ||
+			escenarioActual == 21)
+		{
+			miJugador->aplicarImpactoCarisma(mitilina, impacto);
+			//void mostrarEstado();
 		}
-		else {
 
-			mitilina.modificarConfianza(impacto);
-			mitilina.actualizarAmor();
+		// Escenarios de ATRACTIVO
+		else if (escenarioActual == 3 ||
+			escenarioActual == 7 ||
+			escenarioActual == 10 ||
+			escenarioActual == 13 ||
+			escenarioActual == 16 ||
+			escenarioActual == 17)
+		{
+			miJugador->aplicarImpactoAtractivo(mitilina, impacto);
+			//void mostrarEstado();
+			
+		}
+		// Escenarios de CONFIANZA
+		else
+		{
+			miJugador->aplicarImpactoConfianza(mitilina, impacto);
+			//void mostrarEstado();
+			
 		}
 
 		if (mitilina.relacionTerminada()) {
@@ -3560,6 +3581,8 @@ int main() {
 			ventana.draw(bg101);
 		}
 		ventana.display();
+		
 	}
+	mitilina.mostrarEstado();
 	return 0;
 };

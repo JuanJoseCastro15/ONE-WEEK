@@ -47,8 +47,11 @@ void Novia::actualizarAmor() {
         Amor = 0;
 }
 
+void Novia::mostrarEstado() const {
+    std::cout << "Amor: " << Amor << " | Confianza: " << Confianza << " | Felicidad: " << Felicidad << std::endl;
+}
 
-    //agregue esta funcion para ver si te terminan depues de tomar una decision
+//agregue esta funcion para ver si te terminan depues de tomar una decision
 
 bool Novia::relacionTerminada() const {
     return Amor < 60;
@@ -60,7 +63,7 @@ int Novia::getFelicidad() const { return Felicidad; }
 
 Jugador::Jugador(int A, int C, int L) : Atractivo(A), Carisma(C), Lealtad(L) {}
 
-int Jugador::calcularFelicidad(int impact) {
+int Jugador::calcularFelicidadC(int impact) {
 
     // si la respuesta es mala, se respeta el castigo
     if (impact < 0) {
@@ -68,6 +71,16 @@ int Jugador::calcularFelicidad(int impact) {
     }
 
     return impact + (Carisma / 10);
+}
+
+int Jugador::calcularFelicidadA(int impact) {
+
+    // si la respuesta es mala, se respeta el castigo
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Atractivo / 10);
 }
 
 int Jugador::calcularConfianza(int impact) {
@@ -79,31 +92,79 @@ int Jugador::calcularConfianza(int impact) {
     return impact + (Lealtad / 10);
 }
 
-void Jugador::aplicarImpacto(Novia& novia, int impact) {
-    int cambioConf = calcularConfianza(impact);
-    int cambioFeli = calcularFelicidad(impact);
+void Jugador::aplicarImpactoCarisma(Novia& novia, int impact) // funcion para aplicar correctamente el valor y hacer el cambio a la novia 
+{
+    int cambio = calcularFelicidadC(impact);
 
-    novia.modificarConfianza(cambioConf);
-    novia.modificarFelicidad(cambioFeli);
+    novia.modificarFelicidad(cambio);
+    novia.actualizarAmor();
+}
+void Jugador::aplicarImpactoAtractivo(Novia& novia, int impact)
+{
+    int cambio = calcularFelicidadA(impact);
+
+    novia.modificarFelicidad(cambio);
+    novia.actualizarAmor();
+}
+void Jugador::aplicarImpactoConfianza(Novia& novia, int impact) 
+{
+    int cambio = calcularConfianza(impact);
+
+    novia.modificarConfianza(cambio);
+
     novia.actualizarAmor();
 }
 
 
-
-
 Otaku::Otaku() : Jugador(30, 70, 5) {}
 
-int Otaku::calcularFelicidad(int impact) {
+int Otaku::calcularFelicidadC(int impact) {
 
-    // habilidad especial balanceada
-    return (impact + Carisma) / 3;
+   //cout << "*** Otaku::calcularFelicidadC ***" << endl;
+    if (impact < 0) {
+        return impact;
+    } 
+
+    return impact + (Carisma / 3);
 }
 
+int Otaku::calcularFelicidadA(int impact) {
 
+   //cout << "*** Otaku::calcularFelicidadA ***" << endl;
 
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Atractivo / 3);
+}
+
+int Otaku::calcularConfianza(int impact) {
+
+   //cout << "*** Otaku::calcularConfianza ***" << endl;
+
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Lealtad / 3);
+}
 Toxico::Toxico() : Jugador(80, 30, 5) {}
 
-int Toxico::calcularFelicidad(int impact) {
+int Toxico::calcularFelicidadC(int impact) {
+
+    //cout << "*** Toxico::calcularFelicidadC ***" << endl;
+
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Carisma / 10);
+}
+
+int Toxico::calcularFelicidadA(int impact) {
+
+    //cout << "*** Toxico::calcularFelicidadA ***" << endl;
 
     if (impact < 0) {
         return impact;
@@ -112,8 +173,32 @@ int Toxico::calcularFelicidad(int impact) {
     return impact + (Atractivo / 10);
 }
 
+int Toxico::calcularConfianza(int impact) {
+
+   //cout << "*** Toxico::calcularConfianza ***" << endl;
+
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Lealtad / 10);
+}
 Gymrat::Gymrat() : Jugador(90, 50, 5) {}
-int Gymrat::calcularFelicidad(int impact) {
+
+int Gymrat::calcularFelicidadC(int impact) {
+
+    //cout << "*** Gymrat::calcularFelicidadC ***" << endl;
+
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Carisma / 10);
+}
+
+int Gymrat::calcularFelicidadA(int impact) {
+
+    //cout << "*** Gymrat::calcularFelicidadA ***" << endl;
 
     if (impact < 0) {
         return impact;
@@ -122,9 +207,32 @@ int Gymrat::calcularFelicidad(int impact) {
     return impact + (Atractivo / 10);
 }
 
+int Gymrat::calcularConfianza(int impact) {
 
+    //cout << "*** Gymrat::calcularConfianza ***" << endl;
+
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Lealtad / 10);
+}
 NPC::NPC() : Jugador(50, 50, 5) {}
-int NPC::calcularFelicidad(int impact) {
+
+int NPC::calcularFelicidadC(int impact) {
+
+    //cout << "*** NPC::calcularFelicidadC ***" << endl;
+
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Carisma / 10);
+}
+
+int NPC::calcularFelicidadA(int impact) {
+
+    //cout << "*** NPC::calcularFelicidadA ***" << endl;
 
     if (impact < 0) {
         return impact;
@@ -133,7 +241,16 @@ int NPC::calcularFelicidad(int impact) {
     return impact + (Atractivo / 10);
 }
 
+int NPC::calcularConfianza(int impact) {
 
+    //cout << "*** NPC::calcularConfianza ***" << endl;
+
+    if (impact < 0) {
+        return impact;
+    }
+
+    return impact + (Lealtad / 10);
+}
 
 // otaku carisma 70, atractivo 30, lealtad 5
 // Toxico carisma 30, atractivo 80, lealtad 5
