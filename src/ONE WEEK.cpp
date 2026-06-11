@@ -1031,7 +1031,7 @@ void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<
 			escenarioActual == 21)
 		{
 			miJugador->aplicarImpactoCarisma(mitilina, impacto);
-			//void mostrarEstado();
+			mitilina.mostrarEstado();
 		}
 
 		// Escenarios de ATRACTIVO
@@ -1043,14 +1043,14 @@ void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<
 			escenarioActual == 17)
 		{
 			miJugador->aplicarImpactoAtractivo(mitilina, impacto);
-			//void mostrarEstado();
+			mitilina.mostrarEstado();
 			
 		}
 		// Escenarios de CONFIANZA
 		else
 		{
 			miJugador->aplicarImpactoConfianza(mitilina, impacto);
-			//void mostrarEstado();
+			mitilina.mostrarEstado();
 			
 		}
 

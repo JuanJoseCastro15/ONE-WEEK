@@ -47,12 +47,12 @@ void Novia::actualizarAmor() {
         Amor = 0;
 }
 
+
 void Novia::mostrarEstado() const {
     std::cout << "Amor: " << Amor << " | Confianza: " << Confianza << " | Felicidad: " << Felicidad << std::endl;
 }
 
 //agregue esta funcion para ver si te terminan depues de tomar una decision
-
 bool Novia::relacionTerminada() const {
     return Amor < 60;
 }
