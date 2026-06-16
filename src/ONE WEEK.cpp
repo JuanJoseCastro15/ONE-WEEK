@@ -191,7 +191,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	else if (clase == 3) { //OTAKU
 		e4.op1 = L"Acercarme corriendo como naruto";
 		e4.op2 = L"Acercarme y decir:\nEsto ya parece opening de Your Name";
-		e4.op3 = L"Acercarme a Illeana-chan";
+		e4.op3 = L"Acercarme a Abril-chan";
 		e4.op4 = L"Acercarme haciendo pausas raras";
 	}
 
@@ -345,7 +345,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	//Dia 3
 	Escenario e9;
 
-	e9.pregunta = L"Illeana me mira directamente.\n"
+	e9.pregunta = L"Abril me mira directamente.\n"
 		L"Me pasas tu numero?";
 
 	e9.imp1 = -4;
@@ -485,7 +485,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	else if (clase == 3) { //OTAKU
 		e12.op1 = L"Chi UnU";
 		e12.op2 = L"Baka, no creo que sea tanto";
-		e12.op3 = L"No lo se Illeana-chan";
+		e12.op3 = L"No lo se Abril-chan";
 		e12.op4 = L"*hacer ruidos raros*";
 	}
 
@@ -505,25 +505,25 @@ vector<Escenario> cargarHistoria(int clase) {
 		e13.op2 = L"Perfecto, tengo que llamarle para disculparme";
 		e13.op3 = L"Mmm, ya me enojé luego lo intento arreglar";
 		e13.op4 = L"Mejor intento pescar un nuevo pez,\n"
-			L"Illeana suena a una buena opción";
+			L"Abril suena a una buena opción";
 	}
 	else if (clase == 1) { //NPC
 		e13.op1 = L"Ay no, debo mandarle mensaje";
 		e13.op2 = L"Ay no, debo hablar con ella, debería marcarle";
 		e13.op3 = L"Que desastre";
-		e13.op4 = L"Debo... Debo hablar con alguien. Illeana quizá\nesté libre";
+		e13.op4 = L"Debo... Debo hablar con alguien. Abril quizá\nesté libre";
 	}
 	else if (clase == 2) { //GYMRAT
 		e13.op1 = L"Necesito mandarle mensaje, no quiero que\nestemos mal";
 		e13.op2 = L"Necesito marcarle, es urgente";
 		e13.op3 = L"*Te pones a hacer lagartijas*";
-		e13.op4 = L"Ileana me comprende más, debería hablarle";
+		e13.op4 = L"Abril me comprende más, debería hablarle";
 	}
 	else if (clase == 3) { //OTAKU
 		e13.op1 = L"Ooh oh, debo mandarle mensaje a mi sempai";
 		e13.op2 = L"No puede ser, le debo marcar a mi novia-chan";
 		e13.op3 = L"*te pones a ver anime*";
-		e13.op4 = L"Debería buscar a Illeana-chan, ella sí me\nentiende";
+		e13.op4 = L"Debería buscar a Abril-chan, ella sí me\nentiende";
 	}
 
 	h.push_back(e13);
@@ -570,7 +570,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	Escenario e15;
 
-	e15.pregunta = L"Como de costumbre, milagrosamente te encontraste a Illeana.\n"
+	e15.pregunta = L"Como de costumbre, milagrosamente te encontraste a Abril.\n"
 		L"Decides acercarte y comienzas a darle una explicación sobre lo ayer";
 
 	e15.imp1 = -5;
@@ -598,7 +598,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e15.op4 = L"Sabes que me has metido en problemas";
 	}
 	else if (clase == 3) { //OTAKU
-		e15.op1 = L"Perdón que mi novia nos interrumpiera\nIlleana-chan";
+		e15.op1 = L"Perdón que mi novia nos interrumpiera\nAbril-chan";
 		e15.op2 = L"Perdón por dejarte plantada como árbol";
 		e15.op3 = L"Ya viste YBC? 7w7";
 		e15.op4 = L"Oi oi oi, me metiste en problemas";
@@ -739,8 +739,8 @@ vector<Escenario> cargarHistoria(int clase) {
 	}
 	else if (clase == 2) { //GYMRAT
 		e19.op1 = L"Sinceramente, no sé quien es, no la conozco";
-		e19.op2 = L"Mira amor ella es Illeana, de la uni";
-		e19.op3 = L"Ella es Illeana, es una amiguita de la\nuniversidad";
+		e19.op2 = L"Mira amor ella es Abril, de la uni";
+		e19.op3 = L"Ella es Abril, es una amiguita de la\nuniversidad";
 		e19.op4 = L"*No responder*";
 	}
 	else if (clase == 3) { //OTAKU
@@ -754,7 +754,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	Escenario e20;
 
-	e20.pregunta = L"Illeana: Holaa feliz san valentín {NOMBRE},\nquién es ella??? *Qué respondes?*";
+	e20.pregunta = L"Abril: Holaa feliz san valentín {NOMBRE},\nquién es ella??? *Qué respondes?*";
 
 	e20.imp1 = 2;
 	e20.imp2 = -2;
@@ -769,13 +769,13 @@ vector<Escenario> cargarHistoria(int clase) {
 	}
 	else if (clase == 1) { //NPC
 		e20.op1 = L"Ella es mi novia";
-		e20.op2 = L"Hola Illeana, no te había visto";
+		e20.op2 = L"Hola Abril, no te había visto";
 		e20.op3 = L"Es una amiga muy cercana";
-		e20.op4 = L"Ah, Illeana, te presento al amor de mi vida";
+		e20.op4 = L"Ah, Abril, te presento al amor de mi vida";
 	}
 	else if (clase == 2) { //GYMRAT
-		e20.op1 = L"Ileana, te presento a mi novia";
-		e20.op2 = L"Ey Ileana, no había notado tu presencia";
+		e20.op1 = L"Abril, te presento a mi novia";
+		e20.op2 = L"Ey Abril, no había notado tu presencia";
 		e20.op3 = L"Ella es una amiga";
 		e20.op4 = L"Ella es mi novia, mi amor, mi reina, mi\nmotivación para vivir";
 	}
@@ -1226,19 +1226,19 @@ int main() {
 	sf::Sprite bg7(tulipanes);
 	ajustar(bg7, tulipanes);
 
-	// escena illeana
-	sf::Texture illeana;
-	cargarTextura(illeana, "assets/fondos/illeanapasillo.png");
+	// escena Abril
+	sf::Texture Abril;
+	cargarTextura(Abril, "assets/fondos/Abrilpasillo.png");
 
-	sf::Sprite bg8(illeana);
-	ajustar(bg8, illeana);
+	sf::Sprite bg8(Abril);
+	ajustar(bg8, Abril);
 
-	// escena illeana con opciones
-	sf::Texture illeanapasillo;
-	cargarTextura(illeanapasillo, "assets/fondos/illeanapasillocuadro1.png");
+	// escena Abril con opciones
+	sf::Texture Abrilpasillo;
+	cargarTextura(Abrilpasillo, "assets/fondos/Abrilpasillocuadro1.png");
 
-	sf::Sprite bg9(illeanapasillo);
-	ajustar(bg9, illeanapasillo);
+	sf::Sprite bg9(Abrilpasillo);
+	ajustar(bg9, Abrilpasillo);
 
 	// escena del cuarto con un boton
 	sf::Texture cuartocontexto;
@@ -1338,7 +1338,7 @@ int main() {
 	sf::Sprite bg21(telelluvia);
 	ajustar(bg21, telelluvia);
 
-	// escena del mensaje abierto con illeana
+	// escena del mensaje abierto con Abril
 	sf::Texture mensajegirasol;
 	cargarTextura(mensajegirasol, "assets/fondos/mensajegira.png");
 
@@ -1352,12 +1352,12 @@ int main() {
 	sf::Sprite bg23(giraop);
 	ajustar(bg23, giraop);
 
-	// escena del pasillo con illeana avisandote del domingo
-	sf::Texture pasIlleana;
-	cargarTextura(pasIlleana, "assets/fondos/pasilloilleana.png");
+	// escena del pasillo con Abril avisandote del domingo
+	sf::Texture pasAbril;
+	cargarTextura(pasAbril, "assets/fondos/pasilloAbril.png");
 
-	sf::Sprite bg24(pasIlleana);
-	ajustar(bg24, pasIlleana);
+	sf::Sprite bg24(pasAbril);
+	ajustar(bg24, pasAbril);
 	// dia 3
 	sf::Texture dia3;
 	cargarTextura(dia3, "assets/fondos/Dia3.jpeg");
@@ -1393,40 +1393,40 @@ int main() {
 	sf::Sprite bg29(cuartoconcel);
 	ajustar(bg29, cuartoconcel);
 
-	// Illeana pensando
-	sf::Texture illeanapiensa;
-	cargarTextura(illeanapiensa, "assets/fondos/Illiana pensando.PNG");
+	// Abril pensando
+	sf::Texture Abrilpiensa;
+	cargarTextura(Abrilpiensa, "assets/fondos/Abril pensando.PNG");
 
-	sf::Sprite bg30(illeanapiensa);
-	ajustar(bg30, illeanapiensa);
+	sf::Sprite bg30(Abrilpiensa);
+	ajustar(bg30, Abrilpiensa);
 
-	// Illeana pide numero
-	sf::Texture illeananumero;
-	cargarTextura(illeananumero, "assets/fondos/Illiana te pide el numero.PNG");
+	// Abril pide numero
+	sf::Texture Abrilnumero;
+	cargarTextura(Abrilnumero, "assets/fondos/Abril te pide el numero.PNG");
 
-	sf::Sprite bg31(illeananumero);
-	ajustar(bg31, illeananumero);
+	sf::Sprite bg31(Abrilnumero);
+	ajustar(bg31, Abrilnumero);
 
 	// Opciones numero
-	sf::Texture illeananumop;
-	cargarTextura(illeananumop, "assets/fondos/Illiana te pide el numero opciones.PNG");
+	sf::Texture Abrilnumop;
+	cargarTextura(Abrilnumop, "assets/fondos/Abril te pide el numero opciones.PNG");
 
-	sf::Sprite bg32(illeananumop);
-	ajustar(bg32, illeananumop);
+	sf::Sprite bg32(Abrilnumop);
+	ajustar(bg32, Abrilnumop);
 
-	// Illeana avergonzada
-	sf::Texture illeanaApenada;
-	cargarTextura(illeanaApenada, "assets/fondos/Illiana avergonzada.PNG");
+	// Abril avergonzada
+	sf::Texture AbrilApenada;
+	cargarTextura(AbrilApenada, "assets/fondos/Abril avergonzada.PNG");
 
-	sf::Sprite bg33(illeanaApenada);
-	ajustar(bg33, illeanaApenada);
+	sf::Sprite bg33(AbrilApenada);
+	ajustar(bg33, AbrilApenada);
 
-	// Mensaje de Illeana
-	sf::Texture mensajeIlleana;
-	cargarTextura(mensajeIlleana, "assets/fondos/MensajedeIlliana.PNG");
+	// Mensaje de Abril
+	sf::Texture mensajeAbril;
+	cargarTextura(mensajeAbril, "assets/fondos/MensajedeAbril.PNG");
 
-	sf::Sprite bg34(mensajeIlleana);
-	ajustar(bg34, mensajeIlleana);
+	sf::Sprite bg34(mensajeAbril);
+	ajustar(bg34, mensajeAbril);
 
 	// Novia esperando en cafe
 	sf::Texture cafe1;
@@ -1529,19 +1529,19 @@ int main() {
 	ajustar(bg48, TelefonoEnCama);
 
 	// Dia 4 Escenario 2
-	// Illiana salida 1
-	sf::Texture IllianaSalida1;
-	cargarTextura(IllianaSalida1, "assets/fondos/Illianasalida1.png");
+	// Abril salida 1
+	sf::Texture AbrilSalida1;
+	cargarTextura(AbrilSalida1, "assets/fondos/Abrilsalida1.png");
 
-	sf::Sprite bg49(IllianaSalida1);
-	ajustar(bg49, IllianaSalida1);
+	sf::Sprite bg49(AbrilSalida1);
+	ajustar(bg49, AbrilSalida1);
 
-	// Illiana salida 2
-	sf::Texture IllianaSalida2;
-	cargarTextura(IllianaSalida2, "assets/fondos/Illianasalida2.png");
+	// Abril salida 2
+	sf::Texture AbrilSalida2;
+	cargarTextura(AbrilSalida2, "assets/fondos/Abrilsalida2.png");
 
-	sf::Sprite bg50(IllianaSalida2);
-	ajustar(bg50, IllianaSalida2);
+	sf::Sprite bg50(AbrilSalida2);
+	ajustar(bg50, AbrilSalida2);
 
 	// Novia lejos
 	sf::Texture NoviaLejos;
@@ -1616,7 +1616,7 @@ int main() {
 	sf::Sprite bg60(noviaescuela);
 	ajustar(bg60, noviaescuela);
 
-	//IlleanaenojadaPasillo
+	//AbrilenojadaPasillo
 	sf::Texture Pasilloenojada;
 	cargarTextura(Pasilloenojada, "assets/fondos/pasilloenojada.png");
 
@@ -1752,23 +1752,23 @@ int main() {
 	sf::Sprite bg83(Noviatensa);
 	ajustar(bg83, Noviatensa);
 
-	//Illiana llega
-	sf::Texture Illeanallega;
-	cargarTextura(Illeanallega, "assets/fondos/Illeanallega.png");
-	sf::Sprite bg84(Illeanallega);
-	ajustar(bg84, Illeanallega);
+	//Abril llega
+	sf::Texture Abrilllega;
+	cargarTextura(Abrilllega, "assets/fondos/Abrilllega.png");
+	sf::Sprite bg84(Abrilllega);
+	ajustar(bg84, Abrilllega);
 
-	//Illiana llega OP
-	sf::Texture IlleanallegaOP;
-	cargarTextura(IlleanallegaOP, "assets/fondos/Illeanallegaop.png");
-	sf::Sprite bg85(IlleanallegaOP);
-	ajustar(bg85, IlleanallegaOP);
+	//Abril llega OP
+	sf::Texture AbrilllegaOP;
+	cargarTextura(AbrilllegaOP, "assets/fondos/Abrilllegaop.png");
+	sf::Sprite bg85(AbrilllegaOP);
+	ajustar(bg85, AbrilllegaOP);
 
-	//Illiana se va
-	sf::Texture IlleanaSeVa;
-	cargarTextura(IlleanaSeVa, "assets/fondos/Illeanaseva.png");
-	sf::Sprite bg86(IlleanaSeVa);
-	ajustar(bg86, IlleanaSeVa);
+	//Abril se va
+	sf::Texture AbrilSeVa;
+	cargarTextura(AbrilSeVa, "assets/fondos/Abrilseva.png");
+	sf::Sprite bg86(AbrilSeVa);
+	ajustar(bg86, AbrilSeVa);
 
 	//Nombredeugador
 	sf::Texture NombredeJugador;
@@ -1830,17 +1830,17 @@ int main() {
 	sf::Sprite bg96(Noviamalo);
 	ajustar(bg96, Noviamalo);
 
-	//Illeananotanmalo
-	sf::Texture Illeananotanmalo;
-	cargarTextura(Illeananotanmalo, "assets/fondos/Illeananotanmalo.png");
-	sf::Sprite bg97(Illeananotanmalo);
-	ajustar(bg97, Illeananotanmalo);
+	//Abrilnotanmalo
+	sf::Texture Abrilnotanmalo;
+	cargarTextura(Abrilnotanmalo, "assets/fondos/Abrilnotanmalo.png");
+	sf::Sprite bg97(Abrilnotanmalo);
+	ajustar(bg97, Abrilnotanmalo);
 
-	//Illeanamalo
-	sf::Texture Illeanamalo;
-	cargarTextura(Illeanamalo, "assets/fondos/Illeanamalo.png");
-	sf::Sprite bg98(Illeanamalo);
-	ajustar(bg98, Illeanamalo);
+	//Abrilmalo
+	sf::Texture Abrilmalo;
+	cargarTextura(Abrilmalo, "assets/fondos/Abrilmalo.png");
+	sf::Sprite bg98(Abrilmalo);
+	ajustar(bg98, Abrilmalo);
 
 	//Pantallafinal
 	sf::Texture creditos;
@@ -2056,7 +2056,7 @@ int main() {
 	};
 	escenas[21] = SceneData{
 		&bg17,
-		L"En mi camino me encuentro con Illeana.\n"
+		L"En mi camino me encuentro con Abril.\n"
 		L"Parece que quedo atrapada por la lluvia.",
 		false,
 		true,
@@ -2074,7 +2074,7 @@ int main() {
 	};
 	escenas[23] = SceneData{
 		&bg19,
-		L"Tu: Otra vez tú\nIlleana: Creo que sí coincidimos después de todo {NOMBRE}\nSe acerca un poco a tu paraguas sin preguntar directamente",
+		L"Tu: Otra vez tú\nAbril: Creo que sí coincidimos después de todo {NOMBRE}\nSe acerca un poco a tu paraguas sin preguntar directamente",
 		false,
 		true,
 		false,
@@ -2115,7 +2115,7 @@ int main() {
 	};
 	escenas[28] = SceneData{
 		&bg24,
-		L"Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Illeana volteó hacia mi.\n"
+		L"Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Abril volteó hacia mi.\n"
 		L"'Oye...'\n"
 		L"'El domingo va a haber algo interesante cerca de aquí, deberías venir'",
 		false,
@@ -2213,7 +2213,7 @@ int main() {
 	};
 	escenas[39] = SceneData{
 		&bg24,
-		L"Illeana se me acerca como si ya fuera costumbre.\n"
+		L"Abril se me acerca como si ya fuera costumbre.\n"
 		L"Parece ser que ya somos amigos.\n"
 		L"\"Oye {NOMBRE}...\"\n",
 		false,
@@ -2487,7 +2487,7 @@ int main() {
 	escenas[70] = SceneData{
 		&bg30,
 		L"Que estresante. \n"
-		L"Como es costumbre, encontré a Illeana en el pasillo. Aún faltaba tiempo para\n"
+		L"Como es costumbre, encontré a Abril en el pasillo. Aún faltaba tiempo para\n"
 		L"entrar a clases entonces nos quedamos platicando. Le conté sobre lo mal \n"
 		L"que iba mi día. Entre ver a mi novia con alguien más y olvidar mi telefono \n"
 		L"me la estaba pasando fatal. Incluso nos quedamos platicando en la salida.",
@@ -2648,7 +2648,7 @@ int main() {
 	};
 	escenas[88] = SceneData{
 		&bg61,
-		L"Como siempre, me encuentro con Illeana antes\n"
+		L"Como siempre, me encuentro con Abril antes\n"
 		L"de clases, pero parece que no está \n"
 		L"de buenas. Debo acercarme y darle una explicación\n",
 		false,
@@ -2859,7 +2859,7 @@ int main() {
 	};
 	escenas[113] = SceneData{
 		&bg88,
-		L"Volteo y era Illeana, celebrando con unas amigas\nque le estaban echando carrilla, me quedé congelado",
+		L"Volteo y era Abril, celebrando con unas amigas\nque le estaban echando carrilla, me quedé congelado",
 		false,
 		true,
 		false,
@@ -2884,7 +2884,7 @@ int main() {
 	};
 	escenas[116] = SceneData{
 		&bg81,
-		L"Cuando menos lo esperaba el ruido se escuchaba\nmás fuerte, volteo y noto que Illeana se está acercando a nosotros.",
+		L"Cuando menos lo esperaba el ruido se escuchaba\nmás fuerte, volteo y noto que Abril se está acercando a nosotros.",
 		false,
 		true,
 		false,
@@ -2900,7 +2900,7 @@ int main() {
 	};
 	escenas[118] = SceneData{
 		&bg84,
-		L"Ileana: Holaaa, feliz san valentín",
+		L"Abril: Holaaa, feliz san valentín",
 		false,
 		true,
 		false,
@@ -2917,7 +2917,7 @@ int main() {
 	};
 	escenas[120] = SceneData{
 		&bg86,
-		L"Illeana: Es lindo conocerte. En fin, {NOMBRE} espero poder verte mañana,\nluego te mando la ubicación más tarde, va?",
+		L"Abril: Es lindo conocerte. En fin, {NOMBRE} espero poder verte mañana,\nluego te mando la ubicación más tarde, va?",
 		false,
 		true,
 		false,
@@ -2974,7 +2974,7 @@ int main() {
 	};
 	escenas[127] = SceneData{
 		&bg10,
-		L"... Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes;\nde Illiana y mi novia:",
+		L"... Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes;\nde Abril y mi novia:",
 		false,
 		true,
 		false,
@@ -3047,7 +3047,7 @@ int main() {
 	};
 	escenas[136] = SceneData{
 		&bg10,
-		L"“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio\n con Ileana siento que soy yo mismo y me\n quiere ser como soy...\n\nCon quién me voy?",
+		L"“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio\n con Abril siento que soy yo mismo y me\n quiere ser como soy...\n\nCon quién me voy?",
 		false,
 		true,
 		false,
@@ -3095,7 +3095,7 @@ int main() {
 	};
 	escenas[142] = SceneData{
 		&bg98,
-		L"Me fui con Illeana, y ese mismo dia mi novia me termino. \n Con el tiempo me empareje con Illeana pero todo habia sido una broma\n que hizo con sus amigos. Me humillaron.",
+		L"Me fui con Abril, y ese mismo dia mi novia me termino. \n Con el tiempo me empareje con Abril pero todo habia sido una broma\n que hizo con sus amigos. Me humillaron.",
 		false,
 		true,
 		false,

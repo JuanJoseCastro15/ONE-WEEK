@@ -110,7 +110,7 @@ Opción 4: Usar ropa fea (bajar atractivo)
 
 
 D2_E2
-Es la chica de ayer, Illeana.
+Es la chica de ayer, Abril.
 Está bajo un pequeño techo, mirando la lluvia… como si no tuviera prisa.
 Levanta la mirada.
 Me ve.
@@ -127,7 +127,7 @@ Opción 2: Acercarme coqueteando (baja confianza con la novia)
         Toxico: Acercarse y decir “Esperaste mucho por mi?”
         Gymrat: Acercase y decir “Creo que te estas volviendo parte de mi rutina”
 Opción 3: Saludar rápido (neutral)
-        Otaku:  Acercarme a Illeana-chan 
+        Otaku:  Acercarme a Abril-chan 
         NPC: Saludar con la mano al pasar.
         Toxico: *Saludar rápido*
         Gymrat: *Saludar *
@@ -168,7 +168,7 @@ Tu celular vibra
 Mensaje de tu novia:
 “Oyeee, con este clima se antoja verte”
 “Tu novia???”
-(illeana nota que sonríes viendo el celular)
+(Abril nota que sonríes viendo el celular)
 Qué le respondes a tu novia?
 
 Opción 1: Responder lindo amor confianza
@@ -224,7 +224,7 @@ Gymrat:
 
 D3E2:
 Te mira directo.
-“¿Me pasas tu número?(Illiana)
+“¿Me pasas tu número?(Abril)
 Decisión
 Opción 1: Dárselo sin problema -confianza novia
 Otaku: “EMMM… esta bien …”
@@ -315,7 +315,7 @@ Opción 2: No
     Toxico: ”Como por?, claro que no.”
     Gymrat:
 Opción 3: Tal vez
-    Otaku: “No lo se Illeana-chan”
+    Otaku: “No lo se Abril-chan”
     NPC: “Hemos estado juntos mucho tiempo, debo pensarlo” 
     Toxico: ”Tendre que pensarlo.”
     Gymrat:
@@ -344,10 +344,10 @@ Acción 3:  no haces nada
     NPC: “Que desastre”
     Toxico: ”Mmm, ya me enoje luego lo intento arreglar.”
     Gymrat:
-Accion 4: Le mandas mensaje a illeana (-1000000 de aura super negativa)
-     Otaku:  “Deberia buscar a Illeana-chan, ella si me entiende”
-     NPC: “Debo…debo hablar con alguien. Illeana quizá este libre”
-     Toxico: ”Mejor intento pescar un nuevo pez, Illeana suena a una buena opción.”
+Accion 4: Le mandas mensaje a Abril (-1000000 de aura super negativa)
+     Otaku:  “Deberia buscar a Abril-chan, ella si me entiende”
+     NPC: “Debo…debo hablar con alguien. Abril quizá este libre”
+     Toxico: ”Mejor intento pescar un nuevo pez, Abril suena a una buena opción.”
      Gymrat:
 
 D5E1:
@@ -375,12 +375,12 @@ Acción 4:  le dices “ya me disculpe, contenta?”
      Gymrat:
 
 D5E2:
-Como de costumbre , milagrosamente te encontraste a Illeana . Decides acercarte  y comienzas a darle una explicación
+Como de costumbre , milagrosamente te encontraste a Abril . Decides acercarte  y comienzas a darle una explicación
 Escenario 2:
 Sobre lo de ayer…
 
 Accion 1: perdon por que mi novia nos interrumpiera
-     Otaku: "Perdon que mi novia nos interrumpiera illeana-chan"
+     Otaku: "Perdon que mi novia nos interrumpiera Abril-chan"
      NPC: "Disculpame, no esperaba que apareciera" 
      Toxico: ”Perdon por la aparicion de mi novia, a veces es molesta”
      Gymrat:
@@ -495,7 +495,7 @@ Opcion 3 : decir que es una amiguita
 Opcion 4: No responder
 
 D6E3:
-Illeana: Holaa feliz san valentin, quien es ella???
+Abril: Holaa feliz san valentin, quien es ella???
 Que respondes? 
 Opcion 1: Decir con seguridad tu novia (neutral)
    Otaku: "Es mi novia, la waifu oficial del canon"
@@ -504,7 +504,7 @@ Opcion 1: Decir con seguridad tu novia (neutral)
    Gymrat:
 Opcion 2: Cambiar de tema (tipo solo saludas y no contestas) negativa
    Otaku: "Ahhh… cutscene incómoda… skip…"
-   NPC: "Hola Illeana, no te había visto"
+   NPC: "Hola Abril, no te había visto"
    Toxico: "¿Que ondaaaa, como andas?"
    Gymrat:
 Opcion 3: Decir que es una amiga (MUY MALA)
@@ -514,7 +514,7 @@ Opcion 3: Decir que es una amiga (MUY MALA)
    Gymrat:
 Opcion 4: Una respuesta afirmando y chuleando a tu novia (positiva)
    Otaku: Si, es ella… mi personaje de rango S .
-   NPC: "Ah, Illiana, te presento al amor de mi vida [ ]"
+   NPC: "Ah, Abril, te presento al amor de mi vida [ ]"
    Toxico: "Ella es mi mujer"
    Gymrat: 
 
