@@ -10,7 +10,6 @@ public:
 
     void modificarConfianza(int valor);
 
-
     void modificarFelicidad(int valor);
 
     void modificarFelicidad();

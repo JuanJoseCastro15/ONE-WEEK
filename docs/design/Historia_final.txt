@@ -47,7 +47,7 @@ Justo cuando estoy por entrar al salon pero algo me interrumpe. Una chica está 
 Se acerca hacia mí. 
 
 
-Ileana: “Hola, me llamo Ileana, ¿Cómo te llamas?” (Afecta confianza)
+Abril: “Hola, me llamo Abril, ¿Cómo te llamas?” (Afecta confianza)
 
 
 Acción 1 : responder amable
@@ -104,7 +104,7 @@ Opción 4: Usar ropa fea (bajar atractivo)
 
 
 //transicion 
-Llegando al campus con mi paraguas.  La lluvia caía constante… de esas que no molestan, pero tampoco te dejan ignorarla. El ambiente era tranquilo en el campus…demasiado tranquilo. En mi camino, me encuentro con Illeana, parece que quedó atrapada en la lluvia. .
+Llegando al campus con mi paraguas.  La lluvia caía constante… de esas que no molestan, pero tampoco te dejan ignorarla. El ambiente era tranquilo en el campus…demasiado tranquilo. En mi camino, me encuentro con Abril, parece que quedó atrapada en la lluvia. .
 Está bajo un pequeño techo, mirando la lluvia como si no tuviera prisa.
 Levanta la mirada y me encuentra. Sonríe.
 //Escenario 2  (Afecta confianza y carisma)
@@ -113,7 +113,7 @@ Acción 2: Acercarme coqueteando (baja confianza con la novia)
 Acción 3: Saludar rápido (neutral)
 Acción 4: Dudar un poco antes de acercarme (- carisma)
 Prota: “Otra vez tú…” sonríe
-Illeana: “Creo que sí coincidimos después de todo” 
+Abril: “Creo que sí coincidimos después de todo” 
 Se acerca un poco a tu paraguas sin preguntar directamente.
 //Escenario 3: (Afecta carisma y confianza)
 Responses:
@@ -128,7 +128,7 @@ Mi celular vibró
 //Escenario 4: (Afecta Confianza)
 Mensaje de tu novia:
 “Oyeee, con este clima se antoja verte”
-Illeana: “Tu novia??”
+Abril: “Tu novia??”
 
 
 (La chica nota que sonríes viendo el celular)
@@ -136,13 +136,13 @@ Opción 1: Responder lindo amor confianza
 Opción 2: Responder seco neutral amor leve
 Opción 3: No responder -confianza
 Opción 4: Responder mientras escondes el celular -menos confianza
-Illeana: “Vaya, enserio te distraes… es tu novia, ¿no? 
+Abril: “Vaya, enserio te distraes… es tu novia, ¿no? 
 //Escenario 5: (Afecta confianza)
 Opción 1: Sí directo +confianza novia
 Opción 2: “Sí… supongo” +confianza
 Opción 3: “¿Por qué lo preguntas?” neutral
 Opción 4: Evadir —---confianza 
-Llegamos al edificio de clases y caminamos por el pasillo. Antes de entrar Illeana volteó hacia mi.
+Llegamos al edificio de clases y caminamos por el pasillo. Antes de entrar Abril volteó hacia mi.
 “Oye…”
 “El domingo… va a haber algo interesante cerca de aquí, deberías venir:)”
 Uff, por fin terminó el día. Por fin puedo dormir. 
@@ -165,8 +165,8 @@ Opción 4: Evadir la pregunta -confianza
  Guardo el celular. 
 No sé si fue mi imaginación, pero esa pregunta se sintió más pesada de lo normal… no sé, creo que es mejor alistarme para clases. 
 Al llegar al campus todo seguía normal. Caminaba tranquilo hasta mi salón de clases hasta que- 
-Illeana: “Hey”
-Se me acerca Illeana como si ya fuera costumbre. Parece ser que ya somos amigos. 
+Abril: “Hey”
+Se me acerca Abril como si ya fuera costumbre. Parece ser que ya somos amigos. 
 “Oye…”
 “Estuve pensando en lo que te dije ayer”
 //cambio de imagen *se cuza de brazos*
@@ -223,9 +223,9 @@ Recibes un mensaje de tu novia
 //Transición
 Llegó la tarde y fui a clases…
 Que estresante.
-Como es costumbre, encontré a Illeana en el pasillo. Aún faltaba tiempo para entrar a clases entonces nos quedamos platicando. Le conté sobre lo mal que iba mi día. Entre ver a mi novia con alguien más y olvidar mi teléfono me la estaba pasando fatal. Incluso nos quedamos platicando en la salida. 
+Como es costumbre, encontré a Abril en el pasillo. Aún faltaba tiempo para entrar a clases entonces nos quedamos platicando. Le conté sobre lo mal que iba mi día. Entre ver a mi novia con alguien más y olvidar mi teléfono me la estaba pasando fatal. Incluso nos quedamos platicando en la salida. 
  //Escenario 2 (Afecta confianza)
-Illeana: “¿Cómo te sentiste después de eso ? Supongo que muy feo, terminarás con ella? No seas migajero.”
+Abril: “¿Cómo te sentiste después de eso ? Supongo que muy feo, terminarás con ella? No seas migajero.”
 Opción 1: Si
 Opción 2: No
 Opción 3: Tal vez
@@ -241,7 +241,7 @@ Al llegar a casa corrí a mi cuarto. Mi teléfono estaba en mi cama y al abrirlo
 Acción 1: le mandas mensaje
 Acción 2: le marcas
 Acción 3:  no haces nada
-Acción 4: Le mandas mensaje a illeana (-1000000 de aura super negativa)
+Acción 4: Le mandas mensaje a Abril (-1000000 de aura super negativa)
 Ha sido un día horroroso. Luego de quedarme un rato despierto, mejor decidí descansar, es mejor arreglar esto con la mente despejada. 
 //Menú de la noche
 Dia 5 
@@ -255,7 +255,7 @@ Acción 2: la besas en la frente
 Acción 3: beso en la boca
 Acción 4:  le dices “ya me disculpe, contenta?”
 //Transicón
-Luego de hablar un tiempo, aceptó mi disculpa. Parecía feliz de que todo regresara a la normalidad. Decidí acompañarla a la universidad y luego me fui a mi clase. Como siempre, me encuentro con Illeana antes de clases, pero parece que no esta de buenas. Debo acercarme y darle una explicación
+Luego de hablar un tiempo, aceptó mi disculpa. Parecía feliz de que todo regresara a la normalidad. Decidí acompañarla a la universidad y luego me fui a mi clase. Como siempre, me encuentro con Abril antes de clases, pero parece que no esta de buenas. Debo acercarme y darle una explicación
 //Escenario 2: (Afecta confianza)
 Sobre lo de ayer…
 Acción 1: perdon por que mi novia nos interrumpiera
@@ -301,7 +301,7 @@ Opción 3: contestas pasivamente.
 Opción 4: le coqueteas al mesero.
 El mesero tomó su orden y se fue. Seguimos platicando sobre la universidad y como nos estamos adaptando. 
 De repente escuchamos unos murmullos en la parte de atrás.
-Volteo y era Illeana, celebrando con unas amigas que le estaban echando carrilla,  me quede congelado….
+Volteo y era Abril, celebrando con unas amigas que le estaban echando carrilla,  me quede congelado….
 //Escenario 2: (Afecta felicidad y confianza)
 Sin darme cuenta mi novia me estaba preguntando sobre quién era ella. 
 N: “Acaso no es la chica del otro día?”
@@ -310,16 +310,16 @@ Opción 2: Decir que es una amiga
 Opción 3 : decir que es una amiguita
 Opción 4:  no responder
 Mi novia estuvo dudando pero le aseguré que no era nada. Igual ella decidió confiar. Llegaron nuestros alimentos y los disfrutamos.
-Cuando menos lo esperaba el ruido se escuchaba más fuerte, volteo y noto que Illeana se está acercando a nosotros.
+Cuando menos lo esperaba el ruido se escuchaba más fuerte, volteo y noto que Abril se está acercando a nosotros.
 ‘Ay no’
-Ileana: Holaaa, feliz san valentín, quién es ella? No nos vas a presentar?
+Abril: Holaaa, feliz san valentín, quién es ella? No nos vas a presentar?
 //Escenario 3: (Afecta felicidad y confianza)
 Que respondes?
 Opción 1: Decir con seguridad tu novia (neutral)
 Opción 2: Cambiar de tema (tipo solo saludas y no contestas) negativa
 Opción 3: Decir que es una amiga —-- opción mala nivel infierno
 Opcion 4: una respuesta de afirmando y chuleando a tu novia (positiva)
-Illeana: Es lindo conocerte. En fin, [jugador] espero poder verte mañana, luego te mando la ubicación más tarde, va?”
+Abril: Es lindo conocerte. En fin, [jugador] espero poder verte mañana, luego te mando la ubicación más tarde, va?”
 \\Transición
 Después de ese incómodo momento, terminamos de comer y pagamos la cuenta . La lleve a su casa . El camino se sintió tenso, al llegar a su casa hablamos: Mañana será nuestro aniversario, no quiero pelear, olvidemos esto por hoy. Nuestra conversación quedó en esas y regresé a mi casa… 
 Espero que mañana sea un mejor día. 
@@ -327,8 +327,8 @@ Espero que mañana sea un mejor día.
 
 Dia 7 - domingo ultimo 
 \\alarma
-Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes; de Illiana y mi novia:
-Illiana Te veo hoy a las 6
+Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes; de Abril y mi novia:
+Abril Te veo hoy a las 6
 Obviamente le contestaste a tu amor
 //Escenario 1:
 Hice reservación a las 6:00 , después de todo me toca invitarte.
@@ -341,11 +341,11 @@ Opción 3: no contestar
 Opcion4: yo tambien
 //Transición
 Apague el celular y comencé a recapitular todo lo vivido
-Escena de las flores, primera vez con Ileana, novia con celular foto, restaurante, lluvia,  viste a tu novia con otro…
-“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio con Ileana siento que soy yo mismo y me quieren ser como soy…
+Escena de las flores, primera vez con Abril, novia con celular foto, restaurante, lluvia,  viste a tu novia con otro…
+“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio con Abril siento que soy yo mismo y me quieren ser como soy…
 //Escenario final
 ¿CON QUIEN ELIGES PASAR LA TARDE?
-OPCION 1 ILLEANA
+OPCION 1 Abril
 OPCION 2 Tu novia
 
 
@@ -359,11 +359,11 @@ Final alternativo amor < 70 y fuiste con tu novia
 Tuvieron la cita pero al final te reclama de todo por mensaje terminan
 
 
-Final illeana amor > 70  y te fuiste con illeana
+Final Abril amor > 70  y te fuiste con Abril
 Ella de fondo platican, regresas a casa termina por mensaje
 
 
-Final malo amor < 70 y te fuiste con illeana,
+Final malo amor < 70 y te fuiste con Abril,
 Sales con ella pero al final solo te uso te bote y tu novia te termina por mensaje.
 
 
