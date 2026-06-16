@@ -15,8 +15,8 @@ public:
     void modificarFelicidad();
 
     void actualizarAmor();
-
-	void mostrarEstado() const; //Esta funcion es para mostrar el estado actual de la novia utilizar si los valores no se estan modificando correctamente, en tal caso, sacar de la nota 
+    void mostrarEstado() const;
+	 //  Esta funcion es para mostrar el estado actual de la novia utilizar si los valores no se estan modificando correctamente, en tal caso, sacar de la nota 
     // Esta funcion esta puesta como nota en los casos donde se utilizan las funciones, antes de la carga de texturas.
 
     //agregue esta funcion para ver si te terminan depues de tomar una decision

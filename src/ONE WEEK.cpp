@@ -1031,7 +1031,7 @@ void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<
 			escenarioActual == 21)
 		{
 			miJugador->aplicarImpactoCarisma(mitilina, impacto);
-			mitilina.mostrarEstado();
+			//mitilina.mostrarEstado();
 		}
 
 		// Escenarios de ATRACTIVO
@@ -1043,14 +1043,14 @@ void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<
 			escenarioActual == 17)
 		{
 			miJugador->aplicarImpactoAtractivo(mitilina, impacto);
-			mitilina.mostrarEstado();
+			//mitilina.mostrarEstado();
 			
 		}
 		// Escenarios de CONFIANZA
 		else
 		{
 			miJugador->aplicarImpactoConfianza(mitilina, impacto);
-			mitilina.mostrarEstado();
+			//mitilina.mostrarEstado();
 			
 		}
 
@@ -1082,6 +1082,15 @@ bool esCaracterValido(wchar_t c) {
 		c == L'Á' || c == L'É' || c == L'Í' || c == L'Ó' || c == L'Ú') return true;
 
 	return false; // Cualquier otra cosa (números, símbolos raros) se ignora porque borre algunos
+}
+
+// funcion para reiniciar los valores si termina el juego por tener menos amor o por que termino el juego y quiere probar con otro personaje 
+void reiniciarJuego(Novia& mitilina, unique_ptr<Jugador>& miJugador,
+	vector<Escenario>& historia, wstring& nombreJugador) {
+	mitilina = Novia();
+	miJugador.reset();
+	historia.clear();
+	nombreJugador.clear();
 }
 
 int main() {
@@ -3260,6 +3269,7 @@ int main() {
 					// logica del menu principal
 					if (scene == 0) { //escena de presiona para jugar
 						if (zonaJugar.contains(mousePos)) {
+							reiniciarJuego(mitilina, miJugador, historia, nombreJugador);
 							scene = 1; // Cambiamos al juego
 						}
 					}
@@ -3583,6 +3593,5 @@ int main() {
 		ventana.display();
 		
 	}
-	mitilina.mostrarEstado();
 	return 0;
 };
