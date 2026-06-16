@@ -22,7 +22,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	//Dia 1
 	Escenario e0;
-	e0.pregunta = L"Ring * Te llega un mensaje de tu novia * : Buenos días {NOMBRE}!!!"; //toxico =1, npc = 1, gymrat =2, otaku = 3
+	e0.pregunta = L"Ring *Te llega un mensaje de tu novia* ¡¡¡Buenos días {NOMBRE}!!!"; //toxico =1, npc = 1, gymrat =2, otaku = 3
 
 	e0.imp1 = 5;
 	e0.imp2 = 3;
@@ -31,34 +31,34 @@ vector<Escenario> cargarHistoria(int clase) {
 
 
 	if (clase == 0) { //TOXICO
-		e0.op1 = L"Buenos días";
-		e0.op2 = L"Buenos días bebé, como amaneciste?";
-		e0.op3 = L"Buenos días amor";
-		e0.op4 = L"Ok";
+		e0.op1 = L"Buenos días.";
+		e0.op2 = L"Buenos días bebé, ¿Cómo amaneciste?.";
+		e0.op3 = L"Buenos días amor.";
+		e0.op4 = L"Ok.";
 	}
 	else if (clase == 1) { //NPC
-		e0.op1 = L"Buenos días";
-		e0.op2 = L"Buenos días, pensé en ti al despertar";
-		e0.op3 = L"Buenos días princesa";
-		e0.op4 = L"Buenos días, hasta que me hablas";
+		e0.op1 = L"Buenos días.";
+		e0.op2 = L"Buenos días, pensé en ti al despertar.";
+		e0.op3 = L"Buenos días princesa.";
+		e0.op4 = L"Buenos días, hasta que me hablas.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e0.op1 = L"Buenos días";
-		e0.op2 = L"Buenos días, pensé en ti";
-		e0.op3 = L"Buenos días hermosa, hoy entreno amarte más";
-		e0.op4 = L"Qué tienen de bueno? me duele todo";
+		e0.op1 = L"Buenos días.";
+		e0.op2 = L"Buenos días, pensé en ti.";
+		e0.op3 = L"Buenos días hermosa, hoy entreno amarte más.";
+		e0.op4 = L"¿Qué tienen de bueno?, Me duele todo.";
 	}
 	else if (clase == 3) { //OTAKU
-		e0.op1 = L"Buenos días OwO";
-		e0.op2 = L"Cómo amaneció mi waifu pechocha";
-		e0.op3 = L"Ohayooooo amor 7w7";
-		e0.op4 = L"Te tardaste en decirme, bakaaa";
+		e0.op1 = L"Buenos días OwO.";
+		e0.op2 = L"¿Cómo amaneció mi waifu pechocha?";
+		e0.op3 = L"Ohayooooo amor 7w7.";
+		e0.op4 = L"Te tardaste en decirme, bakaaa.";
 	}
 
 	h.push_back(e0);
 
 	Escenario e1;
-	e1.pregunta = L"Te he visto por aquí, pero no en clases * comienza a acercarse *\nCómo te llamas?";
+	e1.pregunta = L"Te he visto por aquí, pero no en clases *comienza a acercarse*\n¿Cómo te llamas?";
 
 	e1.imp1 = 0;
 	e1.imp2 = -5;
@@ -66,34 +66,34 @@ vector<Escenario> cargarHistoria(int clase) {
 	e1.imp4 = -3;
 
 	if (clase == 0) { //TOXICO
-		e1.op1 = L"*solo la saluda con la mano*";
-		e1.op2 = L"Hola, soy {NOMBRE}, pero puedes\nllamarme tu futuro dueño";
-		e1.op3 = L"A ok";
-		e1.op4 = L"Qué te importa? *con tono misterioso*";
+		e1.op1 = L"*Solo la saluda con la mano*.";
+		e1.op2 = L"Hola, soy {NOMBRE}, pero puedes\nllamarme tu futuro dueño.";
+		e1.op3 = L"A ok.";
+		e1.op4 = L"¿Qué te importa? *con tono misterioso*.";
 	}
 	else if (clase == 1) { //NPC
-		e1.op1 = L"Hola soy {NOMBRE}";
+		e1.op1 = L"Hola soy {NOMBRE}.";
 		e1.op2 = L"Hola soy {NOMBRE}, podría\nacostumbrarme a verte.";
-		e1.op3 = L"*con sus manos hace un like*";
-		e1.op4 = L"Hola, que lindo coincidir contigo";
+		e1.op3 = L"*Con sus manos hace un like*.";
+		e1.op4 = L"Hola, que lindo coincidir contigo.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e1.op1 = L"Hola? Soy {NOMBRE}";
-		e1.op2 = L"Mucho gusto soy {NOMBRE}, y parece\nque he encontrado una nueva motivación";
-		e1.op3 = L"eh?";
-		e1.op4 = L"Hola, no creo que nos hayamos visto";
+		e1.op1 = L"Hola? Soy {NOMBRE}.";
+		e1.op2 = L"Mucho gusto soy {NOMBRE}, y parece\nque he encontrado una nueva motivación.";
+		e1.op3 = L"¿Eh?.";
+		e1.op4 = L"Hola, no creo que nos hayamos visto.";
 	}
 	else if (clase == 3) { //OTAKU
-		e1.op1 = L"Hola..*se sonroja*";
-		e1.op2 = L"Soy {NOMBRE} pero puedo ser tu\nsempai 7w7";
+		e1.op1 = L"Hola...*se sonroja*.";
+		e1.op2 = L"Soy {NOMBRE} pero puedo ser tu\nsempai 7w7.";
 		e1.op3 = L"...";
-		e1.op4 = L"Ehh mmmm, eres una chica muy kawaii";
+		e1.op4 = L"Ehh mmmm, eres una chica muy kawaii.";
 	}
 
 	h.push_back(e1);
 
 	Escenario e2;
-	e2.pregunta = L"Qué le respondes a tu novia?...";
+	e2.pregunta = L"¿Qué le respondes a tu novia?...";
 
 	e2.imp1 = 3;
 	e2.imp2 = 0;
@@ -101,28 +101,28 @@ vector<Escenario> cargarHistoria(int clase) {
 	e2.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e2.op1 = L"Estoy contando los dias para verte preciosa";
-		e2.op2 = L"Un año mas de peleas, yeeeeey";
-		e2.op3 = L"Qué?, si este domingo estoy ocupado\n(ver tik tok)";
-		e2.op4 = L"Es la champions?";
+		e2.op1 = L"Estoy contando los dias para verte preciosa.";
+		e2.op2 = L"Un año mas de peleas, yeeeeey.";
+		e2.op3 = L"¿Qué?, si este domingo estoy ocupado\n(ver tik tok).";
+		e2.op4 = L"¿Es la champions?";
 	}
 	else if (clase == 1) { //NPC
-		e2.op1 = L"Espero con ansias verte";
-		e2.op2 = L"Me alegra celebrar un año";
-		e2.op3 = L"Qué tiene el domingo?";
-		e2.op4 = L"Para qué o qué?";
+		e2.op1 = L"Espero con ansias verte.";
+		e2.op2 = L"Me alegra celebrar un año.";
+		e2.op3 = L"¿Qué tiene el domingo?";
+		e2.op4 = L"¿Para qué o qué?";
 	}
 	else if (clase == 2) { //GYMRAT
-		e2.op1 = L"Así es, amor, ya ansío poder verte";
-		e2.op2 = L"La serie de nuestra vida ha llegado\na una nueva repetición";
-		e2.op3 = L"Se me olvidó, pero no se me olvidó entrenar";
-		e2.op4 = L"Ando ocupado construyendo mi mejor version.";
+		e2.op1 = L"Así es, amor, ya ansío poder verte.";
+		e2.op2 = L"La serie de nuestra vida ha llegado\na una nueva repetición.";
+		e2.op3 = L"Se me olvidó, pero no se me olvidó entrenar.";
+		e2.op4 = L"Ando ocupado construyendo mi mejor versión.";
 	}
 	else if (clase == 3) { //OTAKU
-		e2.op1 = L"Me emociona mas que un evento de fortnite\n>.<";
-		e2.op2 = L"Ya casi llega la fecha en donde empezó\nnuestro arco de amor";
-		e2.op3 = L"El estreno de la nueva temporada de\nMy Dress-Up Darling?";
-		e2.op4 = L"Sigue molestando y te anotaré\nen mi libreta >;v";
+		e2.op1 = L"Me emociona mas que un evento de fortnite\n>.<.";
+		e2.op2 = L"Ya casi llega la fecha en donde empezó\nnuestro arco de amor.";
+		e2.op3 = L"¿El estreno de la nueva temporada de\nMy Dress-Up Darling?";
+		e2.op4 = L"Sigue molestando y te anotaré\nen mi libreta >;v.";
 	}
 
 	h.push_back(e2);
@@ -136,34 +136,34 @@ vector<Escenario> cargarHistoria(int clase) {
 	e3.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e3.op1 = L"La bufanda que hizo la tipa con la que ando";
-		e3.op2 = L"Un abrigo para frio";
-		e3.op3 = L"Mi camisa Gucci (Imitación de temu)";
-		e3.op4 = L"Una camiseta con la frase\n“El pobre es pobre por que quiere”";
+		e3.op1 = L"La bufanda que hizo la tipa con la que ando.";
+		e3.op2 = L"Un abrigo para frio.";
+		e3.op3 = L"Mi camisa Gucci (Imitación de temu).";
+		e3.op4 = L"Una camiseta con la frase\n“El pobre es pobre por que quiere”.";
 	}
 	else if (clase == 1) { //NPC
-		e3.op1 = L"La bufanda que me hizo mi novia";
-		e3.op2 = L"Algo para calentar";
-		e3.op3 = L"Mi confiable sudadera gris";
-		e3.op4 = L" Ropa que aún no se ha lavado";
+		e3.op1 = L"La bufanda que me hizo mi novia.";
+		e3.op2 = L"Algo para calentar.";
+		e3.op3 = L"Mi confiable sudadera gris.";
+		e3.op4 = L"Ropa que aún no se ha lavado.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e3.op1 = L"La bufanda que me hizo mi PR";
-		e3.op2 = L"Blindado contra el frio";
-		e3.op3 = L"Sudadera";
-		e3.op4 = L"Un pans y un muscle fit";
+		e3.op1 = L"La bufanda que me hizo mi PR.";
+		e3.op2 = L"Blindado contra el frio.";
+		e3.op3 = L"Sudadera.";
+		e3.op4 = L"Un pans y un muscle fit.";
 	}
 	else if (clase == 3) { //OTAKU
-		e3.op1 = L"La bufanda que me hizo mi noviecita-chan";
-		e3.op2 = L"Abrigadito y calientito";
-		e3.op3 = L"Una camisa de Naruto";
-		e3.op4 = L"Una camisa de una chica sacando la\nlengua y mirando hacia arriba";
+		e3.op1 = L"La bufanda que me hizo mi noviecita-chan.";
+		e3.op2 = L"Abrigadito y calientito.";
+		e3.op3 = L"Una camisa de Naruto.";
+		e3.op4 = L"Una camisa de una chica sacando la\nlengua y mirando hacia arriba.";
 	}
 
 	h.push_back(e3);
 
 	Escenario e4;
-	e4.pregunta = L"Esta bajo un pequeño techo, mirando la lluvia como si no tuviera prisa.\nLevanta la mirada y me encuentra. Sonrie.";
+	e4.pregunta = L"Esta bajo un pequeño techo, mirando la lluvia como si no tuviera prisa.\nLevanta la mirada y me encuentra. Ella sonrie.";
 
 	e4.imp1 = -3;
 	e4.imp2 = -5;
@@ -171,34 +171,34 @@ vector<Escenario> cargarHistoria(int clase) {
 	e4.imp4 = 2;
 
 	if (clase == 0) { //TOXICO
-		e4.op1 = L"Acercarme mientras hago poses chistosas";
-		e4.op2 = L"Acercarse y decir: Esperaste mucho por mi?";
-		e4.op3 = L"Saludar rápido";
-		e4.op4 = L"Hola... Alicia?";
+		e4.op1 = L"Acercarme mientras hago poses chistosas.";
+		e4.op2 = L"*Acercarse y decir* ¿Esperaste mucho por mi?";
+		e4.op3 = L"Saludar rápido.";
+		e4.op4 = L"Hola... ¿Alicia?";
 	}
 	else if (clase == 1) { //NPC
-		e4.op1 = L"Acercarme con una sonrisa";
-		e4.op2 = L"Acercarse y decir:Esperaba verte de nuevo";
-		e4.op3 = L"Saludar con la mano al pasar.";
-		e4.op4 = L"Tratar de alejarme, arrepentirme, acercarme ";
+		e4.op1 = L"*Acercarme con una sonrisa*.";
+		e4.op2 = L"*Acercarse y decir* Esperaba verte de nuevo*.";
+		e4.op3 = L"*Saludar con la mano al pasar.";
+		e4.op4 = L"*Tratar de alejarme, arrepentirme y acercarme*.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e4.op1 = L"Acercarme lentamente";
-		e4.op2 = L"Acercase y decir:\nCreo que te estas volviendo parte de mi rutina";
-		e4.op3 = L"Saludar";
-		e4.op4 = L"Acercarme y decir: Hola...tu...";
+		e4.op1 = L"*Acercarme lentamente*.";
+		e4.op2 = L"*Acercase y decir*\nCreo que te estas volviendo parte de mi rutina.";
+		e4.op3 = L"*Saludar*.";
+		e4.op4 = L"*Acercarme y decir* Hola...tu...";
 	}
 	else if (clase == 3) { //OTAKU
-		e4.op1 = L"Acercarme corriendo como naruto";
-		e4.op2 = L"Acercarme y decir:\nEsto ya parece opening de Your Name";
-		e4.op3 = L"Acercarme a Abril-chan";
-		e4.op4 = L"Acercarme haciendo pausas raras";
+		e4.op1 = L"*Acercarme corriendo como naruto*.";
+		e4.op2 = L"*Acercarme y decir*\nEsto ya parece opening de Your Name.";
+		e4.op3 = L"*Acercarme a Abril-chan*.";
+		e4.op4 = L"*Acercarme haciendo pausas raras*.";
 	}
 
 	h.push_back(e4);
 
 	Escenario e5;
-	e5.pregunta = L"Qué le respondes a tu novia?";
+	e5.pregunta = L"¿Qué le respondes a tu novia?.";
 
 	e5.imp1 = 5;
 	e5.imp2 = 0;
@@ -206,34 +206,34 @@ vector<Escenario> cargarHistoria(int clase) {
 	e5.imp4 = -2;
 
 	if (clase == 0) { //TOXICO
-		e5.op1 = L"Obvio, con este y con cualquier clima";
-		e5.op2 = L"No estaria mal";
-		e5.op3 = L"*No responder*";
-		e5.op4 = L"Gracias";
+		e5.op1 = L"Obvio, con este y con cualquier clima.";
+		e5.op2 = L"No estaria mal.";
+		e5.op3 = L"*No responder*.";
+		e5.op4 = L"Gracias.";
 	}
 	else if (clase == 1) { //NPC
-		e5.op1 = L"Y también quiero verte mi vida";
-		e5.op2 = L"Yo igual";
-		e5.op3 = L"Dejarla en visto";
-		e5.op4 = L"oks";
+		e5.op1 = L"Y también quiero verte mi vida.";
+		e5.op2 = L"Yo igual.";
+		e5.op3 = L"*Dejarla en visto*.";
+		e5.op4 = L"Oks.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e5.op1 = L"No cancelo entrenamiento...pero\npor ti hago una excepción";
-		e5.op2 = L"Yo también";
-		e5.op3 = L"*No responder*";
-		e5.op4 = L"Eso suena a plan obligatorio";
+		e5.op1 = L"No cancelo entrenamiento...pero\npor ti hago una excepción.";
+		e5.op2 = L"Yo también.";
+		e5.op3 = L"*No responder*.";
+		e5.op4 = L"Eso suena a plan obligatorio.";
 	}
 	else if (clase == 3) { //OTAKU
-		e5.op1 = L"Yo también te quiero ver pinchecha hemocha,\nnya";
-		e5.op2 = L"Chi amor UwU";
-		e5.op3 = L"Dejarla en visto";
-		e5.op4 = L"ok :/";
+		e5.op1 = L"Yo también te quiero ver pinchecha hemocha,\nnya.";
+		e5.op2 = L"Chi amor UwU.";
+		e5.op3 = L"Dejarla en visto.";
+		e5.op4 = L"Ok :/.";
 	}
 
 	h.push_back(e5);
 
 	Escenario e6;
-	e6.pregunta = L"Hoy es un dia importante...\nQué le dices a tu novia?";
+	e6.pregunta = L"Hoy es un dia importante...\n¿Qué le dices a tu novia?";
 
 	e6.imp1 = 3;
 	e6.imp2 = 4;
@@ -241,28 +241,28 @@ vector<Escenario> cargarHistoria(int clase) {
 	e6.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e6.op1 = L"Obvio me acordé";
-		e6.op2 = L"Feliz día amor";
-		e6.op3 = L"Ah, era hoy?";
-		e6.op4 = L"Ni idea";
+		e6.op1 = L"Obvio me acordé.";
+		e6.op2 = L"Feliz día amor.";
+		e6.op3 = L"Ah, ¿Era hoy?.";
+		e6.op4 = L"Ni idea.";
 	}
 	else if (clase == 1) { //NPC
-		e6.op1 = L"Claro que me acordé";
-		e6.op2 = L"Feliz día mi amor";
-		e6.op3 = L"Perdón, olvidé la fecha";
-		e6.op4 = L"¿Qué tenía hoy?";
+		e6.op1 = L"Claro que me acordé.";
+		e6.op2 = L"Feliz día mi amor.";
+		e6.op3 = L"Perdón, olvidé la fecha.";
+		e6.op4 = L"¿Qué tenía hoy?.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e6.op1 = L"Nunca olvidaría nuestro día";
-		e6.op2 = L"Feliz día preciosa";
+		e6.op1 = L"Nunca olvidaría nuestro día.";
+		e6.op2 = L"Feliz día preciosa.";
 		e6.op3 = L"Andaba entrenando...";
-		e6.op4 = L"No tuve tiempo";
+		e6.op4 = L"No tuve tiempo.";
 	}
 	else if (clase == 3) { //OTAKU
-		e6.op1 = L"Nuestro evento canónico UwU";
-		e6.op2 = L"Feliz día waifu";
-		e6.op3 = L"Mi memoria filler falló";
-		e6.op4 = L"No recuerdo ese arco";
+		e6.op1 = L"Nuestro evento canónico UwU.";
+		e6.op2 = L"Feliz día waifu.";
+		e6.op3 = L"Mi memoria filler falló.";
+		e6.op4 = L"No recuerdo ese arco.";
 	}
 
 	h.push_back(e6);
@@ -276,28 +276,28 @@ vector<Escenario> cargarHistoria(int clase) {
 	e7.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e7.op1 = L"Claro que sí";
-		e7.op2 = L"Eres mía";
-		e7.op3 = L"No sé";
-		e7.op4 = L"Qué flojera";
+		e7.op1 = L"Claro que sí.";
+		e7.op2 = L"Eres mía.";
+		e7.op3 = L"No sé.";
+		e7.op4 = L"Qué flojera.";
 	}
 	else if (clase == 1) { //NPC
-		e7.op1 = L"Muchísimo";
-		e7.op2 = L"Siempre estaré contigo";
-		e7.op3 = L"A veces lo dudo";
-		e7.op4 = L"No me molestes";
+		e7.op1 = L"Muchísimo.";
+		e7.op2 = L"Siempre estaré contigo.";
+		e7.op3 = L"A veces lo dudo.";
+		e7.op4 = L"No me molestes.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e7.op1 = L"Más que al gym";
-		e7.op2 = L"Siempre";
-		e7.op3 = L"Estoy confundido";
-		e7.op4 = L"Estoy ocupado";
+		e7.op1 = L"Más que al gym.";
+		e7.op2 = L"Siempre.";
+		e7.op3 = L"Estoy confundido.";
+		e7.op4 = L"Estoy ocupado.";
 	}
 	else if (clase == 3) { //OTAKU
-		e7.op1 = L"Más que al anime";
-		e7.op2 = L"Tú eres mi protagonista";
+		e7.op1 = L"Más que al anime.";
+		e7.op2 = L"Tú eres mi protagonista.";
 		e7.op3 = L"No sé...";
-		e7.op4 = L"zzz";
+		e7.op4 = L"zzz.";
 	}
 
 	h.push_back(e7);
@@ -306,9 +306,9 @@ vector<Escenario> cargarHistoria(int clase) {
 	//Dia 3
 	Escenario e8;
 
-	e8.pregunta = L"Buenos días <3\n"
+	e8.pregunta = L"Buenos días <3.\n"
 		L"Ayer te sentí un poco raro...\n"
-		L"Todo bien?";
+		L"¿Todo bien?";
 
 	e8.imp1 = 5;
 	e8.imp2 = 2;
@@ -334,7 +334,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e8.op4 = L"Nah, todo normal.";
 	}
 	else if (clase == 3) { //OTAKU
-		e8.op1 = L"Todo bien mi waifu hermosa UwU";
+		e8.op1 = L"Todo bien mi waifu hermosa UwU.";
 		e8.op2 = L"Solo andaba sin energía ayer.";
 		e8.op3 = L"Toy bien.";
 		e8.op4 = L"Nada importante nya.";
@@ -346,7 +346,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	Escenario e9;
 
 	e9.pregunta = L"Abril me mira directamente.\n"
-		L"Me pasas tu numero?";
+		L"¿Me pasas tu numero?";
 
 	e9.imp1 = -4;
 	e9.imp2 = 2;
@@ -355,8 +355,8 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	if (clase == 0) { //TOXICO
 		e9.op1 = L"Claro, te paso mi numero y lo que quieras.";
-		e9.op2 = L"Eh... si quieres.";
-		e9.op3 = L"Va, a mi novia le agradara\n que haga amistades.";
+		e9.op2 = L"Eh... Si quieres.";
+		e9.op3 = L"Va, a mi novia le agradará\n que haga amistades.";
 		e9.op4 = L"Bueno.";
 	}
 	else if (clase == 1) { // NPC
@@ -372,7 +372,7 @@ vector<Escenario> cargarHistoria(int clase) {
 		e9.op4 = L"Sí... toma.";
 	}
 	else if (clase == 3) { // OTAKU
-		e9.op1 = L"Chi UwU";
+		e9.op1 = L"Chi UwU.";
 		e9.op2 = L"Mmm... bueno nya.";
 		e9.op3 = L"Solo si no haces spam.";
 		e9.op4 = L"E-esta bien.";
@@ -382,7 +382,7 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	Escenario e10;
 
-	e10.pregunta = L"Qué respondes?";
+	e10.pregunta = L"¿Qué respondes?";
 
 	e10.imp1 = 5;
 	e10.imp2 = -2;
@@ -390,28 +390,28 @@ vector<Escenario> cargarHistoria(int clase) {
 	e10.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e10.op1 = L"Obvio, feliz cumpleaños";
-		e10.op2 = L"Feliz aniversario!";
-		e10.op3 = L"El día que nos conocimos?";
-		e10.op4 = L"Claro, era... este... ajá...";
+		e10.op1 = L"Obvio, feliz cumpleaños.";
+		e10.op2 = L"¡Feliz aniversario!";
+		e10.op3 = L"¿El día que nos conocimos?";
+		e10.op4 = L"Claro, Era... Este... Ajá...";
 	}
 	else if (clase == 1) { //NPC
 		e10.op1 = L"\"Obvio, feliz cumpleaños\"";
 		e10.op2 = L"\"Feliz aniversario...\"";
-		e10.op3 = L"\"El primer día que hablamos?\"";
-		e10.op4 = L"\"Eh... era una cita cualquiera?\"";
+		e10.op3 = L"\"¿El primer día que hablamos?\"";
+		e10.op4 = L"\"Eh... ¿Era una cita cualquiera?\"";
 	}
 	else if (clase == 2) { //GYMRAT
 		e10.op1 = L"\"Obvio, feliz cumpleaños\"";
 		e10.op2 = L"\"Feliz aniversario preciosa\"";
-		e10.op3 = L"\"Cuándo nos conocimos?\"";
-		e10.op4 = L"\"Era una salida?\"";
+		e10.op3 = L"\"¿Cuándo nos conocimos?\"";
+		e10.op4 = L"\"¿Era una salida?\"";
 	}
 	else if (clase == 3) { //OTAKU
 		e10.op1 = L"\"Obvio waifu, feliz cumpleaños UwU\"";
 		e10.op2 = L"\"Feliz aniversario nya\"";
-		e10.op3 = L"\"El inicio de nuestro arco?\"";
-		e10.op4 = L"\"Era relleno?\"";
+		e10.op3 = L"\"¿El inicio de nuestro arco?\"";
+		e10.op4 = L"\"¿Era relleno?\"";
 	}
 
 	h.push_back(e10);
@@ -428,35 +428,35 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	if (clase == 0) { //TOXICO
 		e11.op1 = L"Pues si tomar un licuado es desayunar,\nentonces sí.";
-		e11.op2 = L"Y eso a ti qué te importa?";
-		e11.op3 = L"De hecho no, ayer se me revolvió el estómago";
-		e11.op4 = L"*ignorarla*";
+		e11.op2 = L"¿Y eso a ti qué te importa?";
+		e11.op3 = L"De hecho no, ayer se me revolvió el estómago.";
+		e11.op4 = L"*Ignorarla*.";
 	}
 	else if (clase == 1) { //NPC
-		e11.op1 = L"Sí, y tu?";
-		e11.op2 = L"Lindo saber que te importa, creí que\nibas a estar muy ocupada";
-		e11.op3 = L"No he tenido hambre, he tenido un día muy malo";
-		e11.op4 = L"*Dejarla en visto*";
+		e11.op1 = L"Sí. ¿Y tu?";
+		e11.op2 = L"Lindo saber que te importa, creí que\nibas a estar muy ocupada.";
+		e11.op3 = L"No he tenido hambre, he tenido un día muy malo.";
+		e11.op4 = L"*Dejarla en visto*.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e11.op1 = L"Sí, un licuado de proteína y 7 huevos\n revueltos :D";
+		e11.op1 = L"Sí, un licuado de proteína y 7 huevos\nrevueltos :D.";
 		e11.op2 = L"¿Qué te importa?";
-		e11.op3 = L"Últimamente se me revuelve el estómago";
-		e11.op4 = L"*ignorarla*";
+		e11.op3 = L"Últimamente se me revuelve el estómago.";
+		e11.op4 = L"*Ignorarla*.";
 	}
 	else if (clase == 3) { //OTAKU
-		e11.op1 = L"Chi";
-		e11.op2 = L"Todo bien, baka :/";
-		e11.op3 = L"Me he sentido un poco down  T.T";
-		e11.op4 = L"*Dejarla en visto*";
+		e11.op1 = L"Chi.";
+		e11.op2 = L"Todo bien, baka :/.";
+		e11.op3 = L"Me he sentido un poco down T.T.";
+		e11.op4 = L"*Dejarla en visto*.";
 	}
 
 	h.push_back(e11);
 
 	Escenario e12;
 
-	e12.pregunta = L"Cómo te sentiste después de eso?\n"
-		L"Supongo que muy feo, terminarás con ella? No seas migajero {NOMBRE}.";
+	e12.pregunta = L"¿Cómo te sentiste después de eso?\n"
+		L"Supongo que muy feo. ¿Terminarás con ella? No seas migajero {NOMBRE}.";
 
 	e12.imp1 = -5;
 	e12.imp2 = 4;
@@ -464,36 +464,36 @@ vector<Escenario> cargarHistoria(int clase) {
 	e12.imp4 = 2;
 
 	if (clase == 0) { //TOXICO
-		e12.op1 = L"Yo creo que sí, igual ya tengo a alguien más\nen mente";
-		e12.op2 = L"Cómo por?, claro que no";
-		e12.op3 = L"Tendré que pensarlo";
+		e12.op1 = L"Yo creo que sí, igual ya tengo a alguien más\nen mente.";
+		e12.op2 = L"¿Cómo por?, claro que no.";
+		e12.op3 = L"Tendré que pensarlo.";
 		e12.op4 = L"*Contemplar el panorama completo mientras\n"
-			L"*mantiene una mirada fija a algún lugar*";
+			L"mantienes una mirada fija a algún lugar*.";
 	}
 	else if (clase == 1) { //NPC
-		e12.op1 = L"Sí, creo que sí";
-		e12.op2 = L"Han pasado muchas cosas, no creo que sea\npara tanto";
-		e12.op3 = L"Hemos estado juntos mucho tiempo, debo\npensarlo";
+		e12.op1 = L"Sí, creo que sí.";
+		e12.op2 = L"Han pasado muchas cosas, no creo que sea\npara tanto.";
+		e12.op3 = L"Hemos estado juntos mucho tiempo, debo\npensarlo.";
 		e12.op4 = L"...";
 	}
 	else if (clase == 2) { //GYMRAT
-		e12.op1 = L"Creo que sí ... fue bueno mientras duró";
-		e12.op2 = L"Por supuesto que no";
-		e12.op3 = L"Es una decisión difícil, debo pensarlo";
-		e12.op4 = L"*Alza la vista al cielo pensando*";
+		e12.op1 = L"Creo que sí ... fue bueno mientras duró.";
+		e12.op2 = L"Por supuesto que no.";
+		e12.op3 = L"Es una decisión difícil, debo pensarlo.";
+		e12.op4 = L"*Alza la vista al cielo pensando*.";
 	}
 	else if (clase == 3) { //OTAKU
-		e12.op1 = L"Chi UnU";
-		e12.op2 = L"Baka, no creo que sea tanto";
-		e12.op3 = L"No lo se Abril-chan";
-		e12.op4 = L"*hacer ruidos raros*";
+		e12.op1 = L"Chi UnU.";
+		e12.op2 = L"Baka, no creo que sea tanto.";
+		e12.op3 = L"No lo se Abril-chan.";
+		e12.op4 = L"*Hacer ruidos raros*.";
 	}
 
 	h.push_back(e12);
 	
 	Escenario e13;
 
-	e13.pregunta = L"Te sientes culpable... decides buscarla";
+	e13.pregunta = L"Te sientes culpable... Decides buscarla.";
 
 	e13.imp1 = 0;
 	e13.imp2 = 3;
@@ -501,29 +501,29 @@ vector<Escenario> cargarHistoria(int clase) {
 	e13.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e13.op1 = L"No puede ser, ni modo, toca disculparme";
-		e13.op2 = L"Perfecto, tengo que llamarle para disculparme";
-		e13.op3 = L"Mmm, ya me enojé luego lo intento arreglar";
+		e13.op1 = L"No puede ser, ni modo, toca disculparme.";
+		e13.op2 = L"Perfecto, tengo que llamarle para disculparme.";
+		e13.op3 = L"Mmm, ya me enojé luego lo intento arreglar.";
 		e13.op4 = L"Mejor intento pescar un nuevo pez,\n"
-			L"Abril suena a una buena opción";
+			L"Abril suena a una buena opción.";
 	}
 	else if (clase == 1) { //NPC
-		e13.op1 = L"Ay no, debo mandarle mensaje";
-		e13.op2 = L"Ay no, debo hablar con ella, debería marcarle";
-		e13.op3 = L"Que desastre";
-		e13.op4 = L"Debo... Debo hablar con alguien. Abril quizá\nesté libre";
+		e13.op1 = L"Ay no, debo mandarle mensaje.";
+		e13.op2 = L"Ay no, debo hablar con ella, debería marcarle.";
+		e13.op3 = L"Que desastre.";
+		e13.op4 = L"Debo... Debo hablar con alguien. Abril quizá\nesté libre.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e13.op1 = L"Necesito mandarle mensaje, no quiero que\nestemos mal";
-		e13.op2 = L"Necesito marcarle, es urgente";
-		e13.op3 = L"*Te pones a hacer lagartijas*";
-		e13.op4 = L"Abril me comprende más, debería hablarle";
+		e13.op1 = L"Necesito mandarle mensaje, no quiero que\nestemos mal.";
+		e13.op2 = L"Necesito marcarle, es urgente.";
+		e13.op3 = L"*Te pones a hacer lagartijas*.";
+		e13.op4 = L"Abril me comprende más, debería hablarle.";
 	}
 	else if (clase == 3) { //OTAKU
-		e13.op1 = L"Ooh oh, debo mandarle mensaje a mi sempai";
-		e13.op2 = L"No puede ser, le debo marcar a mi novia-chan";
-		e13.op3 = L"*te pones a ver anime*";
-		e13.op4 = L"Debería buscar a Abril-chan, ella sí me\nentiende";
+		e13.op1 = L"Ooh oh, debo mandarle mensaje a mi sempai.";
+		e13.op2 = L"No puede ser, le debo marcar a mi novia-chan.";
+		e13.op3 = L"*Te pones a ver anime*";
+		e13.op4 = L"Debería buscar a Abril-chan, ella sí me\nentiende.";
 	}
 
 	h.push_back(e13);
@@ -541,29 +541,29 @@ vector<Escenario> cargarHistoria(int clase) {
 	e14.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e14.op1 = L"Puedo demostrar cuan arrepentido estoy con\n un abrazo?";
-		e14.op2 = L"*Le besas la frente*";
-		e14.op3 = L"Me aceptas un beso?";
-		e14.op4 = L"Bueno, ya hice mi trabajo, ya estamos bien,\n no?";
+		e14.op1 = L"¿Puedo demostrar cuan arrepentido estoy con\n un abrazo?";
+		e14.op2 = L"*Le besas la frente*.";
+		e14.op3 = L"¿Me aceptas un beso?";
+		e14.op4 = L"Bueno, ya hice mi trabajo, ya estamos bien,\n ¿No?";
 	}
 	else if (clase == 1) { //NPC
-		e14.op1 = L"Me aceptas un abrazo como disculpa?";
-		e14.op2 = L"*le da un beso en la frente*";
-		e14.op3 = L"Un beso de reconciliacion?";
-		e14.op4 = L"Bueno, ya lo arreglamos, no?";
+		e14.op1 = L"¿Me aceptas un abrazo como disculpa?";
+		e14.op2 = L"*Le da un beso en la frente*.";
+		e14.op3 = L"¿Un beso de reconciliacion?";
+		e14.op4 = L"Bueno, ya lo arreglamos, ¿No?";
 	}
 	else if (clase == 2) { //GYMRAT
-		e14.op1 = L"*Te acercas y la abrazas*";
-		e14.op2 = L"*Te acercas y le das un beso en la frente*";
-		e14.op3 = L"*Te acercas y la besas*";
-		e14.op4 = L"Bueno, ya nos arreglamos, no?";
+		e14.op1 = L"*Te acercas y la abrazas*.";
+		e14.op2 = L"*Te acercas y le das un beso en la frente*.";
+		e14.op3 = L"*Te acercas y la besas*.";
+		e14.op4 = L"Bueno, ya nos arreglamos, ¿No?";
 	}
 	else if (clase == 3) { //OTAKU
-		e14.op1 = L"Podrías perdonar a este terroncito de azúcar\n"
-			L"con un abrazo";
-		e14.op2 = L"*Le da un beso de manera kawaii*";
-		e14.op3 = L"Un besito de reconciliación, waifu-chan?";
-		e14.op4 = L"Ash, ya lo arreglamos baka?";
+		e14.op1 = L"¿Podrías perdonar a este terroncito de azúcar\n"
+			L"con un abrazo?";
+		e14.op2 = L"*Le da un beso de manera kawaii*.";
+		e14.op3 = L"¿Un besito de reconciliación? Waifu-chan.";
+		e14.op4 = L"Ash, ¿Ya lo arreglamos baka?";
 	}
 
 	h.push_back(e14);
@@ -571,7 +571,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	Escenario e15;
 
 	e15.pregunta = L"Como de costumbre, milagrosamente te encontraste a Abril.\n"
-		L"Decides acercarte y comienzas a darle una explicación sobre lo ayer";
+		L"Decides acercarte y comienzas a darle una explicación sobre lo ayer.";
 
 	e15.imp1 = -5;
 	e15.imp2 = -3;
@@ -580,35 +580,35 @@ vector<Escenario> cargarHistoria(int clase) {
 
 	if (clase == 0) { //TOXICO
 		e15.op1 = L"Perdón por la aparición de mi novia\n"
-			L"a veces es molesta";
-		e15.op2 = L"Perdón por irme sin explicación";
-		e15.op3 = L"Qué rollo con el pollo";
-		e15.op4 = L"Oye, por tu culpa me tuve que disculpar";
+			L"a veces es molesta.";
+		e15.op2 = L"Perdón por irme sin explicación.";
+		e15.op3 = L"Qué rollo con el pollo.";
+		e15.op4 = L"Oye, por tu culpa me tuve que disculpar.";
 	}
 	else if (clase == 1) { //NPC
-		e15.op1 = L"Discúlpame, no esperaba que apareciera";
-		e15.op2 = L"No quise dejarte así, perdóname";
-		e15.op3 = L"Así que... Cómo te fue con la tarea?";
-		e15.op4 = L"Oye, ayer me metiste en un problemón";
+		e15.op1 = L"Discúlpame, no esperaba que apareciera.";
+		e15.op2 = L"No quise dejarte así, perdóname.";
+		e15.op3 = L"Así que... ¿Cómo te fue con la tarea?";
+		e15.op4 = L"Oye, ayer me metiste en un problemón.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e15.op1 = L"Disculpa, mi novia a veces es así";
-		e15.op2 = L"Perdón por dejarte plantada, no fue mi\nintención";
-		e15.op3 = L"Ey, cómo estás? Todo bien?";
-		e15.op4 = L"Sabes que me has metido en problemas";
+		e15.op1 = L"Disculpa, mi novia a veces es así.";
+		e15.op2 = L"Perdón por dejarte plantada, no fue mi\nintención.";
+		e15.op3 = L"Ey, ¿Cómo estás? ¿Todo bien?";
+		e15.op4 = L"Sabes que me has metido en problemas.";
 	}
 	else if (clase == 3) { //OTAKU
-		e15.op1 = L"Perdón que mi novia nos interrumpiera\nAbril-chan";
-		e15.op2 = L"Perdón por dejarte plantada como árbol";
-		e15.op3 = L"Ya viste YBC? 7w7";
-		e15.op4 = L"Oi oi oi, me metiste en problemas";
+		e15.op1 = L"Perdón que mi novia nos interrumpiera\nAbril-chan.";
+		e15.op2 = L"Perdón por dejarte plantada como árbol.";
+		e15.op3 = L"¿Ya viste YBC? 7w7.";
+		e15.op4 = L"Oi oi oi, me metiste en problemas.";
 	}
 
 	h.push_back(e15);
 
 	Escenario e16;
 
-	e16.pregunta = L"Llegando, notaste muchas flores bonitas, cuál escoges?";
+	e16.pregunta = L"Llegando, notaste muchas flores bonitas, ¿Cuál escoges?";
 
 	e16.imp1 = 2;
 	e16.imp2 = -5;
@@ -616,35 +616,35 @@ vector<Escenario> cargarHistoria(int clase) {
 	e16.imp4 = -2;
 
 	if (clase == 0) { //TOXICO
-		e16.op1 = L"Rosas, un clásico";
-		e16.op2 = L"Girasoles, el más barato";
-		e16.op3 = L"Tulipanes, a algunos les gusta";
-		e16.op4 = L"Flores beso, el nombre  y la apariencia se ven\n interesantes";
+		e16.op1 = L"Rosas, un clásico.";
+		e16.op2 = L"Girasoles, el más barato.";
+		e16.op3 = L"Tulipanes, a algunos les gusta.";
+		e16.op4 = L"Flores beso, el nombre  y la apariencia se ven\n interesantes.";
 	}
 	else if (clase == 1) { //NPC
-		e16.op1 = L"La rosa es una flor muy clásica";
-		e16.op2 = L"Los girasoles brindan mucha alegría";
-		e16.op3 = L"Los tulipanes representan el amor\n perfecto, no?";
-		e16.op4 = L"Es muy única";
+		e16.op1 = L"La rosa es una flor muy clásica.";
+		e16.op2 = L"Los girasoles brindan mucha alegría.";
+		e16.op3 = L"Los tulipanes representan el amor\n perfecto, ¿No?";
+		e16.op4 = L"Es muy única.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e16.op1 = L"Las rosas siempre son las mejores";
-		e16.op2 = L"Unos brillantes girasoles estarían bien, no?";
-		e16.op3 = L"Los tulipanes son bastante hermosos";
-		e16.op4 = L"Las flores beso son tan buenas como\nel ejercicio";
+		e16.op1 = L"Las rosas siempre son las mejores.";
+		e16.op2 = L"Unos brillantes girasoles estarían bien, ¿No?";
+		e16.op3 = L"Los tulipanes son bastante hermosos.";
+		e16.op4 = L"Las flores beso son tan buenas como\nel ejercicio.";
 	}
 	else if (clase == 3) { //OTAKU
-		e16.op1 = L"Supongo que las rosas le gustarán";
-		e16.op2 = L"Los girasoles como la frase: gira, gira\n tu calzón";
-		e16.op3 = L"Los tulipanes son hemochos uwu";
-		e16.op4 = L"Es al más barata, podre usar lo demás\n para un manga";
+		e16.op1 = L"Supongo que las rosas le gustarán.";
+		e16.op2 = L"Los girasoles como la frase: gira, gira\n tu calzón.";
+		e16.op3 = L"Los tulipanes son hemochos uwu.";
+		e16.op4 = L"Es al más barata, podre usar lo demás\n para un manga.";
 	}
 
 	h.push_back(e16);
 
 	Escenario e17;
 
-	e17.pregunta = L"Le escribes";
+	e17.pregunta = L"Le escribes.";
 
 	e17.imp1 = 2;
 	e17.imp2 = 5;
@@ -652,26 +652,26 @@ vector<Escenario> cargarHistoria(int clase) {
 	e17.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e17.op1 = L"Ponte linda, mañana paso por ti a las 6pm";
-		e17.op2 = L"Pide permiso para salir mañana a las 6pm";
-		e17.op3 = L"Te tengo una sorpresa mañana a las 6pm,\n alístate";
-		e17.op4 = L"Oye, mañana teníamos que hacer algo?";
+		e17.op1 = L"Ponte linda, mañana paso por ti a las 6pm.";
+		e17.op2 = L"Pide permiso para salir mañana a las 6pm.";
+		e17.op3 = L"Te tengo una sorpresa mañana a las 6pm,\n alístate.";
+		e17.op4 = L"Oye, ¿Mañana teníamos que hacer algo?";
 	}
 	else if (clase == 1) { //NPC
-		e17.op1 = L"Prepárate. Mañana paso por ti a las 6 ;)";
-		e17.op2 = L"Pide permiso porque mañana voy a pasar a\n las 6";
-		e17.op3 = L"Te tengo un regalo :), mañana a las 6\n prepárate para ser sorprendida";
-		e17.op4 = L"Entonces, mañana hay plan o no?";
+		e17.op1 = L"Prepárate. Mañana paso por ti a las 6 ;).";
+		e17.op2 = L"Pide permiso porque mañana voy a pasar a\n las 6.";
+		e17.op3 = L"Te tengo un regalo :), mañana a las 6\n prepárate para ser sorprendida.";
+		e17.op4 = L"Entonces, ¿Mañana hay plan o no?";
 	}
 	else if (clase == 2) { //GYMRAT
-		e17.op1 = L"Mañana tú y yo, 6pm, para que estés lista";
-		e17.op2 = L"Oye, pide permiso, mañana pasaré por ti\n a las 6";
-		e17.op3 = L"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6";
-		e17.op4 = L"Te parece si no voy al gym mañana y\n salimos? Cómo a las 6?";
+		e17.op1 = L"Mañana tú y yo, 6pm, para que estés lista.";
+		e17.op2 = L"Oye, pide permiso, mañana pasaré por ti\n a las 6.";
+		e17.op3 = L"Tengo una sorpresa para ti, pero debes de\n estar lista a las 6.";
+		e17.op4 = L"¿Te parece si no voy al gym mañana y\n salimos? ¿Cómo a las 6?";
 	}
 	else if (clase == 3) { //OTAKU
-		e17.op1 = L"Sempaiiii, mañana a las 6 OwO";
-		e17.op2 = L"Mañana paso por ti a las 6 , ponte\n guapa...";
+		e17.op1 = L"Sempaiiii, mañana a las 6 OwO.";
+		e17.op2 = L"Mañana paso por ti a las 6, ponte\n guapa...";
 		e17.op3 = L"Mañana desbloqueas evento exclusivo\n conmigo.";
 		e17.op4 = L"Supongo que mañana continua esta situacion\n rara entre nosotros.";
 	}
@@ -681,7 +681,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	//Dia6 
 	Escenario e18;
 
-	e18.pregunta = L"*Llega el mesero a tomar su orden*,\n”Ya están listos para ordenar?”";
+	e18.pregunta = L"*Llega el mesero a tomar su orden*,\n“¿Ya están listos para ordenar?”";
 
 	e18.imp1 = 0;
 	e18.imp2 = -2;
@@ -689,36 +689,36 @@ vector<Escenario> cargarHistoria(int clase) {
 	e18.imp4 = -5;
 
 	if (clase == 0) { //TOXICO
-		e18.op1 = L"Claro, quiero un rollo california en salsa\nchipotle";
-		e18.op2 = L"Pues hemos estado como 10 minutos aqui,\nasi que, yo diria que sí";
-		e18.op3 = L"Esta vez quiero que mi amor escoga por mi";
-		e18.op4 = L"Al fin, mínimo compensas la tardanza con\nuna buena vista, seria un gohan";
+		e18.op1 = L"Claro, quiero un rollo california en salsa\nchipotle.";
+		e18.op2 = L"Pues hemos estado como 10 minutos aqui,\nasi que, yo diria que sí.";
+		e18.op3 = L"Esta vez quiero que mi amor escoga por mi.";
+		e18.op4 = L"Al fin, mínimo compensas la tardanza con\nuna buena vista, seria un gohan.";
 
 	}
 	else if (clase == 1) { //NPC
-		e18.op1 = L"Si, nos gustarían los rollos especiales de San\nValentín";
-		e18.op2 = L"Desde hace como 10 minutos. Pero lo bueno\nque llegas";
+		e18.op1 = L"Si, nos gustarían los rollos especiales de San\nValentín.";
+		e18.op2 = L"Desde hace como 10 minutos. Pero lo bueno\nque llegas.";
 		e18.op3 = L"Amm, si no sé que quieras amor...";
-		e18.op4 = L"Con esos ojitos, te perdono la tardanza,\nvamos a querer unos rollos\"";
+		e18.op4 = L"Con esos ojitos, te perdono la tardanza,\nvamos a querer unos rollos.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e18.op1 = L"Claro, deseamos unos rollos especiales de San\nValentín, con extra proteina por favor\"";
-		e18.op2 = L"Pensaba que estabas muy ocupado,\nmira quiero unos rollos San Valentín\n a las 6\"";
-		e18.op3 = L"Manana desbloqueas evento exclusivo\n conmigo.\"";
-		e18.op4 = L"Que bueno que llegas, vamos a ordenar\n unos rollos San Valentín\"";
+		e18.op1 = L"Claro, deseamos unos rollos especiales de San\nValentín, con extra proteina por favor.";
+		e18.op2 = L"Pensaba que estabas muy ocupado,\nmira quiero unos rollos San Valentín\n a las 6.";
+		e18.op3 = L"Manana desbloqueas evento exclusivo\n conmigo.";
+		e18.op4 = L"Que bueno que llegas, vamos a ordenar\n unos rollos San Valentín.";
 	}
 	else if (clase == 3) { //OTAKU
-		e18.op1 = L"haiii, quiero crunchyroll para los dos";
-		e18.op2 = L"Hazta que llegas maid-sama :'v";
+		e18.op1 = L"Haiii, quiero crunchyroll para los dos.";
+		e18.op2 = L"Hazta que llegas maid-sama :'v.";
 		e18.op3 = L"Sii... que pida ella por mi...";
-		e18.op4 = L"Creo que este restaurante tiene demasiado\nfanservice 7w7";
+		e18.op4 = L"Creo que este restaurante tiene demasiado\nfanservice 7w7.";
 	}
 
 	h.push_back(e18);
 
 	Escenario e19;
 
-	e19.pregunta = L"“Sin darme cuenta, mi novia me estaba preguntando sobre quién era ella.\nN: “{NOMBRE} Acaso no es la chica del otro día?”";
+	e19.pregunta = L"“Sin darme cuenta, mi novia me estaba preguntando sobre quién era ella.\nN: “¿{NOMBRE} acaso no es la chica del otro día?”";
 
 	e19.imp1 = -1;
 	e19.imp2 = 3;
@@ -726,35 +726,35 @@ vector<Escenario> cargarHistoria(int clase) {
 	e19.imp4 = -2;
 
 	if (clase == 0) { //TOXICO
-		e19.op1 = L"¿Sepa, tu la conoces de algo?";
-		e19.op2 = L"Ah si, es una amiga de mi escuela";
-		e19.op3 = L"Ah si, es mi besty";
-		e19.op4 = L"*Te come la lengua el gato*";
+		e19.op1 = L"Sepa, ¿Tu la conoces de algo?";
+		e19.op2 = L"Ah si, es una amiga de mi escuela.";
+		e19.op3 = L"Ah si, es mi besty.";
+		e19.op4 = L"*Te come la lengua el gato*.";
 	}
 	else if (clase == 1) { //NPC
-		e19.op1 = L"Ah, es ahm- una conocida";
-		e19.op2 = L"Oh, una amiga de la escuela";
-		e19.op3 = L"Es una...amiguita de la escuela";
-		e19.op4 = L"*No responder*";
+		e19.op1 = L"Ah, es ahm- una conocida.";
+		e19.op2 = L"Oh, una amiga de la escuela.";
+		e19.op3 = L"Es una...amiguita de la escuela.";
+		e19.op4 = L"*No responder*.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e19.op1 = L"Sinceramente, no sé quien es, no la conozco";
-		e19.op2 = L"Mira amor ella es Abril, de la uni";
-		e19.op3 = L"Ella es Abril, es una amiguita de la\nuniversidad";
-		e19.op4 = L"*No responder*";
+		e19.op1 = L"Sinceramente, no sé quien es, no la conozco.";
+		e19.op2 = L"Mira amor ella es Abril, de la uni.";
+		e19.op3 = L"Ella es Abril, es una amiguita de la\nuniversidad.";
+		e19.op4 = L"*No responder*.";
 	}
 	else if (clase == 3) { //OTAKU
-		e19.op1 = L"Ella? Nah, literalmente NPC genérico del fondo";
+		e19.op1 = L"Ella? Nah, literalmente NPC genérico del fondo.";
 		e19.op2 = L"Es compa del server, nada mas.";
-		e19.op3 = L"Ella solo es una amiguita, no le des mucha bola\njeje";
-		e19.op4 = L"*No responder*";
+		e19.op3 = L"Ella solo es una amiguita, no le des mucha bola\njeje.";
+		e19.op4 = L"*No responder*.";
 	}
 
 	h.push_back(e19);
 
 	Escenario e20;
 
-	e20.pregunta = L"Abril: Holaa feliz san valentín {NOMBRE},\nquién es ella??? *Qué respondes?*";
+	e20.pregunta = L"Abril: Holaa feliz san valentín {NOMBRE},\n¿Quién es ella??? *Qué respondes?*.";
 
 	e20.imp1 = 2;
 	e20.imp2 = -2;
@@ -762,35 +762,35 @@ vector<Escenario> cargarHistoria(int clase) {
 	e20.imp4 = 5;
 
 	if (clase == 0) { //TOXICO
-		e20.op1 = L"Ella es mi novia";
-		e20.op2 = L"Qué ondaaaa, como andas?";
-		e20.op3 = L"Se podría decir que es mi mejor amiga";
-		e20.op4 = L"Ella es mi mujer";
+		e20.op1 = L"Ella es mi novia.";
+		e20.op2 = L"Qué ondaaaa, ¿Cómo andas?";
+		e20.op3 = L"Se podría decir que es mi mejor amiga.";
+		e20.op4 = L"Ella es mi mujer.";
 	}
 	else if (clase == 1) { //NPC
-		e20.op1 = L"Ella es mi novia";
-		e20.op2 = L"Hola Abril, no te había visto";
-		e20.op3 = L"Es una amiga muy cercana";
-		e20.op4 = L"Ah, Abril, te presento al amor de mi vida";
+		e20.op1 = L"Ella es mi novia.";
+		e20.op2 = L"Hola Abril, no te había visto.";
+		e20.op3 = L"Es una amiga muy cercana.";
+		e20.op4 = L"Ah, Abril, te presento al amor de mi vida.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e20.op1 = L"Abril, te presento a mi novia";
-		e20.op2 = L"Ey Abril, no había notado tu presencia";
-		e20.op3 = L"Ella es una amiga";
-		e20.op4 = L"Ella es mi novia, mi amor, mi reina, mi\nmotivación para vivir";
+		e20.op1 = L"Abril, te presento a mi novia.";
+		e20.op2 = L"Ey Abril, no había notado tu presencia.";
+		e20.op3 = L"Ella es una amiga.";
+		e20.op4 = L"Ella es mi novia, mi amor, mi reina, mi\nmotivación para vivir.";
 	}
 	else if (clase == 3) { //OTAKU
-		e20.op1 = L"Es mi novia, la waifu oficial del canon";
-		e20.op2 = L"Ahhh… cutscene incómoda... Skip...";
-		e20.op3 = L"Es mi onichan nada mas";
-		e20.op4 = L"Si, es ella... Mi personaje de rango S";
+		e20.op1 = L"Es mi novia, la waifu oficial del canon.";
+		e20.op2 = L"Ahhh… Cutscene incómoda... Skip...";
+		e20.op3 = L"Es mi onichan nada mas.";
+		e20.op4 = L"Si, ella es... Mi personaje de rango S.";
 	}
 
 	h.push_back(e20);
 
 	Escenario e21;
 
-	e21.pregunta = L"Hice reservación a las 6:00 , después de todo me toca invitarte.\nTe amo\n*Qué respondes?*";
+	e21.pregunta = L"Hice reservación a las 6:00, después de todo me toca invitarte.\nTe amo\n*¿Qué respondes?*";
 
 	e21.imp1 = 2;
 	e21.imp2 = -2;
@@ -798,28 +798,28 @@ vector<Escenario> cargarHistoria(int clase) {
 	e21.imp4 = 5;
 
 	if (clase == 0) { //TOXICO
-		e21.op1 = L"Te amo";
-		e21.op2 = L"Ah ok";
+		e21.op1 = L"Te amo.";
+		e21.op2 = L"Ah ok.";
 		e21.op3 = L"...";
-		e21.op4 = L"Yo igual";
+		e21.op4 = L"Yo igual.";
 	}
 	else if (clase == 1) { //NPC
-		e21.op1 = L"Te amo";
-		e21.op2 = L"Gracias";
+		e21.op1 = L"Te amo.";
+		e21.op2 = L"Gracias.";
 		e21.op3 = L"...";
-		e21.op4 = L"Yo igual";
+		e21.op4 = L"Yo igual.";
 	}
 	else if (clase == 2) { //GYMRAT
-		e21.op1 = L"Te amo";
-		e21.op2 = L"...Muchas gracias, me alegra que lo sientas así";
+		e21.op1 = L"Te amo.";
+		e21.op2 = L"... Muchas gracias, me alegra que lo sientas así.";
 		e21.op3 = L"...";
-		e21.op4 = L"Yo igual";
+		e21.op4 = L"Yo igual.";
 	}
 	else if (clase == 3) { //OTAKU
-		e21.op1 = L"Te amo";
-		e21.op2 = L"Te lo agradezco";
+		e21.op1 = L"Te amo.";
+		e21.op2 = L"Te lo agradezco.";
 		e21.op3 = L"...";
-		e21.op4 = L"Yo también";
+		e21.op4 = L"Yo también.";
 	}
 
 	h.push_back(e21);
@@ -1983,7 +1983,7 @@ int main() {
 	escenas[13] = SceneData{
 		&bg10,
 		L"Fue un día bastante pesado...\n"
-		L"*ring ring* El celular esta sonando, debería revisarlo",
+		L"*Ring, ring* El celular esta sonando, debería revisarlo.",
 		false,
 		true,
 		false,
@@ -2000,7 +2000,7 @@ int main() {
 	};
 	escenas[15] = SceneData{
 		&bg12,
-		L"Que día tan interesante. Primer día de uni, y de mi \n"
+		L"Que día tan interesante. Primer día de uni y de mi \n"
 		L"nueva vida...\n"
 		L"\n\n"
 		L"Sencillamente perfecto.",
@@ -2046,7 +2046,7 @@ int main() {
 		&bg16,
 		L"Llegando al campus con mi paraguas.\n"
 		L"La lluvia caía constante...\n"
-		L"de esas que no molestan, pero tampoco te dejan ignorarla.\n\n"
+		L"De esas que no molestan, pero tampoco te dejan ignorarla.\n\n"
 		L"El ambiente era tranquilo.\n"
 		L"Demasiado tranquilo.\n\n",
 		false,
@@ -2074,7 +2074,7 @@ int main() {
 	};
 	escenas[23] = SceneData{
 		&bg19,
-		L"Tu: Otra vez tú\nAbril: Creo que sí coincidimos después de todo {NOMBRE}\nSe acerca un poco a tu paraguas sin preguntar directamente",
+		L"{NOMBRE}: ¿Otra vez tú?\nAbril: Creo que sí coincidimos después de todo {NOMBRE}.\n*Se acerca un poco a tu paraguas sin preguntar directamente*.",
 		false,
 		true,
 		false,
@@ -2098,7 +2098,7 @@ int main() {
 	};
 	escenas[26] = SceneData{
 		&bg22,
-		L"Es tu novia?",
+		L"¿Es tu novia?",
 		false,
 		true,
 		false,
@@ -2117,7 +2117,7 @@ int main() {
 		&bg24,
 		L"Llegamos al edificio de clases y caminamos por el pasillo.\nAntes de entrar Abril volteó hacia mi.\n"
 		L"'Oye...'\n"
-		L"'El domingo va a haber algo interesante cerca de aquí, deberías venir'",
+		L"'El domingo va a haber algo interesante cerca de aquí, deberías venir.",
 		false,
 		true,
 		false,
@@ -2167,7 +2167,7 @@ int main() {
 	};
 	escenas[34] = SceneData{
 		&bg27,
-		L"Decido revisar mi celular y encuentro unos mensajes",
+		L"Decido revisar mi celular y encuentro unos mensajes.",
 		false,
 		true,
 		false,
@@ -2223,7 +2223,7 @@ int main() {
 	};
 	escenas[40] = SceneData{
 		&bg30,
-		L"Estuve pensando en lo que te dije ayer",
+		L"Estuve pensando en lo que te dije ayer.",
 		false,
 		true,
 		false,
@@ -2232,8 +2232,8 @@ int main() {
 	escenas[41] = SceneData{ 
 		&bg31,
 		L"Lo del domingo...\n"
-		L"Creo que estaría más fácil si te paso\n"
-		L"la info por mensaje",
+		L"Creo que estaría más fácil si te paso.\n"
+		L"la info por mensaje.",
 		false,
 		true,
 		false,
@@ -2260,8 +2260,8 @@ int main() {
 	};
 	escenas[44] = SceneData{
 		&bg33,
-		L"\"Gracias {NOMBRE}... No pensé que dirías que sí tan fácil\"\n\n"
-		L"\"El domingo te mando la info\"",
+		L"Gracias {NOMBRE}... No pensé que dirías que sí tan fácil.\n\n"
+		L"El domingo te mando la info.",
 		false,
 		true,
 		false,
@@ -2309,9 +2309,9 @@ int main() {
 	};
 	escenas[49] = SceneData{
 		&bg37,
-		L"\"¡Hey!\"\n"
-		L"\"Pensé que ibas a llegar tarde\"\n\n"
-		L"\"Hoy es un día importante...\"",
+		L"¡Hey!\n"
+		L"Pensé que ibas a llegar tarde.\n\n"
+		L"Hoy es un día importante...",
 		false,
 		true,
 		false,
@@ -2319,7 +2319,7 @@ int main() {
 	};
 	escenas[50] = SceneData{
 		&bg36,
-		L"\"Sí te acordaste, verdad?\"",
+		L"Sí te acordaste, ¿Verdad?",
 		false,
 		true,
 		false,
@@ -2380,7 +2380,7 @@ int main() {
 	escenas[57] = SceneData{
 		&bg10,
 		L"Los jueves tengo clases por la tarde, así que mejor me voy temprano\n"
-		L"a comprar la comida para cenar",
+		L"a comprar la comida para cenar.",
 		false,
 		true,
 		false,
@@ -2413,7 +2413,7 @@ int main() {
 	};
 	escenas[61] = SceneData{
 		&bg44,
-		L"Mejor me voy a casa. no quiero hacer una escena",
+		L"Mejor me voy a casa. No quiero hacer una escena.",
 		false,
 		true,
 		false,
@@ -2437,7 +2437,7 @@ int main() {
 	};
 	escenas[64] = SceneData{
 		&bg46,
-		L"Hola amor, ya desayunaste?",
+		L"Hola amor, ¿Ya desayunaste?",
 		false,
 		true,
 		false,
@@ -2445,7 +2445,7 @@ int main() {
 	};
 	escenas[65] = SceneData{
 		&bg47,
-		L"Qué le respondo?",
+		L"¿Qué le respondo?",
 		true,
 		false,
 		false,
@@ -2454,7 +2454,7 @@ int main() {
 	};
 	escenas[66] = SceneData{
 		&bg10,
-		L"Escucho la voz de mi mamá desde la cocina y dejo mi telefono en la cama",
+		L"Escucho la voz de mi mamá desde la cocina y dejo mi telefono en la cama.",
 		false,
 		true,
 		false,
@@ -2478,7 +2478,7 @@ int main() {
 	};
 	escenas[69] = SceneData{
 		&bg6,
-		L"Llego la tarde y fuí a clases...",
+		L"Llegó la tarde y fuí a clases...",
 		false,
 		true,
 		false,
@@ -2486,10 +2486,10 @@ int main() {
 	};
 	escenas[70] = SceneData{
 		&bg30,
-		L"Que estresante. \n"
-		L"Como es costumbre, encontré a Abril en el pasillo. Aún faltaba tiempo para\n"
-		L"entrar a clases entonces nos quedamos platicando. Le conté sobre lo mal \n"
-		L"que iba mi día. Entre ver a mi novia con alguien más y olvidar mi telefono \n"
+		L"Que estresante.\n"
+		L"Como es costumbre, encontré a Abril en el pasillo. Aún faltaba tiempo para.\n"
+		L"entrar a clases entonces nos quedamos platicando. Le conté sobre lo mal\n"
+		L"que iba mi día. Entre ver a mi novia con alguien más y olvidar mi telefono\n"
 		L"me la estaba pasando fatal. Incluso nos quedamos platicando en la salida.",
 		false,
 		true,
@@ -2498,8 +2498,8 @@ int main() {
 	};
 	escenas[71] = SceneData{
 		&bg49,
-		L"Cómo te sentiste despues de eso?\n"
-		L"Supongo que muy feo, terminarás con ella?",
+		L"¿Cómo te sentiste despues de eso?\n"
+		L"Supongo que muy feo, ¿Terminarás con ella?",
 		false,
 		true,
 		false,
@@ -2516,7 +2516,7 @@ int main() {
 	};
 	escenas[73] = SceneData{
 		&bg51,
-		L"Voltee a ver el otro lado de la calle y para mi sorpresa, ahi estaba ella.",
+		L"Volteé a ver el otro lado de la calle y para mi sorpresa, ahí estaba ella.",
 		false,
 		true,
 		false,
@@ -2525,7 +2525,7 @@ int main() {
 	escenas[74] = SceneData{
 		&bg52,
 		L"Me veía con una mirada decepcionada, pues llevaba horas sin\n"
-		L"contestarle y ademas estaba con alguien mas.",
+		L"contestarle y ademas estaba con alguien más.",
 		false,
 		true,
 		false,
@@ -2534,7 +2534,7 @@ int main() {
 	escenas[75] = SceneData{
 		&bg53,
 		L"Me di cuenta de lo mal que se veía y me consumieron las emociones.\n"
-		L"Al ver a las dos, huí... Como buena gallina .",
+		L"Al verlas a las dos, huí... Como buena gallina.",
 		false,
 		true,
 		false,
@@ -2542,7 +2542,7 @@ int main() {
 	};
 	escenas[76] = SceneData{
 		&bg29,
-		L"Al llegar a casa, corrí a mi cuarto. Mi telefono estaba en mi cama",
+		L"Al llegar a casa, corrí a mi cuarto. Mi telefono estaba en mi cama.",
 		false,
 		true,
 		false,
@@ -2550,7 +2550,7 @@ int main() {
 	};
 	escenas[77] = SceneData{
 		&bg55,
-		L"... Ay no",
+		L"... Ay no.",
 		false,
 		true,
 		false,
@@ -2611,8 +2611,8 @@ int main() {
 	escenas[84] = SceneData{
 		&bg10,
 		L"No me quiero levantar. Después de todo el caos el\n"
-		L"silencio pesa más que cualquier discusión. Pero debo \n"
-		L"arreglar las cosas. No es solo una amiga, es mi novia... \n"
+		L"silencio pesa más que cualquier discusión. Pero debo\n"
+		L"arreglar las cosas. No es solo una amiga, es mi novia...\n"
 		L"Debo salir a buscarla.",
 		false,
 		true,
@@ -2621,7 +2621,7 @@ int main() {
 	};
 	escenas[85] = SceneData{
 		&bg58,
-		L"Llego a su casa, me abrio la puerta y decido explicarme",
+		L"Llego a su casa, me abrio la puerta y decido explicarme.",
 		false,
 		true,
 		false,
@@ -2640,7 +2640,7 @@ int main() {
 		&bg60,
 		L"Luego de hablar un tiempo, aceptó mi dísculpa.\n"
 		L"Parecía feliz de que todo regresara a la \n"
-		L"normalidad. Decidí acompañarla a la universidad\n y luego me fui a clase",
+		L"normalidad. Decidí acompañarla a la universidad\n y luego me fui a clase.",
 		false,
 		true,
 		false,
@@ -2650,7 +2650,7 @@ int main() {
 		&bg61,
 		L"Como siempre, me encuentro con Abril antes\n"
 		L"de clases, pero parece que no está \n"
-		L"de buenas. Debo acercarme y darle una explicación\n",
+		L"de buenas. Debo acercarme y darle una explicación.\n",
 		false,
 		true,
 		false,
@@ -2667,7 +2667,7 @@ int main() {
 	};
 	escenas[90] = SceneData{
 		&bg30,
-		L"Luego de nuestra plática parece que nuestra relación cambio",
+		L"Luego de nuestra plática parece que nuestra relación cambio.",
 		false,
 		true,
 		false,
@@ -2676,7 +2676,7 @@ int main() {
 	escenas[91] = SceneData{
 		&bg6,
 		L"Pasaron las clases y me dí cuenta que faltaba un día para el 14 de\n"
-		L"febrero y no he comprado nada de regalo... Debería ir a la florería\n",
+		L"febrero y no he comprado nada de regalo... Debería ir a la florería.\n",
 		false,
 		true,
 		false,
@@ -2694,8 +2694,8 @@ int main() {
 	escenas[93] = SceneData{
 		&bg12,
 		L"Compré flores y fui caminando a mi casa.\n"
-		L"Me siento bastante feliz. Busqué ropa decente y también mi perfume favorito. \n\n"
-		L"Parece que ya todo está listo, ahora solo falta avisar\n",
+		L"Me siento bastante feliz. Busqué ropa decente y también mi perfume favorito.\n\n"
+		L"Parece que ya todo está listo, ahora solo falta avisar.\n",
 		false,
 		true,
 		false,
@@ -2786,7 +2786,7 @@ int main() {
 	};
 	escenas[104] = SceneData{
 		&bg71,
-		L"Luego de unas horas me doy cuenta de que ya casi se acerca la hora de vernos,\nasí que comencé a alistarme. Tome todas mis cosas incluyendo el regalo y sali de casa.",
+		L"Luego de unas horas me doy cuenta de que ya casi se acerca la hora de vernos,\nasí que comencé a alistarme. Tomé todas mis cosas incluyendo el regalo y sali de casa.",
 		false,
 		true,
 		false,
@@ -2802,7 +2802,7 @@ int main() {
 	};
 	escenas[106] = SceneData{
 		&bg73,
-		L"Yo: Hey amor!!! ¿Llevas mucho tiempo esperando?\nNovia: no, acabo de llegar.\n*le das las flores*",
+		L"{NOMBRE}: Hey amor!!! ¿Llevas mucho tiempo esperando?\nNovia: No, acabo de llegar.\n*Le das las flores*.",
 		false,
 		true,
 		false,
@@ -2810,7 +2810,7 @@ int main() {
 	};
 	escenas[107] = SceneData{
 		&bg74,
-		L"Omggg que hermosas",
+		L"Novia: Omggg que hermosas.",
 		false,
 		true,
 		false,
@@ -2818,7 +2818,7 @@ int main() {
 	};
 	escenas[108] = SceneData{
 		&bg75,
-		L"Yo: ¿Nos vamos?\nNovia:Si\n*Comenzamos a caminar hacia el sushi, mientras me contaba cómo fue su primera\n semana en la universidad*",
+		L"{NOMBRE}: ¿Nos vamos?\nNovia:Si.\n*Comenzamos a caminar hacia el sushi, mientras me contaba cómo fue su primera\n semana en la universidad*.",
 		false,
 		true,
 		false,
@@ -2826,7 +2826,7 @@ int main() {
 	};
 	escenas[109] = SceneData{
 		&bg76,
-		L"*Me contó que hizo muchas amigas y que\nla están saturando de proyectos pero aún así tiene tiempo para verme*",
+		L"Me contó que hizo muchas amigas y que\nla están saturando de proyectos pero aún así tiene tiempo para verme.",
 		false,
 		true,
 		false,
@@ -2843,7 +2843,7 @@ int main() {
 	};
 	escenas[111] = SceneData{
 		&bg76,
-		L"El mesero tomó su orden y se fue. Seguimos\nplaticando sobre la universidad y como nos estamos adaptando",
+		L"El mesero tomó su orden y se fue. Seguimos\nplaticando sobre la universidad y como nos estamos adaptando.",
 		false,
 		true,
 		false,
@@ -2859,7 +2859,7 @@ int main() {
 	};
 	escenas[113] = SceneData{
 		&bg88,
-		L"Volteo y era Abril, celebrando con unas amigas\nque le estaban echando carrilla, me quedé congelado",
+		L"Volteo y era Abril, celebrando con unas amigas\nque le estaban echando carrilla, me quedé congelado.",
 		false,
 		true,
 		false,
@@ -2892,7 +2892,7 @@ int main() {
 	};
 	escenas[117] = SceneData{
 		&bg83,
-		L"Ay no",
+		L"Ay no.",
 		false,
 		true,
 		false,
@@ -2900,7 +2900,7 @@ int main() {
 	};
 	escenas[118] = SceneData{
 		&bg84,
-		L"Abril: Holaaa, feliz san valentín",
+		L"Abril: Holaaa, feliz san valentín.",
 		false,
 		true,
 		false,
@@ -2917,7 +2917,7 @@ int main() {
 	};
 	escenas[120] = SceneData{
 		&bg86,
-		L"Abril: Es lindo conocerte. En fin, {NOMBRE} espero poder verte mañana,\nluego te mando la ubicación más tarde, va?",
+		L"Abril: Es lindo conocerte. En fin, {NOMBRE} espero poder verte mañana,\nluego te mando la ubicación más tarde, ¿Va?",
 		false,
 		true,
 		false,
@@ -2934,7 +2934,7 @@ int main() {
 	escenas[122] = SceneData{
 		&bg89,
 		L"El camino se sintió tenso, apenas y me habló en el carro\n\n"
-		L"Novia: Mañana será nuestro aniversario, no quiero pelear, olvidemos esto por hoy.\n Nuestra conversación quedó en esas y regresé a mi casa",
+		L"Novia: Mañana será nuestro aniversario, no quiero pelear, olvidemos esto por hoy.\n Nuestra conversación quedó en esas y regresé a mi casa.",
 		false,
 		true,
 		false,
@@ -2974,7 +2974,7 @@ int main() {
 	};
 	escenas[127] = SceneData{
 		&bg10,
-		L"... Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes;\nde Abril y mi novia:",
+		L"... Me desperté con una mala sensación. Vi mi teléfono y tenía un par de mensajes\nde Abril y de mi novia.",
 		false,
 		true,
 		false,
@@ -2982,7 +2982,7 @@ int main() {
 	};
 	escenas[128] = SceneData{
 		&bg91,
-		L"Obviamente le contestaste a tu amor",
+		L"Obviamente le contestaste a tu amor.",
 		false,
 		true,
 		false,
@@ -2999,7 +2999,7 @@ int main() {
 	};
 	escenas[130] = SceneData{
 		&bg10,
-		L"Apagué el celular y comencé a recapitular todo lo vivido",
+		L"Apagué el celular y comencé a recapitular todo lo vivido.",
 		false,
 		true,
 		false,
@@ -3007,7 +3007,7 @@ int main() {
 	};
 	escenas[131] = SceneData{
 		&bg20,
-		L"Recordé mis conversaciones con Illenaa, conocerla...\n\n",
+		L"Recordé mis conversaciones con Abril, conocerla...\n\n",
 		false,
 		true,
 		false,
@@ -3015,7 +3015,7 @@ int main() {
 	};
 	escenas[132] = SceneData{
 		&bg24,
-		L"Nuestras conversaciones en clase\n\n",
+		L"Nuestras conversaciones en clase.\n\n",
 		false,
 		true,
 		false,
@@ -3023,7 +3023,7 @@ int main() {
 	};
 	escenas[133] = SceneData{
 	   &bg24,
-	   L"Nuestras conversaciones en clase\n\n",
+	   L"Nuestras conversaciones en clase.\n\n",
 	   false,
 	   true,
 	   false,
@@ -3031,7 +3031,7 @@ int main() {
 	};
 	escenas[134] = SceneData{
 		&bg89,
-		L"Recordé los pleitos con mi novia\n\n",
+		L"Recordé los pleitos con mi novia.\n\n",
 		false,
 		true,
 		false,
@@ -3039,7 +3039,7 @@ int main() {
 	};
 	escenas[135] = SceneData{
 		&bg60,
-		L"Pero también nuestros momentos felices\n\n",
+		L"Pero también nuestros momentos felices.\n\n",
 		false,
 		true,
 		false,
@@ -3047,7 +3047,7 @@ int main() {
 	};
 	escenas[136] = SceneData{
 		&bg10,
-		L"“Amo mucho a mi novia pero últimamente siento que no es lo mismo, en cambio\n con Abril siento que soy yo mismo y me\n quiere ser como soy...\n\nCon quién me voy?",
+		L"“Amo mucho a mi novia, pero últimamente siento que no es lo mismo, en cambio\n con Abril siento que soy yo mismo y me\n quiere ser como soy...\n\n¿Con quién me voy?",
 		false,
 		true,
 		false,
@@ -3063,7 +3063,7 @@ int main() {
 	};
 	escenas[138] = SceneData{
 		&bg94,
-		L"Fui a la cita con mi novia, después de hablar arreglamos las cosas.\n Han pasado mucho tiempo desde entonces y por fin obtuvimos \n nuestro final feliz. ",
+		L"Fui a la cita con mi novia, después de hablar arreglamos las cosas.\nHan pasado mucho tiempo desde entonces y por fin obtuvimos\nnuestro final feliz.",
 		false,
 		true,
 		false,
@@ -3071,7 +3071,7 @@ int main() {
 	};
 	escenas[139] = SceneData{
 		&bg95,
-		L"Pero cayó un meteorito en la boda y falleció. :(",
+		L"Pero cayó un meteorito en la boda y falleció. :(.",
 		false,
 		true,
 		false,
@@ -3079,7 +3079,7 @@ int main() {
 	};
 	escenas[140] = SceneData{
 		&bg96,
-		L"`Fui a la cita con mi novia, pero peleamos toda la tarde.\nPor más que lo intentamos, no funcionó lo nuestro.\n Terminamos unas semanas después.",
+		L"Fui a la cita con mi novia, pero peleamos toda la tarde.\nPor más que lo intentamos, no funcionó lo nuestro.\nTerminamos unas semanas después.",
 		false,
 		true,
 		false,
@@ -3087,7 +3087,7 @@ int main() {
 	};
 	escenas[141] = SceneData{
 		&bg97,
-		L"Me fui con Illena y regresé a un texo en el celular.\n Habíamos terminado.\n Quizá era lo mejor..",
+		L"Me fuí con Abril y regresé a un texo en el celular.\nHabíamos terminado.\nQuizá era lo mejor...",
 		false,
 		true,
 		false,
@@ -3095,7 +3095,7 @@ int main() {
 	};
 	escenas[142] = SceneData{
 		&bg98,
-		L"Me fui con Abril, y ese mismo dia mi novia me termino. \n Con el tiempo me empareje con Abril pero todo habia sido una broma\n que hizo con sus amigos. Me humillaron.",
+		L"Me fuí con Abril, y ese mismo dia mi novia me termino.\nCon el tiempo me empareje con Abril pero todo habia sido una broma\nque hizo con sus amigos. Me humillaron.",
 		false,
 		true,
 		false,
@@ -3119,7 +3119,7 @@ int main() {
 	};
 	escenas[199] = SceneData{
 		&bg12,
-		L"Ella decidio terminar contigo...\n\nGAME OVER",
+		L"Mi novia decidió terminar conmigo...\n\nGAME OVER.",
 		false,
 		true,
 		false,
