@@ -151,7 +151,8 @@ sfml-window-d.lib;
 sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy /y /d "$(ProjectDir)..\libs\SFML\debug\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /y /d "$(ProjectDir)..\libs\SFML\debug\*.dll" "$(TargetDir)"
+xcopy /y /d /e /i "$(ProjectDir)..\assets" "$(TargetDir)assets"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -172,7 +173,8 @@ sfml-system-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependen
       <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>xcopy /y /d "$(ProjectDir)..\libs\SFML\release\*.dll" "$(TargetDir)"</Command>
+      <Command>xcopy /y /d "$(ProjectDir)..\libs\SFML\release\*.dll" "$(TargetDir)"
+xcopy /y /d /e /i "$(ProjectDir)..\assets" "$(TargetDir)assets"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
