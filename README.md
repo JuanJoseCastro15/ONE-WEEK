@@ -1,11 +1,11 @@
 # ONE WEEK - Simulador de Citas (Visual Novel)
 
 ## Resumen del Proyecto
-**ONE WEEK** es una novela visual interactiva y simulador de citas desarrollado en C++. El juego se basa en mecánicas de gestión de recursos y árboles de decisión distribuidos a lo largo de 7 "días" (ciclos lógicos).
+**ONE WEEK** es una novela visual interactiva y simulador de citas desarrollado en C++. El juego se basa en mecánicas de toma de desiciones a lo largo de distintos escenarios repartidos en 7 días.
 
 El jugador selecciona entre 4 perfiles iniciales (Gymrat, Otaku, Tóxico, NPC/Chico Bueno), cada uno con estadísticas base de atractivo, confianza y carisma. A través de escenarios cotidianos (responder mensajes, citas, dar regalos, o decidir mentir/ser infiel), las decisiones del jugador afectan dinámicamente las métricas de la pareja ("amor", "felicidad", "confianza"). 
 
-El motor lógico evalúa constantemente estas variables: si el nivel de amor se agota, la relación termina prematuramente. Dependiendo del histórico de elecciones y las estadísticas acumuladas, la narrativa se bifurca hacia 4 finales principales y 1 final oculto.
+El motor lógico evalúa constantemente estas variables: si el nivel de amor se agota, la relación termina prematuramente. Dependiendo del historial de elecciones y las estadísticas acumuladas, la narrativa termina en uno de 4 finales principales o un final oculto.
 
 
 ## Tecnologías y Entorno
