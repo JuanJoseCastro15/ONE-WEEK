@@ -576,7 +576,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	e15.imp1 = -5;
 	e15.imp2 = -3;
 	e15.imp3 = 1;
-	e15.imp4 = -5;
+	e15.imp4 = 0;
 
 	if (clase == 0) { //TOXICO
 		e15.op1 = L"Perdón por la aparición de mi novia\n"
@@ -781,7 +781,7 @@ vector<Escenario> cargarHistoria(int clase) {
 	}
 	else if (clase == 3) { //OTAKU
 		e20.op1 = L"Es mi novia, la waifu oficial del canon.";
-		e20.op2 = L"Ahhh… Cutscene incómoda... Skip...";
+		e20.op2 = L"Ahhh... Cutscene incómoda... Skip...";
 		e20.op3 = L"Es mi onichan nada mas.";
 		e20.op4 = L"Si, ella es... Mi personaje de rango S.";
 	}
