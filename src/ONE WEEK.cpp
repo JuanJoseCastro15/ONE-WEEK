@@ -854,7 +854,7 @@ void procesarRegalo(int& scene,int siguienteScene,Novia& mitilina,sf::Vector2f m
 	// si eligio cualquier regalo
 	if (regaloElegido) {
 
-		cout << "Le diste un regalo a tu novia." << endl;
+		//cout << "Le diste un regalo a tu novia." << endl;
 
 		scene = siguienteScene;
 	}
@@ -991,11 +991,11 @@ void renderizarEscena(sf::RenderWindow& ventana,SceneData& escena,sf::Text& text
 void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<Escenario>& historia,unique_ptr<Jugador>& miJugador,
 	Novia& mitilina,sf::Vector2f mousePos,sf::FloatRect zOp1,sf::FloatRect zOp2,sf::FloatRect zOp3,sf::FloatRect zOp4) {
 
-	// validar historia
-	if (escenarioActual < 0 || escenarioActual >= historia.size()) {
+	/* validar historia
+if (escenarioActual < 0 || escenarioActual >= historia.size()) {
 		cout << "ERROR: escenarioActual fuera de rango" << endl;
 		return;
-	}
+	}*/
 
 	int impacto = -67;
 
@@ -1018,8 +1018,8 @@ void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<
 
 	if (impacto != -67) {
 
-		cout << "Escenario actual: " << escenarioActual << endl;
-		cout << "Scene actual: " << scene << endl;
+		//cout << "Escenario actual: " << escenarioActual << endl;
+		//cout << "Scene actual: " << scene << endl;
 
 		// Escenarios de CARISMA
 		if (escenarioActual == 0 ||
@@ -1062,11 +1062,11 @@ void procesarDecision(int& scene,int siguienteScene,int& escenarioActual,vector<
 }
 
 void cargarTextura(sf::Texture& textura, string ruta) {
-	cout << "Intentando cargar: " << ruta << endl;
-	if (!textura.loadFromFile(ruta)) 
-		cout << " ERROR cargando: " << ruta << endl;
-	else 
-		cout << " Cargada correctamente: " << ruta << endl;
+	//cout << "Intentando cargar: " << ruta << endl;
+	if (!textura.loadFromFile(ruta));
+	//cout << " ERROR cargando: " << ruta << endl;
+	else;
+		//cout << " Cargada correctamente: " << ruta << endl;
 }
 
 //Para ver si el jugador usa caracteres validos, ya que se modifico la fuente
@@ -3240,7 +3240,7 @@ int main() {
 				if (auto* textEvent = event->getIf<sf::Event::TextEntered>()) {
 					//si presiona enter avanzamos de escena para linux y windows
 					if (textEvent->unicode == '\r' || textEvent->unicode == '\n') {
-						cout << "ENTER PRESIONADO" << endl;
+						//cout << "ENTER PRESIONADO" << endl;
 						if (!nombreJugador.empty()) {
 							scene = 2;
 						}
