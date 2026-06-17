@@ -18,10 +18,10 @@ El motor lógico evalúa constantemente estas variables: si el nivel de amor se 
 ## Arquitectura del Equipo
 Este proyecto fue un esfuerzo multidisciplinario. Aunque todos los miembros colaboraron en el diseño narrativo y el ensamblaje de los 7 días, la implementación técnica se dividió de la siguiente manera:
 
-* **[David Vigueros] (https://github.com/luisdvigueros-arch) | Lógica Core y Optimización:** Diseño de la arquitectura de clases (POO) del motor subyacente y optimización de las estructuras de datos para las escenas.
-* **[Fatima Vazques] (https://github.com/FatimaSof) | UI y Narrativa:** Programación de la interfaz gráfica integrando la librería SFML y redacción principal del guion lógico.
-* **[Juan Castro] (https://github.com/JuanJoseCastro15) | Build Engineering y Repositorio:** Administración de GitHub, configuración del proyecto en Visual Studio (rutas relativas, dependencias, enlazador) y empaquetado de versiones (Releases).
-* **[Mia De La Crúz] (https://github.com/MiaDeLaCruz25) | Arte 2D:** Creación, formato y optimización de las imágenes y *assets* visuales del juego.
+* **[David Vigueros](https://github.com/luisdvigueros-arch) | Lógica Core y Optimización:** Diseño de la arquitectura de clases (POO) del motor subyacente y optimización de las estructuras de datos para las escenas.
+* **[Fatima Vazques](https://github.com/FatimaSof) | UI y Narrativa:** Programación de la interfaz gráfica integrando la librería SFML y redacción principal del guion lógico.
+* **[Juan Castro](https://github.com/JuanJoseCastro15) | Build Engineering y Repositorio:** Administración de GitHub, configuración del proyecto en Visual Studio (rutas relativas, dependencias, enlazador) y empaquetado de versiones (Releases).
+* **[Mia De La Crúz](https://github.com/MiaDeLaCruz25) | Arte 2D:** Creación, formato y optimización de las imágenes y *assets* visuales del juego.
 
 
 ## Instalación y Ejecución
