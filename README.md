@@ -47,7 +47,7 @@ El repositorio está diseñado para una integración sin fricción, con rutas re
 *Nota Técnica:* El sistema de compilación está automatizado. Los eventos post-compilación se encargarán de mover las `.dll` de SFML necesarias y conectar la carpeta de `assets/` al directorio de salida `bin/`, dejando el entorno listo para ejecución inmediata.
 
 
-## 💡 Evolución del Proyecto (Post-Mortem)
+## Evolución del Proyecto (Post-Mortem)
 Debido a la naturaleza académica del proyecto, la narrativa se integró directamente en el código fuente. En un entorno de producción escalable, el siguiente paso sería:
 * Desacoplar los diálogos y valores estadísticos a archivos de configuración externos (JSON o CSV).
 * Implementar un *parser* dinámico en C++ que construya el árbol de decisiones en tiempo de ejecución, permitiendo a los escritores modificar la historia sin necesidad de recompilar los binarios.
