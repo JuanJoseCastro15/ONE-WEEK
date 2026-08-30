@@ -1480,7 +1480,7 @@ int main() {
 
 	// Novia con otro
 	sf::Texture NoviaOtro;
-	cargarTextura(NoviaOtro, "assets/fondos/NoviaconOtro.png");
+	cargarTextura(NoviaOtro, "assets/fondos/NoviaconOtro.jpeg");
 
 	sf::Sprite bg42(NoviaOtro);
 	ajustar(bg42, NoviaOtro);
@@ -1494,7 +1494,7 @@ int main() {
 
 	// Mejor se va
 	sf::Texture MejorSeVa;
-	cargarTextura(MejorSeVa, "assets/fondos/mejorseVa.png");
+	cargarTextura(MejorSeVa, "assets/fondos/mejorseVa.jpeg");
 
 	sf::Sprite bg44(MejorSeVa);
 	ajustar(bg44, MejorSeVa);
