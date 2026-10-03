@@ -31,10 +31,6 @@ Para jugar sin necesidad de configurar el entorno de desarrollo:
 3. Extrae el contenido (incluye el ejecutable `.exe`, librerías `.dll` de SFML y la carpeta `assets/`).
 4. Ejecuta el juego directamente.
 
-
-## Compilación desde el Código Fuente (Plug-and-Play)
-El repositorio está diseñado para una integración sin fricción, con rutas relativas y eventos post-compilación (post-build) ya configurados. No es necesario vincular dependencias manualmente.
-
 **Prerrequisitos:**
 * Visual Studio (Carga de trabajo: Desarrollo para el escritorio con C++).
 
